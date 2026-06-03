@@ -16,3 +16,22 @@ For Hot51 CDN FLV streams: always start with `/api/stream-proxy?roomId=...&ancho
 - In HLS `ERROR` handler proxy retry: `hlsTriedRef.current = false` before `startHls(proxyUrl, el)`
 - In `handleSwitchMode` HLS case: same — use proxy URL directly for CDN streams
 - In `handleSwitchMode` FLV case: if `isHot51Cdn(flvUrl) && anchorId`, use stream-proxy URL
+
+## hls-proxy must use undici+ProxyAgent, not only curl
+
+**Root cause (2026-06-03):** `hls-proxy` used `curlRaceCdnText` (curl-based) exclusively. On Replit US servers, the Indonesian proxy pool works with undici + ProxyAgent but curl's `--proxy` tunneling times out for the same proxies. Result: hls-proxy always returned 502 while stream-proxy (using `fetchViaBestProxy` / undici) returned 200.
+
+**Fix:** In the `/hls-proxy` route, race BOTH `fetchViaBestProxy` (undici candidates) AND `curlRaceCdnText` (curl candidates) via `Promise.any`. The undici approach wins first, fixing the 502.
+
+**Why curl fails but undici works:** The proxy pool includes HTTP proxies (`http://103.177.8.133:1111`) that accept undici CONNECT tunneling but stall curl's CONNECT handshake (possibly different TLS handling). SOCKS4 proxies work in curl but not undici; HTTP proxies work in undici but not curl — racing both covers all proxy types.
+
+## mpegts.js Web Worker requires absolute URLs
+
+**Bug:** `startFlv` called with relative URL like `/api/stream-proxy?roomId=...` caused `Failed to execute 'fetch' on 'WorkerGlobalScope': Failed to parse URL`. mpegts.js with `enableWorker:true` runs fetch inside a Web Worker where relative URLs have no base URL context.
+
+**Fix:** Always wrap stream-proxy URLs with `toAbsoluteUrl()` before passing to `startFlv`:
+```js
+const sp = toAbsoluteUrl(`${BASE}/api/stream-proxy?...`);
+startFlv(sp, el);
+```
+HLS.js (XHR-based, main thread) handles relative URLs fine. Only mpegts.js worker requires absolute.

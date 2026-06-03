@@ -2060,13 +2060,24 @@ liveRouter.get("/hls-proxy", async (req: Request, res: Response) => {
   let manifestText: string | null = null;
   let usedUrl = rawUrl;
 
-  const raceResult = await Promise.any(
-    urlsToTry.map(async (candidateUrl) => {
+  // Race both undici+ProxyAgent (same mechanism as stream-proxy) AND curl-based approaches.
+  // undici+ProxyAgent wins when curl proxies time out (common in Replit US environment).
+  const raceResult = await Promise.any([
+    // undici + ProxyAgent — identical to fetchViaBestProxy used by stream-proxy (works when curl fails)
+    ...urlsToTry.map(async (candidateUrl) => {
+      const r = await fetchViaBestProxy(candidateUrl, cdnHeaders, 15_000);
+      if (!r) throw new Error("no response");
+      const text = await r.res.text();
+      if (!text.includes("#EXTM3U")) throw new Error("not m3u8");
+      return { body: text, url: candidateUrl };
+    }),
+    // curl-based — SOCKS4 support, fallback if undici ProxyAgent fails
+    ...urlsToTry.map(async (candidateUrl) => {
       const body = await curlRaceCdnText(candidateUrl, cdnHeaders, 18_000);
       if (!body) throw new Error("no manifest");
       return { body, url: candidateUrl };
-    })
-  ).catch(() => null);
+    }),
+  ]).catch(() => null);
 
   if (raceResult) {
     manifestText = raceResult.body;

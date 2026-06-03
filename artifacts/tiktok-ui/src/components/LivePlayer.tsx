@@ -351,8 +351,10 @@ export default function LivePlayer({
       }
 
       if (flvIsCdn && anchorId) {
-        // Hot51 CDN FLV: route through server-side stream-proxy to avoid 403/geo-block
-        const sp = `${BASE}/api/stream-proxy?roomId=${encodeURIComponent(roomId)}&anchorId=${encodeURIComponent(anchorId)}${liveId ? `&liveId=${encodeURIComponent(liveId)}` : ""}`;
+        // Hot51 CDN FLV: route through server-side stream-proxy to avoid 403/geo-block.
+        // MUST use absolute URL — mpegts.js runs fetch() inside a Web Worker where
+        // relative URLs throw "Failed to parse URL from /api/..." (no base URL context).
+        const sp = toAbsoluteUrl(`${BASE}/api/stream-proxy?roomId=${encodeURIComponent(roomId)}&anchorId=${encodeURIComponent(anchorId)}${liveId ? `&liveId=${encodeURIComponent(liveId)}` : ""}`);
         console.info("[LivePlayer] FLV via stream-proxy:", sp.substring(0, 80));
         startFlv(sp, el);
       } else {
@@ -509,7 +511,8 @@ export default function LivePlayer({
         : (hlsUrl ? toAbsoluteUrl(hlsUrl) : "");
       // Always use stream-proxy for CDN streams or when no native .flv URL
       if (anchorId && (isHot51Cdn(flvUrl) || !isNativeFLV)) {
-        const sp = `${BASE}/api/stream-proxy?roomId=${encodeURIComponent(roomId)}&anchorId=${encodeURIComponent(anchorId)}${liveId ? `&liveId=${encodeURIComponent(liveId)}` : ""}`;
+        // Use absolute URL — mpegts.js Web Worker can't resolve relative URLs
+        const sp = toAbsoluteUrl(`${BASE}/api/stream-proxy?roomId=${encodeURIComponent(roomId)}&anchorId=${encodeURIComponent(anchorId)}${liveId ? `&liveId=${encodeURIComponent(liveId)}` : ""}`);
         startFlv(sp, videoEl);
       } else if (isNativeFLV) {
         startFlv(flvUrl, videoEl);
