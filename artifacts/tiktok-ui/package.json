@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "PORT=${PORT:-20677} BASE_PATH=${BASE_PATH:-/} node node_modules/vite/bin/vite.js --config vite.config.ts --host 0.0.0.0",
+    "dev": "PORT=${PORT:-20677} BASE_PATH=${BASE_PATH:-/} node node_modules/vite/bin/vite.js --config vite.config.ts --host ::",
     "build": "vite build --config vite.config.ts",
     "serve": "vite preview --config vite.config.ts --host 0.0.0.0",
     "typecheck": "tsc -p tsconfig.json --noEmit"
