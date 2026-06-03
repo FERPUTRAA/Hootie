@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="layout/activity_become_family_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <WebView android:id="@id/wv" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <androidx.appcompat.widget.LinearLayoutCompat android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="@dimen/dp_44">
+        <ImageView android:id="@id/ivBack" android:tag="binding_1" android:padding="@dimen/dp_13" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_live_back" />
+        <TextView android:textSize="16.0dip" android:textStyle="bold" android:textColor="@color/white" android:gravity="center" android:id="@id/title" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/me.become.model" android:layout_weight="1.0" />
+        <ImageView android:id="@id/ivNotice" android:tag="binding_2" android:paddingLeft="@dimen/dp_14" android:paddingTop="@dimen/dp_10" android:paddingRight="@dimen/dp_14" android:paddingBottom="@dimen/dp_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_model_service" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</FrameLayout>

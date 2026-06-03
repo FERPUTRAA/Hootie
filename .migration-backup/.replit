@@ -1,0 +1,70 @@
+modules = ["nodejs-20", "nodejs-24", "python-3.11"]
+
+[deployment]
+router = "application"
+deploymentTarget = "autoscale"
+
+[deployment.postBuild]
+args = ["pnpm", "store", "prune"]
+env = { "CI" = "true" }
+
+[workflows]
+
+[agent]
+stack = "BEST_EFFORT_FALLBACK"
+expertMode = true
+
+[postMerge]
+path = "scripts/post-merge.sh"
+timeoutMs = 20000
+
+[[ports]]
+localPort = 5000
+externalPort = 5173
+
+[[ports]]
+localPort = 8080
+externalPort = 8080
+
+[[ports]]
+localPort = 8081
+externalPort = 8081
+
+[[ports]]
+localPort = 8082
+externalPort = 3000
+
+[[ports]]
+localPort = 8083
+externalPort = 3003
+
+[[ports]]
+localPort = 8084
+externalPort = 4200
+
+[[ports]]
+localPort = 8085
+externalPort = 3002
+
+[[ports]]
+localPort = 8086
+externalPort = 3001
+
+[[ports]]
+localPort = 9000
+externalPort = 9000
+
+[[ports]]
+localPort = 20677
+externalPort = 80
+
+[userenv]
+
+[userenv.shared]
+HOT51_STREAM_KEY = "4ad75f5e2eb06d315ea14e8484a29e1d"
+HOT51_PROXY_URL = "http://103.175.224.131:8080"
+AGORA_APP_CERTIFICATE = "6dfd8bd4e2364fa4a57c01ec9757178e"
+AGORA_CUSTOMER_ID = "e5963aaa320545b4a9ce873f3fbe9627"
+
+[nix]
+packages = ["cargo", "psmisc", "run", "wget"]

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:tag="layout/activity_withdrawal_finally_confirm_0" android:background="#fff9f9f9" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.example.obs.player.ui.widget.TitleBarView android:id="@id/title" android:layout_width="fill_parent" android:layout_height="44.0dip" app:defaultLeftIco="@drawable/ic_back" app:isTitleTextBold="true" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:title="common.confirm" app:titleColor="@color/silverMoneyColo2" app:titleSize="16.0sp" />
+    <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="90.0dip" android:src="@drawable/img_success" />
+    <TextView android:textStyle="bold" android:textColor="@color/silverMoneyColo2" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="31.0dip" android:text="@string/audit.finance.checking" />
+    <Button android:textColor="#ff6c6c6c" android:layout_gravity="center" android:id="@id/btnContact" android:tag="binding_1" android:background="@drawable/bg_btn_empty_withdrawal" android:layout_width="165.0dip" android:layout_height="50.0dip" android:layout_marginTop="156.0dip" />
+</androidx.appcompat.widget.LinearLayoutCompat>

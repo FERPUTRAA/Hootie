@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/lll_imgroup" android:tag="layout/lmp_group_item5_0" android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="36.0dip">
+        <TextView android:textSize="10.0dip" android:textColor="#ffffffff" android:gravity="center" android:id="@id/product_name" android:background="@drawable/shape_game_product_item_disable_bg" android:layout_width="100.0dip" android:layout_height="36.0dip" />
+        <ImageView android:id="@id/disable_ico" android:layout_width="100.0dip" android:layout_height="wrap_content" android:layout_centerInParent="true" app:srcCompat="@drawable/diss_ico" />
+    </RelativeLayout>
+    <TextView android:textSize="10.0dip" android:textColor="#ff8e8e93" android:gravity="center" android:id="@id/odds" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="12.0dip" android:layout_marginTop="2.0dip" app:layout_constraintEnd_toEndOf="@id/product_name" app:layout_constraintStart_toStartOf="@id/product_name" app:layout_constraintTop_toBottomOf="@id/product_name" />
+</LinearLayout>

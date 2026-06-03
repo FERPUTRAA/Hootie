@@ -1,0 +1,115 @@
+GET /501/api/plr/financemo/toy/v2/get/list?merchantId=501&t=1780220220 HTTP/1.1
+merchantId: 501
+Authorization: Bearer eyJraWQiOiJ1c2VyLW9hdXRoMi1qa3MiLCJhbGciOiJSUzI1NiJ9.eyJhZ2VudElkIjowLCJtZXJjaGFudElkIjo1MDEsInVzZXJfbmFtZSI6InlsYnphMmpjdGMiLCJzY29wZSI6WyJhbGwiXSwibWVtYmVyVHlwZSI6MSwiZXhwIjoxNzgxNTE2MTc5LCJqdGkiOiIxYTQxNzcxMS05MDdkLTRlZGEtODdhOC1mMzBlM2U2ODU1ZmIiLCJjbGllbnRfaWQiOiJhcHAtcGxheWVyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9QTEFZRVIiXSwidXNlcm5hbWUiOiJ5bGJ6YTJqY3RjIiwibWVtYmVySWQiOiIyMDYxMDE4OTMwMzY5MjM2OTkzIn0.UhAlwQcAU-8OWR1OZpg-dZTal9d_MtekxCBcJ46u9rsmh_BrYnE3cYJZFAim_ZEkAPjI32kuiYLfrQ9BlfyFmAIuoRHJ89Pzu-WoPXakKETQYNwT_q84mSPOh0fbRnLoSEAcCQSecU-5ar1zC-sJQBXVEjfJs2KPxd4-PTbM3YPm-jahT3FURAl354pD4pTb2UdeID_Fhi1aDZRuWX8V0t9u7RDhvLwKnnSVRP5-3fRqUvwvure-pMdXIe-gyIzJfG-Qkr6RMAUebrfxBOfoC1keN8IVPFdkVvPZtkQQkcSlLSwFfoH2CHvciHa7D6SM7CA5YnP0WaQHzq6JBF9sbA
+locale-language: ENU
+device: 08b55ddbd0debc1fa8cdc7127240d402
+area: ID
+dev-type: android_realme_RMX2030
+system-version: 10
+versionCode: 593
+time-zone: GMT+07:00
+username: ylbza2jctc
+ac: 2345689
+client-type: 1
+sign: 2d8a19c093670f0b4b0130f6cc4c7087
+User-Agent: Cronet/593 (Linux; U; Android 10; en; RMX2030; Build/QKQ1.200209.002; Cronet/119.0.6045.31)
+Host: api.fsccdn.com
+Connection: Keep-Alive
+Accept-Encoding: gzip
+
+
+
+GET /501/api/plr/financemo/toy/v2/get/list?merchantId=501&t=1780220160 HTTP/1.1
+merchantId: 501
+Authorization: Bearer eyJraWQiOiJ1c2VyLW9hdXRoMi1qa3MiLCJhbGciOiJSUzI1NiJ9.eyJhZ2VudElkIjowLCJtZXJjaGFudElkIjo1MDEsInVzZXJfbmFtZSI6InlsYnphMmpjdGMiLCJzY29wZSI6WyJhbGwiXSwibWVtYmVyVHlwZSI6MSwiZXhwIjoxNzgxNTE2MTc5LCJqdGkiOiIxYTQxNzcxMS05MDdkLTRlZGEtODdhOC1mMzBlM2U2ODU1ZmIiLCJjbGllbnRfaWQiOiJhcHAtcGxheWVyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9QTEFZRVIiXSwidXNlcm5hbWUiOiJ5bGJ6YTJqY3RjIiwibWVtYmVySWQiOiIyMDYxMDE4OTMwMzY5MjM2OTkzIn0.UhAlwQcAU-8OWR1OZpg-dZTal9d_MtekxCBcJ46u9rsmh_BrYnE3cYJZFAim_ZEkAPjI32kuiYLfrQ9BlfyFmAIuoRHJ89Pzu-WoPXakKETQYNwT_q84mSPOh0fbRnLoSEAcCQSecU-5ar1zC-sJQBXVEjfJs2KPxd4-PTbM3YPm-jahT3FURAl354pD4pTb2UdeID_Fhi1aDZRuWX8V0t9u7RDhvLwKnnSVRP5-3fRqUvwvure-pMdXIe-gyIzJfG-Qkr6RMAUebrfxBOfoC1keN8IVPFdkVvPZtkQQkcSlLSwFfoH2CHvciHa7D6SM7CA5YnP0WaQHzq6JBF9sbA
+locale-language: ENU
+device: 08b55ddbd0debc1fa8cdc7127240d402
+area: ID
+dev-type: android_realme_RMX2030
+system-version: 10
+versionCode: 593
+time-zone: GMT+07:00
+username: ylbza2jctc
+ac: 2345689
+client-type: 1
+sign: a837fefc111e4d6cfb4b418a059aa4df
+User-Agent: Cronet/593 (Linux; U; Android 10; en; RMX2030; Build/QKQ1.200209.002; Cronet/119.0.6045.31)
+Host: api.fsccdn.com
+Connection: Keep-Alive
+Accept-Encoding: gzip
+
+
+
+POST /501/api/plr/toy/send HTTP/1.1
+merchantId: 501
+Authorization: Bearer eyJraWQiOiJ1c2VyLW9hdXRoMi1qa3MiLCJhbGciOiJSUzI1NiJ9.eyJhZ2VudElkIjowLCJtZXJjaGFudElkIjo1MDEsInVzZXJfbmFtZSI6InlsYnphMmpjdGMiLCJzY29wZSI6WyJhbGwiXSwibWVtYmVyVHlwZSI6MSwiZXhwIjoxNzgxNTE2MTc5LCJqdGkiOiIxYTQxNzcxMS05MDdkLTRlZGEtODdhOC1mMzBlM2U2ODU1ZmIiLCJjbGllbnRfaWQiOiJhcHAtcGxheWVyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9QTEFZRVIiXSwidXNlcm5hbWUiOiJ5bGJ6YTJqY3RjIiwibWVtYmVySWQiOiIyMDYxMDE4OTMwMzY5MjM2OTkzIn0.UhAlwQcAU-8OWR1OZpg-dZTal9d_MtekxCBcJ46u9rsmh_BrYnE3cYJZFAim_ZEkAPjI32kuiYLfrQ9BlfyFmAIuoRHJ89Pzu-WoPXakKETQYNwT_q84mSPOh0fbRnLoSEAcCQSecU-5ar1zC-sJQBXVEjfJs2KPxd4-PTbM3YPm-jahT3FURAl354pD4pTb2UdeID_Fhi1aDZRuWX8V0t9u7RDhvLwKnnSVRP5-3fRqUvwvure-pMdXIe-gyIzJfG-Qkr6RMAUebrfxBOfoC1keN8IVPFdkVvPZtkQQkcSlLSwFfoH2CHvciHa7D6SM7CA5YnP0WaQHzq6JBF9sbA
+locale-language: ENU
+device: 08b55ddbd0debc1fa8cdc7127240d402
+area: ID
+dev-type: android_realme_RMX2030
+system-version: 10
+versionCode: 593
+time-zone: GMT+07:00
+username: ylbza2jctc
+ac: 2345689
+client-type: 1
+sign: 08c4e7c3bda811740bf8d087b3fcbcf6
+User-Agent: Cronet/593 (Linux; U; Android 10; en; RMX2030; Build/QKQ1.200209.002; Cronet/119.0.6045.31)
+Content-Type: application/json; charset=utf-8
+Content-Length: 104
+Host: api.fsccdn.com
+Connection: Keep-Alive
+Accept-Encoding: gzip
+
+{"toyId":"60003","memberId":2061018930369236993,"anchorId":"1874677548927598594","area":"ID","toyNum":1}
+
+
+POST /501/api/plr/toy/send HTTP/1.1
+merchantId: 501
+Authorization: Bearer eyJraWQiOiJ1c2VyLW9hdXRoMi1qa3MiLCJhbGciOiJSUzI1NiJ9.eyJhZ2VudElkIjowLCJtZXJjaGFudElkIjo1MDEsInVzZXJfbmFtZSI6InlsYnphMmpjdGMiLCJzY29wZSI6WyJhbGwiXSwibWVtYmVyVHlwZSI6MSwiZXhwIjoxNzgxNTE2MTc5LCJqdGkiOiIxYTQxNzcxMS05MDdkLTRlZGEtODdhOC1mMzBlM2U2ODU1ZmIiLCJjbGllbnRfaWQiOiJhcHAtcGxheWVyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9QTEFZRVIiXSwidXNlcm5hbWUiOiJ5bGJ6YTJqY3RjIiwibWVtYmVySWQiOiIyMDYxMDE4OTMwMzY5MjM2OTkzIn0.UhAlwQcAU-8OWR1OZpg-dZTal9d_MtekxCBcJ46u9rsmh_BrYnE3cYJZFAim_ZEkAPjI32kuiYLfrQ9BlfyFmAIuoRHJ89Pzu-WoPXakKETQYNwT_q84mSPOh0fbRnLoSEAcCQSecU-5ar1zC-sJQBXVEjfJs2KPxd4-PTbM3YPm-jahT3FURAl354pD4pTb2UdeID_Fhi1aDZRuWX8V0t9u7RDhvLwKnnSVRP5-3fRqUvwvure-pMdXIe-gyIzJfG-Qkr6RMAUebrfxBOfoC1keN8IVPFdkVvPZtkQQkcSlLSwFfoH2CHvciHa7D6SM7CA5YnP0WaQHzq6JBF9sbA
+locale-language: ENU
+device: 08b55ddbd0debc1fa8cdc7127240d402
+area: ID
+dev-type: android_realme_RMX2030
+system-version: 10
+versionCode: 593
+time-zone: GMT+07:00
+username: ylbza2jctc
+ac: 2345689
+client-type: 1
+sign: 08c4e7c3bda811740bf8d087b3fcbcf6
+User-Agent: Cronet/593 (Linux; U; Android 10; en; RMX2030; Build/QKQ1.200209.002; Cronet/119.0.6045.31)
+Content-Type: application/json; charset=utf-8
+Content-Length: 104
+Host: api.fsccdn.com
+Connection: Keep-Alive
+Accept-Encoding: gzip
+
+{"toyId":"60003","memberId":2061018930369236993,"anchorId":"1874677548927598594","area":"ID","toyNum":1}
+
+POST /501/api/plr/toy/send HTTP/1.1
+merchantId: 501
+Authorization: Bearer eyJraWQiOiJ1c2VyLW9hdXRoMi1qa3MiLCJhbGciOiJSUzI1NiJ9.eyJhZ2VudElkIjowLCJtZXJjaGFudElkIjo1MDEsInVzZXJfbmFtZSI6InlsYnphMmpjdGMiLCJzY29wZSI6WyJhbGwiXSwibWVtYmVyVHlwZSI6MSwiZXhwIjoxNzgxNTE2MTc5LCJqdGkiOiIxYTQxNzcxMS05MDdkLTRlZGEtODdhOC1mMzBlM2U2ODU1ZmIiLCJjbGllbnRfaWQiOiJhcHAtcGxheWVyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9QTEFZRVIiXSwidXNlcm5hbWUiOiJ5bGJ6YTJqY3RjIiwibWVtYmVySWQiOiIyMDYxMDE4OTMwMzY5MjM2OTkzIn0.UhAlwQcAU-8OWR1OZpg-dZTal9d_MtekxCBcJ46u9rsmh_BrYnE3cYJZFAim_ZEkAPjI32kuiYLfrQ9BlfyFmAIuoRHJ89Pzu-WoPXakKETQYNwT_q84mSPOh0fbRnLoSEAcCQSecU-5ar1zC-sJQBXVEjfJs2KPxd4-PTbM3YPm-jahT3FURAl354pD4pTb2UdeID_Fhi1aDZRuWX8V0t9u7RDhvLwKnnSVRP5-3fRqUvwvure-pMdXIe-gyIzJfG-Qkr6RMAUebrfxBOfoC1keN8IVPFdkVvPZtkQQkcSlLSwFfoH2CHvciHa7D6SM7CA5YnP0WaQHzq6JBF9sbA
+locale-language: ENU
+device: 08b55ddbd0debc1fa8cdc7127240d402
+area: ID
+dev-type: android_realme_RMX2030
+system-version: 10
+versionCode: 593
+time-zone: GMT+07:00
+username: ylbza2jctc
+ac: 2345689
+client-type: 1
+sign: 08c4e7c3bda811740bf8d087b3fcbcf6
+User-Agent: Cronet/593 (Linux; U; Android 10; en; RMX2030; Build/QKQ1.200209.002; Cronet/119.0.6045.31)
+Content-Type: application/json; charset=utf-8
+Content-Length: 104
+Host: api.fsccdn.com
+Connection: Keep-Alive
+Accept-Encoding: gzip
+
+{"toyId":"60003","memberId":2061018930369236993,"anchorId":"1874677548927598594","area":"ID","toyNum":1}
+
+
+
+

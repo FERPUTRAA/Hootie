@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/layout_empty_withdrawal_0" android:background="#fff9f9f9" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="90.0dip" android:src="@drawable/image_empty_withdrawal" />
+    <TextView android:textSize="@dimen/sp_16" android:textColor="#ff212121" android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_17" android:text="@string/withdraw.method.empty.desc" />
+    <Button android:textColor="#ff212121" android:layout_gravity="center" android:id="@id/btnContact" android:background="@drawable/bg_btn_empty_withdrawal" android:paddingLeft="@dimen/dp_8" android:paddingRight="@dimen/dp_8" android:layout_width="165.0dip" android:layout_height="50.0dip" android:layout_marginTop="156.0dip" android:text="@string/app.contact.service" android:paddingHorizontal="@dimen/dp_8" />
+</LinearLayout>

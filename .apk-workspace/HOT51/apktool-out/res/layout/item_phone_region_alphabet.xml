@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.AppCompatTextView android:textSize="@dimen/sp_11" android:textColor="#ff999999" android:gravity="bottom" android:id="@id/tv_country_header" android:tag="layout/item_phone_region_alphabet_0" android:background="@color/white" android:paddingLeft="@dimen/dp_15" android:paddingRight="@dimen/dp_15" android:layout_width="fill_parent" android:layout_height="@dimen/dp_30" android:paddingHorizontal="@dimen/dp_15"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

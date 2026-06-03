@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="layout/activity_select_language_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:background="#fff5f6fa" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.example.obs.player.ui.widget.TitleBarView android:id="@id/title" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="@dimen/common_title_bar_height" app:defaultLeftIco="@drawable/ic_back" app:isTitleTextBold="true" app:rightText="common.save" app:rightTextColor="@color/red_fe2" app:rightTextSize="@dimen/common_title_bar_right_font" app:title="setting.language.switch" app:titleColor="#ff0d0143" app:titleSize="@dimen/common_title_bar_font" />
+        <com.drake.statelayout.StateLayout android:id="@id/state" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/dp_8">
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/rv" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+        </com.drake.statelayout.StateLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</FrameLayout>

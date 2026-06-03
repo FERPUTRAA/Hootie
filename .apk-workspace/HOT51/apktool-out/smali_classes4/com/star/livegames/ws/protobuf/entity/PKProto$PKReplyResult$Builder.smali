@@ -1,0 +1,2394 @@
+.class public final Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+.super Lcom/google/protobuf/GeneratedMessageV3$Builder;
+.source "SourceFile"
+
+# interfaces
+.implements Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResultOrBuilder;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = "Builder"
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/google/protobuf/GeneratedMessageV3$Builder<",
+        "Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;",
+        ">;",
+        "Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResultOrBuilder;"
+    }
+.end annotation
+
+
+# instance fields
+.field private bitField0_:I
+
+.field private now_:Ljava/lang/Object;
+
+.field private pkEnd_:Ljava/lang/Object;
+
+.field private pkReply_:Z
+
+.field private pkStart_:Ljava/lang/Object;
+
+.field private pkTime_:Ljava/lang/Object;
+
+.field private pkType_:Ljava/lang/Object;
+
+.field private status_:I
+
+
+# direct methods
+.method private constructor <init>()V
+    .locals 1
+
+    invoke-direct {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;-><init>()V
+
+    const-string v0, ""
+
+    iput-object v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->pkType_:Ljava/lang/Object;
+
+    iput-object v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->pkStart_:Ljava/lang/Object;
+
+    iput-object v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->pkTime_:Ljava/lang/Object;
+
+    iput-object v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->now_:Ljava/lang/Object;
+
+    iput-object v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->pkEnd_:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method private constructor <init>(Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "parent"
+        }
+    .end annotation
+
+    invoke-direct {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$Builder;-><init>(Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;)V
+
+    const-string p1, ""
+
+    iput-object p1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->pkType_:Ljava/lang/Object;
+
+    iput-object p1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->pkStart_:Ljava/lang/Object;
+
+    iput-object p1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->pkTime_:Ljava/lang/Object;
+
+    iput-object p1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->now_:Ljava/lang/Object;
+
+    iput-object p1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->pkEnd_:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method synthetic constructor <init>(Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;Lcom/star/livegames/ws/protobuf/entity/PKProto$1;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;-><init>(Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;)V
+
+    return-void
+.end method
+
+.method synthetic constructor <init>(Lcom/star/livegames/ws/protobuf/entity/PKProto$1;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;-><init>()V
+
+    return-void
+.end method
+
+.method private buildPartial0(Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;)V
+    .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "result"
+        }
+    .end annotation
+
+    iget v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    and-int/lit8 v1, v0, 0x1
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->pkType_:Ljava/lang/Object;
+
+    invoke-static {p1, v1}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;->access$5102(Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/4 v1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    and-int/lit8 v2, v0, 0x2
+
+    if-eqz v2, :cond_1
+
+    iget-boolean v2, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->pkReply_:Z
+
+    invoke-static {p1, v2}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;->access$5202(Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;Z)Z
+
+    or-int/lit8 v1, v1, 0x2
+
+    :cond_1
+    and-int/lit8 v2, v0, 0x4
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->pkStart_:Ljava/lang/Object;
+
+    invoke-static {p1, v2}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;->access$5302(Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;Ljava/lang/Object;)Ljava/lang/Object;
+
+    or-int/lit8 v1, v1, 0x4
+
+    :cond_2
+    and-int/lit8 v2, v0, 0x8
+
+    if-eqz v2, :cond_3
+
+    iget-object v2, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->pkTime_:Ljava/lang/Object;
+
+    invoke-static {p1, v2}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;->access$5402(Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;Ljava/lang/Object;)Ljava/lang/Object;
+
+    or-int/lit8 v1, v1, 0x8
+
+    :cond_3
+    and-int/lit8 v2, v0, 0x10
+
+    if-eqz v2, :cond_4
+
+    iget-object v2, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->now_:Ljava/lang/Object;
+
+    invoke-static {p1, v2}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;->access$5502(Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;Ljava/lang/Object;)Ljava/lang/Object;
+
+    or-int/lit8 v1, v1, 0x10
+
+    :cond_4
+    and-int/lit8 v2, v0, 0x20
+
+    if-eqz v2, :cond_5
+
+    iget-object v2, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->pkEnd_:Ljava/lang/Object;
+
+    invoke-static {p1, v2}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;->access$5602(Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;Ljava/lang/Object;)Ljava/lang/Object;
+
+    or-int/lit8 v1, v1, 0x20
+
+    :cond_5
+    and-int/lit8 v0, v0, 0x40
+
+    if-eqz v0, :cond_6
+
+    iget v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->status_:I
+
+    invoke-static {p1, v0}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;->access$5702(Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;I)I
+
+    or-int/lit8 v1, v1, 0x40
+
+    :cond_6
+    invoke-static {p1, v1}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;->access$5876(Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;I)I
+
+    return-void
+.end method
+
+.method public static final getDescriptor()Lcom/google/protobuf/Descriptors$Descriptor;
+    .locals 1
+
+    invoke-static {}, Lcom/star/livegames/ws/protobuf/entity/PKProto;->access$4600()Lcom/google/protobuf/Descriptors$Descriptor;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public bridge synthetic addRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            "field",
+            "value"
+        }
+    .end annotation
+
+    invoke-virtual {p0, p1, p2}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->addRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public bridge synthetic addRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/Message$Builder;
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            "field",
+            "value"
+        }
+    .end annotation
+
+    invoke-virtual {p0, p1, p2}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->addRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public addRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "field",
+            "value"
+        }
+    .end annotation
+
+    invoke-super {p0, p1, p2}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->addRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+
+    return-object p1
+.end method
+
+.method public bridge synthetic build()Lcom/google/protobuf/Message;
+    .locals 1
+
+    invoke-virtual {p0}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->build()Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public bridge synthetic build()Lcom/google/protobuf/MessageLite;
+    .locals 1
+
+    invoke-virtual {p0}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->build()Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public build()Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;
+    .locals 2
+
+    invoke-virtual {p0}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->buildPartial()Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;->isInitialized()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    return-object v0
+
+    :cond_0
+    invoke-static {v0}, Lcom/google/protobuf/AbstractMessage$Builder;->newUninitializedMessageException(Lcom/google/protobuf/Message;)Lcom/google/protobuf/UninitializedMessageException;
+
+    move-result-object v0
+
+    throw v0
+.end method
+
+.method public bridge synthetic buildPartial()Lcom/google/protobuf/Message;
+    .locals 1
+
+    invoke-virtual {p0}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->buildPartial()Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public bridge synthetic buildPartial()Lcom/google/protobuf/MessageLite;
+    .locals 1
+
+    invoke-virtual {p0}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->buildPartial()Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public buildPartial()Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;
+    .locals 2
+
+    new-instance v0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, v1}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;-><init>(Lcom/google/protobuf/GeneratedMessageV3$Builder;Lcom/star/livegames/ws/protobuf/entity/PKProto$1;)V
+
+    iget v1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    if-eqz v1, :cond_0
+
+    invoke-direct {p0, v0}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->buildPartial0(Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;)V
+
+    :cond_0
+    invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->onBuilt()V
+
+    return-object v0
+.end method
+
+.method public bridge synthetic clear()Lcom/google/protobuf/AbstractMessage$Builder;
+    .locals 1
+
+    invoke-virtual {p0}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->clear()Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public bridge synthetic clear()Lcom/google/protobuf/GeneratedMessageV3$Builder;
+    .locals 1
+
+    invoke-virtual {p0}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->clear()Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public bridge synthetic clear()Lcom/google/protobuf/Message$Builder;
+    .locals 1
+
+    invoke-virtual {p0}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->clear()Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public bridge synthetic clear()Lcom/google/protobuf/MessageLite$Builder;
+    .locals 1
+
+    invoke-virtual {p0}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->clear()Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public clear()Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+    .locals 2
+
+    invoke-super {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clear()Lcom/google/protobuf/GeneratedMessageV3$Builder;
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    const-string v1, ""
+
+    iput-object v1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->pkType_:Ljava/lang/Object;
+
+    iput-boolean v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->pkReply_:Z
+
+    iput-object v1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->pkStart_:Ljava/lang/Object;
+
+    iput-object v1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->pkTime_:Ljava/lang/Object;
+
+    iput-object v1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->now_:Ljava/lang/Object;
+
+    iput-object v1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->pkEnd_:Ljava/lang/Object;
+
+    iput v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->status_:I
+
+    return-object p0
+.end method
+
+.method public bridge synthetic clearField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000
+        }
+        names = {
+            "field"
+        }
+    .end annotation
+
+    invoke-virtual {p0, p1}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->clearField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public bridge synthetic clearField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Lcom/google/protobuf/Message$Builder;
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000
+        }
+        names = {
+            "field"
+        }
+    .end annotation
+
+    invoke-virtual {p0, p1}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->clearField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public clearField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "field"
+        }
+    .end annotation
+
+    invoke-super {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clearField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+
+    return-object p1
+.end method
+
+.method public clearNow()Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+    .locals 1
+
+    invoke-static {}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;->getDefaultInstance()Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;->getNow()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->now_:Ljava/lang/Object;
+
+    iget v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    and-int/lit8 v0, v0, -0x11
+
+    iput v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->onChanged()V
+
+    return-object p0
+.end method
+
+.method public bridge synthetic clearOneof(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/google/protobuf/AbstractMessage$Builder;
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000
+        }
+        names = {
+            "oneof"
+        }
+    .end annotation
+
+    invoke-virtual {p0, p1}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->clearOneof(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public bridge synthetic clearOneof(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000
+        }
+        names = {
+            "oneof"
+        }
+    .end annotation
+
+    invoke-virtual {p0, p1}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->clearOneof(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public bridge synthetic clearOneof(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/google/protobuf/Message$Builder;
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000
+        }
+        names = {
+            "oneof"
+        }
+    .end annotation
+
+    invoke-virtual {p0, p1}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->clearOneof(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public clearOneof(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "oneof"
+        }
+    .end annotation
+
+    invoke-super {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clearOneof(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+
+    return-object p1
+.end method
+
+.method public clearPkEnd()Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+    .locals 1
+
+    invoke-static {}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;->getDefaultInstance()Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;->getPkEnd()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->pkEnd_:Ljava/lang/Object;
+
+    iget v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    and-int/lit8 v0, v0, -0x21
+
+    iput v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->onChanged()V
+
+    return-object p0
+.end method
+
+.method public clearPkReply()Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+    .locals 1
+
+    iget v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    and-int/lit8 v0, v0, -0x3
+
+    iput v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->pkReply_:Z
+
+    invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->onChanged()V
+
+    return-object p0
+.end method
+
+.method public clearPkStart()Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+    .locals 1
+
+    invoke-static {}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;->getDefaultInstance()Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;->getPkStart()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->pkStart_:Ljava/lang/Object;
+
+    iget v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    and-int/lit8 v0, v0, -0x5
+
+    iput v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->onChanged()V
+
+    return-object p0
+.end method
+
+.method public clearPkTime()Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+    .locals 1
+
+    invoke-static {}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;->getDefaultInstance()Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;->getPkTime()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->pkTime_:Ljava/lang/Object;
+
+    iget v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    and-int/lit8 v0, v0, -0x9
+
+    iput v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->onChanged()V
+
+    return-object p0
+.end method
+
+.method public clearPkType()Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+    .locals 1
+
+    invoke-static {}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;->getDefaultInstance()Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;->getPkType()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->pkType_:Ljava/lang/Object;
+
+    iget v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    and-int/lit8 v0, v0, -0x2
+
+    iput v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->onChanged()V
+
+    return-object p0
+.end method
+
+.method public clearStatus()Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+    .locals 1
+
+    iget v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    and-int/lit8 v0, v0, -0x41
+
+    iput v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->status_:I
+
+    invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->onChanged()V
+
+    return-object p0
+.end method
+
+.method public bridge synthetic clone()Lcom/google/protobuf/AbstractMessage$Builder;
+    .locals 1
+
+    invoke-virtual {p0}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->clone()Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public bridge synthetic clone()Lcom/google/protobuf/AbstractMessageLite$Builder;
+    .locals 1
+
+    invoke-virtual {p0}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->clone()Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public bridge synthetic clone()Lcom/google/protobuf/GeneratedMessageV3$Builder;
+    .locals 1
+
+    invoke-virtual {p0}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->clone()Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public bridge synthetic clone()Lcom/google/protobuf/Message$Builder;
+    .locals 1
+
+    invoke-virtual {p0}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->clone()Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public bridge synthetic clone()Lcom/google/protobuf/MessageLite$Builder;
+    .locals 1
+
+    invoke-virtual {p0}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->clone()Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public clone()Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+    .locals 1
+
+    invoke-super {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clone()Lcom/google/protobuf/GeneratedMessageV3$Builder;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+
+    return-object v0
+.end method
+
+.method public bridge synthetic clone()Ljava/lang/Object;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/CloneNotSupportedException;
+        }
+    .end annotation
+
+    invoke-virtual {p0}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->clone()Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public bridge synthetic getDefaultInstanceForType()Lcom/google/protobuf/Message;
+    .locals 1
+
+    invoke-virtual {p0}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->getDefaultInstanceForType()Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public bridge synthetic getDefaultInstanceForType()Lcom/google/protobuf/MessageLite;
+    .locals 1
+
+    invoke-virtual {p0}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->getDefaultInstanceForType()Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getDefaultInstanceForType()Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;
+    .locals 1
+
+    invoke-static {}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;->getDefaultInstance()Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getDescriptorForType()Lcom/google/protobuf/Descriptors$Descriptor;
+    .locals 1
+
+    invoke-static {}, Lcom/star/livegames/ws/protobuf/entity/PKProto;->access$4600()Lcom/google/protobuf/Descriptors$Descriptor;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getNow()Ljava/lang/String;
+    .locals 2
+
+    iget-object v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->now_:Ljava/lang/Object;
+
+    instance-of v1, v0, Ljava/lang/String;
+
+    if-nez v1, :cond_0
+
+    check-cast v0, Lcom/google/protobuf/ByteString;
+
+    invoke-virtual {v0}, Lcom/google/protobuf/ByteString;->toStringUtf8()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->now_:Ljava/lang/Object;
+
+    return-object v0
+
+    :cond_0
+    check-cast v0, Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getNowBytes()Lcom/google/protobuf/ByteString;
+    .locals 2
+
+    iget-object v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->now_:Ljava/lang/Object;
+
+    instance-of v1, v0, Ljava/lang/String;
+
+    if-eqz v1, :cond_0
+
+    check-cast v0, Ljava/lang/String;
+
+    invoke-static {v0}, Lcom/google/protobuf/ByteString;->copyFromUtf8(Ljava/lang/String;)Lcom/google/protobuf/ByteString;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->now_:Ljava/lang/Object;
+
+    return-object v0
+
+    :cond_0
+    check-cast v0, Lcom/google/protobuf/ByteString;
+
+    return-object v0
+.end method
+
+.method public getPkEnd()Ljava/lang/String;
+    .locals 2
+
+    iget-object v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->pkEnd_:Ljava/lang/Object;
+
+    instance-of v1, v0, Ljava/lang/String;
+
+    if-nez v1, :cond_0
+
+    check-cast v0, Lcom/google/protobuf/ByteString;
+
+    invoke-virtual {v0}, Lcom/google/protobuf/ByteString;->toStringUtf8()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->pkEnd_:Ljava/lang/Object;
+
+    return-object v0
+
+    :cond_0
+    check-cast v0, Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getPkEndBytes()Lcom/google/protobuf/ByteString;
+    .locals 2
+
+    iget-object v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->pkEnd_:Ljava/lang/Object;
+
+    instance-of v1, v0, Ljava/lang/String;
+
+    if-eqz v1, :cond_0
+
+    check-cast v0, Ljava/lang/String;
+
+    invoke-static {v0}, Lcom/google/protobuf/ByteString;->copyFromUtf8(Ljava/lang/String;)Lcom/google/protobuf/ByteString;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->pkEnd_:Ljava/lang/Object;
+
+    return-object v0
+
+    :cond_0
+    check-cast v0, Lcom/google/protobuf/ByteString;
+
+    return-object v0
+.end method
+
+.method public getPkReply()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->pkReply_:Z
+
+    return v0
+.end method
+
+.method public getPkStart()Ljava/lang/String;
+    .locals 2
+
+    iget-object v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->pkStart_:Ljava/lang/Object;
+
+    instance-of v1, v0, Ljava/lang/String;
+
+    if-nez v1, :cond_0
+
+    check-cast v0, Lcom/google/protobuf/ByteString;
+
+    invoke-virtual {v0}, Lcom/google/protobuf/ByteString;->toStringUtf8()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->pkStart_:Ljava/lang/Object;
+
+    return-object v0
+
+    :cond_0
+    check-cast v0, Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getPkStartBytes()Lcom/google/protobuf/ByteString;
+    .locals 2
+
+    iget-object v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->pkStart_:Ljava/lang/Object;
+
+    instance-of v1, v0, Ljava/lang/String;
+
+    if-eqz v1, :cond_0
+
+    check-cast v0, Ljava/lang/String;
+
+    invoke-static {v0}, Lcom/google/protobuf/ByteString;->copyFromUtf8(Ljava/lang/String;)Lcom/google/protobuf/ByteString;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->pkStart_:Ljava/lang/Object;
+
+    return-object v0
+
+    :cond_0
+    check-cast v0, Lcom/google/protobuf/ByteString;
+
+    return-object v0
+.end method
+
+.method public getPkTime()Ljava/lang/String;
+    .locals 2
+
+    iget-object v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->pkTime_:Ljava/lang/Object;
+
+    instance-of v1, v0, Ljava/lang/String;
+
+    if-nez v1, :cond_0
+
+    check-cast v0, Lcom/google/protobuf/ByteString;
+
+    invoke-virtual {v0}, Lcom/google/protobuf/ByteString;->toStringUtf8()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->pkTime_:Ljava/lang/Object;
+
+    return-object v0
+
+    :cond_0
+    check-cast v0, Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getPkTimeBytes()Lcom/google/protobuf/ByteString;
+    .locals 2
+
+    iget-object v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->pkTime_:Ljava/lang/Object;
+
+    instance-of v1, v0, Ljava/lang/String;
+
+    if-eqz v1, :cond_0
+
+    check-cast v0, Ljava/lang/String;
+
+    invoke-static {v0}, Lcom/google/protobuf/ByteString;->copyFromUtf8(Ljava/lang/String;)Lcom/google/protobuf/ByteString;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->pkTime_:Ljava/lang/Object;
+
+    return-object v0
+
+    :cond_0
+    check-cast v0, Lcom/google/protobuf/ByteString;
+
+    return-object v0
+.end method
+
+.method public getPkType()Ljava/lang/String;
+    .locals 2
+
+    iget-object v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->pkType_:Ljava/lang/Object;
+
+    instance-of v1, v0, Ljava/lang/String;
+
+    if-nez v1, :cond_0
+
+    check-cast v0, Lcom/google/protobuf/ByteString;
+
+    invoke-virtual {v0}, Lcom/google/protobuf/ByteString;->toStringUtf8()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->pkType_:Ljava/lang/Object;
+
+    return-object v0
+
+    :cond_0
+    check-cast v0, Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getPkTypeBytes()Lcom/google/protobuf/ByteString;
+    .locals 2
+
+    iget-object v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->pkType_:Ljava/lang/Object;
+
+    instance-of v1, v0, Ljava/lang/String;
+
+    if-eqz v1, :cond_0
+
+    check-cast v0, Ljava/lang/String;
+
+    invoke-static {v0}, Lcom/google/protobuf/ByteString;->copyFromUtf8(Ljava/lang/String;)Lcom/google/protobuf/ByteString;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->pkType_:Ljava/lang/Object;
+
+    return-object v0
+
+    :cond_0
+    check-cast v0, Lcom/google/protobuf/ByteString;
+
+    return-object v0
+.end method
+
+.method public getStatus()I
+    .locals 1
+
+    iget v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->status_:I
+
+    return v0
+.end method
+
+.method public hasNow()Z
+    .locals 1
+
+    iget v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    and-int/lit8 v0, v0, 0x10
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+.end method
+
+.method public hasPkEnd()Z
+    .locals 1
+
+    iget v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    and-int/lit8 v0, v0, 0x20
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+.end method
+
+.method public hasPkReply()Z
+    .locals 1
+
+    iget v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    and-int/lit8 v0, v0, 0x2
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+.end method
+
+.method public hasPkStart()Z
+    .locals 1
+
+    iget v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    and-int/lit8 v0, v0, 0x4
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+.end method
+
+.method public hasPkTime()Z
+    .locals 1
+
+    iget v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    and-int/lit8 v0, v0, 0x8
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+.end method
+
+.method public hasPkType()Z
+    .locals 2
+
+    iget v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    const/4 v1, 0x1
+
+    and-int/2addr v0, v1
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    return v1
+.end method
+
+.method public hasStatus()Z
+    .locals 1
+
+    iget v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    and-int/lit8 v0, v0, 0x40
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+.end method
+
+.method protected internalGetFieldAccessorTable()Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
+    .locals 3
+
+    invoke-static {}, Lcom/star/livegames/ws/protobuf/entity/PKProto;->access$4700()Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
+
+    move-result-object v0
+
+    const-class v1, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;
+
+    const-class v2, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+
+    invoke-virtual {v0, v1, v2}, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;->ensureFieldAccessorsInitialized(Ljava/lang/Class;Ljava/lang/Class;)Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final isInitialized()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public bridge synthetic mergeFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/AbstractMessage$Builder;
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            "input",
+            "extensionRegistry"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    invoke-virtual {p0, p1, p2}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->mergeFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public bridge synthetic mergeFrom(Lcom/google/protobuf/Message;)Lcom/google/protobuf/AbstractMessage$Builder;
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000
+        }
+        names = {
+            "other"
+        }
+    .end annotation
+
+    invoke-virtual {p0, p1}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->mergeFrom(Lcom/google/protobuf/Message;)Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public bridge synthetic mergeFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/AbstractMessageLite$Builder;
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            "input",
+            "extensionRegistry"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    invoke-virtual {p0, p1, p2}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->mergeFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public bridge synthetic mergeFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/Message$Builder;
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            "input",
+            "extensionRegistry"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    invoke-virtual {p0, p1, p2}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->mergeFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public bridge synthetic mergeFrom(Lcom/google/protobuf/Message;)Lcom/google/protobuf/Message$Builder;
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000
+        }
+        names = {
+            "other"
+        }
+    .end annotation
+
+    invoke-virtual {p0, p1}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->mergeFrom(Lcom/google/protobuf/Message;)Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public bridge synthetic mergeFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/MessageLite$Builder;
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            "input",
+            "extensionRegistry"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    invoke-virtual {p0, p1, p2}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->mergeFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public mergeFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+    .locals 5
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "input",
+            "extensionRegistry"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v0, 0x0
+
+    :cond_0
+    :goto_0
+    if-nez v0, :cond_9
+
+    :try_start_0
+    invoke-virtual {p1}, Lcom/google/protobuf/CodedInputStream;->readTag()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    if-eqz v1, :cond_8
+
+    const/16 v3, 0xa
+
+    if-eq v1, v3, :cond_7
+
+    const/16 v3, 0x10
+
+    if-eq v1, v3, :cond_6
+
+    const/16 v4, 0x1a
+
+    if-eq v1, v4, :cond_5
+
+    const/16 v4, 0x22
+
+    if-eq v1, v4, :cond_4
+
+    const/16 v4, 0x2a
+
+    if-eq v1, v4, :cond_3
+
+    const/16 v3, 0x32
+
+    if-eq v1, v3, :cond_2
+
+    const/16 v3, 0x38
+
+    if-eq v1, v3, :cond_1
+
+    invoke-super {p0, p1, p2, v1}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->parseUnknownField(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;I)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {p1}, Lcom/google/protobuf/CodedInputStream;->readUInt32()I
+
+    move-result v1
+
+    iput v1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->status_:I
+
+    iget v1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    or-int/lit8 v1, v1, 0x40
+
+    iput v1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {p1}, Lcom/google/protobuf/CodedInputStream;->readStringRequireUtf8()Ljava/lang/String;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->pkEnd_:Ljava/lang/Object;
+
+    iget v1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    or-int/lit8 v1, v1, 0x20
+
+    iput v1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    goto :goto_0
+
+    :cond_3
+    invoke-virtual {p1}, Lcom/google/protobuf/CodedInputStream;->readStringRequireUtf8()Ljava/lang/String;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->now_:Ljava/lang/Object;
+
+    iget v1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    or-int/2addr v1, v3
+
+    iput v1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    goto :goto_0
+
+    :cond_4
+    invoke-virtual {p1}, Lcom/google/protobuf/CodedInputStream;->readStringRequireUtf8()Ljava/lang/String;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->pkTime_:Ljava/lang/Object;
+
+    iget v1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    or-int/lit8 v1, v1, 0x8
+
+    iput v1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    goto :goto_0
+
+    :cond_5
+    invoke-virtual {p1}, Lcom/google/protobuf/CodedInputStream;->readStringRequireUtf8()Ljava/lang/String;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->pkStart_:Ljava/lang/Object;
+
+    iget v1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    or-int/lit8 v1, v1, 0x4
+
+    iput v1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    goto :goto_0
+
+    :cond_6
+    invoke-virtual {p1}, Lcom/google/protobuf/CodedInputStream;->readBool()Z
+
+    move-result v1
+
+    iput-boolean v1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->pkReply_:Z
+
+    iget v1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    or-int/lit8 v1, v1, 0x2
+
+    iput v1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    goto :goto_0
+
+    :cond_7
+    invoke-virtual {p1}, Lcom/google/protobuf/CodedInputStream;->readStringRequireUtf8()Ljava/lang/String;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->pkType_:Ljava/lang/Object;
+
+    iget v1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    or-int/2addr v1, v2
+
+    iput v1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+    :try_end_0
+    .catch Lcom/google/protobuf/InvalidProtocolBufferException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto/16 :goto_0
+
+    :cond_8
+    :goto_1
+    move v0, v2
+
+    goto/16 :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_2
+
+    :catch_0
+    move-exception p1
+
+    :try_start_1
+    invoke-virtual {p1}, Lcom/google/protobuf/InvalidProtocolBufferException;->unwrapIOException()Ljava/io/IOException;
+
+    move-result-object p1
+
+    throw p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :goto_2
+    invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->onChanged()V
+
+    throw p1
+
+    :cond_9
+    invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->onChanged()V
+
+    return-object p0
+.end method
+
+.method public mergeFrom(Lcom/google/protobuf/Message;)Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "other"
+        }
+    .end annotation
+
+    instance-of v0, p1, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;
+
+    invoke-virtual {p0, p1}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->mergeFrom(Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;)Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_0
+    invoke-super {p0, p1}, Lcom/google/protobuf/AbstractMessage$Builder;->mergeFrom(Lcom/google/protobuf/Message;)Lcom/google/protobuf/AbstractMessage$Builder;
+
+    return-object p0
+.end method
+
+.method public mergeFrom(Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;)Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "other"
+        }
+    .end annotation
+
+    invoke-static {}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;->getDefaultInstance()Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;
+
+    move-result-object v0
+
+    if-ne p1, v0, :cond_0
+
+    return-object p0
+
+    :cond_0
+    invoke-virtual {p1}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;->hasPkType()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-static {p1}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;->access$5100(Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->pkType_:Ljava/lang/Object;
+
+    iget v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    or-int/lit8 v0, v0, 0x1
+
+    iput v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->onChanged()V
+
+    :cond_1
+    invoke-virtual {p1}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;->hasPkReply()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {p1}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;->getPkReply()Z
+
+    move-result v0
+
+    invoke-virtual {p0, v0}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->setPkReply(Z)Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+
+    :cond_2
+    invoke-virtual {p1}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;->hasPkStart()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    invoke-static {p1}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;->access$5300(Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->pkStart_:Ljava/lang/Object;
+
+    iget v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    or-int/lit8 v0, v0, 0x4
+
+    iput v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->onChanged()V
+
+    :cond_3
+    invoke-virtual {p1}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;->hasPkTime()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    invoke-static {p1}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;->access$5400(Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->pkTime_:Ljava/lang/Object;
+
+    iget v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    or-int/lit8 v0, v0, 0x8
+
+    iput v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->onChanged()V
+
+    :cond_4
+    invoke-virtual {p1}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;->hasNow()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    invoke-static {p1}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;->access$5500(Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->now_:Ljava/lang/Object;
+
+    iget v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    or-int/lit8 v0, v0, 0x10
+
+    iput v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->onChanged()V
+
+    :cond_5
+    invoke-virtual {p1}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;->hasPkEnd()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_6
+
+    invoke-static {p1}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;->access$5600(Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->pkEnd_:Ljava/lang/Object;
+
+    iget v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    or-int/lit8 v0, v0, 0x20
+
+    iput v0, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->onChanged()V
+
+    :cond_6
+    invoke-virtual {p1}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;->hasStatus()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_7
+
+    invoke-virtual {p1}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;->getStatus()I
+
+    move-result v0
+
+    invoke-virtual {p0, v0}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->setStatus(I)Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+
+    :cond_7
+    invoke-virtual {p1}, Lcom/google/protobuf/GeneratedMessageV3;->getUnknownFields()Lcom/google/protobuf/UnknownFieldSet;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->mergeUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+
+    invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->onChanged()V
+
+    return-object p0
+.end method
+
+.method public bridge synthetic mergeUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/AbstractMessage$Builder;
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1010
+        }
+        names = {
+            "unknownFields"
+        }
+    .end annotation
+
+    invoke-virtual {p0, p1}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->mergeUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public bridge synthetic mergeUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1010
+        }
+        names = {
+            "unknownFields"
+        }
+    .end annotation
+
+    invoke-virtual {p0, p1}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->mergeUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public bridge synthetic mergeUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/Message$Builder;
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1010
+        }
+        names = {
+            "unknownFields"
+        }
+    .end annotation
+
+    invoke-virtual {p0, p1}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->mergeUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final mergeUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x10
+        }
+        names = {
+            "unknownFields"
+        }
+    .end annotation
+
+    invoke-super {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->mergeUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+
+    return-object p1
+.end method
+
+.method public bridge synthetic setField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            "field",
+            "value"
+        }
+    .end annotation
+
+    invoke-virtual {p0, p1, p2}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->setField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public bridge synthetic setField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/Message$Builder;
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            "field",
+            "value"
+        }
+    .end annotation
+
+    invoke-virtual {p0, p1, p2}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->setField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public setField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "field",
+            "value"
+        }
+    .end annotation
+
+    invoke-super {p0, p1, p2}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->setField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+
+    return-object p1
+.end method
+
+.method public setNow(Ljava/lang/String;)Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "value"
+        }
+    .end annotation
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iput-object p1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->now_:Ljava/lang/Object;
+
+    iget p1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    or-int/lit8 p1, p1, 0x10
+
+    iput p1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->onChanged()V
+
+    return-object p0
+.end method
+
+.method public setNowBytes(Lcom/google/protobuf/ByteString;)Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "value"
+        }
+    .end annotation
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {p1}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;->access$6200(Lcom/google/protobuf/ByteString;)V
+
+    iput-object p1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->now_:Ljava/lang/Object;
+
+    iget p1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    or-int/lit8 p1, p1, 0x10
+
+    iput p1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->onChanged()V
+
+    return-object p0
+.end method
+
+.method public setPkEnd(Ljava/lang/String;)Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "value"
+        }
+    .end annotation
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iput-object p1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->pkEnd_:Ljava/lang/Object;
+
+    iget p1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    or-int/lit8 p1, p1, 0x20
+
+    iput p1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->onChanged()V
+
+    return-object p0
+.end method
+
+.method public setPkEndBytes(Lcom/google/protobuf/ByteString;)Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "value"
+        }
+    .end annotation
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {p1}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;->access$6300(Lcom/google/protobuf/ByteString;)V
+
+    iput-object p1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->pkEnd_:Ljava/lang/Object;
+
+    iget p1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    or-int/lit8 p1, p1, 0x20
+
+    iput p1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->onChanged()V
+
+    return-object p0
+.end method
+
+.method public setPkReply(Z)Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "value"
+        }
+    .end annotation
+
+    iput-boolean p1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->pkReply_:Z
+
+    iget p1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    or-int/lit8 p1, p1, 0x2
+
+    iput p1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->onChanged()V
+
+    return-object p0
+.end method
+
+.method public setPkStart(Ljava/lang/String;)Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "value"
+        }
+    .end annotation
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iput-object p1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->pkStart_:Ljava/lang/Object;
+
+    iget p1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    or-int/lit8 p1, p1, 0x4
+
+    iput p1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->onChanged()V
+
+    return-object p0
+.end method
+
+.method public setPkStartBytes(Lcom/google/protobuf/ByteString;)Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "value"
+        }
+    .end annotation
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {p1}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;->access$6000(Lcom/google/protobuf/ByteString;)V
+
+    iput-object p1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->pkStart_:Ljava/lang/Object;
+
+    iget p1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    or-int/lit8 p1, p1, 0x4
+
+    iput p1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->onChanged()V
+
+    return-object p0
+.end method
+
+.method public setPkTime(Ljava/lang/String;)Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "value"
+        }
+    .end annotation
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iput-object p1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->pkTime_:Ljava/lang/Object;
+
+    iget p1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    or-int/lit8 p1, p1, 0x8
+
+    iput p1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->onChanged()V
+
+    return-object p0
+.end method
+
+.method public setPkTimeBytes(Lcom/google/protobuf/ByteString;)Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "value"
+        }
+    .end annotation
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {p1}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;->access$6100(Lcom/google/protobuf/ByteString;)V
+
+    iput-object p1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->pkTime_:Ljava/lang/Object;
+
+    iget p1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    or-int/lit8 p1, p1, 0x8
+
+    iput p1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->onChanged()V
+
+    return-object p0
+.end method
+
+.method public setPkType(Ljava/lang/String;)Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "value"
+        }
+    .end annotation
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iput-object p1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->pkType_:Ljava/lang/Object;
+
+    iget p1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    or-int/lit8 p1, p1, 0x1
+
+    iput p1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->onChanged()V
+
+    return-object p0
+.end method
+
+.method public setPkTypeBytes(Lcom/google/protobuf/ByteString;)Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "value"
+        }
+    .end annotation
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {p1}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult;->access$5900(Lcom/google/protobuf/ByteString;)V
+
+    iput-object p1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->pkType_:Ljava/lang/Object;
+
+    iget p1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    or-int/lit8 p1, p1, 0x1
+
+    iput p1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->onChanged()V
+
+    return-object p0
+.end method
+
+.method public bridge synthetic setRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;ILjava/lang/Object;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000,
+            0x1000
+        }
+        names = {
+            "field",
+            "index",
+            "value"
+        }
+    .end annotation
+
+    invoke-virtual {p0, p1, p2, p3}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->setRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;ILjava/lang/Object;)Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public bridge synthetic setRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;ILjava/lang/Object;)Lcom/google/protobuf/Message$Builder;
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000,
+            0x1000
+        }
+        names = {
+            "field",
+            "index",
+            "value"
+        }
+    .end annotation
+
+    invoke-virtual {p0, p1, p2, p3}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->setRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;ILjava/lang/Object;)Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public setRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;ILjava/lang/Object;)Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "field",
+            "index",
+            "value"
+        }
+    .end annotation
+
+    invoke-super {p0, p1, p2, p3}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->setRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;ILjava/lang/Object;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+
+    return-object p1
+.end method
+
+.method public setStatus(I)Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "value"
+        }
+    .end annotation
+
+    iput p1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->status_:I
+
+    iget p1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    or-int/lit8 p1, p1, 0x40
+
+    iput p1, p0, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->bitField0_:I
+
+    invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->onChanged()V
+
+    return-object p0
+.end method
+
+.method public bridge synthetic setUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1010
+        }
+        names = {
+            "unknownFields"
+        }
+    .end annotation
+
+    invoke-virtual {p0, p1}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->setUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public bridge synthetic setUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/Message$Builder;
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1010
+        }
+        names = {
+            "unknownFields"
+        }
+    .end annotation
+
+    invoke-virtual {p0, p1}, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;->setUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final setUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x10
+        }
+        names = {
+            "unknownFields"
+        }
+    .end annotation
+
+    invoke-super {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->setUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/star/livegames/ws/protobuf/entity/PKProto$PKReplyResult$Builder;
+
+    return-object p1
+.end method

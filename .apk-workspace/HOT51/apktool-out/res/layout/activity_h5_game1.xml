@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:tag="layout/activity_h5_game1_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.example.obs.player.ui.widget.CustomWebView android:id="@id/web_view" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.example.obs.player.ui.widget.CustomNativeWebView android:id="@id/webViewNative" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_menu" android:background="@drawable/bg_fab" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="37.0dip" android:layout_marginEnd="32.0dip" app:layout_constraintBottom_toBottomOf="@id/btn_switch" app:layout_constraintEnd_toEndOf="@id/btn_switch" app:layout_constraintTop_toTopOf="@id/btn_switch">
+        <ImageView android:id="@id/btn_refresh" android:layout_width="37.0dip" android:layout_height="37.0dip" android:src="@drawable/icon_conversion" />
+        <ImageView android:id="@id/btn_back" android:layout_width="37.0dip" android:layout_height="37.0dip" android:src="@drawable/icon_fab_back" />
+        <ImageView android:id="@id/btn_change" android:layout_width="37.0dip" android:layout_height="37.0dip" android:src="@drawable/h5refresh" android:layout_marginEnd="11.0dip" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_menu1" android:background="@drawable/bg_fab1" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="37.0dip" android:layout_marginStart="32.0dip" app:layout_constraintBottom_toBottomOf="@id/btn_switch" app:layout_constraintStart_toStartOf="@id/btn_switch" app:layout_constraintTop_toTopOf="@id/btn_switch">
+        <ImageView android:id="@id/btn_change1" android:layout_width="37.0dip" android:layout_height="37.0dip" android:src="@drawable/h5refresh" android:layout_marginStart="11.0dip" />
+        <ImageView android:id="@id/btn_back1" android:layout_width="37.0dip" android:layout_height="37.0dip" android:src="@drawable/icon_fab_back" />
+        <ImageView android:id="@id/btn_refresh1" android:layout_width="37.0dip" android:layout_height="37.0dip" android:src="@drawable/icon_conversion" />
+    </LinearLayout>
+    <ImageView android:id="@id/btn_switch" android:layout_width="48.0dip" android:layout_height="48.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <ImageView android:id="@id/btn_switch2" android:visibility="invisible" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/icon_fab_close" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

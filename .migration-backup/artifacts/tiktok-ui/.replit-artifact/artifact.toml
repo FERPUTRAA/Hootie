@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "TikTok UI"
+version = "1.0.0"
+id = "artifacts/tiktok-ui"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 20677
+
+[services.development]
+run = "pnpm --filter @workspace/tiktok-ui run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/tiktok-ui", "run", "build" ]
+publicDir = "artifacts/tiktok-ui/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "20677"
+BASE_PATH = "/"

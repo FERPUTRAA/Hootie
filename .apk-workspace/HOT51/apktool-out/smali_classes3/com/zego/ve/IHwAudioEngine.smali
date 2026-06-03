@@ -1,0 +1,41 @@
+.class interface abstract Lcom/zego/ve/IHwAudioEngine;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Landroid/os/IInterface;
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/zego/ve/IHwAudioEngine$Stub;
+    }
+.end annotation
+
+
+# virtual methods
+.method public abstract getSupportedFeatures()Ljava/util/List;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract init(Ljava/lang/String;Ljava/lang/String;)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;,
+            Ljava/lang/NullPointerException;
+        }
+    .end annotation
+.end method
+
+.method public abstract isFeatureSupported(I)Z
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method

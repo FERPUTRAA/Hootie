@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/layout" android:background="@drawable/shape_dialog_phone_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="10.0dip" android:layout_marginEnd="10.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <com.example.obs.player.ui.widget.qmui.AppTextView android:textSize="20.0sp" android:textColor="#ffff3b30" android:gravity="center" android:id="@id/dialog_bottom_photo_camera" android:layout_width="fill_parent" android:layout_height="57.0dip" app:resText="common.camera" />
+        <View android:background="#2108141f" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <com.example.obs.player.ui.widget.qmui.AppTextView android:textSize="20.0sp" android:textColor="#ff007aff" android:gravity="center" android:id="@id/dialog_bottom_photo_gallery" android:layout_width="fill_parent" android:layout_height="57.0dip" app:resText="common.album" />
+    </LinearLayout>
+    <com.example.obs.player.ui.widget.qmui.AppTextView android:textSize="20.0sp" android:textColor="#ff007aff" android:gravity="center" android:id="@id/dialog_bottom_photo_close" android:background="@drawable/shape_dialog_phone_bg" android:layout_width="fill_parent" android:layout_height="57.0dip" android:layout_marginTop="5.0dip" android:layout_marginBottom="10.0dip" android:layout_marginStart="10.0dip" android:layout_marginEnd="10.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/layout" app:resText="common.cancel" />
+</androidx.constraintlayout.widget.ConstraintLayout>

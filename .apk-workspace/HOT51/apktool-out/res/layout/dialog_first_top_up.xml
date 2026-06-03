@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/rootContainer" android:tag="layout/dialog_first_top_up_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.example.obs.player.ui.widget.MyWebView android:id="@id/webContent" android:layout_width="fill_parent" android:layout_height="@dimen/dp_720" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+        <ProgressBar android:id="@id/progressBar" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="?android:progressBarStyle" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/srl_classics_arrow" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginRight="20.0dip" android:layout_toLeftOf="@id/srl_classics_title" android:layout_centerVertical="true" android:contentDescription="@android:string/untitled" android:layout_marginEnd="20.0dip" android:layout_toStartOf="@id/srl_classics_title" />
+    <ImageView android:id="@id/srl_classics_progress" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginRight="20.0dip" android:layout_toLeftOf="@id/srl_classics_title" android:layout_centerVertical="true" android:contentDescription="@android:string/untitled" android:layout_marginEnd="20.0dip" android:layout_toStartOf="@id/srl_classics_title" />
+    <com.example.obs.player.ui.widget.qmui.AppTextView android:textSize="15.0sp" android:textColor="#ff666666" android:gravity="center_horizontal" android:id="@id/srl_classics_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:paddingStart="6.0dip" android:paddingEnd="6.0dip" app:resText="refresh.pullDown" />
+</merge>

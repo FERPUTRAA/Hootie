@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.drake.statelayout.StateLayout android:id="@id/state" android:tag="layout/activity_help_content_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:background="#fffafafc" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.example.obs.player.ui.widget.TitleBarView android:id="@id/title" android:background="@color/app_title_bar_color" android:layout_width="fill_parent" android:layout_height="@dimen/common_title_bar_height" app:defaultLeftIco="@drawable/black_back" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:title="UC.row.help" app:titleColor="@color/app_title_color" app:titleSize="@dimen/common_title_bar_font" />
+        <TextView android:textSize="14.0dip" android:textColor="@color/black" android:id="@id/tv" android:padding="4.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ViewStub android:id="@id/textView10" android:padding="4.0dip" android:layout="@layout/stub_webview" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+</com.drake.statelayout.StateLayout>

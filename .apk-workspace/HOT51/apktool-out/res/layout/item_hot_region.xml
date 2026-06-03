@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/cl_country_item_root" android:tag="layout/item_hot_region_0" android:layout_width="fill_parent" android:layout_height="@dimen/dp_56"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.example.obs.player.ui.widget.NiceImageView android:id="@id/iv_flag" android:tag="binding_1" android:layout_width="@dimen/dp_48" android:layout_height="@dimen/dp_32" android:scaleType="centerCrop" app:corner_radius="@dimen/dp_4" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <androidx.appcompat.widget.AppCompatTextView android:textSize="@dimen/sp_12" android:textColor="#ff212121" android:ellipsize="end" android:id="@id/tv_flag_name" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="@dimen/dp_70" android:singleLine="true" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_gravity="center_horizontal" android:id="@id/item" android:tag="layout/item_pay_channel_0" android:background="@drawable/selector_checkbox_stroke" android:layout_width="fill_parent" android:layout_height="@dimen/dp_40" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/image01" android:visibility="gone" android:layout_width="102.0dip" android:layout_height="32.0dip" android:layout_marginTop="12.0dip" android:src="@drawable/zhongzhi08" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/ivDiscount" android:tag="binding_1" android:background="@drawable/bg_recharge_discount" android:layout_width="wrap_content" android:layout_height="14.0dip" android:minWidth="37.0dip" android:layout_alignParentEnd="true">
+        <TextView android:textSize="10.0dip" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="center" android:id="@id/textView01" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="6.0dip" android:layout_marginEnd="6.0dip" />
+    </LinearLayout>
+    <TextView android:textSize="12.0dip" android:textColor="@drawable/selector_text_checkbox" android:ellipsize="middle" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/textView02" android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="fill_parent" android:singleLine="true" />
+</RelativeLayout>

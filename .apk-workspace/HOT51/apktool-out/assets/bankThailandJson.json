@@ -1,0 +1,110 @@
+[
+  {
+    "bankName": "BANGKOK BANK",
+    "bankImgUrl": "https://storage.googleapis.com/images-sg/bank/THA/BBL.png"
+  },
+  {
+    "bankName": "KASIKORNBANK",
+    "bankImgUrl": "https://storage.googleapis.com/images-sg/bank/THA/KKR.png"
+  },
+  {
+    "bankName": "THAI BANK",
+    "bankImgUrl": "https://storage.googleapis.com/images-sg/bank/THA/KTB.png"
+  },
+  {
+    "bankName": "TMBTHANACHART BANK",
+    "bankImgUrl": "https://storage.googleapis.com/images-sg/bank/THA/TTB.png"
+  },
+  {
+    "bankName": "THE SIAM COMMERCIAL BANK",
+    "bankImgUrl": "https://storage.googleapis.com/images-sg/bank/THA/SCB.png"
+  },
+  {
+    "bankName": "Standard Chartered",
+    "bankImgUrl": "https://storage.googleapis.com/images-sg/bank/THA/SCBT.png"
+  },
+  {
+    "bankName": "United Overseas Bank",
+    "bankImgUrl": "https://storage.googleapis.com/images-sg/bank/THA/UOB.png"
+  },
+  {
+    "bankName": "BANK OF AYUDHYA",
+    "bankImgUrl": "https://storage.googleapis.com/images-sg/bank/THA/BAY.png"
+  },
+  {
+    "bankName": "Government Savings Bank",
+    "bankImgUrl": "https://storage.googleapis.com/images-sg/bank/THA/GSB.png"
+  },
+  {
+    "bankName": "Export-Import Bank (Exim Bank)",
+    "bankImgUrl": "https://storage.googleapis.com/images-sg/bank/THA/EXIM.png"
+  },
+  {
+    "bankName": "TISCO Bank",
+    "bankImgUrl": "https://storage.googleapis.com/images-sg/bank/THA/TISCO.png"
+  },
+  {
+    "bankName": "KIATNAKIN PHATRA BANK",
+    "bankImgUrl": "https://storage.googleapis.com/images-sg/bank/THA/KKP.png"
+  },
+  {
+    "id": 60005,
+    "bankName": "BBL",
+    "bankImgUrl": "https://storage.googleapis.com/images-sg/bank/THA/BBL.png"
+  },
+  {
+    "id": 60006,
+    "bankName": "KBANK",
+    "bankImgUrl": "https://storage.googleapis.com/images-sg/bank/THA/KKR.png"
+  },
+  {
+    "id": 60007,
+    "bankName": "KTB",
+    "bankImgUrl": "https://storage.googleapis.com/images-sg/bank/THA/KTB.png"
+  },
+  {
+    "id": 60008,
+    "bankName": "TTB",
+    "bankImgUrl": "https://storage.googleapis.com/images-sg/bank/THA/TTB.png"
+  },
+  {
+    "id": 60009,
+    "bankName": "SCB",
+    "bankImgUrl": "https://storage.googleapis.com/images-sg/bank/THA/SCB.png"
+  },
+  {
+    "id": 60010,
+    "bankName": "SCBT",
+    "bankImgUrl": "https://storage.googleapis.com/images-sg/bank/THA/SCBT.png"
+  },
+  {
+    "id": 60011,
+    "bankName": "UOBT",
+    "bankImgUrl": "https://storage.googleapis.com/images-sg/bank/THA/UOB.png"
+  },
+  {
+    "id": 60012,
+    "bankName": "BAY",
+    "bankImgUrl": "https://storage.googleapis.com/images-sg/bank/THA/BAY.png"
+  },
+  {
+    "id": 60013,
+    "bankName": "GSB",
+    "bankImgUrl": "https://storage.googleapis.com/images-sg/bank/THA/GSB.png"
+  },
+  {
+    "id": 60014,
+    "bankName": "EXIM",
+    "bankImgUrl": "https://storage.googleapis.com/images-sg/bank/THA/EXIM.png"
+  },
+  {
+    "id": 60015,
+    "bankName": "TISCO",
+    "bankImgUrl": "https://storage.googleapis.com/images-sg/bank/THA/TISCO.png"
+  },
+  {
+    "id": 60016,
+    "bankName": "KKP",
+    "bankImgUrl": "https://storage.googleapis.com/images-sg/bank/THA/KKP.png"
+  }
+]

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/dialog_live_link_mcp_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/live_gift_bg" android:layout_width="fill_parent" android:layout_height="@dimen/dp_440">
+        <TextView android:textSize="@dimen/sp_18" android:textColor="@color/white" android:gravity="center" android:layout_width="fill_parent" android:layout_height="@dimen/dp_54" android:text="@string/common.application.list" android:fontFamily="sans-serif-medium" />
+        <View android:background="#14ffffff" android:layout_width="fill_parent" android:layout_height="@dimen/dp_0_5" />
+        <FrameLayout android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.drake.statelayout.StateLayout android:id="@id/state" android:layout_width="fill_parent" android:layout_height="fill_parent" app:empty_layout="@layout/layout_state_lianmai_empty">
+                <androidx.recyclerview.widget.RecyclerView android:id="@id/rv" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+            </com.drake.statelayout.StateLayout>
+            <include android:id="@id/statusEmpty" layout="@layout/layout_state_lianmai_empty" />
+        </FrameLayout>
+    </LinearLayout>
+</RelativeLayout>

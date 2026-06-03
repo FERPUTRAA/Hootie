@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/bg_dialog_filter_account_detail" android:paddingLeft="@dimen/dp_15" android:paddingRight="@dimen/dp_15" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingHorizontal="@dimen/dp_15"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/dp_54">
+        <TextView android:textSize="@dimen/sp_15" android:textColor="#ff212121" android:gravity="center" android:id="@id/cancelTv" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common.cancel" android:layout_centerVertical="true" />
+        <TextView android:textSize="14.0sp" android:textColor="#ff0d0143" android:gravity="center" android:id="@id/selectDateTv" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/picker.date" android:layout_centerInParent="true" />
+        <TextView android:textSize="@dimen/sp_15" android:textColor="#fffe2c55" android:gravity="center" android:id="@id/finishTv" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common.done" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <View android:background="#fff5f5f5" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/timepicker" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="44.0dip" android:layout_marginBottom="44.0dip" android:minHeight="124.0dip">
+        <com.example.obs.player.ui.widget.SelfWheelView android:id="@id/year" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <com.example.obs.player.ui.widget.SelfWheelView android:id="@id/month" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.1" />
+        <com.example.obs.player.ui.widget.SelfWheelView android:id="@id/day" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.1" />
+        <com.example.obs.player.ui.widget.SelfWheelView android:id="@id/hour" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.1" />
+        <com.example.obs.player.ui.widget.SelfWheelView android:id="@id/min" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.1" />
+        <com.example.obs.player.ui.widget.SelfWheelView android:id="@id/second" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.1" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:tag="layout/activity_currency_select_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.example.obs.player.ui.widget.TitleBarView android:id="@id/title" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="50.0dip" app:defaultLeftIco="@drawable/black_back" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:rightTextColor="#ff262628" app:rightTextSize="14.0sp" app:title="user.use.currency" app:titleColor="@color/title_color" app:titleSize="16.0sp" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/rv" android:paddingLeft="@dimen/dp_12" android:paddingRight="@dimen/dp_12" android:layout_width="fill_parent" android:layout_height="0.0dip" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@id/title" />
+</androidx.constraintlayout.widget.ConstraintLayout>

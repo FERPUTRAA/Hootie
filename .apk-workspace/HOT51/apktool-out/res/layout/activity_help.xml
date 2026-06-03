@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="layout/activity_help_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:background="@color/activity_bg" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.example.obs.player.ui.widget.TitleBarView android:id="@id/title" android:background="@color/app_title_bar_color" android:layout_width="fill_parent" android:layout_height="@dimen/common_title_bar_height" app:defaultLeftIco="@drawable/black_back" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:title="UC.row.help" app:titleColor="@color/app_title_color" app:titleSize="@dimen/common_title_bar_font" />
+        <com.drake.statelayout.StateLayout android:id="@id/state" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <androidx.recyclerview.widget.RecyclerView android:layout_gravity="center_horizontal" android:id="@id/rv" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:overScrollMode="never" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+        </com.drake.statelayout.StateLayout>
+    </LinearLayout>
+</FrameLayout>

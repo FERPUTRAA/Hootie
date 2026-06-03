@@ -1,0 +1,563 @@
+POST /g/collect?v=2&tid=G-1DTX7D4FHE&gtm=45je65r2v886650514za200zd886650514&_p=1780038871765&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAAQ&ae=a&are=1&cid=1344145199.1780038657&frm=0&pscdl=noapi&rcb=17&sr=501x1114&uaa=&uab=&uafvl=&uam=&uamb=1&uap=Android&uapv=&uaw=0&ul=id-id&_s=2&tag_exp=0~115616986~115938465~115938469~119034491~119064971&sid=1780038657&sct=1&seg=1&dl=https%3A%2F%2Fjable.tv%2Fvideos%2Fjur-737%2F&dr=https%3A%2F%2Fjable.tv%2F&dt=JUR-737%20%E7%AA%93%E9%9A%9B%E5%AF%86%E7%9D%80%E7%97%B4%E2%97%8F%20%E9%80%9A%E5%8B%A4%E4%B8%AD%E3%81%AB%E5%85%A8%E8%BA%AB%E3%82%92%E5%BC%84%E3%81%B0%E3%82%8C%E7%B6%9A%E3%81%91%20%E5%BF%AB%E6%A5%BD%E5%A0%95%E3%81%A1%E3%81%95%E3%81%9B%E3%82%89%E3%82%8C%E3%81%9F%E7%A7%81%E3%81%AF%20%E4%BB%8A%E6%97%A5%E3%82%82%E8%BA%AB%E4%BD%93%E3%82%92%E5%B7%AE%E3%81%97%E5%87%BA%E3%81%97%E3%81%A6%E2%80%95%E3%80%82%20%E3%83%AA%E3%82%A2%E3%83%AB%E6%84%9F%E3%82%92%E8%BF%BD%E6%B1%82%E3%81%97%E3%81%9F%E5%A4%9A%E8%A7%92%E5%BA%A6%E6%8E%A5%E5%86%99%E3%82%92%E5%90%8C%E6%99%82%E5%B1%95%E9%96%8B%E3%81%99%E3%82%8B%E7%97%B4%E2%97%8F%E3%82%A2%E3%83%B3%E3%82%B0%E3%83%AB%E3%82%82%E5%8F%8E%E9%8C%B2%EF%BC%81%EF%BC%81%20%E6%9C%A8%E6%9D%91%E7%8E%B2%E8%A1%A3%20-%20Jable.TV%20%7C%20%E5%85%8D%E8%B2%BB%E9%AB%98%E6%B8%85AV%E5%9C%A8%E7%B7%9A%E7%9C%8B%20%7C%20J%E7%89%87%20AV%E7%9C%8B%E5%88%B0%E9%A3%BD&en=scroll&epn.percent_scrolled=90&_et=67&tfd=6526 HTTP/1.1
+Host: www.google-analytics.com
+Connection: keep-alive
+Content-Length: 0
+Pragma: no-cache
+Cache-Control: no-cache
+sec-ch-ua-platform: "Android"
+User-Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Stargon/6.3.2 Chrome/148.0.7778.120 Mobile Safari/537.36
+sec-ch-ua: "Chromium";v="148", "Android WebView";v="148", "Not/A)Brand";v="99"
+sec-ch-ua-mobile: ?1
+Accept: */*
+Origin: https://jable.tv
+X-Requested-With: net.onecook.browser
+Sec-Fetch-Site: cross-site
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: empty
+Sec-Fetch-Storage-Access: active
+Referer: https://jable.tv/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+
+
+
+GET /contents/videos_screenshots/59000/59365/preview.jpg HTTP/1.1
+Host: assets-cdn.jable.tv
+Connection: keep-alive
+sec-ch-ua-platform: "Android"
+User-Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Stargon/6.3.2 Chrome/148.0.7778.120 Mobile Safari/537.36
+sec-ch-ua: "Chromium";v="148", "Android WebView";v="148", "Not/A)Brand";v="99"
+sec-ch-ua-mobile: ?1
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Cookie: PHPSESSID=uq4dk6rfdhn24ec622s7gmdibj; kt_ips=2400%3A9800%3A970%3Ad6bb%3Abf0c%3A9495%3A17f9%3A7d1; _ga=GA1.1.1344145199.1780038657; _ga_1DTX7D4FHE=GS2.1.s1780038657$o1$g1$t1780038736$j42$l0$h0
+X-Requested-With: net.onecook.browser
+Sec-Fetch-Site: same-site
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: https://jable.tv/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+
+
+GET / HTTP/1.1
+Host: jable.tv
+Connection: keep-alive
+Cache-Control: max-age=0
+sec-ch-ua: "Chromium";v="148", "Android WebView";v="148", "Not/A)Brand";v="99"
+sec-ch-ua-mobile: ?1
+sec-ch-ua-platform: "Android"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Stargon/6.3.2 Chrome/148.0.7778.120 Mobile Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Cookie: PHPSESSID=uq4dk6rfdhn24ec622s7gmdibj; kt_ips=2400%3A9800%3A970%3Ad6bb%3Abf0c%3A9495%3A17f9%3A7d1; _ga=GA1.1.1344145199.1780038657; kt_tcookie=1; __nuvt=2-398ffde552b80cc8122ecab59be18754; __suvt=8-7b315dbe90cde8dc546a8f14e1033fef; _ga_1DTX7D4FHE=GS2.1.s1780038657$o1$g1$t1780038736$j42$l0$h0
+X-Requested-With: net.onecook.browser
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7
+
+POST /g/collect?v=2&tid=G-1DTX7D4FHE&gtm=45je65r2v886650514za200zd886650514&_p=1780038734372&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAAQ&ae=a&are=1&cid=1344145199.1780038657&frm=0&pscdl=noapi&rcb=14&sr=501x1114&uaa=&uab=&uafvl=&uam=&uamb=1&uap=Android&uapv=&uaw=0&ul=id-id&_s=2&tag_exp=0~115938466~115938469~119027222~119034491&sid=1780038657&sct=1&seg=1&dl=https%3A%2F%2Fjable.tv%2F&dr=https%3A%2F%2Fjable.tv%2F&dt=Jable.TV%20%7C%20%E5%85%8D%E8%B2%BB%E9%AB%98%E6%B8%85AV%E5%9C%A8%E7%B7%9A%E7%9C%8B%20%7C%20J%E7%89%87%20AV%E7%9C%8B%E5%88%B0%E9%A3%BD&en=scroll&epn.percent_scrolled=90&_et=1625&tfd=102964 HTTP/1.1
+Host: www.google-analytics.com
+Connection: keep-alive
+Content-Length: 0
+Pragma: no-cache
+Cache-Control: no-cache
+sec-ch-ua-platform: "Android"
+User-Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Stargon/6.3.2 Chrome/148.0.7778.120 Mobile Safari/537.36
+sec-ch-ua: "Chromium";v="148", "Android WebView";v="148", "Not/A)Brand";v="99"
+sec-ch-ua-mobile: ?1
+Accept: */*
+Origin: https://jable.tv
+X-Requested-With: net.onecook.browser
+Sec-Fetch-Site: cross-site
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: empty
+Sec-Fetch-Storage-Access: active
+Referer: https://jable.tv/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+
+POST /g/collect?v=2&tid=G-1DTX7D4FHE&gtm=45je65r2v886650514za200zd886650514&_p=1780038849460&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAAQ&are=1&cid=1344145199.1780038657&frm=0&pscdl=noapi&rcb=18&sr=501x1114&uaa=&uab=&uafvl=&uam=&uamb=1&uap=Android&uapv=&uaw=0&ul=id-id&_s=1&tag_exp=0~115938466~115938469~119034493&sid=1780038657&sct=1&seg=1&dl=https%3A%2F%2Fjable.tv%2Fvideos%2Fstart-575%2F&dr=https%3A%2F%2Fjable.tv%2F&dt=START-575%20%E5%8E%B3%E6%AD%A3%E3%81%AA%E8%81%B7%E5%8B%99%E3%81%AE%E3%81%9F%E3%82%81%E5%B0%B1%E4%BB%BB%E4%BB%A5%E6%9D%A5%E3%82%BB%E3%83%83%E3%82%AF%E3%82%B9%E3%82%92%E7%A6%81%E3%81%98%E3%82%89%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%E5%A5%B3%E6%8D%9C%E6%9F%BB%E5%AE%98%20%E5%BE%B9%E5%BA%95%E7%9A%84%E3%81%AB%E7%84%A6%E3%82%89%E3%81%95%E3%82%8C%E3%81%A6%E3%80%8C%E3%81%8A%E9%A1%98%E3%81%84%E3%81%97%E3%81%BE%E3%81%99%E3%82%A4%E3%82%AB%E3%81%9B%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%8D%E3%81%A8%E3%81%93%E3%82%93%E3%81%AA%E5%8F%8D%E7%A4%BE%E9%9B%86%E5%9B%A3%E3%81%AB%E9%A0%AD%E3%82%92%E4%B8%8B%E3%81%92%E3%82%8B%E3%81%93%E3%81%A8%E3%81%AB%E3%81%AA%E3%82%8B%E3%81%AA%E3%82%93%E3%81%A6%E2%80%A6%20%E6%9C%AC%E5%BA%84%E9%88%B4%20-%20Jable.TV%20%7C%20%E5%85%8D%E8%B2%BB%E9%AB%98%E6%B8%85AV%E5%9C%A8%E7%B7%9A%E7%9C%8B%20%7C%20J%E7%89%87%20AV%E7%9C%8B%E5%88%B0%E9%A3%BD&en=page_view&_ee=1&tfd=6528 HTTP/1.1
+Host: www.google-analytics.com
+Connection: keep-alive
+Content-Length: 0
+Pragma: no-cache
+Cache-Control: no-cache
+sec-ch-ua-platform: "Android"
+User-Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Stargon/6.3.2 Chrome/148.0.7778.120 Mobile Safari/537.36
+sec-ch-ua: "Chromium";v="148", "Android WebView";v="148", "Not/A)Brand";v="99"
+sec-ch-ua-mobile: ?1
+Accept: */*
+Origin: https://jable.tv
+X-Requested-With: net.onecook.browser
+Sec-Fetch-Site: cross-site
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: empty
+Sec-Fetch-Storage-Access: active
+Referer: https://jable.tv/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+
+GET /abc.gif?userId=4c25683baa7e541ee7ce0014496c85471ee87c5671f43cd3d2de65eaed1cbb98&quality=240p&campaignId=222by125_JP&thumbSizeKey=big&language=en&thumbFit=cover&stripcashR=0&thumbType=SChatBest&kbLimit=25000&modelsInWatchHistoryCount=-1&modelsInFavoritesCount=-1&userType=newuser&modelsCount=1&segment=hls-oldAPI&landing=WidgetV4Universal&referrer=https%3A%2F%2Fjable.tv%2F&i=0&abTest=widgetv4universal_universalAA07052026&abTestVariant=widgetv4universal_universalAA07052026_B_47&seenAbTest=1&seenDomain=1&seenLanding=1&filtersMatch=1 HTTP/1.1
+Host: go.mnaspm.com
+Connection: keep-alive
+sec-ch-ua-platform: "Android"
+User-Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Stargon/6.3.2 Chrome/148.0.7778.120 Mobile Safari/537.36
+sec-ch-ua: "Chromium";v="148", "Android WebView";v="148", "Not/A)Brand";v="99"
+sec-ch-ua-mobile: ?1
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+X-Requested-With: net.onecook.browser
+Sec-Fetch-Site: same-site
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Sec-Fetch-Storage-Access: active
+Referer: https://creative.mnaspm.com/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+
+GET /smartpop/4cf0582a9bc89bb32fe7fa3c7ccaffd1b65a367afd1b8baafa534966e193ab50?userId=4c25683baa7e541ee7ce0014496c85471ee87c5671f43cd3d2de65eaed1cbb98 HTTP/1.1
+sec-ch-ua: "Chromium";v="148", "Android WebView";v="148", "Not/A)Brand";v="99"
+sec-ch-ua-mobile: ?1
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Upgrade-Insecure-Requests: 1
+sec-ch-ua-platform: "Android"
+User-Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Stargon/6.3.2 Chrome/148.0.7778.120 Mobile Safari/537.36
+Referer: https://jable.tv/
+Accept-Language: id-ID,in;q=0.9,en-US;q=0.8,en;q=0.7
+Accept-Encoding: gzip, deflate, br
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+Sec-Fetch-User: ?1
+DNT: 1
+Host: go.mnaspm.com
+Connection: Keep-Alive
+
+
+POST /v1/api.php HTTP/1.1
+Host: s.magsrv.com
+Connection: keep-alive
+Content-Length: 829
+sec-ch-ua-platform: "Android"
+User-Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Stargon/6.3.2 Chrome/148.0.7778.120 Mobile Safari/537.36
+sec-ch-ua: "Chromium";v="148", "Android WebView";v="148", "Not/A)Brand";v="99"
+Content-Type: text/plain
+sec-ch-ua-mobile: ?1
+Accept: */*
+Origin: https://jable.tv
+Cookie: __uvt=s%3A34%3A%222-398ffde552b80cc8122ecab59be18754%22%3B; c-7556152-115018090=7556152-115018090; __nuvt=2-398ffde552b80cc8122ecab59be18754; c-7556152-126929858=7556152-126929858; c-tag=%7B%22tag-video%22%3A%22v7%7C%7CIDN%7C3382953%7C120809094%7C0%7C%7C99%7C64%7C0%7C91%7C56%7C2%7C82%7C34226233%7C1621176%7C1626754%7C0%7C1%7C0%7C0%7C0%7C0%7C1%7C0%7C0%7C1%7C2-398ffde552b80cc8122ecab59be18754%7C%7C0%7Cimasdk.googleapis.com%7C%7C%7C16%7C0%7C0%7C0%7C0%7C0%7C0%7C0%7C0%7C1780038682%7C%7C%7C0%7C0%7C0%7C0%7C0%7C0%7C0%7C0%7C0%7C0%7C1%7C0%7C0%7Cs.magsrv.com%7C%7C%7C%7Cjable.tv%7C0%7C0%7C-1%7C15f47c2e34163913349d03c377e27cb7%7Cok%22%7D; zone-cap-3382953=1; impressions=xoebelelcvxzxmbexorebr
+X-Requested-With: net.onecook.browser
+Sec-Fetch-Site: cross-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Sec-Fetch-Storage-Access: active
+Referer: https://jable.tv/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7
+
+{"user":{"ua":"Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Stargon/6.3.2 Chrome/148.0.7778.120 Mobile Safari/537.36","language":"id-ID","referer":"https://jable.tv/","consumer":"ad-provider","gdpr":{"gdpr":0},"screen_resolution":"501x1114","window_orientation":"portrait","cookies":[{"name":"__suvt","value":"8-7b315dbe90cde8dc546a8f14e1033fef"},{"name":"__nuvt","value":"2-398ffde552b80cc8122ecab59be18754"}],"scr_info":"YXN5bmN8fDM%3D","ch_ua":{"architecture":"","bitness":"","brands":[{"brand":"Chromium","version":"148"},{"brand":"Android WebView","version":"148"},{"brand":"Not/A)Brand","version":"99"}],"fullVersionList":[],"mobile":true,"model":"","platform":"Android","platformVersion":""}},"zones":[{"custom_targeting":{},"id":3377649,"extra_params":{"first_request":true,"zone_type":20}}]}
+
+
+GET /cimp.php?t=api&data=H4sIAAAAAAAAA41Ru27DMAz8lf6ADb5ESZmzdOlS9AMs2S5SNAmQBEEL3MdXttEMnSqCFEAdyTtKSLyj0El+It2x7cjARr2w9uzSM0U871/gho+hfE797Y5kMQnBOSkzYkpGCtUY3TJybpmQsxNYNRsFEjQYMyE4kkBNxEUVBOqJiKU1iXh73a/eoGjdW1zmgh2NEQLxFzMbpNOc5nmcQpCSqNbEIlMdSshl4hSDoQSPapWipWzGIdYxyuxSG5so0ui00Q81tFlPsrBEgvym0C3AtgVfurZDWNPD9ftUgQdss4BFkSzVi/993iw/RK/XFn0lRLj2x+H9ern39XzENrD9wyJ/DWaE+3A5DLfD+bSuqbHtYlEOY5ky1XFKYw3mQ5rZJibVeZr/szBYNXEdSjQbiwWpbLVYMdfIiXz+Ac1d/5ImAgAA&cb=e2e_6a193cbc804077.10332535 HTTP/1.1
+Host: s.magsrv.com
+Connection: keep-alive
+sec-ch-ua-platform: "Android"
+User-Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Stargon/6.3.2 Chrome/148.0.7778.120 Mobile Safari/537.36
+sec-ch-ua: "Chromium";v="148", "Android WebView";v="148", "Not/A)Brand";v="99"
+sec-ch-ua-mobile: ?1
+Accept: */*
+Origin: https://jable.tv
+Cookie: __uvt=s%3A34%3A%222-398ffde552b80cc8122ecab59be18754%22%3B; c-7556152-115018090=7556152-115018090; __nuvt=2-398ffde552b80cc8122ecab59be18754; c-7556152-126929858=7556152-126929858; c-tag=%7B%22tag-video%22%3A%22v7%7C%7CIDN%7C3382953%7C120809094%7C0%7C%7C99%7C64%7C0%7C91%7C56%7C2%7C82%7C34226233%7C1621176%7C1626754%7C0%7C1%7C0%7C0%7C0%7C0%7C1%7C0%7C0%7C1%7C2-398ffde552b80cc8122ecab59be18754%7C%7C0%7Cimasdk.googleapis.com%7C%7C%7C16%7C0%7C0%7C0%7C0%7C0%7C0%7C0%7C0%7C1780038682%7C%7C%7C0%7C0%7C0%7C0%7C0%7C0%7C0%7C0%7C0%7C0%7C1%7C0%7C0%7Cs.magsrv.com%7C%7C%7C%7Cjable.tv%7C0%7C0%7C-1%7C15f47c2e34163913349d03c377e27cb7%7Cok%22%7D; zone-cap-3382953=1; impressions=xoebelelcvxzxmbexorebr
+X-Requested-With: net.onecook.browser
+Sec-Fetch-Site: cross-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Sec-Fetch-Storage-Access: active
+Referer: https://jable.tv/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+
+GET /library/847820/b2e4f6a551b044c7c1955b528193e0f7ef8d409e.webp HTTP/1.1
+Host: z6v2p9a8.bkcdn.net
+Connection: keep-alive
+sec-ch-ua-platform: "Android"
+User-Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Stargon/6.3.2 Chrome/148.0.7778.120 Mobile Safari/537.36
+sec-ch-ua: "Chromium";v="148", "Android WebView";v="148", "Not/A)Brand";v="99"
+sec-ch-ua-mobile: ?1
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+X-Requested-With: net.onecook.browser
+Sec-Fetch-Site: cross-site
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Sec-Fetch-Storage-Access: active
+Referer: https://jable.tv/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+
+
+
+
+GET /hls/tIzRwnR5r83Vm8vZZN10Ig/1780049376/59000/59428/594280.ts HTTP/1.1
+Host: asf-doc.mushroomtrack.com
+Connection: keep-alive
+sec-ch-ua-platform: "Android"
+User-Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Stargon/6.3.2 Chrome/148.0.7778.120 Mobile Safari/537.36
+sec-ch-ua: "Chromium";v="148", "Android WebView";v="148", "Not/A)Brand";v="99"
+sec-ch-ua-mobile: ?1
+Accept: */*
+Origin: https://jable.tv
+X-Requested-With: net.onecook.browser
+Sec-Fetch-Site: cross-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: https://jable.tv/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+
+
+
+GET /hls/tIzRwnR5r83Vm8vZZN10Ig/1780049376/59000/59428/thumb.ts HTTP/1.1
+Host: asf-doc.mushroomtrack.com
+Connection: keep-alive
+sec-ch-ua-platform: "Android"
+User-Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Stargon/6.3.2 Chrome/148.0.7778.120 Mobile Safari/537.36
+sec-ch-ua: "Chromium";v="148", "Android WebView";v="148", "Not/A)Brand";v="99"
+sec-ch-ua-mobile: ?1
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+X-Requested-With: net.onecook.browser
+Sec-Fetch-Site: cross-site
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Sec-Fetch-Storage-Access: active
+Referer: https://jable.tv/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+
+
+POST /csi?v=2&s=ima&dmc=4&puid=1~mpql68nu&c=3594742867086&slotId=1797371433543&eee=missing-element&bi=missing-id&vast_v=3.0&lima_p_ich=0&lima_p_icu=0 HTTP/1.1
+Host: csi.gstatic.com
+Connection: keep-alive
+Content-Length: 0
+sec-ch-ua-platform: "Android"
+User-Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Stargon/6.3.2 Chrome/148.0.7778.120 Mobile Safari/537.36
+sec-ch-ua: "Chromium";v="148", "Android WebView";v="148", "Not/A)Brand";v="99"
+sec-ch-ua-mobile: ?1
+Accept: */*
+Origin: https://imasdk.googleapis.com
+X-Requested-With: net.onecook.browser
+Sec-Fetch-Site: cross-site
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: empty
+Sec-Fetch-Storage-Access: active
+Referer: https://imasdk.googleapis.com/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+
+GET /do2/gS3f9oakRto2BT2BZjZttVzIBEMyWV13/master?param3=ms_1.1&xu=ab53aae1b5c57c93&w=720.1875&h=1601.375&tz=-420&prev_banners=6231225,6743412&keywords=441711&count=2 HTTP/1.1
+Host: tsyndicate.com
+Connection: keep-alive
+nav-ua-he-mobile: true
+sec-ch-ua-platform: "Android"
+nav-ua-he-platform: Android
+nav-ua-he-uaFullVersion: 
+sec-ch-ua: "Chromium";v="148", "Android WebView";v="148", "Not/A)Brand";v="99"
+sec-ch-ua-mobile: ?1
+nav-ua-he-platformVersion: 
+nav-ua-he-architecture: 
+nav-ua-he-brands: "Chromium";v="148", "Android WebView";v="148", "Not/A)Brand";v="99"
+nav-ua-he-model: 
+User-Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Stargon/6.3.2 Chrome/148.0.7778.120 Mobile Safari/537.36
+nav-ua-he-bitness: 
+nav-ua-he-wow64: false
+nav-ua-he-fullVersionList: 
+Accept: */*
+Origin: https://a.shukriya90.com
+Cookie: bfq=APeIECNCx5YZMGbcmEFjBgsZOWrYUGiDRY0cOWzIwOHw4gwZMmzgeDgDxw0YEVnMqHEjRwwaOSzmuHHjZcyLNF_eeBhxIk2ZH0PGjJGDho2jMrqwEDGm4JYYLKBCdehQRtSrU1nYUCqijNMYN3DASDjDZUWwYhPSiAHDKtqxM8rSqBE1LFwaMNbWTcsQxg0ae-GWxDHyrd-QfwMf1ljYrlqUdA3HnQlYctmPXfoo; ts_last_click_id=nsmFhVQH54ubOOVURVUt--2W1cVpqJqXoY5bnEnw1pGmlevfS51w86z8SvCbSg1wHegNMcvVk-fTzEN-2c1WhX9pZ0_IRB8i1rDaD5GFEw_gUIDRUi; ts_direct_tag=1221810:6470704:261965:54:30; cookie_user_id=061e4847-6ca2-536f-87be-f4c77a6925cb
+X-Requested-With: net.onecook.browser
+Sec-Fetch-Site: cross-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Sec-Fetch-Storage-Access: active
+Referer: https://a.shukriya90.com/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+
+
+
+POST /app/domain-checker/get-check HTTP/1.1
+Host: go.mnaspm.com
+Connection: keep-alive
+Content-Length: 0
+sec-ch-ua-platform: "Android"
+User-Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Stargon/6.3.2 Chrome/148.0.7778.120 Mobile Safari/537.36
+sec-ch-ua: "Chromium";v="148", "Android WebView";v="148", "Not/A)Brand";v="99"
+sec-ch-ua-mobile: ?1
+Accept: */*
+Origin: https://creative.mnaspm.com
+X-Requested-With: net.onecook.browser
+Sec-Fetch-Site: same-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: https://creative.mnaspm.com/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+
+
+GET /hls/tIzRwnR5r83Vm8vZZN10Ig/1780049376/59000/59428/594281.ts HTTP/1.1
+Host: asf-doc.mushroomtrack.com
+Connection: keep-alive
+sec-ch-ua-platform: "Android"
+User-Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Stargon/6.3.2 Chrome/148.0.7778.120 Mobile Safari/537.36
+sec-ch-ua: "Chromium";v="148", "Android WebView";v="148", "Not/A)Brand";v="99"
+sec-ch-ua-mobile: ?1
+Accept: */*
+Origin: https://jable.tv
+X-Requested-With: net.onecook.browser
+Sec-Fetch-Site: cross-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: https://jable.tv/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+
+
+GET /api/models?landing=WidgetV4Universal&tag=girls%2Fjapanese&quality=240p&sortBy=paidUsers&stripcashR=0&forceClient=1&modelPromotion=0&acclan=0&abTest=widgetv4universal_universalAA07052026&abTestVariant=widgetv4universal_universalAA07052026_B_47&seenAbTest=1&seenDomain=1&seenLanding=1&limit=1 HTTP/1.1
+Host: go.mnaspm.com
+Connection: keep-alive
+sec-ch-ua-platform: "Android"
+User-Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Stargon/6.3.2 Chrome/148.0.7778.120 Mobile Safari/537.36
+sec-ch-ua: "Chromium";v="148", "Android WebView";v="148", "Not/A)Brand";v="99"
+sec-ch-ua-mobile: ?1
+Accept: */*
+Origin: https://creative.mnaspm.com
+X-Requested-With: net.onecook.browser
+Sec-Fetch-Site: same-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Sec-Fetch-Storage-Access: active
+Referer: https://creative.mnaspm.com/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+
+
+POST /cdn-cgi/rum HTTP/1.1
+Host: creative.mnaspm.com
+Connection: keep-alive
+Content-Length: 988
+sec-ch-ua-platform: "Android"
+User-Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Stargon/6.3.2 Chrome/148.0.7778.120 Mobile Safari/537.36
+sec-ch-ua: "Chromium";v="148", "Android WebView";v="148", "Not/A)Brand";v="99"
+content-type: application/json
+sec-ch-ua-mobile: ?1
+Accept: */*
+Origin: https://creative.mnaspm.com
+X-Requested-With: net.onecook.browser
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Sec-Fetch-Storage-Access: active
+Referer: https://creative.mnaspm.com/widgets/v4/Universal?modelPageOption=model&tag=girls%2Fchinese&autoplay=off&thumbsMargin=3&gridRows=1&gridColumns=1&responsive=0&hideButton=1&hideTitle=1&userId=4c25683baa7e541ee7ce0014496c85471ee87c5671f43cd3d2de65eaed1cbb98&quality=240p&campaignId=222by125_CN
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7
+
+{"memory":{"totalJSHeapSize":68000000,"usedJSHeapSize":64000000,"jsHeapSizeLimit":1000000000},"resources":[],"referrer":"https://jable.tv/","eventType":1,"firstPaint":0,"firstContentfulPaint":0,"startTime":1780038849827.5,"versions":{"fl":"2024.11.0","js":"2026.5.0","timings":2},"pageloadId":"46ae8f15-99a6-46ad-9859-f097ab81d0e5","location":"https://creative.mnaspm.com/widgets/v4/Universal","nt":"navigate","timingsV2":{"nextHopProtocol":"","domainLookupStart":2.0999999940395355,"domainLookupEnd":2.0999999940395355,"connectStart":2.0999999940395355,"connectEnd":2.0999999940395355,"requestStart":2.0999999940395355,"responseStart":2.0999999940395355,"responseEnd":892.8999999985099,"domInteractive":1368.8999999985099,"domComplete":3805.0999999940395,"loadEventStart":3805.1999999955297,"loadEventEnd":3805.2999999970198,"finalResponseHeadersStart":0,"firstInterimResponseStart":0,"transferSize":300,"decodedBodySize":0},"dt":"","siteToken":"88368e79fe4a43c7bc4eb04b6da7e8e4","st":2}
+
+
+
+GET /abc.gif?userId=4c25683baa7e541ee7ce0014496c85471ee87c5671f43cd3d2de65eaed1cbb98&quality=240p&campaignId=222by125_CN&thumbSizeKey=big&language=en&thumbFit=cover&stripcashR=0&thumbType=SChatBest&kbLimit=25000&modelsInWatchHistoryCount=-1&modelsInFavoritesCount=-1&userType=newuser&modelsCount=1&segment=hls-oldAPI&landing=WidgetV4Universal&referrer=https%3A%2F%2Fjable.tv%2F&i=0&abTest=widgetv4universal_universalAA07052026&abTestVariant=widgetv4universal_universalAA07052026_B_96&seenAbTest=1&seenDomain=1&seenLanding=1&filtersMatch=1 HTTP/1.1
+Host: go.mnaspm.com
+Connection: keep-alive
+sec-ch-ua-platform: "Android"
+User-Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Stargon/6.3.2 Chrome/148.0.7778.120 Mobile Safari/537.36
+sec-ch-ua: "Chromium";v="148", "Android WebView";v="148", "Not/A)Brand";v="99"
+sec-ch-ua-mobile: ?1
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+X-Requested-With: net.onecook.browser
+Sec-Fetch-Site: same-site
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Sec-Fetch-Storage-Access: active
+Referer: https://creative.mnaspm.com/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+
+
+GET /api/v1/p/p.gif?p=APeIQFMmDJkycuaI0DEjBgsRYcbQWehQBJ0zC0XcgGGGDA0xZGy0MIMDR5kWNGTcOInDo5gWZWaUwQEDhowwNzbCEPEwTJ0xGcXEsDEmxsYYLXCMgTEDZQ2lLXLACCOjhZgcZmaYgTGGxtIwYnhCJGNnoYwZMnDYuPEQTp2wOmLQgEGzJxw4C9fOYCtiDpyJOmjMgFEjRw4cD9v4BSwYho2aMB6OaYM3bozBN4z2JGMmr4yHYty48dxQhgwbid1gDOxYats2qilKnYFaRB05bBbWkJGDBo4YNR7WkZERDR06cOboePGCTJ00dNK4mUMnjBsXePLoefFDThkzPYQgrOOGDvkzRNIgSbMmjJw0Ysm8aZMxjIs5aOqseZ8njFQXY8wn1hju5cWUZGEAtkVDXbQlB1A6rNSCY6B1pgMMLtQ0g2RwtPEFHA8uhGFNNdQmhx2VyRCZCGWM0aGIGcLAVx3PZeRYDGX4RsMNLRBFVQs10GZGUjeIcZIZXuUUhg05yFDDGGE9lEZlIsgwFww6HFZTlhvpEJIYYuggxlZjZElDDjXEdYMZOURIRgxiyfHFlBlZuaWWWObQ5ZdhjsmVmWiqyaabcAoXRkZNvKFHGmywEcYLNWQIAgpMSFcHHjuAEIQbZMjxRhpkgBADDJkukYKmd7FRxhVliLEEdJDu5QJtky6BBBVNMMECCGywVwYIR7S4xhunTlGdHGe84cYLNszqggwgDIGGp22U8YJcOGToQk43ZBuDiiAkKgajv04RhhnupRHrDbPaMCCEIiRBhFhvyDkGvPKKxQa-8z50kB1feJdbXCXewNtjNT2E7Ghx-bbiv1-IIYduwYnQ6RsL_fbYQ28oFNiGFpdRVlwOvpEdRQp_6OnJJFucB8N0yFFHGf6K_AUdemSEkopxflfccckt94J9-OnHn38YBtjGC2LdYaNYaDzd1gwZKfZFDC4U2teJGXlaHR31tkAedCjN4AIZxHE8B9cM7TjUDILVRga8B32Btlh00KcmTUyVVAMND-VN3N4a-k2DDSptFnAZfn2RIEXdFo7D3z2JAVjI6NbBxkRt7YuyCC62AbAcCaaBcctjrCaXZFHrsIUIXIggLbVp1NFG7DvY0UPs2Ma-a-ybXgwqCKyKYUUaZdyBu-68--Y7CLE78QYdLwSRghCkc7r87iIYFrtY4D8Uvghi_aC1WMBz6imo34v_0A87uU---F30oUBA&r=1&s=3005cf6f15f7496b6ab3e93d408d35b4386ff1d759a8ca956c0d8ca5b71aa4551780038854&w=t&ir=148x100 HTTP/1.1
+Host: pxl-eu.tsyndicate.com
+Connection: keep-alive
+sec-ch-ua-platform: "Android"
+User-Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Stargon/6.3.2 Chrome/148.0.7778.120 Mobile Safari/537.36
+sec-ch-ua: "Chromium";v="148", "Android WebView";v="148", "Not/A)Brand";v="99"
+sec-ch-ua-mobile: ?1
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Cookie: bfq=APeIECNCx5YZMGbcmEFjBgsZOWrYUGiDRY0cOWzIwOHw4gwZMmzgeDgDxw0YEVnMqHEjRwwaOSzmuHHjZcyLNF_eeBhxIk2ZH0PGjJGDho2jMrqwEDGm4JYYLKBCdehQRtSrU1nYUCqijNMYN3DASDjDZUWwYhPSiAHDKtqxM8rSqBE1LFwaMNbWTcsQxg0ae-GWxDHyrd-QfwMf1ljYrlqUdA3HnQlYctmPXfoo; ts_last_click_id=nsmFhVQH54ubOOVURVUt--2W1cVpqJqXoY5bnEnw1pGmlevfS51w86z8SvCbSg1wHegNMcvVk-fTzEN-2c1WhX9pZ0_IRB8i1rDaD5GFEw_gUIDRUi; ts_direct_tag=1221810:6470704:261965:54:30; cookie_user_id=061e4847-6ca2-536f-87be-f4c77a6925cb
+X-Requested-With: net.onecook.browser
+Sec-Fetch-Site: cross-site
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Sec-Fetch-Storage-Access: active
+Referer: https://a.shukriya90.com/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+
+
+
+
+GET /hls/tIzRwnR5r83Vm8vZZN10Ig/1780049376/59000/59428/594282.ts HTTP/1.1
+Host: asf-doc.mushroomtrack.com
+Connection: keep-alive
+sec-ch-ua-platform: "Android"
+User-Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Stargon/6.3.2 Chrome/148.0.7778.120 Mobile Safari/537.36
+sec-ch-ua: "Chromium";v="148", "Android WebView";v="148", "Not/A)Brand";v="99"
+sec-ch-ua-mobile: ?1
+Accept: */*
+Origin: https://jable.tv
+X-Requested-With: net.onecook.browser
+Sec-Fetch-Site: cross-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: https://jable.tv/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+
+
+GET /hls/tIzRwnR5r83Vm8vZZN10Ig/1780049376/59000/59428/594284.ts HTTP/1.1
+Host: asf-doc.mushroomtrack.com
+Connection: keep-alive
+sec-ch-ua-platform: "Android"
+User-Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Stargon/6.3.2 Chrome/148.0.7778.120 Mobile Safari/537.36
+sec-ch-ua: "Chromium";v="148", "Android WebView";v="148", "Not/A)Brand";v="99"
+sec-ch-ua-mobile: ?1
+Accept: */*
+Origin: https://jable.tv
+X-Requested-With: net.onecook.browser
+Sec-Fetch-Site: cross-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: https://jable.tv/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+
+
+GET /abc.gif?campaignId=4cf0582a9bc89bb32fe7fa3c7ccaffd1b65a367afd1b8baafa534966e193ab50&campaignType=smartpop&creativeId=dd495f00f9cd1699e0cb85cb98dfd2c5fa3f805aa594bd8dd9bd8ef91400cbba&iterationId=873995&masterSmartpopId=0&quality=240p&ruleId=0&smartpopId=4941&userId=4c25683baa7e541ee7ce0014496c85471ee87c5671f43cd3d2de65eaed1cbb98&variationId=33508&thumbSizeKey=big&language=en&thumbFit=cover&stripcashR=0&thumbType=SChatBest&kbLimit=25000&modelsInWatchHistoryCount=-1&modelsInFavoritesCount=-1&userType=newuser&modelsCount=3&segment=hls-oldAPI&landing=WidgetV4Universal&referrer=https%3A%2F%2Fgo.mnaspm.com%2F&i=0&abTest=widgetv4universal_universalAA07052026&abTestVariant=widgetv4universal_universalAA07052026_A_37&seenAbTest=1&seenDomain=1&seenLanding=1&filtersMatch=1 HTTP/1.1
+Host: go.bluetrafficstream.com
+Connection: keep-alive
+sec-ch-ua-platform: "Android"
+User-Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Stargon/6.3.2 Chrome/148.0.7778.120 Mobile Safari/537.36
+sec-ch-ua: "Chromium";v="148", "Android WebView";v="148", "Not/A)Brand";v="99"
+sec-ch-ua-mobile: ?1
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Cookie: __cf_bm=pGmbVgExIjlIxX9d7vG1jH7Bet8ETBLmvxnrvJkvTHg-1780038845.287388-1.0.1.1-X9KTA9CiPkvaKBgupPelJlXus1apaDewEoGb.oYCdTRPzv176bhXUm2rcX063nd2TJ.I8P5E4daPuV7sUxsXoCOCUHYLbGZy9VZuV.yYZoiub6ayCrhIPqigMx_av7lp
+X-Requested-With: net.onecook.browser
+Sec-Fetch-Site: same-site
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Sec-Fetch-Storage-Access: active
+Referer: https://creative.bluetrafficstream.com/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+GET /smartpop/b5dc1232ea50feed03503dfbf1ad248480faf7a7e7723ee4423ae4b86fe12fcd?userId=1f2ad638bb163e0f21b19d6cbbcd5805b56eb7b1ef21117b6157eaf2a11915c9&sourceId=5385380&affiliateClickId=osdNTLHPNRHNXTHQ7vYDqa6rLrJXTT20XS3T0uldRLKqaWV11zq6XTTSummdVW6d1s7qKZ5656KHTVzzTWVumrnmmssdK6Z0rpXSuldM6V0rpnTxUXW8cbb1VT6Wy662zTz7656VXabzW2VUu0qrsop1lsptuppmqs12sn4rn1uplsnnndK7zPT7eMyHVSzKmmmpc6at0rpXSuldK6V1Vs91k0rpXTWWyy0W212Oc6V0rpXSuldK6V0rpXSumdK6VxY_8.SkRHqH9znO8z0.3jMh1LpXRTO3zl4r4s1q01sql1zqmrmsqz3q23zu42rcH2A-&p1=5385380&ax=0&kbLimit=1000 HTTP/1.1
+Cookie: _var=83106868.36265_7868025.36264_YzViZTIwNTE=
+sec-ch-ua: "Chromium";v="148", "Android WebView";v="148", "Not/A)Brand";v="99"
+sec-ch-ua-mobile: ?1
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Upgrade-Insecure-Requests: 1
+sec-ch-ua-platform: "Android"
+User-Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Stargon/6.3.2 Chrome/148.0.7778.120 Mobile Safari/537.36
+Referer: https://jable.tv/
+Accept-Language: id-ID,in;q=0.9,en-US;q=0.8,en;q=0.7
+Accept-Encoding: gzip, deflate, br
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+Sec-Fetch-User: ?1
+DNT: 1
+Host: go.xlivrdr.com
+Connection: Keep-Alive
+
+
+
+
+GET /cimp.php?t=api&data=H4sIAAAAAAAAA41QS04DMQy9CheYkX9xnK7ZsGGDOEAmk0FFtEi0qkDy4fFMRZFYEctOZL/Y75mAdIA0ULkD3qHsmB0FRkIeUWVkf7h/dBV/rdNbH88XN8lG4IrGiJ7NBNiZc1YpXkpkUikKjkyZEibzgCGCJ3UjZyFSiingMAIAkufsz0/3mwfSo3nEdayjusQ7AX4iojgNXGxZ5p4STQatGRL1VqdUpo6WkwSWsmnJoomWCrnqVFrpVKIusszRDn7FwNWCSA6ebk4/KR9WICohBr844Fu6nr6Ozf0Gu1ryVRCtv1f/W74a6U30dl2jbozAT+Ohvpw+LmN7P4TqtcdIq3xcgwj4pX7s63n/ftzWFGyHPDGmeeoF2txtbkm02oLSEZiXvvxnYc40YzRo3A1s4dKqNu2Fp6Sta8/f14m5hSMCAAA=&cb=e2e_6a193cd98f8064.51592570 HTTP/1.1
+Host: s.magsrv.com
+Connection: keep-alive
+sec-ch-ua-platform: "Android"
+User-Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Stargon/6.3.2 Chrome/148.0.7778.120 Mobile Safari/537.36
+sec-ch-ua: "Chromium";v="148", "Android WebView";v="148", "Not/A)Brand";v="99"
+sec-ch-ua-mobile: ?1
+Accept: */*
+Origin: https://jable.tv
+Cookie: __uvt=s%3A34%3A%222-398ffde552b80cc8122ecab59be18754%22%3B; c-7556152-115018090=7556152-115018090; __nuvt=2-398ffde552b80cc8122ecab59be18754; c-7556152-126929858=7556152-126929858; c-tag=%7B%22tag-video%22%3A%22v7%7C%7CIDN%7C3382953%7C120809094%7C0%7C%7C99%7C64%7C0%7C91%7C56%7C2%7C82%7C34226233%7C1621176%7C1626754%7C0%7C1%7C0%7C0%7C0%7C0%7C1%7C0%7C0%7C1%7C2-398ffde552b80cc8122ecab59be18754%7C%7C0%7Cimasdk.googleapis.com%7C%7C%7C16%7C0%7C0%7C0%7C0%7C0%7C0%7C0%7C0%7C1780038682%7C%7C%7C0%7C0%7C0%7C0%7C0%7C0%7C0%7C0%7C0%7C0%7C1%7C0%7C0%7Cs.magsrv.com%7C%7C%7C%7Cjable.tv%7C0%7C0%7C-1%7C15f47c2e34163913349d03c377e27cb7%7Cok%22%7D; zone-cap-3382953=1; impressions=xoebelelcvxzxmbexorebr
+X-Requested-With: net.onecook.browser
+Sec-Fetch-Site: cross-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Sec-Fetch-Storage-Access: active
+Referer: https://jable.tv/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+
+
+GET /library/952396/6b36345d2592453ad1bbe958bf2bcb0875bd851b.mp4 HTTP/1.1
+Host: z6v2p9a8.bkcdn.net
+Connection: keep-alive
+sec-ch-ua-platform: "Android"
+User-Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Stargon/6.3.2 Chrome/148.0.7778.120 Mobile Safari/537.36
+sec-ch-ua: "Chromium";v="148", "Android WebView";v="148", "Not/A)Brand";v="99"
+sec-ch-ua-mobile: ?1
+Accept: */*
+Origin: https://jable.tv
+X-Requested-With: net.onecook.browser
+Sec-Fetch-Site: cross-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: https://jable.tv/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+
+
+
+
+

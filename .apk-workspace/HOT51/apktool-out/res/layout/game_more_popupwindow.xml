@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:orientation="vertical" android:layout_width="154.0dip" android:layout_height="195.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_gravity="center_horizontal" android:id="@id/imageView" android:layout_width="18.0dip" android:layout_height="10.0dip" android:src="@drawable/filter_arrow_up" android:scaleType="fitCenter" android:layout_marginEnd="33.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout android:orientation="vertical" android:background="@drawable/bg_game_more" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="154.0dip" android:layout_height="wrap_content" android:minWidth="93.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/imageView">
+        <TextView android:textSize="12.0sp" android:textColor="#ff0d0043" android:gravity="center" android:id="@id/textView01" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" />
+        <TextView android:background="#ffeaeaea" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginTop="9.0dip" />
+        <TextView android:textSize="12.0sp" android:textColor="#ff0d0043" android:gravity="center" android:id="@id/textView02" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" />
+        <TextView android:background="#ffeaeaea" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginTop="9.0dip" />
+        <TextView android:textSize="12.0sp" android:textColor="#ff0d0043" android:gravity="center" android:id="@id/textView03" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" />
+        <TextView android:background="#ffeaeaea" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginTop="9.0dip" />
+        <TextView android:textSize="12.0sp" android:textColor="#ff0d0043" android:gravity="center" android:id="@id/textView04" android:layout_width="fill_parent" android:layout_height="17.0dip" android:layout_marginTop="10.0dip" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" />
+        <TextView android:background="#ffeaeaea" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginTop="9.0dip" />
+        <TextView android:textSize="12.0sp" android:textColor="#ff0d0043" android:gravity="center" android:id="@id/textView05" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" />
+        <TextView android:background="#ffeaeaea" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginTop="9.0dip" android:layout_marginBottom="9.0dip" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

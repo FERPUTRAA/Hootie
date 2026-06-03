@@ -1,0 +1,69 @@
+.class public final Lio/reactivex/internal/operators/flowable/i3;
+.super Lio/reactivex/internal/operators/flowable/a;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lio/reactivex/internal/operators/flowable/i3$a;
+    }
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T:",
+        "Ljava/lang/Object;",
+        ">",
+        "Lio/reactivex/internal/operators/flowable/a<",
+        "TT;TT;>;"
+    }
+.end annotation
+
+
+# instance fields
+.field final c:I
+
+
+# direct methods
+.method public constructor <init>(Lpa/b;I)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lpa/b<",
+            "TT;>;I)V"
+        }
+    .end annotation
+
+    invoke-direct {p0, p1}, Lio/reactivex/internal/operators/flowable/a;-><init>(Lpa/b;)V
+
+    iput p2, p0, Lio/reactivex/internal/operators/flowable/i3;->c:I
+
+    return-void
+.end method
+
+
+# virtual methods
+.method protected H5(Lpa/c;)V
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lpa/c<",
+            "-TT;>;)V"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/a;->b:Lpa/b;
+
+    new-instance v1, Lio/reactivex/internal/operators/flowable/i3$a;
+
+    iget v2, p0, Lio/reactivex/internal/operators/flowable/i3;->c:I
+
+    invoke-direct {v1, p1, v2}, Lio/reactivex/internal/operators/flowable/i3$a;-><init>(Lpa/c;I)V
+
+    invoke-interface {v0, v1}, Lpa/b;->j(Lpa/c;)V
+
+    return-void
+.end method

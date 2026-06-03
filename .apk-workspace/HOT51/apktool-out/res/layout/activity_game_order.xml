@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:orientation="vertical" android:tag="layout/activity_game_order_0" android:background="@color/activity_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.example.obs.player.ui.widget.TitleBarView android:id="@id/title" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="50.0dip" app:defaultLeftIco="@drawable/ic_back" app:isTitleTextBold="true" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:title="game.bet.order" app:titleColor="#ff0d0143" app:titleSize="16.0sp" />
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout android:id="@id/ptr_layout" android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@id/title">
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/recyclerView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="10.0dip" android:overScrollMode="never" />
+        <com.example.obs.player.ui.widget.listView.MyFooter android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignBottom="@id/recyclerView" app:srlDrawableProgressSize="0.0dip" app:srlPrimaryColor="@color/white" />
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+    <TextView android:layout_gravity="center" android:id="@id/tv_empty" android:tag="binding_1" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="300.0dip" />
+    <include android:id="@id/emptyLayout" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:layout_marginStart="8.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" layout="@layout/layout_empty_silver_detail" />
+</androidx.constraintlayout.widget.ConstraintLayout>

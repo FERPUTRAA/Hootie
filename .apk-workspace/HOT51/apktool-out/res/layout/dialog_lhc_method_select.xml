@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/main" android:tag="layout/dialog_lhc_method_select_0" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:id="@id/ll_scroll" android:background="#fff6f6f6" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="60.0dip" app:layout_behavior="@string/appbar_scrolling_view_behavior" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <com.example.obs.player.ui.widget.MultiLineRadioGroup android:orientation="vertical" android:id="@id/ll_scroll_radioGroup" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="20.0dip">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <RadioButton android:id="@id/ll_scroll_01" android:checked="true" style="@style/checkbox_digits_ludan2" />
+                <RadioButton android:id="@id/ll_scroll_02" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" style="@style/checkbox_digits_ludan2" />
+                <RadioButton android:id="@id/ll_scroll_03" style="@style/checkbox_digits_ludan2" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                <RadioButton android:id="@id/ll_scroll_04" style="@style/checkbox_digits_ludan2" />
+                <RadioButton android:id="@id/ll_scroll_05" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" style="@style/checkbox_digits_ludan2" />
+                <RadioButton android:id="@id/ll_scroll_06" style="@style/checkbox_digits_ludan2" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                <RadioButton android:id="@id/ll_scroll_07" style="@style/checkbox_digits_ludan2" />
+                <RadioButton android:id="@id/ll_scroll_08" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" style="@style/checkbox_digits_ludan2" />
+                <RadioButton android:id="@id/ll_scroll_09" style="@style/checkbox_digits_ludan2" />
+            </LinearLayout>
+        </com.example.obs.player.ui.widget.MultiLineRadioGroup>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

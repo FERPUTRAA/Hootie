@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:tag="layout/lottery_his_thisbar_item_0" android:layout_width="fill_parent" android:layout_height="wrap_content" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/num1" android:layout_width="28.0dip" android:layout_height="28.0dip" android:src="@drawable/ic_thisbar_spade_a" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" />
+    <ImageView android:id="@id/num2" android:layout_width="28.0dip" android:layout_height="28.0dip" android:src="@drawable/ic_thisbar_spade_a" app:layout_constraintStart_toEndOf="@id/num1" app:layout_constraintTop_toTopOf="parent" />
+    <TextView android:id="@id/textView98" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="," app:layout_constraintBottom_toBottomOf="@id/num2" app:layout_constraintStart_toEndOf="@id/num2" />
+    <ImageView android:id="@id/num3" android:layout_width="28.0dip" android:layout_height="28.0dip" app:layout_constraintBottom_toBottomOf="@id/textView98" app:layout_constraintStart_toEndOf="@id/textView98" app:layout_constraintTop_toTopOf="@id/num2" app:srcCompat="@drawable/ic_thisbar_spade_a" />
+    <ImageView android:id="@id/num4" android:layout_width="28.0dip" android:layout_height="28.0dip" app:layout_constraintBottom_toBottomOf="@id/textView98" app:layout_constraintStart_toEndOf="@id/num3" app:layout_constraintTop_toTopOf="@id/num2" app:srcCompat="@drawable/ic_thisbar_spade_a" />
+    <TextView android:id="@id/textView105" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="," app:layout_constraintBottom_toBottomOf="@id/num4" app:layout_constraintStart_toEndOf="@id/num4" />
+    <ImageView android:id="@id/num5" android:layout_width="28.0dip" android:layout_height="28.0dip" app:layout_constraintBottom_toBottomOf="@id/textView98" app:layout_constraintStart_toEndOf="@id/textView105" app:layout_constraintTop_toTopOf="@id/num2" app:srcCompat="@drawable/ic_thisbar_spade_a" />
+    <ImageView android:id="@id/num6" android:layout_width="28.0dip" android:layout_height="28.0dip" app:layout_constraintBottom_toBottomOf="@id/num5" app:layout_constraintStart_toEndOf="@id/num5" app:layout_constraintTop_toTopOf="@id/num5" app:srcCompat="@drawable/ic_thisbar_spade_a" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:tag="layout-land/dialog_goods_his_0" android:background="#fff7f8fc" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.example.obs.player.ui.widget.TitleBarView android:id="@id/title" android:background="@color/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/dp_50" app:defaultLeftIco="@drawable/ic_back" app:isHideLine="true" app:isTitleTextBold="true" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:title="record.lottery" app:titleColor="@color/black" app:titleSize="14.0sp" />
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout android:id="@id/refreshLayout" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="@dimen/dp_7" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/title">
+        <com.drake.statelayout.StateLayout android:id="@id/stateLayout" android:layout_width="fill_parent" android:layout_height="fill_parent" app:empty_layout="@layout/layout_state_game_report_empty">
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/recyclerView" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </com.drake.statelayout.StateLayout>
+        <com.example.obs.player.ui.widget.listView.MyFooter android:layout_width="fill_parent" android:layout_height="wrap_content" app:srlTextNothing="MJRefreshBackFooterNoMoreDataText" />
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

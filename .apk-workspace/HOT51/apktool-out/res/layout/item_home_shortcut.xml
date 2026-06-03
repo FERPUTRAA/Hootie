@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:tag="layout/item_home_shortcut_0" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_4" android:outlineSpotShadowColor="@color/card_elevation" android:outlineAmbientShadowColor="@color/card_elevation" app:cardBackgroundColor="@color/white" app:cardCornerRadius="@dimen/dp_8" app:cardElevation="@dimen/dp_10"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/rvShortcut" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/dp_12" android:layout_marginBottom="@dimen/dp_12" android:overScrollMode="never" android:nestedScrollingEnabled="false" android:layout_marginVertical="@dimen/dp_12" />
+</androidx.cardview.widget.CardView>

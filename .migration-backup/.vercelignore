@@ -1,0 +1,15 @@
+# Exclude development/build artifacts and large directories
+.local/
+rtk/
+attached_assets/
+scripts/
+aiku.py
+index.js
+AGENTS.md
+*.bak
+
+# Node modules are installed fresh by Vercel
+node_modules/
+
+# Exclude non-essential workspace items
+artifacts/mockup-sandbox/

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:tag="layout/activity_live_region_list_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.example.obs.player.ui.widget.TitleBarView android:id="@id/title" android:background="@color/app_title_bar_color" android:layout_width="fill_parent" android:layout_height="@dimen/common_title_bar_height" app:defaultLeftIco="@drawable/ic_back" app:isTitleTextBold="true" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:titleColor="#ff1c1c1c" app:titleSize="16.0sp" />
+    <FrameLayout android:id="@id/fl_region_live_list" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</androidx.appcompat.widget.LinearLayoutCompat>

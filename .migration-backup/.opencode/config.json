@@ -1,0 +1,16 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "theme": "opencode",
+  "autoshare": false,
+  "model": "google/gemini-2.0-flash",
+  "instructions": ["/home/runner/workspace/AGENTS.md"],
+  "provider": {
+    "google": {
+      "name": "Google Gemini",
+      "apiKey": "AIzaSyBzjq17LsHBt9mTNJpCKTlE0OwcYsrqqH4"
+    }
+  },
+  "plugin": [
+    "/home/runner/workspace/rtk/hooks/opencode"
+  ]
+}

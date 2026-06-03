@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/activity_splash_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_width="fill_parent" android:layout_height="0.0dip" android:src="@drawable/start_img" android:scaleType="fitXY" android:layout_weight="1.0" />
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="126.0dip">
+        <TextView android:textColor="@color/text_black" android:ellipsize="end" android:gravity="center" android:id="@id/tv_msg" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="17.0dip" android:maxLines="2" android:paddingStart="5.0dip" android:paddingEnd="5.0dip" />
+        <ProgressBar android:id="@id/progress" android:tag="binding_2" android:layout_width="290.0dip" android:layout_height="5.0dip" android:layout_marginTop="9.0dip" android:max="100" android:progressDrawable="@drawable/start_progress" style="?android:progressBarStyleHorizontal" />
+        <TextView android:textColor="#ffaaaaaa" android:id="@id/tv_version" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="18.0dip" />
+    </LinearLayout>
+</LinearLayout>

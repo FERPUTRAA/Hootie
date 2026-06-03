@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="layout/activity_date_pattern_pick_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:background="#fff5f6fa" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.example.obs.player.ui.widget.TitleBarView android:id="@id/title" android:background="@color/app_title_bar_color" android:layout_width="fill_parent" android:layout_height="@dimen/common_title_bar_height" app:defaultLeftIco="@drawable/ic_back" app:isTitleTextBold="true" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:rightText="common.save" app:rightTextColor="@color/red_fe2" app:rightTextSize="@dimen/sp_15" app:title="setting.Numberformat" app:titleColor="#ff1c1c1c" app:titleSize="@dimen/sp_16" />
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/rv" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="@dimen/dp_8" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@id/title" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

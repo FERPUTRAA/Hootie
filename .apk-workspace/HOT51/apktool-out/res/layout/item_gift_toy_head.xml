@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:orientation="vertical" android:id="@id/item" android:tag="layout/item_gift_toy_head_0" android:layout_width="wrap_content" android:layout_height="@dimen/dp_54" android:layout_marginStart="14.0dip" android:layout_marginEnd="@dimen/dp_23"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/icon" android:tag="binding_1" android:layout_width="@dimen/dp_18" android:layout_height="@dimen/dp_18" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <TextView android:textStyle="bold" android:textColor="#fff6f7f9" android:gravity="center" android:id="@id/select_textview" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="@dimen/dp_46" android:layout_marginStart="@dimen/dp_4" app:layout_constraintBottom_toBottomOf="@id/icon" app:layout_constraintStart_toEndOf="@id/icon" app:layout_constraintTop_toTopOf="@id/icon" />
+    <View android:tag="binding_3" android:background="@drawable/shape_gift_toy_indicator" android:layout_width="@dimen/dp_60" android:layout_height="@dimen/dp_2" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="@id/select_textview" app:layout_constraintStart_toStartOf="@id/icon" />
+</androidx.constraintlayout.widget.ConstraintLayout>

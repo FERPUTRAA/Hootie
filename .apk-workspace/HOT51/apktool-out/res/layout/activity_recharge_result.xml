@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat android:gravity="center_horizontal" android:orientation="vertical" android:tag="layout/activity_recharge_result_0" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:background="#fff3f4f6" android:layout_width="fill_parent" android:layout_height="10.0dip" />
+    <TextView android:textSize="14.0dip" android:textColor="@color/text_black" android:gravity="center" android:tag="binding_1" android:paddingLeft="25.0dip" android:paddingRight="25.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="96.0dip" android:drawablePadding="15.0dip" android:lineSpacingExtra="3.0dip" android:paddingHorizontal="25.0dip" app:drawableTopCompat="@drawable/img_success" />
+    <LinearLayout android:gravity="bottom|center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <Button android:textSize="15.0dip" android:textColor="@color/text_black" android:id="@id/btnBackHome" android:tag="binding_2" android:background="@drawable/bg_stroke_corner_21" android:layout_width="161.0dip" android:layout_height="44.0dip" android:layout_marginBottom="160.0dip" />
+    </LinearLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/container" android:tag="layout/activity_player_video_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.example.obs.player.ui.widget.LiveVerticalViewPager android:id="@id/view_pager" android:layout_width="fill_parent" android:layout_height="fill_parent" android:overScrollMode="never" />
+</FrameLayout>

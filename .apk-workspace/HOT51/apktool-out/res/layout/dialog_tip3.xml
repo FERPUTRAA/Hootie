@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/shape_base_dialog_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="35.0dip" android:layout_marginRight="35.0dip">
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="129.0dip">
+                <TextView android:textSize="17.0sp" android:textColor="#ff000000" android:gravity="center" android:id="@id/dialog_tip_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:layout_centerInParent="true" />
+            </RelativeLayout>
+            <View android:background="#ffe0e0e0" android:layout_width="fill_parent" android:layout_height="1.0px" />
+            <com.example.obs.player.ui.widget.qmui.AppTextView android:textSize="15.0sp" android:textColor="#ff000000" android:gravity="center" android:id="@id/dialog_tip_bt" android:layout_width="fill_parent" android:layout_height="48.0dip" app:resText="common.confirm" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,4 @@
+- [Hot51 Sign Algorithm](hot51-sign.md) — salt + double-MD5 sign, precision fix for large memberId integers
+- [Hot51 IP_LIMIT bypass strategy](hot51-ip-limit.md) — GET /lids needs minimal okhttp headers; POST endpoints need CF Worker Mode 3 proxy
+- [LivePlayer proxy-first for CDN streams](liveplayer-proxy-first.md) — Hot51 CDN always use proxy immediately; hlsTriedRef must reset before proxy retry
+- [Hot51 CDN geo-block fix](hot51-cdn-geoblock.md) — bcdn5.livcdn.com 403s from US; sort rooms to put cdnsi.com first; manifestLoadingMaxRetry=1

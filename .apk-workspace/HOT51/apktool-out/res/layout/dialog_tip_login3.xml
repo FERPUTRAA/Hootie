@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="layout/dialog_tip_login3_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/shape_base_dialog_bg2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="35.0dip" android:layout_marginRight="35.0dip">
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="140.0dip">
+                <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="#ff000000" android:gravity="center" android:id="@id/dialog_tip_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:layout_centerInParent="true" />
+            </RelativeLayout>
+            <View android:background="#ffe0e0e0" android:layout_width="fill_parent" android:layout_height="1.0px" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="44.0dip">
+                <TextView android:textSize="16.0sp" android:textColor="#ff707070" android:gravity="center" android:id="@id/dialog_left_bt" android:tag="binding_1" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+                <View android:id="@id/lin" android:background="#ffe0e0e0" android:layout_width="1.0px" android:layout_height="fill_parent" />
+                <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="#ff1c1c1c" android:gravity="center" android:id="@id/dialog_right_bt" android:tag="binding_2" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

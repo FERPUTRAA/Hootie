@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat android:tag="layout/item_cockfighting_his_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.appcompat.widget.LinearLayoutCompat android:orientation="horizontal" android:paddingTop="@dimen/dp_10" android:paddingBottom="@dimen/dp_8" android:layout_width="fill_parent" android:layout_height="@dimen/dp_34">
+        <TextView android:textSize="12.0dip" android:textColor="#ffc7c7c7" android:ellipsize="end" android:id="@id/tvCFHistoryId" android:tag="binding_1" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLines="1" android:layout_weight="1.0" />
+        <TextView android:textSize="12.0dip" android:textStyle="bold" android:ellipsize="end" android:gravity="center" android:id="@id/tvCFMeron" android:tag="binding_2" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLines="1" android:layout_weight="1.0" />
+        <TextView android:textSize="12.0dip" android:textStyle="bold" android:ellipsize="end" android:gravity="end" android:id="@id/tvCFWala" android:tag="binding_3" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLines="1" android:layout_weight="1.0" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,10 @@
+{
+  "name": "@rtk-ai/opencode-plugin",
+  "version": "1.0.0",
+  "description": "RTK token-saving plugin for OpenCode",
+  "type": "module",
+  "main": "rtk.ts",
+  "exports": {
+    ".": "./rtk.ts"
+  }
+}

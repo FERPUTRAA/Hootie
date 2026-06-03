@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/item_global_message_reward_0" android:layout_width="fill_parent" android:layout_height="@dimen/dp_67"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/imgIcon" android:layout_width="@dimen/dp_36" android:layout_height="@dimen/dp_36" android:layout_centerVertical="true" android:importantForAccessibility="no" android:layout_marginStart="@dimen/dp_30" />
+    <TextView android:textSize="@dimen/sp_14" android:textColor="@color/text_black" android:id="@id/tvContent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/dp_20" android:layout_alignParentEnd="true" />
+</RelativeLayout>

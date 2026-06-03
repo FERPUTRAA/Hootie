@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:tag="layout/dialog_title_confirm_0" android:background="@drawable/bg_confirm_dialog" android:layout_width="306.0dip" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="#ff0d0043" android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" />
+    <View android:background="#ffeaeaea" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="20.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="20.0dip" />
+    <TextView android:textSize="13.0sp" android:textColor="#ff0d0143" android:gravity="center" android:id="@id/content" android:layout_width="258.0dip" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginStart="22.0dip" android:layout_marginEnd="22.0dip" />
+    <LinearLayout android:orientation="horizontal" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textStyle="bold" android:textColor="#ff888598" android:gravity="center" android:id="@id/cancel" android:background="@drawable/btn_dialog_negative" android:layout_width="0.0dip" android:layout_height="45.0dip" android:singleLine="true" android:layout_weight="1.0" />
+        <TextView android:textStyle="bold" android:textColor="@color/white" android:gravity="center" android:id="@id/next" android:background="@drawable/btn_dialog_positive" android:layout_width="0.0dip" android:layout_height="45.0dip" android:layout_marginLeft="10.0dip" android:singleLine="true" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

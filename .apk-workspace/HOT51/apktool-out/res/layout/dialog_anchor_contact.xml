@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/dialog_anchor_contact_0" android:background="@drawable/shape_base_dialog_bg2" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="#ff000000" android:gravity="center" android:tag="binding_1" android:layout_width="306.0dip" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" />
+    <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="#ff000000" android:gravity="center" android:id="@id/tv_contact" android:layout_width="306.0dip" android:layout_height="wrap_content" android:layout_marginTop="11.0dip" android:layout_marginBottom="11.0dip" />
+    <TextView android:textSize="12.0sp" android:textColor="@color/text_gray6" android:gravity="center" android:tag="binding_2" android:layout_width="306.0dip" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" />
+    <View android:background="#ffe0e0e0" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="15.0sp" android:textStyle="bold" android:textColor="@color/text_gray6" android:gravity="center" android:id="@id/btn_cancel" android:tag="binding_3" android:layout_width="0.0dip" android:layout_height="48.0dip" android:layout_weight="1.0" />
+        <View android:background="#ffe0e0e0" android:layout_width="1.0px" android:layout_height="fill_parent" />
+        <TextView android:textSize="15.0sp" android:textStyle="bold" android:textColor="@color/text_blue2" android:gravity="center" android:id="@id/btn_ok" android:tag="binding_4" android:layout_width="0.0dip" android:layout_height="48.0dip" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

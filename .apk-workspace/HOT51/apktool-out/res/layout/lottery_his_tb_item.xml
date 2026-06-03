@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="horizontal" android:tag="layout/lottery_his_tb_item_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:gravity="center" android:id="@id/num1" android:layout_width="20.0dip" android:layout_height="20.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <ImageView android:gravity="center" android:id="@id/num2" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginStart="5.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toEndOf="@id/num1" app:layout_constraintTop_toTopOf="parent" />
+    <ImageView android:gravity="center" android:id="@id/num3" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginStart="5.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toEndOf="@id/num2" app:layout_constraintTop_toTopOf="parent" />
+</LinearLayout>

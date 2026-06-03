@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:id="@id/ll" android:tag="layout/fragment_hot_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.drake.brv.PageRefreshLayout android:id="@id/page" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/rv" android:paddingLeft="@dimen/dp_12" android:paddingRight="@dimen/dp_12" android:paddingBottom="24.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/dp_4" android:overScrollMode="never" android:paddingHorizontal="@dimen/dp_12" />
+    </com.drake.brv.PageRefreshLayout>
+</FrameLayout>

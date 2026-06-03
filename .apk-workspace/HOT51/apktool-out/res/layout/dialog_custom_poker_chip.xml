@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="layout/dialog_custom_poker_chip_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/shape_base_dialog_bg2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="35.0dip" android:layout_marginRight="35.0dip">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+            <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="#ff0d0043" android:gravity="center" android:id="@id/dialog_code_input_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="19.0dip" android:layout_marginRight="5.0dip" />
+            <com.example.obs.player.ui.widget.NoPasteEditText android:textSize="14.0sp" android:textColor="#ff000000" android:textColorHint="#ff8e8e93" android:id="@id/dialog_input" android:tag="binding_1" android:background="@drawable/shape_input_bg" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginLeft="20.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="20.0dip" android:maxLength="99" android:inputType="numberDecimal" android:textCursorDrawable="@null" android:paddingStart="5.0dip" android:paddingEnd="1.0dip" android:importantForAutofill="no" />
+            <TextView android:textSize="14.0sp" android:textColor="#ff888888" android:id="@id/tv_range" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="5.0dip" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="45.0dip" android:layout_marginLeft="20.0dip" android:layout_marginTop="12.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="20.0dip">
+                <TextView android:textSize="15.0sp" android:textColor="#ff888598" android:gravity="center" android:id="@id/dialog_refresh_bt" android:tag="binding_2" android:background="@drawable/btn_dialog_negative" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+                <View android:background="#ffe0e0e0" android:visibility="gone" android:layout_width="1.0px" android:layout_height="fill_parent" />
+                <TextView android:textSize="15.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/dialog_code_input_yes" android:tag="binding_3" android:background="@drawable/btn_dialog_positive" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:layout_weight="1.0" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

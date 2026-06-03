@@ -1,0 +1,589 @@
+GET /index.html HTTP/1.1
+Host: www.comhub.live
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+User-Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Mobile Safari/537.36
+Save-Data: on
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: https://www.comhub.live/service-worker.js
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,id;q=0.8
+Cookie: _ga_W4YGZX9TPV=GS2.1.s1779631173$o1$g0$t1779631173$j60$l0$h0; _ga=GA1.1.386047587.1779631173
+
+
+OPTIONS /v1/projects/voxhub-e104a/installations HTTP/1.1
+Host: firebaseinstallations.googleapis.com
+Connection: keep-alive
+Accept: */*
+Access-Control-Request-Method: POST
+Access-Control-Request-Headers: content-type,x-firebase-client,x-goog-api-key
+Origin: https://www.comhub.live
+User-Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Mobile Safari/537.36
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Sec-Fetch-Dest: empty
+Referer: https://www.comhub.live/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,id;q=0.8
+
+
+
+POST /session HTTP/1.1
+Host: app.adjust.com
+Connection: keep-alive
+Content-Length: 332
+sec-ch-ua-platform: "Android"
+Save-Data: on
+Client-SDK: js5.7.2
+User-Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Mobile Safari/537.36
+sec-ch-ua: "Google Chrome";v="141", "Not?A_Brand";v="8", "Chromium";v="141"
+Content-Type: application/x-www-form-urlencoded
+sec-ch-ua-mobile: ?1
+Accept: */*
+Origin: https://www.comhub.live
+Sec-Fetch-Site: cross-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: https://www.comhub.live/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,id;q=0.8
+
+app_token=3ttnixqbv2f4&environment=production&created_at=2026-05-24T20%3A59%3A43.338Z%2B0700&sent_at=2026-05-24T20%3A59%3A43.525Z%2B0700&web_uuid=49c6d52b-68b7-4afb-aadf-6767ead770f0&platform=web&language=en&country=us&machine_type=Linux%20armv81&queue_size=1&attempts=1&time_spent=0&session_length=0&session_count=1&last_interval=0
+
+OPTIONS /attribution?app_token=3ttnixqbv2f4&environment=production&created_at=2026-05-24T20%3A59%3A45.540Z%2B0700&sent_at=2026-05-24T20%3A59%3A47.551Z%2B0700&web_uuid=49c6d52b-68b7-4afb-aadf-6767ead770f0&platform=web&language=en&country=us&machine_type=Linux%20armv81&queue_size=0&attempts=1&initiated_by=backend&time_spent=0&session_length=0&session_count=1&last_interval=0 HTTP/1.1
+Host: app.adjust.com
+Connection: keep-alive
+Accept: */*
+Access-Control-Request-Method: GET
+Access-Control-Request-Headers: client-sdk,content-type
+Origin: https://www.comhub.live
+User-Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Mobile Safari/537.36
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Sec-Fetch-Dest: empty
+Referer: https://www.comhub.live/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,id;q=0.8
+
+
+GET /static/css/AutoGreeting.4ca47851.css HTTP/1.1
+Host: www.comhub.live
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Mobile Safari/537.36
+Save-Data: on
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: https://www.comhub.live/service-worker.js
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,id;q=0.8
+Cookie: _ga_W4YGZX9TPV=GS2.1.s1779631173$o1$g0$t1779631173$j60$l0$h0; _ga=GA1.1.386047587.1779631173
+If-Modified-Since: Thu, 21 May 2026 08:34:47 GMT
+
+
+
+
+
+Respont
+
+
+Connection: keep-alive
+Server: AliyunOSS
+Date: Sun, 24 May 2026 14:00:02 GMT
+x-oss-server-time: 2
+x-oss-request-id: 6A130462E9CC4C3731D9150F
+Last-Modified: Thu, 21 May 2026 08:34:53 GMT
+x-oss-object-type: Normal
+x-oss-hash-crc64ecma: 7285709114933546838
+x-oss-storage-class: Standard
+Cache-Control: public,max-age=0
+Content-MD5: amBxsNFSygdth7bdK3YnXA==
+Vary: Accept-Encoding
+X-Cache: Miss from cloudfront
+Via: 1.1 58951614f432709894b5cb897528b874.cloudfront.net (CloudFront)
+X-Amz-Cf-Pop: CGK50-P4
+X-Amz-Cf-Id: I-gsI4ouVQhoztZp5ilbEN0Zyx1bT2A0jHPm2W1OVLb6hJPpkU6Fvg==
+
+OPTIONS /sdk_click HTTP/1.1
+Host: app.adjust.com
+Connection: keep-alive
+Accept: */*
+Access-Control-Request-Method: POST
+Access-Control-Request-Headers: client-sdk
+Origin: https://www.comhub.live
+User-Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Mobile Safari/537.36
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Sec-Fetch-Dest: empty
+Referer: https://www.comhub.live/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,id;q=0.8
+
+
+GET /static/js/LiveChat.1b92ee72.js HTTP/1.1
+Host: www.comhub.live
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Mobile Safari/537.36
+Save-Data: on
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: https://www.comhub.live/service-worker.js
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,id;q=0.8
+Cookie: _ga=GA1.1.386047587.1779631173; _ga_W4YGZX9TPV=GS2.1.s1779631173$o1$g1$t1779631208$j59$l0$h0; g_state={"i_l":0,"i_ll":1779631214347,"i_b":"adfyMiVfjkKI93XZd4Qv/leDuy2wzWwk4g0rwGfm7uE","i_e":{"enable_itp_optimization":0},"i_et":1779631213337}
+If-Modified-Since: Thu, 21 May 2026 08:34:59 GMT
+
+
+GET /gsi/fedcm/listaccounts HTTP/1.1
+Host: accounts.google.com
+Connection: keep-alive
+Accept: application/json
+Sec-Fetch-Site: cross-site
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: webidentity
+User-Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Mobile Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,id;q=0.8
+Cookie: GCL_AW_P=GCL.1779255562.Cj0KCQjwlLDQBhDjARIsAPlIefEDdBr-EZkX-yLUqFrZZGxSIzUCfrwytVTYj1Xi5eW4CJsYESgO5d4aAsUREALw_wcB; LSOLH=|||_SVI_ELzfv_qhzZQDGBAiP01BRURIZl9xSHVqMjRqSTlrNkJRTVZ2eWpVYXpxb290UHB0NWdYSko5bzJOamxaM3dWelp0M3Y4a3hLaTVkcw_:|||29657775:c912; __Secure-3PSID=g.a000-Qhcovyk0arb1Uh7P_i4SIMHR_b5was6hnB7LLecSBPZ85jYhyE1iRVNlK414PSifc4gsAACgYKAa0SARYSFQHGX2Miio-ErELiFJNOBGX5EVYKeRoVAUF8yKox2ON1OMWg5Rjv7I7w3stB0076; __Host-3PLSID=s.ID|s.youtube:g.a000-QhcojIyW9eVilnHFNiLqu9TuroTBgcVuWXpE_9GjH1yALyjQZPBsET0vHJ0uE-uDu2gogACgYKARISARYSFQHGX2Mi40xcz8PGCt0idW5EUKBIhxoVAUF8yKpjx2lDbC-809ioZiBlUIcZ0076; __Secure-3PAPISID=-FGO9PsmJCNxaxu2/ATzjAVonYLVUL3FdV; NID=531=gqnaZJjY4kj-AQtCAvptzJFuNsJNli1mVbvH6MssN6qoC_r09QMJT229jqwPRPrqxH_FnX2UvY3gelJG6h55weJXfqD9WFO3adyvHtVMX8l4P2fM4PXPvVLSS-lmS_Hl2iyW2nMZkIMfRbGSX9UCgntlj1hM9HxcSMqnVFB_iJs3lKs1MdK9WECQpYgMa8XtPCmukSzNEbt5vhTepsCwpWMkAOLnLgmbQ0gjdniMTWpmPXqGIOGFP2kDn2KH73c98UGP7xw5sFnOqUW7QXlZbk_ndQpJk9QFabCysxZhVIAUtuXDBbsnxTeZFI4DGGrFkhUAsG10eYg8YnfEto8kl0zILdd25oMv1VMcKqD0VOdx3k1c5lZRpjk2TtBfyg4htaNZFmqgVkEwnJkmwhMVqt4HIJTJjdSw61l5BDS3Wp77-VlMVz3nNoPsXkkA0H8Ow1PzRlk1oopS_jMoefxr1GbuYMmGfYMRnol0iV-o5frdo4PFmJ3JRMostv6JJFdjcEv_bDXoPAUrslVcDBmBNuqCd5KSKbbEpi4Og83HcZs8stgVtVfyZ5zzK8B1c4Mle1I8Cq3BqEwyHA; __Secure-3PSIDCC=AKEyXzVGM8SmtGkbGX9Q41lC1NjxC7VNL-PLT1liEZpJe5xVPFrN9Sdb8kbsfIXOKpSR99lzNxk
+
+
+POST /vchat/app/user/login/web_login HTTP/1.1
+Host: www.comhub.live
+Connection: keep-alive
+Content-Length: 1266
+language: en
+sec-ch-ua-platform: "Android"
+timestamp: 1779631230143
+sec-ch-ua: "Google Chrome";v="141", "Not?A_Brand";v="8", "Chromium";v="141"
+sec-ch-ua-mobile: ?1
+deviceId: 49c6d52b-68b7-4afb-aadf-6767ead770f0
+serverVersion: 6
+appVersion: 1.1.0
+PhoneModel: 
+countryCode: 
+CheckSum: d574626a3f4d5f48b3c4fbb5bac07e48
+Accept: application/json, text/plain, */*
+channel: vchat_voxhub_web
+Content-Type: application/json
+sys_region: 
+carrier_region: 
+gender: 1
+channelStatus: 0
+bundleId: com.voxhub.web
+deviceType: 0
+mcc_mnc: 
+Save-Data: on
+User-Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Mobile Safari/537.36
+userId: 174599107
+Origin: https://www.comhub.live
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: https://www.comhub.live/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,id;q=0.8
+Cookie: _ga=GA1.1.386047587.1779631173; _ga_W4YGZX9TPV=GS2.1.s1779631173$o1$g1$t1779631208$j59$l0$h0; g_state={"i_l":0,"i_ll":1779631215776,"i_e":{"enable_itp_optimization":0},"i_et":1779631213337}
+
+{"idToken":"eyJhbGciOiJSUzI1NiIsImtpZCI6IjQxYjJlMTFmZjljYTI2ZTc4YzAyNWE5ZDRhNDI5Y2IwNjAxMzk1NmUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI5MTY3MDE2MTM5MzgtajNxOTU2MGM3YWVwNjZpaHA3czk2dWhyaWo3aWg2NzkuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI5MTY3MDE2MTM5MzgtajNxOTU2MGM3YWVwNjZpaHA3czk2dWhyaWo3aWg2NzkuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDQzNDA1Mjg1NDkwMzE2NjY3MTAiLCJlbWFpbCI6Im1vdG5vZHVkdUBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwibmJmIjoxNzc5NjMwOTI1LCJuYW1lIjoiTW90MW5vMSBEdWR1IiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xXbnB5WUlTYWtTc3J5MVhtODNLeVBYcHlmaGRtQWwxeFpPY2xaNDFGbE5aZG9MQT1zOTYtYyIsImdpdmVuX25hbWUiOiJNb3Qxbm8xIiwiZmFtaWx5X25hbWUiOiJEdWR1IiwiaWF0IjoxNzc5NjMxMjI1LCJleHAiOjE3Nzk2MzQ4MjUsImp0aSI6IjA4NzQwNDUwMmRlYTUzM2NiY2JkZDEzYjZlZDRjZWQyMTczYjNmMjMifQ.pAPv_5cLREl_k7mkA78_zPP7Xluf--XGELDed5HhTMhuSOn29nPB6sWJj5Xl3PYX0sSwkbcjtO9eKY4YMQ73PLtNU1dguXByjpMm9looTKrGX51wPUTPw07XSdpy91Clt9Pv_6dJ-NuWWzsFEH2Z00lp2MYVKG2M4r19u4M9-xqebqmobuUBYeKH360KHRCfL2BVcQWCqFhDWwzGh91wBl9pbI9Zycone2bgxZKlwCIcEhTS9lZhum8HB1TA5arNrUuiPnJ_IHNZgVZrpWT3GGqo3utONZc44qPvBXLz6C8SD38JBgegevzPuibfwtETNHOKor0CwBCBweQ8Tb97cQ","thirdParty":"google","adId":"55d328dd08356de3c5a1515fc5b6ed7d"}
+
+
+GET /vchat/app/im/token HTTP/1.1
+Host: www.comhub.live
+Connection: keep-alive
+language: en
+sec-ch-ua-platform: "Android"
+timestamp: 1779631230931
+sec-ch-ua: "Google Chrome";v="141", "Not?A_Brand";v="8", "Chromium";v="141"
+sec-ch-ua-mobile: ?1
+deviceId: 49c6d52b-68b7-4afb-aadf-6767ead770f0
+serverVersion: 6
+appVersion: 1.1.0
+PhoneModel: 
+countryCode: ID
+CheckSum: 16b8fc5c9f66fa9ec8cde293aa248eeb
+Accept: application/json, text/plain, */*
+channel: vchat_voxhub_web
+sys_region: 
+token: 6cdab879c54842b2bd890921c3ff9c77
+carrier_region: 
+gender: 1
+channelStatus: 0
+bundleId: com.voxhub.web
+deviceType: 0
+mcc_mnc: 
+Save-Data: on
+User-Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Mobile Safari/537.36
+userId: 228433833
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: https://www.comhub.live/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,id;q=0.8
+Cookie: _ga=GA1.1.386047587.1779631173; _ga_W4YGZX9TPV=GS2.1.s1779631173$o1$g1$t1779631208$j59$l0$h0; g_state={"i_l":0,"i_ll":1779631215776,"i_e":{"enable_itp_optimization":0},"i_et":1779631213337}; userId=228433833; token=6cdab879c54842b2bd890921c3ff9c77
+
+
+GET /ws?userId=228433833&token=6cdab879c54842b2bd890921c3ff9c77 HTTP/1.1
+Host: www.comhub.live
+Connection: Upgrade
+Pragma: no-cache
+Cache-Control: no-cache
+User-Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Mobile Safari/537.36
+Upgrade: websocket
+Origin: https://www.comhub.live
+Sec-WebSocket-Version: 13
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,id;q=0.8
+Cookie: _ga=GA1.1.386047587.1779631173; _ga_W4YGZX9TPV=GS2.1.s1779631173$o1$g1$t1779631208$j59$l0$h0; g_state={"i_l":0,"i_ll":1779631215776,"i_e":{"enable_itp_optimization":0},"i_et":1779631213337}; userId=228433833; token=6cdab879c54842b2bd890921c3ff9c77
+Sec-WebSocket-Key: WgiSabWwwSmwcYuM7EtrWw==
+Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+
+GET /vchat/app/im/token HTTP/1.1
+Host: www.comhub.live
+Connection: keep-alive
+language: en
+sec-ch-ua-platform: "Android"
+timestamp: 1779631230934
+sec-ch-ua: "Google Chrome";v="141", "Not?A_Brand";v="8", "Chromium";v="141"
+sec-ch-ua-mobile: ?1
+deviceId: 49c6d52b-68b7-4afb-aadf-6767ead770f0
+serverVersion: 6
+appVersion: 1.1.0
+PhoneModel: 
+countryCode: ID
+CheckSum: 01668048a31423a47c810288453e4bbe
+Accept: application/json, text/plain, */*
+channel: vchat_voxhub_web
+sys_region: 
+token: 6cdab879c54842b2bd890921c3ff9c77
+carrier_region: 
+gender: 1
+channelStatus: 0
+bundleId: com.voxhub.web
+deviceType: 0
+mcc_mnc: 
+Save-Data: on
+User-Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Mobile Safari/537.36
+userId: 228433833
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: https://www.comhub.live/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,id;q=0.8
+Cookie: _ga=GA1.1.386047587.1779631173; _ga_W4YGZX9TPV=GS2.1.s1779631173$o1$g1$t1779631208$j59$l0$h0; g_state={"i_l":0,"i_ll":1779631215776,"i_e":{"enable_itp_optimization":0},"i_et":1779631213337}; userId=228433833; token=6cdab879c54842b2bd890921c3ff9c77
+
+GET /vchat/app/user/info HTTP/1.1
+Host: www.comhub.live
+Connection: keep-alive
+language: en
+sec-ch-ua-platform: "Android"
+timestamp: 1779631231540
+sec-ch-ua: "Google Chrome";v="141", "Not?A_Brand";v="8", "Chromium";v="141"
+sec-ch-ua-mobile: ?1
+deviceId: 49c6d52b-68b7-4afb-aadf-6767ead770f0
+serverVersion: 6
+appVersion: 1.1.0
+PhoneModel: 
+countryCode: ID
+CheckSum: 94ac8ced5a075d57d67422013d078245
+Accept: application/json, text/plain, */*
+channel: vchat_voxhub_web
+sys_region: 
+token: 6cdab879c54842b2bd890921c3ff9c77
+carrier_region: 
+gender: 1
+channelStatus: 0
+bundleId: com.voxhub.web
+deviceType: 0
+mcc_mnc: 
+Save-Data: on
+User-Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Mobile Safari/537.36
+userId: 228433833
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: https://www.comhub.live/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,id;q=0.8
+Cookie: _ga=GA1.1.386047587.1779631173; g_state={"i_l":0,"i_ll":1779631215776,"i_e":{"enable_itp_optimization":0},"i_et":1779631213337}; userId=228433833; token=6cdab879c54842b2bd890921c3ff9c77; _ga_W4YGZX9TPV=GS2.1.s1779631173$o1$g1$t1779631230$j37$l0$h0; im_id=228433833; im_token=24149c2f8d525b069a0284085ce5bdb2
+
+
+GET /socket.io/1/?t=1779631232761 HTTP/1.1
+Host: hkpxy0.netease.im
+Connection: keep-alive
+sec-ch-ua-platform: "Android"
+Save-Data: on
+User-Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Mobile Safari/537.36
+sec-ch-ua: "Google Chrome";v="141", "Not?A_Brand";v="8", "Chromium";v="141"
+sec-ch-ua-mobile: ?1
+Accept: */*
+Origin: https://www.comhub.live
+Sec-Fetch-Site: cross-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Sec-Fetch-Storage-Access: active
+Referer: https://www.comhub.live/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,id;q=0.8
+
+POST /vchat/app/chat/beg/join_match_pool HTTP/1.1
+Host: www.comhub.live
+Connection: keep-alive
+Content-Length: 2
+language: en
+sec-ch-ua-platform: "Android"
+timestamp: 1779631248989
+sec-ch-ua: "Google Chrome";v="141", "Not?A_Brand";v="8", "Chromium";v="141"
+sec-ch-ua-mobile: ?1
+deviceId: 49c6d52b-68b7-4afb-aadf-6767ead770f0
+serverVersion: 6
+appVersion: 1.1.0
+PhoneModel: 
+countryCode: ID
+CheckSum: 474d350c9c48deed7446dd119f6b183d
+Accept: application/json, text/plain, */*
+channel: vchat_voxhub_web
+Content-Type: application/json
+sys_region: 
+token: 6cdab879c54842b2bd890921c3ff9c77
+carrier_region: 
+gender: 1
+channelStatus: 0
+bundleId: com.voxhub.web
+deviceType: 0
+mcc_mnc: 
+Save-Data: on
+User-Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Mobile Safari/537.36
+userId: 228433833
+Origin: https://www.comhub.live
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: https://www.comhub.live/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,id;q=0.8
+Cookie: _ga=GA1.1.386047587.1779631173; g_state={"i_l":0,"i_ll":1779631215776,"i_e":{"enable_itp_optimization":0},"i_et":1779631213337}; userId=228433833; token=6cdab879c54842b2bd890921c3ff9c77; _ga_W4YGZX9TPV=GS2.1.s1779631173$o1$g1$t1779631230$j37$l0$h0; im_id=228433833; im_token=24149c2f8d525b069a0284085ce5bdb2
+
+{}
+
+POST /vchat/app/chat/beg/log_of_steps_to_join_match_room HTTP/1.1
+Host: www.comhub.live
+Connection: keep-alive
+Content-Length: 94
+language: en
+sec-ch-ua-platform: "Android"
+timestamp: 1779631253363
+sec-ch-ua: "Google Chrome";v="141", "Not?A_Brand";v="8", "Chromium";v="141"
+sec-ch-ua-mobile: ?1
+deviceId: 49c6d52b-68b7-4afb-aadf-6767ead770f0
+serverVersion: 6
+appVersion: 1.1.0
+PhoneModel: 
+countryCode: ID
+CheckSum: 268b56df7ab1a23b21c1ab751f40bcc5
+Accept: application/json, text/plain, */*
+channel: vchat_voxhub_web
+Content-Type: application/json
+sys_region: 
+token: 6cdab879c54842b2bd890921c3ff9c77
+carrier_region: 
+gender: 1
+channelStatus: 0
+bundleId: com.voxhub.web
+deviceType: 0
+mcc_mnc: 
+Save-Data: on
+User-Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Mobile Safari/537.36
+userId: 228433833
+Origin: https://www.comhub.live
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: https://www.comhub.live/live-chat?channel=%257B%2522age%2522%253A26%252C%2522avatar%2522%253A%2522https%253A%252F%252Fres1.comhub.live%252Fres%252F8gDiIkFnEpHqPtNvPxRzQSngeyoni4k4m4FGGHPLTMSPORWWTZXafCgiBhfmlikqIjsNRPwxxvttv0Za15.jpeg%2522%252C%2522countryCode%2522%253A%2522ID%2522%252C%2522gender%2522%253A2%252C%2522nickname%2522%253A%2522Dhira%25F0%259F%2592%258B%2522%252C%2522rtcToken%2522%253A%257B%2522autoRtcId%2522%253A%25221147962ca8014ac49b7f88b92f437c90%2522%252C%2522channelId%2522%253A%2522228433833_1779631251188_110072916_1779631248837_ejoy2%2522%252C%2522fpsLevel%2522%253A3%252C%2522resolutionLevel%2522%253A9%252C%2522rtcProvide%2522%253A1%252C%2522spCom%2522%253Atrue%252C%2522spTRtc%2522%253Afalse%252C%2522timestamp%2522%253A1779717653%252C%2522token%2522%253A%25220061147962ca8014ac49b7f88b92f437c90IADhHQWvCiA4xxMuAyNsjwaJHOsOop8mTk7FGUVA8a6n2747IntjI51AIgBsbXyYFVYUagQAAQAVVhRqAgAVVhRqAwAVVhRqBAAVVhRq%2522%257D%252C%2522targetId%2522%253A110072916%257D
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,id;q=0.8
+Cookie: _ga=GA1.1.386047587.1779631173; g_state={"i_l":0,"i_ll":1779631215776,"i_e":{"enable_itp_optimization":0},"i_et":1779631213337}; userId=228433833; token=6cdab879c54842b2bd890921c3ff9c77; _ga_W4YGZX9TPV=GS2.1.s1779631173$o1$g1$t1779631230$j37$l0$h0; im_id=228433833; im_token=24149c2f8d525b069a0284085ce5bdb2
+
+{"channelId":"228433833_1779631251188_110072916_1779631248837_ejoy2","step":"AgoraClientInit"}
+
+GET /vchat/app/mine/detail?visitedUserId=110072916 HTTP/1.1
+Host: www.comhub.live
+Connection: keep-alive
+language: en
+sec-ch-ua-platform: "Android"
+timestamp: 1779631253411
+sec-ch-ua: "Google Chrome";v="141", "Not?A_Brand";v="8", "Chromium";v="141"
+sec-ch-ua-mobile: ?1
+deviceId: 49c6d52b-68b7-4afb-aadf-6767ead770f0
+serverVersion: 6
+appVersion: 1.1.0
+PhoneModel: 
+countryCode: ID
+CheckSum: f9c0a536c6650b49b9376b411f3d72ab
+Accept: application/json, text/plain, */*
+channel: vchat_voxhub_web
+sys_region: 
+token: 6cdab879c54842b2bd890921c3ff9c77
+carrier_region: 
+gender: 1
+channelStatus: 0
+bundleId: com.voxhub.web
+deviceType: 0
+mcc_mnc: 
+Save-Data: on
+User-Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Mobile Safari/537.36
+userId: 228433833
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: https://www.comhub.live/live-chat?channel=%257B%2522age%2522%253A26%252C%2522avatar%2522%253A%2522https%253A%252F%252Fres1.comhub.live%252Fres%252F8gDiIkFnEpHqPtNvPxRzQSngeyoni4k4m4FGGHPLTMSPORWWTZXafCgiBhfmlikqIjsNRPwxxvttv0Za15.jpeg%2522%252C%2522countryCode%2522%253A%2522ID%2522%252C%2522gender%2522%253A2%252C%2522nickname%2522%253A%2522Dhira%25F0%259F%2592%258B%2522%252C%2522rtcToken%2522%253A%257B%2522autoRtcId%2522%253A%25221147962ca8014ac49b7f88b92f437c90%2522%252C%2522channelId%2522%253A%2522228433833_1779631251188_110072916_1779631248837_ejoy2%2522%252C%2522fpsLevel%2522%253A3%252C%2522resolutionLevel%2522%253A9%252C%2522rtcProvide%2522%253A1%252C%2522spCom%2522%253Atrue%252C%2522spTRtc%2522%253Afalse%252C%2522timestamp%2522%253A1779717653%252C%2522token%2522%253A%25220061147962ca8014ac49b7f88b92f437c90IADhHQWvCiA4xxMuAyNsjwaJHOsOop8mTk7FGUVA8a6n2747IntjI51AIgBsbXyYFVYUagQAAQAVVhRqAgAVVhRqAwAVVhRqBAAVVhRq%2522%257D%252C%2522targetId%2522%253A110072916%257D
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,id;q=0.8
+Cookie: _ga=GA1.1.386047587.1779631173; g_state={"i_l":0,"i_ll":1779631215776,"i_e":{"enable_itp_optimization":0},"i_et":1779631213337}; userId=228433833; token=6cdab879c54842b2bd890921c3ff9c77; _ga_W4YGZX9TPV=GS2.1.s1779631173$o1$g1$t1779631230$j37$l0$h0; im_id=228433833; im_token=24149c2f8d525b069a0284085ce5bdb2
+
+POST /api/v2/transpond/webrtc?v=2 HTTP/1.1
+Host: webrtc2-2.ap.sd-rtn.com
+Connection: keep-alive
+Content-Length: 614
+sec-ch-ua-platform: "Android"
+Save-Data: on
+User-Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Mobile Safari/537.36
+Accept: application/json, text/plain, */*
+sec-ch-ua: "Google Chrome";v="141", "Not?A_Brand";v="8", "Chromium";v="141"
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary9b405ozbovfFKg4I
+sec-ch-ua-mobile: ?1
+Origin: https://www.comhub.live
+Sec-Fetch-Site: cross-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: https://www.comhub.live/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,id;q=0.8
+
+------WebKitFormBoundary9b405ozbovfFKg4I
+Content-Disposition: form-data; name="request"
+
+{"appid":"1147962ca8014ac49b7f88b92f437c90","client_ts":1779631253405,"opid":930950541884,"sid":"B34643B8DAEF44038AA23537C256164C","request_bodies":[{"uri":22,"buffer":{"cname":"228433833_1779631251188_110072916_1779631248837_ejoy2","detail":{"11":"CN,GLOBAL","17":"1","22":"CN,GLOBAL"},"key":"0061147962ca8014ac49b7f88b92f437c90IADhHQWvCiA4xxMuAyNsjwaJHOsOop8mTk7FGUVA8a6n2747IntjI51AIgBsbXyYFVYUagQAAQAVVhRqAgAVVhRqAwAVVhRqBAAVVhRq","service_ids":[11,26],"uid":228433833}}]}
+------WebKitFormBoundary9b405ozbovfFKg4I--
+
+
+
+
+OPTIONS /events/messages HTTP/1.1
+Host: statscollector-1.agora.io
+Connection: keep-alive
+Accept: */*
+Access-Control-Request-Method: POST
+Access-Control-Request-Headers: content-type
+Origin: https://www.comhub.live
+User-Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Mobile Safari/537.36
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Sec-Fetch-Dest: empty
+Referer: https://www.comhub.live/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,id;q=0.8
+
+
+POST /api/v2/transpond/webrtc?v=2 HTTP/1.1
+Host: webrtc2-ap-web-1.agora.io
+Connection: keep-alive
+Content-Length: 613
+sec-ch-ua-platform: "Android"
+Save-Data: on
+User-Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Mobile Safari/537.36
+Accept: application/json, text/plain, */*
+sec-ch-ua: "Google Chrome";v="141", "Not?A_Brand";v="8", "Chromium";v="141"
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryiUvWp0Msc6QE3hHA
+sec-ch-ua-mobile: ?1
+Origin: https://www.comhub.live
+Sec-Fetch-Site: cross-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: https://www.comhub.live/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,id;q=0.8
+
+------WebKitFormBoundaryiUvWp0Msc6QE3hHA
+Content-Disposition: form-data; name="request"
+
+{"appid":"1147962ca8014ac49b7f88b92f437c90","client_ts":1779631253397,"opid":93632213637,"sid":"B34643B8DAEF44038AA23537C256164C","request_bodies":[{"uri":22,"buffer":{"cname":"228433833_1779631251188_110072916_1779631248837_ejoy2","detail":{"11":"CN,GLOBAL","17":"1","22":"CN,GLOBAL"},"key":"0061147962ca8014ac49b7f88b92f437c90IADhHQWvCiA4xxMuAyNsjwaJHOsOop8mTk7FGUVA8a6n2747IntjI51AIgBsbXyYFVYUagQAAQAVVhRqAgAVVhRqAwAVVhRqBAAVVhRq","service_ids":[11,26],"uid":228433833}}]}
+------WebKitFormBoundaryiUvWp0Msc6QE3hHA--
+
+
+
+POST /events/messages HTTP/1.1
+Host: statscollector-1.agora.io
+Connection: keep-alive
+Content-Length: 1203
+sec-ch-ua-platform: "Android"
+Save-Data: on
+User-Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Mobile Safari/537.36
+Accept: application/json, text/plain, */*
+sec-ch-ua: "Google Chrome";v="141", "Not?A_Brand";v="8", "Chromium";v="141"
+Content-Type: application/json
+sec-ch-ua-mobile: ?1
+Origin: https://www.comhub.live
+Sec-Fetch-Site: cross-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: https://www.comhub.live/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,id;q=0.8
+
+{"msgType":"EventMessages","sentTs":1779631255,"payloads":["{\"type\":\"io.agora.pb.Wrtc.JoinChooseServer\",\"data\":{\"sid\":\"B34643B8DAEF44038AA23537C256164C\",\"lts\":1779631254792,\"success\":true,\"cname\":\"228433833_1779631251188_110072916_1779631248837_ejoy2\",\"uid\":228433833,\"peer\":null,\"cid\":4196585757,\"elapse\":1423,\"vid\":\"1258866\",\"role\":\"host\",\"eventType\":\"join_choose_server\",\"eventElapse\":1395,\"chooseServerAddr\":\"https://webrtc2-ap-web-1.agora.io/api/v2/transpond/webrtc?v=2\",\"errorCode\":null,\"chooseServerAddrList\":\"[\\\"156-59-176-70.edge.agora.io:4723\\\",\\\"129-227-71-133.edge.sd-rtn.com:4707\\\",\\\"148-153-197-173.edge.agora.io:4707\\\"]\",\"chooseServerIp\":\"148.153.100.229\",\"opid\":93632213637,\"unilbsServerIds\":\"11,26\",\"isHttp3\":-1,\"ua\":\"Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Mobile Safari/537.36\",\"resourceTimingInfo\":\"{\\\"name\\\":\\\"https://webrtc2-ap-web-1.agora.io/api/v2/transpond/webrtc?v=2\\\",\\\"protocol\\\":\\\"http/1.1\\\",\\\"dnscost\\\":0,\\\"tcpTlsCost\\\":1201.8000000044703,\\\"reqCost\\\":170.30000000447035,\\\"handleCost\\\":20}\"}}"],"vid":1258866}
+
+
+POST /api/v2/transpond/webrtc?v=2 HTTP/1.1
+Host: webrtc2-ap-web-3.agora.io
+Connection: keep-alive
+Content-Length: 614
+sec-ch-ua-platform: "Android"
+Save-Data: on
+User-Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Mobile Safari/537.36
+Accept: application/json, text/plain, */*
+sec-ch-ua: "Google Chrome";v="141", "Not?A_Brand";v="8", "Chromium";v="141"
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryawqiwRWgWFUhUtZv
+sec-ch-ua-mobile: ?1
+Origin: https://www.comhub.live
+Sec-Fetch-Site: cross-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: https://www.comhub.live/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,id;q=0.8
+
+------WebKitFormBoundaryawqiwRWgWFUhUtZv
+Content-Disposition: form-data; name="request"
+
+{"appid":"1147962ca8014ac49b7f88b92f437c90","client_ts":1779631254486,"opid":352071622354,"sid":"B34643B8DAEF44038AA23537C256164C","request_bodies":[{"uri":22,"buffer":{"cname":"228433833_1779631251188_110072916_1779631248837_ejoy2","detail":{"11":"CN,GLOBAL","17":"1","22":"CN,GLOBAL"},"key":"0061147962ca8014ac49b7f88b92f437c90IADhHQWvCiA4xxMuAyNsjwaJHOsOop8mTk7FGUVA8a6n2747IntjI51AIgBsbXyYFVYUagQAAQAVVhRqAgAVVhRqAwAVVhRqBAAVVhRq","service_ids":[11,26],"uid":228433833}}]}
+------WebKitFormBoundaryawqiwRWgWFUhUtZv--
+
+
+
+
+
+GET /tig/avatar/110072916/2026-5-16/359f89b6-3973-49a0-8cfc-88741015dd36.jpeg?x-oss-process=image/resize,w_200,limit_1 HTTP/1.1
+Host: res.tigodating.com
+Connection: keep-alive
+sec-ch-ua-platform: "Android"
+Save-Data: on
+User-Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Mobile Safari/537.36
+sec-ch-ua: "Google Chrome";v="141", "Not?A_Brand";v="8", "Chromium";v="141"
+sec-ch-ua-mobile: ?1
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: cross-site
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Sec-Fetch-Storage-Access: active
+Referer: https://www.comhub.live/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,id;q=0.8

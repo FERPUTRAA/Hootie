@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:tag="layout/activity_ranking_0" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.drake.engine.widget.FixedViewPager android:id="@id/view_pager" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <com.example.obs.player.ui.widget.TitleBarView android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="@dimen/dp_50" app:defaultLeftIco="@drawable/ic_ranking_back" app:isHideLine="true" app:layout_constraintTop_toTopOf="parent" app:rightIco="@drawable/ic_ranking_explain" app:title="rank.title" app:titleColor="@color/white" app:titleSize="@dimen/sp_17" />
+    <net.lucode.hackware.magicindicator.MagicIndicator android:id="@id/magic_indicator" android:paddingLeft="@dimen/dp_15" android:paddingRight="@dimen/dp_15" android:paddingBottom="2.0dip" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="@dimen/dp_40" android:paddingHorizontal="@dimen/dp_15" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/toolbar" />
+</androidx.constraintlayout.widget.ConstraintLayout>

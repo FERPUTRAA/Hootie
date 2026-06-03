@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/item" android:tag="layout/item_home_shortcut_list_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.AppCompatImageView android:id="@id/imvCover" android:tag="binding_1" android:layout_width="@dimen/dp_40" android:layout_height="@dimen/dp_40" android:scaleType="centerCrop" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <androidx.appcompat.widget.AppCompatTextView android:textSize="12.0dip" android:textColor="#ff212121" android:ellipsize="end" android:gravity="center_horizontal" android:id="@id/tvContext" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_4" android:maxLines="2" app:layout_constraintEnd_toEndOf="@id/imvCover" app:layout_constraintStart_toStartOf="@id/imvCover" app:layout_constraintTop_toBottomOf="@id/imvCover" />
+</androidx.constraintlayout.widget.ConstraintLayout>

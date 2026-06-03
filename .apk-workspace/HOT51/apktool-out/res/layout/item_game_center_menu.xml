@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="layout/item_game_center_menu_0" android:background="@drawable/selector_game_center_menu" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minWidth="@dimen/dp_90"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_item" android:tag="binding_1" android:paddingTop="@dimen/dp_12" android:paddingBottom="@dimen/dp_12" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="50.0dip" android:paddingVertical="@dimen/dp_12">
+        <ImageView android:tag="binding_2" android:layout_width="@dimen/dp_24" android:layout_height="@dimen/dp_24" />
+        <TextView android:textSize="@dimen/sp_12" android:textColor="@color/selector_game_accent_text" android:ellipsize="end" android:gravity="center" android:id="@id/type_name" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_12" android:layout_marginTop="@dimen/dp_4" android:layout_marginRight="@dimen/dp_12" android:maxLines="2" android:layout_marginHorizontal="@dimen/dp_12" />
+    </LinearLayout>
+    <View android:layout_gravity="bottom" android:background="#ffe8e8e8" android:layout_width="fill_parent" android:layout_height="@dimen/dp_0_5" />
+    <ImageView android:layout_gravity="bottom|center" android:tag="binding_4" android:background="@drawable/shape_game_center_indicator" android:layout_width="@dimen/dp_22" android:layout_height="@dimen/dp_2" />
+</FrameLayout>

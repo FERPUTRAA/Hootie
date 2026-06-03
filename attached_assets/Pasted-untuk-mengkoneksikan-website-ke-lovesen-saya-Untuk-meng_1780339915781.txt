@@ -1,0 +1,214 @@
+untuk mengkoneksikan website ke lovesen saya
+
+Untuk **menghubungkan website sendiri ke vibrator Lovense**, kamu punya **2 opsi utama** tergantung kebutuhan:
+
+***
+
+## 🎯 Opsi 1: Integrasi API Lovense (Untuk Developer) ⭐ **RECOMMENDED**
+
+Karena kamu **software developer**, ini opsi terbaik untuk kontrol penuh dari website custom.
+
+### Langkah 1: Daftar sebagai Developer Lovense
+1. Buka [Lovense Developer Dashboard](https://www.lovense.com/user/developer/info) [1][2]
+2. Login dengan akun Lovense kamu
+3. **Set Callback URL** → isi dengan URL website kamu (misal: `https://yourwebsite.com/api/lovense/callback`) [1]
+4. **Copy Developer Token** → simpan securely, ini akan dipakai untuk API calls [1]
+
+### Langkah 2: Tambahkan Lovense LAN.js ke Website
+Di halaman HTML website kamu, tambahkan script berikut [1]:
+
+```html
+<script src="https://api.lovense.com/api/lan/v2/lan.js"></script>
+```
+
+### Langkah 3: Hubungkan User ke Toy (QR Code)
+Server kamu perlu generate QR code agar user bisa scan dengan **Lovense Remote app**:
+
+```javascript
+// Server-side: Generate QR Code
+const result = await axios.post('https://api.lovense.com/api/lan/getQrCode', {
+  token: 'YOUR_DEVELOPER_TOKEN',  // dari dashboard
+  uid: 'user_id_di_website_kamu',
+  uname: 'username_user',
+  utoken: md5(uid + 'salt'),  // token keamanan untuk verifikasi user
+  v: 2
+});
+
+// Response berisi QR code URL
+console.log(result.data.qr);  // https://test2.lovense.com/UploadFiles/qr/xxx.jpg
+console.log(result.data.code); // kode untuk PC Remote
+```
+
+
+
+### Langkah 4: Handle Callback dari Lovense Remote
+Setelah user scan QR code, Lovense akan POST ke Callback URL kamu:
+
+```javascript
+// Callback handler di server kamu
+app.post('/api/lovense/callback', (req, res) => {
+  const callbackData = req.body;
+  
+  // Data yang diterima:
+  // {
+  //   "uid": "xxx",
+  //   "toys": { "toy_id": { "name": "max", "id": "xxxx", "status": 1 } },
+  //   "httpsPort": "34568",
+  //   "domain": "192-168-1-44.lovense.club",
+  //   ...
+  // }
+  
+  // Kirim data ini ke frontend untuk connect
+  res.json({ success: true });
+});
+```
+
+
+
+### Langkah 5: Kirim Perintah Vibrasi ke Toy
+Di frontend (setelah dapat callback data):
+
+```javascript
+// Set callback data dari Lovense
+lovense.setConnectCallbackData(callbackData);
+
+// Kirim perintah vibrasi
+lovense.sendCommand({
+  command: "Function",
+  action: "Vibrate:16",  // 0-20 (强度的)
+  timeSec: 20,           // durasi total 20 detik
+  loopRunningSec: 9,     // nyala 9 detik
+  loopPauseSec: 4,       // pause 4 detik
+  toy: "ff922f7fd345",   // toy ID dari callback
+  apiVer: 1
+});
+```
+
+
+
+### Perintah Vibrasi yang Tersedia
+
+| Action | Range | Deskripsi |
+|--------|-------|-----------|
+| `Vibrate:X` | 0-20 | Getaran (0 = off, 20 = max) [1] |
+| `Rotate:X` | 0-20 | Rotasi (untuk Max/Nora) [1] |
+| `Pump:X` | 0-3 | Pompa (untuk Nora) [1] |
+| `Stop` | - | Hentikan semua [1] |
+
+**ContohPattern Request** (untuk pola kompleks):
+
+```javascript
+lovense.sendCommand({
+  command: "Pattern",
+  rule: "V:1;F:v;S:1000#",  // vibrate, interval 1 detik
+  strength: "20;20;5;20;10", // pola intensitas
+  timeSec: 9,
+  toy: "ff922f7fd345",
+  apiVer: 2
+});
+```
+
+
+
+***
+
+## 🎯 Opsi 2: Menggunakan Lovense Connect + Extension Browser (Lebih Mudah)
+
+Jika kamu tidak mau coding API dari nol:
+
+### Langkah 1: Install Lovense Connect Desktop
+1. Download **Lovense Connect PC Version** dari [ >(https://www.lovense.com/software-guide/Lovense-Connect)[3]
+2. Install & jalankan aplikasi [3]
+3. Klik **"Add Toy"** → pairing dengan vibrator via Bluetooth [3]
+
+### Langkah 2: Install Browser Extension
+1. Install **"Share Link"** extension dari Chrome Extension Store [4]
+2. Pin extension ke toolbar Chrome [4]
+3. Klik extension → **"Go to settings"** [4]
+
+### Langkah 3: Tambahkan Website Kamu ke Lovense Dashboard
+1. Login ke [Lovense Dashboard](https://www.lovense.com/user/dashboard) [4]
+2. Klik **"Add a Cam Site"** → pilih **"Custom"** atau tambahkan website kamu [4]
+3. Klik **"Connect Now"** → pair device [4]
+
+### Langkah 4: Integrasikan ke Website
+Tambahkan tombol/controls di website yang mengirim perintah ke Lovense Remote via API lokal (sama seperti Opsi 1, tapi lebih sederhana karena sudah connect via PC app).
+
+***
+
+## 🔧 Diagram Arsitektur
+
+```
+┌─────────────────┐
+│  Website Kamu   │
+│  (Frontend)     │
+└────────┬────────┘
+         │ HTTP/HTTPS
+         ▼
+┌─────────────────┐
+│  Backend Server │
+│  (Node.js/PHP)  │─── Lovense API (api.lovense.com)
+└────────┬────────┘
+         │ WebSocket/LAN
+         ▼
+┌─────────────────┐
+│ Lovense Remote  │
+│   (Mobile/PC)   │─── Bluetooth
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│  Lovense Toy    │
+│  (Vibrator)     │
+└─────────────────┘
+```
+
+***
+
+## ✅ Prerequisites
+
+| Item | Keterangan |
+|------|------------|
+| **Aplikasi** | Lovense Remote (Mobile) atau Lovense Connect (PC) [1] |
+| **Akun** | Akun Lovense (gratis, daftar di [lovense.com](https://www.lovense.com/signup)) [4] |
+| **Developer Token** | Dari Lovense Developer Dashboard [1] |
+| **Bluetooth** | Aktif di ponsel/komputer [5] |
+| **Koneksi Internet** | Stabil, **tidak pakai VPN** [6] |
+| **Local Network** | Frontend & Lovense Remote harus di **LAN sama** untuk LAN API [1] |
+
+***
+
+## 📚 Dokumentasi Lengkap
+
+- **Official API Docs**: [Lovense Standard API](https://developer.lovense.com/docs/standard-solutions/standard-api) [1]
+- **Source Code Example**: [GitHub - lovense/Standard_solutions](https://github.com/lovense/Standard_solutions) [1]
+- **API Demos**: [Delta-F/lovense-api-demos](https://github.com/Delta-F/lovense-api-demos) [7]
+
+***
+
+## 💡 Tips untuk Case Kamu
+
+Karena kamu **software developer dengan background Linux/Networking**:
+
+1. **Gunakan Opsi 1** (API) — kamu punya kontrol penuh
+2. Backend bisa pakai **Node.js/Python** di Linux laptop kamu
+3. Gunakan **WebSocket** untuk real-time control
+4. Deploy backend di **VPS lokal** atau **Replit** (kamu sudah pakai Replit)
+5. Jika butuh **remote access** dari luar LAN, gunakan **server API** (bukan LAN API) — lihat dokumentasi "By server" [1]
+
+***
+
+Kalau kamu mau **contoh kode lengkap** (Node.js/Python/PHP) untuk backend atau frontend, kasih tahu — saya bisa buatkan contoh kode siap pakai sesuai stack yang kamu prefer!
+
+Kutipan:
+[1] GitHub - lovense/Standard_solutions: These solutions allow you to control users' Lovense toys by simple HTTPS request. https://github.com/lovense/Standard_solutions
+[2] By local application https://developer.lovense.com/docs/standard-solutions/standard-api
+[3] LoyalFans x Lovense: Installation & Setup https://loyalfans.zendesk.com/hc/en-us/articles/11499313938460-LoyalFans-x-Lovense-Installation-Setup
+[4] Lovense Integration - AdultWork.com https://help.adultwork.com/hc/en-us/articles/15602275866641-Lovense-Integration
+[5] Buku Panduan & Petunjuk Pengguna LOVENSE - Manuals+ https://manuals.plus/id/category/lovense
+[6] How to Connect Lovense Toys to Stripchat | Cam101 https://www.cam101.com/articleView/detail/how-to-connect-lovense-toys-to-stripchat
+[7] Delta-F/lovense-api-demos https://github.com/Delta-F/lovense-api-demos
+[8] How to Use Lovense Toys for Long Distance Control? Step-By-Step https://www.mysextoyguide.com/how-to-connect-lovense-long-distance/
+[9] Lovense - The RevealMe Blog https://blog.revealme.com/lovense/
+[10] Lovense Remote - Aplikasi di Google Play https://play.google.com/store/apps/details/Lovense+Remote?id=com.lovense.wear&hl=id
+[11] Lovense® Control Link Guide: Connect and Enjoy Anywhere https://www.lovense.com/software-guide/Lovense-Remote/Discover/Control-Link

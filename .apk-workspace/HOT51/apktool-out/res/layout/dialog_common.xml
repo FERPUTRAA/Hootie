@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="layout/dialog_common_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/shape_base_dialog_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="38.0dip" android:layout_marginRight="38.0dip">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+            <RelativeLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="156.0dip">
+                <ImageView android:id="@id/ivTip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:layout_centerHorizontal="true" />
+                <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="#ff0d0043" android:gravity="center" android:id="@id/dialog_tip_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:layout_below="@id/ivTip" />
+            </RelativeLayout>
+            <View android:background="#ffe0e0e0" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0px" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="45.0dip" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="20.0dip">
+                <TextView android:textSize="14.0sp" android:textColor="#ff888598" android:gravity="center" android:id="@id/dialog_left_bt" android:tag="binding_1" android:background="@drawable/btn_dialog_negative" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+                <View android:id="@id/lin" android:background="#ffe0e0e0" android:visibility="gone" android:layout_width="1.0px" android:layout_height="fill_parent" />
+                <TextView android:textSize="14.0sp" android:textColor="#ffffffff" android:gravity="center" android:id="@id/dialog_right_bt" android:tag="binding_2" android:background="@drawable/btn_dialog_positive" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:layout_weight="1.0" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

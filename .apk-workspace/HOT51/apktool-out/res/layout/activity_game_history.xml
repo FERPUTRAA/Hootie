@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/activity_game_history_0" android:background="#fff3f4f6" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.example.obs.player.ui.widget.TitleBarView android:id="@id/title" android:background="@drawable/bg_head" android:layout_width="fill_parent" android:layout_height="50.0dip" app:defaultLeftIco="@drawable/ic_back" app:isHideLine="true" app:isTitleTextBold="true" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:titleColor="@color/black" app:titleSize="16.0sp" />
+    <com.drake.brv.PageRefreshLayout android:orientation="vertical" android:id="@id/page" android:background="#fff3f4f6" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/rv" android:layout_width="fill_parent" android:layout_height="fill_parent" android:overScrollMode="never" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    </com.drake.brv.PageRefreshLayout>
+</LinearLayout>

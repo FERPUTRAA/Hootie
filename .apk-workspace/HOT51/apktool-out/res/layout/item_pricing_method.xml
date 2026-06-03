@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/item" android:tag="layout/item_pricing_method_0" android:layout_width="fill_parent" android:layout_height="56.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="15.0sp" android:textColor="@color/text_black" android:id="@id/tvCurrency" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="15.0dip" />
+    <ImageView android:id="@id/imgCheck" android:tag="binding_2" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginRight="15.0dip" android:src="@drawable/ic_currency_checked_red" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+</RelativeLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:tag="layout/activity_withdraw_result_0" android:background="#fff9f9f9" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.example.obs.player.ui.widget.TitleBarView android:id="@id/title" android:layout_width="fill_parent" android:layout_height="44.0dip" app:defaultLeftIco="@drawable/ic_back" app:isTitleTextBold="true" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:title="common.confirm" app:titleColor="@color/black" app:titleSize="16.0sp" />
+    <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="90.0dip" android:src="@drawable/img_success" />
+    <TextView android:textSize="13.0dip" android:textColor="@color/text_black" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="@string/audit.finance.checking" android:lineSpacingExtra="3.0dip" />
+    <LinearLayout android:gravity="bottom|center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <Button android:textSize="15.0dip" android:textColor="@color/text_black" android:id="@id/btnContact" android:background="@drawable/bg_stroke_corner_21" android:layout_width="161.0dip" android:layout_height="42.0dip" android:layout_marginBottom="160.0dip" android:text="@string/common.back.home" />
+    </LinearLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>

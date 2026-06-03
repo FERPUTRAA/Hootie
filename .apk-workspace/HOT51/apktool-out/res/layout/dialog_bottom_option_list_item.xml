@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.example.obs.player.ui.widget.qmui.AppTextView android:textSize="15.0sp" android:textColor="@color/txt_color1" android:gravity="center" android:id="@id/bottom_option_list_item_text" android:layout_width="fill_parent" android:layout_height="50.0dip" app:resText="common.free" />
+    <View android:id="@id/bottom_option_list_item_lin" style="@style/HorizontalLine" />
+</LinearLayout>

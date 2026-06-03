@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:tag="layout/trend_chart_fragment_0" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.amar.library.ui.StickyScrollView android:id="@id/trendScrollView" android:layout_width="fill_parent" android:layout_height="fill_parent" app:stickyHeader="@id/ll_tab_head_trend">
+        <LinearLayout android:orientation="vertical" android:id="@id/layoutTrend" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+            <LinearLayout android:orientation="vertical" android:id="@id/ll_tab_head_trend" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <View android:background="#ffe1e1e1" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+                <TextView android:textSize="10.0sp" android:textColor="#ff999999" android:gravity="center_vertical" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="26.0dip" android:text="@string/game.wingo.new.statistic" android:layout_marginStart="16.0dip" />
+                <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="151.5dip" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip">
+                    <LinearLayout android:orientation="vertical" android:id="@id/ll_100" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+                    <View android:background="@drawable/shape_trend_100_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <LinearLayout android:orientation="horizontal" android:background="#fff3f4f6" android:layout_width="fill_parent" android:layout_height="30.0dip" android:layout_marginTop="12.0dip">
+                    <TextView android:textSize="10.0sp" android:textColor="#ff212121" android:gravity="center" android:layout_gravity="center" android:tag="binding_2" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+                    <TextView android:textSize="10.0sp" android:textColor="#ff212121" android:gravity="center" android:layout_gravity="center" android:tag="binding_3" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="3.0" />
+                </LinearLayout>
+            </LinearLayout>
+            <com.example.obs.player.ui.widget.custom.OneMWinGoTrendChartView android:id="@id/trendChartView" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <TextView android:textSize="12.0sp" android:textColor="#ff999999" android:gravity="center" android:id="@id/tv_footer" android:tag="binding_4" android:background="#ffffffff" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="42.0dip" android:text="@string/game.wingo.noMore.data" />
+        </LinearLayout>
+    </com.amar.library.ui.StickyScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:tag="layout/activity_main_0" android:background="#ffefefef" android:layout_width="fill_parent" android:layout_height="fill_parent" android:splitMotionEvents="false"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.drake.engine.widget.FixedViewPager android:id="@id/vp" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintBottom_toTopOf="@id/bottom_bg" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:pager_scrollable="false" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/bottom_bg" android:background="@color/white" android:layout_width="0.0dip" android:layout_height="50.0dip" android:elevation="10.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/bottom_home" android:tag="binding_1" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <ImageView android:id="@id/home_img" android:layout_width="48.0dip" android:layout_height="48.0dip" android:scaleType="centerCrop" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/bottom_live" android:tag="binding_2" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <ImageView android:id="@id/live_img" android:layout_width="48.0dip" android:layout_height="48.0dip" android:scaleType="centerCrop" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/bottom_game" android:tag="binding_3" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <ImageView android:id="@id/game_img" android:layout_width="48.0dip" android:layout_height="48.0dip" android:scaleType="centerCrop" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/bottom_activities" android:tag="binding_4" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <ImageView android:id="@id/activities_img" android:layout_width="48.0dip" android:layout_height="48.0dip" android:scaleType="centerCrop" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/bottom_my" android:tag="binding_5" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <ImageView android:id="@id/my_img" android:layout_width="48.0dip" android:layout_height="48.0dip" android:scaleType="centerCrop" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:textSize="14.0sp" android:textColor="@color/white" android:ellipsize="end" android:gravity="center" android:id="@id/tvLogin" android:tag="binding_6" android:background="@drawable/bg_btn_login" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:layout_width="0.0dip" android:layout_height="44.0dip" android:layout_marginLeft="45.0dip" android:layout_marginRight="45.0dip" android:layout_marginBottom="40.0dip" android:maxLines="2" android:layout_marginHorizontal="45.0dip" android:paddingHorizontal="20.0dip" app:layout_constraintBottom_toTopOf="@id/bottom_bg" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintWidth_default="wrap" app:layout_constraintWidth_min="145.0dip" />
+</androidx.constraintlayout.widget.ConstraintLayout>

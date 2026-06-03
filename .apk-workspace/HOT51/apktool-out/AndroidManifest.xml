@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="35" android:compileSdkVersionCodename="15" package="com.sagadsg.user.mady501857" platformBuildVersionCode="35" platformBuildVersionName="15">
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO"/>
+    <uses-feature android:name="android.hardware.camera.ar" android:required="false"/>
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <data android:scheme="zalo"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <data android:scheme="fb"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <data android:scheme="instagram"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <data android:scheme="fb-messenger"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <data android:scheme="whatsapp"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <data android:scheme="tg"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <data android:scheme="line"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <data android:scheme="vnd.youtube"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <data android:scheme="twitter"/>
+        </intent>
+        <package android:name="com.zing.zalo"/>
+        <package android:name="com.facebook.katana"/>
+        <package android:name="com.instagram.android"/>
+        <package android:name="com.facebook.orca"/>
+        <package android:name="com.whatsapp"/>
+        <package android:name="org.telegram.messenger"/>
+        <package android:name="jp.naver.line.android"/>
+        <package android:name="com.google.android.youtube"/>
+        <package android:name="com.twitter.android"/>
+        <intent>
+            <action android:name="android.intent.action.CREATE_DOCUMENT"/>
+            <data android:mimeType="*/*"/>
+        </intent>
+    </queries>
+    <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true"/>
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <permission android:name="com.sagadsg.user.mady501857.permission.MT_COMPONENT_PERMISSION" android:protectionLevel="signature"/>
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT"/>
+    <uses-permission android:name="android.permission.RESTART_PACKAGES"/>
+    <permission android:name="com.sagadsg.user.mady501857.permission.XGPUSH_RECEIVE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.sagadsg.user.mady501857.permission.XGPUSH_RECEIVE"/>
+    <application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:extractNativeLibs="true" android:fullBackupContent="@xml/appsflyer_backup_rules" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:largeHeap="true" android:name="com.example.obs.player.base.App" android:networkSecurityConfig="@xml/network_security_config_release" android:requestLegacyExternalStorage="true" android:roundIcon="@mipmap/ic_launcher" android:supportsRtl="true" android:theme="@style/AppTheme.NoActionBar.StatusBarWhite" android:usesCleartextTraffic="true">
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <activity android:exported="false" android:name="com.example.obs.player.ui.activity.live.ActivitiesActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="true" android:launchMode="singleTask" android:name="com.example.obs.player.ui.activity.login.LoginOrRegisterActivity" android:screenOrientation="portrait"/>
+        <provider android:authorities="com.sagadsg.user.mady501857.drake.file_provider" android:exported="false" android:grantUriPermissions="true" android:name="com.drake.engine.interfaces.EngineFileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_provider_paths"/>
+        </provider>
+        <activity android:exported="false" android:name="com.example.obs.player.ui.activity.game.InternalH5GameActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="false" android:name="com.example.obs.player.ui.activity.mine.bank.CurrencySelectActivity"/>
+        <activity android:exported="false" android:name="com.example.obs.player.ui.activity.mine.BecomeFamilyActivity"/>
+        <activity android:exported="false" android:name="com.example.obs.player.ui.activity.mine.wallet.DigitalWalletTypeActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="false" android:name="com.example.obs.player.ui.activity.mine.bank.BankSelectActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="false" android:name="com.example.obs.player.ui.activity.mine.withdraw.ChooseDigitalWalletActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="false" android:name="com.example.obs.player.ui.activity.mine.withdraw.WithdrawalFinallyConfirmActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="false" android:name="com.example.obs.player.ui.activity.mine.withdraw.ChooseBankCardActivity"/>
+        <activity android:exported="true" android:name="com.example.obs.player.ui.activity.mine.wallet.DigitalWalletActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="true" android:name="com.example.obs.player.ui.activity.mine.wallet.BindDigitalWalletActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="true" android:name="com.example.obs.player.ui.activity.mine.recharge.RechargeScreenshotActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="false" android:name="com.example.obs.player.ui.activity.mine.withdraw.DCWithdrawalConfirmActivity"/>
+        <activity android:exported="false" android:name="com.example.obs.player.ui.activity.mine.withdraw.DCWithdrawActivity"/>
+        <activity android:exported="false" android:name="com.example.obs.player.ui.activity.mine.withdraw.WithdrawalListActivity"/>
+        <activity android:exported="true" android:name="com.example.obs.player.ui.activity.mine.SelectLanguageActivity"/>
+        <activity android:exported="true" android:name="com.example.obs.player.ui.activity.main.YouQianActivity"/>
+        <activity android:exported="true" android:name="com.example.obs.player.ui.activity.mine.record.MoreDetailsActivity"/>
+        <activity android:exported="true" android:name="com.example.obs.player.ui.activity.mine.record.GameHistoryActivity"/>
+        <activity android:exported="true" android:name="com.example.obs.player.ui.activity.mine.bank.BankManageActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="true" android:name="com.example.obs.player.ui.activity.mine.HelpActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="true" android:name="com.example.obs.player.ui.activity.mine.HelpContentActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="true" android:name="com.example.obs.player.ui.fragment.main.GameFragment"/>
+        <activity android:exported="true" android:launchMode="singleTask" android:name="com.example.obs.player.ui.activity.mine.PricingMethodActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="true" android:launchMode="singleTask" android:name="com.example.obs.player.ui.activity.mine.FirstPricingMethodActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="true" android:launchMode="singleTask" android:name="com.example.obs.player.ui.activity.mine.SelectRegionActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="true" android:launchMode="singleTask" android:name="com.example.obs.player.ui.activity.mine.EditProfileActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="true" android:launchMode="singleTask" android:name="com.example.obs.player.ui.activity.login.VerifySMSActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateVisible"/>
+        <activity android:exported="true" android:launchMode="singleTask" android:name="com.example.obs.player.ui.activity.login.SetPasswordActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="true" android:launchMode="singleTask" android:name="com.example.obs.player.ui.activity.login.RegisterActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="true" android:launchMode="singleTask" android:name="com.example.obs.player.ui.activity.login.AuthorizationActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="true" android:name="com.example.obs.player.ui.activity.main.SplashActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.Launcher">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="j9xox4"/>
+            </intent-filter>
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <data android:scheme="hot51://"/>
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="hot51.onelink.me" android:pathPrefix="/bNzJ" android:scheme="https"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="openapp"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="true" android:name="com.example.obs.player.ui.activity.live.SearchLiveActivity" android:screenOrientation="portrait"/>
+        <meta-data android:name="com.openinstall.APP_KEY" android:value="j9xox4"/>
+        <meta-data android:name="BaiduMobAd_STAT_ID" android:value="765151d9a9"/>
+        <activity android:exported="true" android:name="com.example.obs.player.ui.activity.mine.withdraw.AuditActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="true" android:name="com.example.obs.player.ui.activity.mine.order.GameOrderDetailActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="true" android:name="com.example.obs.player.ui.activity.mine.order.GameOrderActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="true" android:name="com.example.obs.player.ui.activity.mine.order.GameReportActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="true" android:name="com.example.obs.player.ui.activity.mine.conversion.ConversionActivity" android:screenOrientation="portrait"/>
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <activity android:exported="true" android:name="com.example.obs.player.ui.activity.mine.H5ErrorActivity"/>
+        <activity android:configChanges="keyboard|layoutDirection|orientation|screenSize" android:exported="true" android:hardwareAccelerated="true" android:name="com.example.obs.player.ui.activity.game.X5WebH5GameActivity" android:screenOrientation="sensor" android:theme="@style/AppTheme.NoActionBar.Full"/>
+        <activity android:exported="true" android:name="com.example.obs.player.ui.activity.game.SearchGameActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="true" android:name="com.example.obs.player.ui.activity.mine.record.UserOrderDetailsActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="true" android:name="com.example.obs.player.ui.activity.mine.record.UserOrderHisActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="true" android:launchMode="singleTask" android:name="com.example.obs.player.ui.activity.mine.UserFollowActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="true" android:name="com.example.obs.player.ui.activity.mine.recharge.RechargeResultActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="true" android:launchMode="singleTask" android:name="com.example.obs.player.ui.activity.mine.recharge.RechargeChannelActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="true" android:name="com.example.obs.player.ui.activity.mine.recharge.RechargeActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="true" android:name="com.example.obs.player.ui.activity.mine.exchange.ExchangeDetailsActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="true" android:name="com.example.obs.player.ui.activity.mine.exchange.ExchangeRecordActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="true" android:name="com.example.obs.player.ui.activity.mine.proxy.ProxyMoneyActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="true" android:name="com.example.obs.player.ui.activity.game.GameMainActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:exported="true" android:name="com.example.obs.player.ui.activity.game.OMWGMainActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:exported="true" android:name="com.example.obs.player.ui.activity.mine.withdraw.WithdrawActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateVisible"/>
+        <activity android:exported="true" android:name="com.example.obs.player.ui.activity.mine.withdraw.WithdrawResultActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="true" android:name="com.example.obs.player.ui.activity.mine.bank.BindBankActivity" android:screenOrientation="portrait"/>
+        <provider android:authorities="com.sagadsg.user.mady501857.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/provider_paths"/>
+        </provider>
+        <activity android:exported="true" android:name="com.example.obs.player.ui.activity.mine.EditPasswordActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateVisible"/>
+        <activity android:exported="true" android:name="com.example.obs.player.ui.activity.mine.SettingActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="true" android:name="com.example.obs.player.ui.activity.mine.ModifyUserInfoActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateVisible"/>
+        <activity android:exported="true" android:launchMode="singleTop" android:name="com.example.obs.player.ui.activity.main.SplashAdvertActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar.Full"/>
+        <activity android:exported="true" android:name="com.example.obs.player.ui.activity.ranking.RankingActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="true" android:launchMode="singleTask" android:name="com.example.obs.player.ui.activity.main.AppLockActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.Launcher" android:windowSoftInputMode="stateVisible">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="true" android:hardwareAccelerated="true" android:launchMode="singleTask" android:name="com.example.obs.player.ui.activity.main.MainActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="cn.jiguang.myaction"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="true" android:launchMode="singleTop" android:name="com.example.obs.player.ui.activity.main.IPRestrictionActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="true" android:name="com.example.obs.player.ui.activity.game.GameCenterActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="orientation|screenSize" android:exported="true" android:launchMode="singleTask" android:name="com.example.obs.player.ui.activity.live.PlayerVideoSlideActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustNothing|stateAlwaysHidden"/>
+        <activity android:exported="true" android:name="com.example.obs.player.ui.activity.mine.group.WebViewActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="true" android:name="com.example.obs.player.ui.activity.main.SplashWebViewActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="true" android:name="com.example.obs.player.ui.activity.message.NotificationActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.example.obs.player.ui.activity.message.NotificationDetailActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="true" android:name="com.example.obs.player.ui.activity.message.WebAndTextActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="true" android:name="com.example.obs.player.ui.activity.mine.wallet.WalletActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="true" android:name="com.example.obs.player.ui.activity.mine.promot.InviteCodeActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="true" android:name="com.example.obs.player.ui.activity.mine.promot.PosterActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="true" android:launchMode="singleTask" android:name="com.example.obs.player.ui.activity.mine.BindSuccessfulActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="false" android:name="com.example.obs.player.ui.activity.login.PhoneRegionActivity" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:exported="false" android:launchMode="singleTask" android:name="com.example.obs.player.ui.activity.live.HotRegionActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:exported="false" android:launchMode="singleTask" android:name="com.example.obs.player.ui.activity.live.LiveRegionListActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:exported="false" android:launchMode="singleTask" android:name="com.example.obs.player.ui.activity.live.LiveRegionListActivityNew" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:exported="false" android:launchMode="singleTask" android:name="com.example.obs.player.ui.activity.migrate.PlatformMigrateActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:exported="true" android:name="com.example.obs.player.ui.activity.mine.SettingPasswordActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateVisible"/>
+        <activity android:name="com.example.obs.player.ui.activity.mine.DatePatternPickActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.obs.player.ui.activity.mine.NumberFormatPickActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.obs.player.ui.activity.mine.SystemPermissionActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="true" android:name="com.example.obs.player.ui.activity.login.NewSetPasswordActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="true" android:name="com.example.obs.player.ui.activity.login.FindPasswordActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="true" android:name="com.example.obs.player.ui.activity.login.ReCaptchaActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.obs.player.ui.activity.anchor.AnchorInfoDetailsActivity" android:screenOrientation="portrait"/>
+        <service android:label="dexopt" android:name="com.tencent.smtt.export.external.DexClassLoaderProviderService" android:process=":dexopt"/>
+        <service android:name="org.eclipse.paho.android.service.MqttService"/>
+        <service android:name="com.eclipse.paho.service.MqttService"/>
+        <receiver android:enabled="true" android:exported="true" android:name="com.example.obs.player.utils.WebGameCleaner$WebGameCleanerReceiver"/>
+        <meta-data android:name="app_name" android:value="com.example.obs.player.global.App"/>
+        <service android:exported="false" android:name="com.example.obs.player.component.jpush.UserService" android:process=":remote">
+            <intent-filter>
+                <action android:name="com.engagelab.privates.intent.USER_SERVICE"/>
+            </intent-filter>
+        </service>
+        <receiver android:exported="false" android:name="com.example.obs.player.component.jpush.UserReceiver">
+            <intent-filter>
+                <action android:name="com.engagelab.privates.intent.USER_RECEIVER"/>
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@mipmap/ic_launcher"/>
+        <service android:exported="false" android:name="com.example.obs.player.component.jpush.FirebaseMessagingCallback">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <receiver android:exported="false" android:name="com.example.obs.player.component.tpns.XGPushReceiver">
+            <intent-filter>
+                <action android:name="com.tencent.android.xg.vip.action.PUSH_MESSAGE"/>
+                <action android:name="com.tencent.android.xg.vip.action.FEEDBACK"/>
+            </intent-filter>
+        </receiver>
+        <provider android:authorities="com.sagadsg.user.mady501857.xxx.XGVIP_PUSH_AUTH" android:exported="false" android:name="com.tencent.android.tpush.XGPushProvider"/>
+        <meta-data android:name="XG_SERVER_SUFFIX" android:value="tpns.sgp.tencent.com"/>
+        <meta-data android:name="XG_SERVICE_PULL_UP_OFF" android:value="true"/>
+        <meta-data android:name="com.google.ar.core" android:value="optional"/>
+        <activity android:configChanges="keyboardHidden|navigation|orientation|screenSize" android:exported="false" android:name="com.alipay.sdk.app.H5PayActivity"/>
+        <activity android:configChanges="keyboardHidden|navigation|orientation|screenSize" android:exported="false" android:name="com.alipay.sdk.app.H5AuthActivity"/>
+        <activity android:configChanges="keyboardHidden|navigation|orientation|screenSize" android:exported="true" android:launchMode="singleInstance" android:name="com.alipay.sdk.app.PayResultActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="true" android:launchMode="singleTask" android:name="com.alipay.sdk.app.AlipayResultActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:configChanges="keyboardHidden|navigation|orientation|screenSize" android:exported="false" android:name="com.alipay.sdk.app.H5OpenAuthActivity" android:screenOrientation="behind" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="orientation|screenSize" android:exported="false" android:name="im.zego.internal.screencapture.ZegoScreenCaptureManager$ZegoScreenCaptureAssistantActivity" android:screenOrientation="fullUser" android:theme="@android:style/Theme.Translucent"/>
+        <service android:enabled="true" android:exported="false" android:foregroundServiceType="mediaProjection" android:name="im.zego.internal.screencapture.ZegoScreenCaptureService"/>
+        <provider android:authorities="com.sagadsg.user.mady501857.androidx-startup" android:exported="false" android:name="androidx.startup.InitializationProvider">
+            <meta-data android:name="com.drake.engine.interfaces.EngineInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="com.drake.net.internal.NetInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="com.drake.tooltip.internal.TooltipInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="androidx.emoji2.text.EmojiCompatInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="androidx.profileinstaller.ProfileInstallerInitializer" android:value="androidx.startup"/>
+        </provider>
+        <activity android:label="@string/chucker_name" android:launchMode="singleTask" android:name="com.chuckerteam.chucker.internal.ui.MainActivity" android:taskAffinity="com.chuckerteam.chucker.task" android:theme="@style/Chucker.Theme"/>
+        <activity android:name="com.chuckerteam.chucker.internal.ui.transaction.TransactionActivity" android:parentActivityName="com.chuckerteam.chucker.internal.ui.MainActivity" android:theme="@style/Chucker.Theme"/>
+        <activity android:name="com.chuckerteam.chucker.internal.ui.throwable.ThrowableActivity" android:parentActivityName="com.chuckerteam.chucker.internal.ui.MainActivity" android:theme="@style/Chucker.Theme"/>
+        <service android:exported="false" android:name="com.chuckerteam.chucker.internal.support.ClearDatabaseService"/>
+        <provider android:authorities="com.sagadsg.user.mady501857.com.chuckerteam.chucker.provider" android:exported="false" android:grantUriPermissions="true" android:name="com.chuckerteam.chucker.internal.support.ChuckerFileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/chucker_provider_paths"/>
+        </provider>
+        <provider android:authorities="com.sagadsg.user.mady501857.drake.serializeInit" android:enabled="true" android:exported="false" android:multiprocess="true" android:name="com.drake.serialize.initialize.SerializerInitializer"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:launchMode="standard" android:name="com.yhao.floatwindow.FloatActivity" android:theme="@style/permission_PermissionActivity" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" android:visibleToInstantApps="true"/>
+        <service android:directBootAware="true" android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.auth.ktx.FirebaseAuthKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.ktx.FirebaseAnalyticsKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.crashlytics.ktx.FirebaseCrashlyticsKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <activity android:excludeFromRecents="true" android:exported="true" android:launchMode="singleTask" android:name="com.google.firebase.auth.internal.GenericIdpActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="firebase.auth" android:path="/" android:scheme="genericidp"/>
+            </intent-filter>
+        </activity>
+        <activity android:excludeFromRecents="true" android:exported="true" android:launchMode="singleTask" android:name="com.google.firebase.auth.internal.RecaptchaActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="firebase.auth" android:path="/" android:scheme="recaptcha"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <service android:directBootAware="true" android:exported="false" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <provider android:authorities="com.sagadsg.user.mady501857.firebaseinitprovider" android:directBootAware="true" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <service android:directBootAware="true" android:exported="false" android:name="androidx.room.MultiInstanceInvalidationService"/>
+        <activity android:name="com.tencent.rtmp.video.TXScreenCapture$TXScreenCaptureAssistantActivity" android:theme="@android:style/Theme.Translucent"/>
+        <provider android:authorities="com.sagadsg.user.mady501857.luckProvider" android:exported="false" android:grantUriPermissions="true" android:name="com.luck.picture.lib.basic.PictureFileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/ps_file_paths"/>
+        </provider>
+        <service android:enabled="true" android:foregroundServiceType="location" android:name="com.luck.picture.lib.service.ForegroundService"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.luck.picture.lib.basic.PictureSelectorSupporterActivity" android:theme="@style/Base.Theme.NoActionBar"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.luck.picture.lib.basic.PictureSelectorTransparentActivity" android:theme="@style/Picture.Theme.Translucent"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:launchMode="singleTask" android:name="com.engagelab.privates.common.component.MTCommonActivity" android:taskAffinity="" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="com.engagelab.privates.common.component.MTCommonActivity"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="com.sagadsg.user.mady501857"/>
+            </intent-filter>
+        </activity>
+        <provider android:authorities="com.sagadsg.user.mady501857.MTCommonProvider" android:exported="false" android:name="com.engagelab.privates.common.component.MTCommonProvider" android:readPermission="com.sagadsg.user.mady501857.permission.MT_COMPONENT_PERMISSION" android:writePermission="com.sagadsg.user.mady501857.permission.MT_COMPONENT_PERMISSION"/>
+        <meta-data android:name="ENGAGELAB_PRIVATES_CHANNEL" android:value="developer"/>
+        <meta-data android:name="ENGAGELAB_PRIVATES_PROCESS" android:value=":remote"/>
+        <meta-data android:name="firebase_messaging_auto_init_enabled" android:value="false"/>
+        <activity android:exported="true" android:launchMode="singleInstance" android:name="com.tencent.android.tpush.TpnsActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="com.sagadsg.user.mady501857.OPEN_TPNS_ACTIVITY"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <data android:host="com.sagadsg.user.mady501857" android:scheme="tpns"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="false" android:launchMode="singleInstance" android:name="com.tencent.android.tpush.InnerTpnsActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="com.sagadsg.user.mady501857.OPEN_TPNS_ACTIVITY_V2"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <data android:host="com.sagadsg.user.mady501857" android:scheme="stpns"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="false" android:name="com.tencent.android.tpush.inappmessage.InAppMessageActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <receiver android:exported="false" android:name="com.tencent.android.tpush.XGPushReceiver" android:process=":xg_vip_service">
+            <intent-filter android:priority="0x7FFFFFFF">
+                <action android:name="com.tencent.android.xg.vip.action.SDK"/>
+                <action android:name="com.tencent.android.xg.vip.action.INTERNAL_PUSH_MESSAGE"/>
+                <action android:name="com.tencent.android.xg.vip.action.ACTION_SDK_KEEPALIVE"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="com.tencent.android.tpush.service.XGVipPushService" android:process=":xg_vip_service"/>
+        <service android:exported="false" android:name="com.tencent.android.tpush.rpc.XGRemoteService">
+            <intent-filter>
+                <action android:name="com.sagadsg.user.mady501857.XGVIP_PUSH_ACTION"/>
+            </intent-filter>
+        </service>
+        <provider android:authorities="com.sagadsg.user.mady501857.TPUSH_PROVIDER" android:exported="false" android:name="com.tencent.android.tpush.SettingsContentProvider"/>
+        <provider android:authorities="com.sagadsg.user.mady501857.AUTH_XGPUSH_KEEPALIVE" android:exported="false" android:name="com.tencent.android.tpush.XGVipPushKAProvider"/>
+        <service android:exported="false" android:name="com.tencent.tpns.mqttchannel.services.MqttService" android:process=":xg_vip_service"/>
+        <provider android:authorities="com.sagadsg.user.mady501857.XG_SETTINGS_PROVIDER" android:exported="false" android:name="com.tencent.tpns.baseapi.base.SettingsContentProvider"/>
+        <meta-data android:name="XG_V2_ACCESS_ID" android:value=""/>
+        <meta-data android:name="XG_V2_ACCESS_KEY" android:value=""/>
+        <service android:exported="false" android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery">
+            <meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct"/>
+        </service>
+        <service android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"/>
+        <receiver android:directBootAware="false" android:enabled="true" android:exported="true" android:name="androidx.profileinstaller.ProfileInstallReceiver" android:permission="android.permission.DUMP">
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SKIP_FILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION"/>
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

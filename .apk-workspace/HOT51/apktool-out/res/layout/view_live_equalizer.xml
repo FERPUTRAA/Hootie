@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/liveEqualizerContainer" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/bar1" android:layout_width="9.0dip" android:layout_height="10.0dip" android:src="@drawable/anchor_live_status" android:scaleType="fitCenter" android:layout_marginEnd="2.0dip" />
+    <ImageView android:id="@id/bar2" android:layout_width="9.0dip" android:layout_height="10.0dip" android:src="@drawable/anchor_live_status" android:scaleType="fitCenter" android:layout_marginEnd="2.0dip" />
+    <ImageView android:id="@id/bar3" android:layout_width="9.0dip" android:layout_height="10.0dip" android:src="@drawable/anchor_live_status" android:scaleType="fitCenter" />
+</LinearLayout>

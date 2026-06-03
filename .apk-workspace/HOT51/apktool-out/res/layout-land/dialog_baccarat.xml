@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="layout-land/dialog_baccarat_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:background="#ed070707" android:paddingLeft="@dimen/dp_16" android:paddingRight="@dimen/dp_16" android:layout_width="fill_parent" android:layout_height="@dimen/dp_400">
+        <androidx.appcompat.widget.LinearLayoutCompat android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_20" android:layout_marginTop="@dimen/dp_16" android:layout_marginRight="@dimen/dp_20" android:layout_marginBottom="@dimen/dp_15">
+            <androidx.appcompat.widget.LinearLayoutCompat android:gravity="center" android:orientation="vertical" android:id="@id/llMeron" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="13.0dip" android:textStyle="bold" android:textColor="@color/white" android:gravity="center" android:id="@id/tvMeron" android:background="@drawable/ic_meron" android:layout_width="@dimen/dp_51" android:layout_height="@dimen/dp_51" android:text="Banker" />
+                <TextView android:textSize="14.0dip" android:textStyle="bold" android:textColor="@color/white" android:id="@id/tvMPercent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_8" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <androidx.appcompat.widget.LinearLayoutCompat android:gravity="center" android:orientation="vertical" android:id="@id/llWala" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="13.0dip" android:textStyle="bold" android:textColor="@color/white" android:gravity="center" android:id="@id/tvWala" android:background="@drawable/ic_wala" android:layout_width="@dimen/dp_51" android:layout_height="@dimen/dp_51" android:text="Player" />
+                <TextView android:textSize="14.0dip" android:textStyle="bold" android:textColor="@color/white" android:id="@id/tvWPercent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_8" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <androidx.appcompat.widget.LinearLayoutCompat android:gravity="center" android:orientation="vertical" android:id="@id/llTie" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="13.0dip" android:textStyle="bold" android:textColor="@color/white" android:gravity="center" android:id="@id/tvTie" android:background="@drawable/ic_tie" android:layout_width="@dimen/dp_51" android:layout_height="@dimen/dp_51" android:text="Tie" />
+                <TextView android:textSize="14.0dip" android:textStyle="bold" android:textColor="@color/white" android:id="@id/tvTPercent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_8" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <TextView android:textSize="11.0dip" android:textColor="#ffffffff" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/game.history.blackjack.period" />
+        <View android:background="#ed1a1c1b" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="@dimen/dp_9" />
+        <androidx.constraintlayout.widget.ConstraintLayout android:orientation="horizontal" android:paddingTop="@dimen/dp_10" android:paddingBottom="@dimen/dp_8" android:layout_width="fill_parent" android:layout_height="@dimen/dp_34">
+            <TextView android:textSize="12.0dip" android:textStyle="bold" android:textColor="@color/white" android:ellipsize="end" android:id="@id/tvWinner" android:layout_width="@dimen/dp_80" android:layout_height="fill_parent" android:text="@string/game.history.cockfightting.win" android:maxLines="1" app:layout_constraintLeft_toLeftOf="parent" />
+            <TextView android:textSize="12.0dip" android:textStyle="bold" android:textColor="@color/white" android:ellipsize="end" android:gravity="center" android:id="@id/tvPeriod" android:layout_width="@dimen/dp_90" android:layout_height="fill_parent" android:text="@string/game.history.cockfighting.period" android:maxLines="1" app:layout_constraintLeft_toRightOf="@id/tvWinner" app:layout_constraintRight_toLeftOf="@id/tvPlayer" app:layout_constraintStart_toEndOf="@id/tvWinner" />
+            <TextView android:textSize="12.0dip" android:textStyle="bold" android:textColor="@color/white" android:ellipsize="end" android:gravity="center" android:id="@id/tvPlayer" android:layout_width="@dimen/dp_100" android:layout_height="fill_parent" android:text="PLAYER" android:maxLines="1" android:layout_weight="1.0" android:layout_marginStart="@dimen/dp_10" app:layout_constraintLeft_toRightOf="@id/tvPeriod" />
+            <TextView android:textSize="12.0dip" android:textStyle="bold" android:textColor="@color/white" android:ellipsize="end" android:gravity="end" android:id="@id/tvBanner" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="BANKER" android:maxLines="1" android:layout_weight="1.0" app:layout_constraintRight_toRightOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <com.drake.brv.PageRefreshLayout android:id="@id/page" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/rv" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+        </com.drake.brv.PageRefreshLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</FrameLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/item" android:tag="layout/item_login_register_0" android:background="@drawable/bg_corner_24_d1d1d1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_15" android:layout_marginTop="@dimen/dp_12" android:layout_marginRight="@dimen/dp_15" android:layout_marginHorizontal="@dimen/dp_15"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <ImageView android:id="@id/iconView" android:tag="binding_1" android:layout_width="@dimen/dp_24" android:layout_height="@dimen/dp_24" android:importantForAccessibility="no" />
+        <TextView android:textSize="@dimen/sp_14" android:textColor="#ff212121" android:gravity="center_vertical" android:id="@id/tvName" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="@dimen/dp_200" android:minHeight="@dimen/dp_48" android:layout_marginStart="@dimen/dp_10" />
+    </LinearLayout>
+</RelativeLayout>

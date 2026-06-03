@@ -1,0 +1,39 @@
+Untuk mewujudkan DevChat yang bisa berpikir sekaligus bekerja layaknya *hacker profesional*, ada satu fondasi penting yang perlu dipahami: **AI tidak akan bisa mengakses internet dan belajar secara otomatis. Anda sendiri yang akan berperan sebagai "jembatan" penelitiannya.** Berikut adalah pendekatan praktis yang bisa Anda ikuti:
+
+---
+
+### 🤔 Pahami Cara Kerja Utamanya
+
+Konsep "berpikir seperti hacker" di sini berarti proses **penelitian terstruktur** yang Anda lakukan secara manual, yang kemudian Anda "ajarkan" ke AI dalam bentuk instruksi yang jelas.
+
+Secara sederhana, alurnya adalah: **Anda** → **Mencari Solusi** → **Memberi Instruksi ke DevChat** → **AI Menjalankan**.
+
+### 🚀 Panduan Langkah demi Langkah
+
+Ikuti tahapan ini untuk membangun dan mengoptimalkan DevChat Anda:
+
+**Langkah 1: Pelajari Cara Kerja Agen Web Professional**
+*   Pelajari dari aplikasi nyata: Replit Agent memungkinkan AI mencari informasi real-time dan menggunakannya langsung untuk membangun aplikasi.
+*   Pelajari metode penelitian AI modern: Sebuah proyek "Deep Research" oleh Google menggunakan alur `Klasifikasi → Perencanaan → Riset Web → Sintesis Jawaban`.
+*   Pahami psikologi "hacker" dalam riset: Agen canggih seperti GPT Researcher tidak hanya mencari satu kali, tetapi menggunakan tim AI yang saling memeriksa untuk mendapatkan hasil yang lebih akurat.
+
+**Langkah 2: Lakukan Riset Mandiri untuk DevChat Anda**
+*   Saat menemui masalah yang tidak bisa diselesaikan DevChat, riset sendiri di internet.
+*   Buat ringkasan singkat dari hasil riset Anda sebagai "Laporan Intelijen".
+
+**Langkah 3: Beri "Perintah Akademik" ke DevChat AI**
+*   Tulis instruksi yang detail berdasarkan hasil riset Anda, termasuk kode spesifik dari tutorial yang Anda temukan.
+*   Arahkan AI dengan perintah eksplisit seperti: "Sekarang gunakan 'web search' untuk mencari dokumentasi API X dan implementasikan langsung ke project".
+
+**Langkah 4: Optimalkan dengan Tools Pendukung (Opsional)**
+*   Untuk tugas berulang yang memerlukan data real-time, Anda dapat mengintegrasikan API Pencarian (seperti Tavily atau Serper.dev) atau alat Scraping Web (seperti Browserless).
+
+---
+
+### 💡 Poin Kunci yang Perlu Diingat
+
+Inti dari "DevChat yang bisa belajar" bukanlah pada teknologinya yang super canggih, melainkan pada **proses penelitian terstruktur** dan **komunikasi instruksi yang tepat** antara Anda sebagai developer dengan AI.
+
+Dengan pendekatan ini, Anda bisa mengubah DevChat dari sekadar alat eksekutor kode menjadi "partner development" yang tangguh.
+
+Apakah Anda ingin fokus ke bagian tertentu dari panduan ini, atau mulai mendiskusikan masalah spesifik yang ingin DevChat Anda selesaikan?

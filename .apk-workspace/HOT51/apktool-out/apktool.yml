@@ -1,0 +1,29 @@
+version: 2.11.1
+apkFileName: HOT51.apk
+isFrameworkApk: false
+usesFramework:
+  ids:
+  - 1
+  tag: null
+sdkInfo:
+  minSdkVersion: 23
+  targetSdkVersion: 35
+packageInfo:
+  forcedPackageId: 127
+  renameManifestPackage: null
+versionInfo:
+  versionCode: 590
+  versionName: 1.1.590
+sharedLibrary: false
+sparseResources: false
+compactEntries: false
+doNotCompress:
+- arsc
+- jpg
+- mp3
+- png
+- wav
+- webp
+- assets/dexopt/baseline.prof
+- assets/dexopt/baseline.profm
+- res/raw/login.mp4

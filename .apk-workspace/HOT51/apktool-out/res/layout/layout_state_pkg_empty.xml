@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.appcompat.widget.LinearLayoutCompat android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:layout_width="@dimen/dp_100" android:layout_height="@dimen/dp_100" android:src="@drawable/ic_state_pkg_empty" />
+        <TextView android:textSize="@dimen/sp_12" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_10" android:text="@string/status.data.empty.package" />
+        <Button android:textSize="@dimen/sp_12" android:textColor="@color/white" android:id="@id/btn_go" android:background="@drawable/global_btn_login" android:layout_width="@dimen/dp_76" android:layout_height="@dimen/dp_28" android:layout_marginTop="@dimen/dp_30" android:text="@string/status.data.empty.go" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.core.widget.NestedScrollView>

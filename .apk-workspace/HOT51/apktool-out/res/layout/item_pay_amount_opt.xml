@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="layout/item_pay_amount_opt_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="12.0dip" android:textColor="@drawable/selector_text_checkbox" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/item" android:tag="binding_1" android:background="@drawable/selector_checkbox_stroke" android:layout_width="fill_parent" android:layout_height="40.0dip" />
+</FrameLayout>

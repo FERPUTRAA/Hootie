@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_item" android:tag="layout/prize_history_item_0" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="40.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="11.0sp" android:textColor="#ff212121" android:gravity="center" android:id="@id/tv_issue" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="\ 20240731010" android:layout_weight="19.0" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/ll_num" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="14.0">
+        <ImageView android:id="@id/iv_num_05" android:background="@null" android:visibility="gone" android:layout_width="9.0dip" android:layout_height="wrap_content" android:src="@drawable/prize_history_0" android:scaleType="fitCenter" />
+        <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="#ff6c76ff" android:id="@id/tv_number" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" />
+    </LinearLayout>
+    <TextView android:textSize="11.0sp" android:textColor="#ff212121" android:gravity="center" android:id="@id/tv_big_small" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="小" android:layout_weight="14.0" />
+    <TextView android:textSize="11.0sp" android:textColor="#ff212121" android:gravity="center" android:id="@id/tv_odd_even" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="双" android:layout_weight="14.0" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/ll_color" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="14.0">
+        <ImageView android:id="@id/iv_color_gr" android:background="@null" android:layout_width="12.0dip" android:layout_height="12.0dip" android:src="@drawable/prize_red_ball" android:scaleType="fitCenter" />
+        <ImageView android:id="@id/iv_color_05" android:background="@null" android:visibility="gone" android:layout_width="12.0dip" android:layout_height="12.0dip" android:src="@drawable/prize_purple_ball" android:scaleType="fitCenter" android:layout_marginStart="10.0dip" />
+    </LinearLayout>
+</LinearLayout>

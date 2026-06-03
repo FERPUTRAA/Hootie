@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat android:gravity="center" android:orientation="vertical" android:tag="layout/poker_chip_item_0" android:layout_width="wrap_content" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:id="@id/llUseCurrency" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:textSize="10.0sp" android:textColor="#ff151923" android:gravity="center_horizontal" android:id="@id/tvCurrency" android:background="@drawable/shape_price_currency" android:paddingLeft="@dimen/dp_3" android:paddingTop="2.0dip" android:paddingRight="@dimen/dp_3" android:paddingBottom="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="@dimen/dp_30" android:drawablePadding="1.0dip" app:drawableStartCompat="@drawable/float_coin" />
+        <ImageView android:layout_gravity="center" android:id="@id/ivArrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="3.0dip" android:src="@drawable/ic_triangle" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <FrameLayout android:id="@id/rl_root" android:paddingTop="@dimen/dp_1" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatTextView android:textSize="@dimen/sp_12" android:textStyle="bold" android:textColor="#ffffffff" android:ellipsize="end" android:gravity="center" android:id="@id/poker_num" android:background="@drawable/ic_chip_0_padding" android:paddingLeft="@dimen/dp_10" android:paddingRight="@dimen/dp_10" android:paddingBottom="@dimen/dp_5" android:layout_width="@dimen/dp_46" android:layout_height="@dimen/dp_46" android:checked="true" android:maxLines="1" android:layout_centerVertical="true" app:autoSizeMaxTextSize="@dimen/sp_12" app:autoSizeMinTextSize="@dimen/sp_7" app:autoSizeStepGranularity="1.0sp" app:autoSizeTextType="uniform" />
+        </LinearLayout>
+        <ImageView android:layout_gravity="center" android:id="@id/pokerSetting" android:visibility="invisible" android:layout_width="@dimen/dp_24" android:layout_height="@dimen/dp_20" android:src="@drawable/ic_chip_custom_set" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    </FrameLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>

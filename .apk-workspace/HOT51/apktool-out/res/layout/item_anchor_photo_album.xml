@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/ll_anchor_photo_item" android:tag="layout/item_anchor_photo_album_0" android:layout_width="fill_parent" android:layout_height="117.0dip" android:layout_marginEnd="5.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/iv_anchor_photo" android:tag="binding_1" android:background="@null" android:layout_width="fill_parent" android:layout_height="112.0dip" android:src="@drawable/anchor_photo_loading_img" android:scaleType="centerCrop" app:layout_constraintDimensionRatio="H,1:1" />
+</LinearLayout>

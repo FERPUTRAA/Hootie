@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="chucker_background_span_color">#ffffe082</color>
+    <color name="chucker_color_background">#ff121212</color>
+    <color name="chucker_color_error">#ffcf6679</color>
+    <color name="chucker_color_on_background">#ffffffff</color>
+    <color name="chucker_color_on_error">#ff000000</color>
+    <color name="chucker_color_on_primary">#ff000000</color>
+    <color name="chucker_color_on_surface">#ffffffff</color>
+    <color name="chucker_color_primary">#ff81d4fa</color>
+    <color name="chucker_color_primary_variant">#ff121212</color>
+    <color name="chucker_color_secondary">#ff59cc94</color>
+    <color name="chucker_color_surface">#ff121212</color>
+    <color name="chucker_foreground_span_color">#ffef5350</color>
+    <color name="chucker_status_300">#ff64b5f6</color>
+    <color name="chucker_status_400">#ffffb74d</color>
+    <color name="chucker_status_500">#ffe53935</color>
+    <color name="chucker_status_default">#ffe0e0e0</color>
+    <color name="chucker_status_error">#ffe57373</color>
+    <color name="chucker_status_requested">#ff757575</color>
+    <color name="permissionx_default_dialog_bg">#ff3c4043</color>
+    <color name="permissionx_split_line">#ff55565a</color>
+    <color name="permissionx_text_color">#ffffffff</color>
+    <color name="permissionx_tint_color">#ff8ab6f5</color>
+</resources>

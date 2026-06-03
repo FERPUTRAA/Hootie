@@ -1,0 +1,10 @@
+.class interface abstract Lcom/google/android/gms/internal/measurement/zzhe;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# virtual methods
+.method public abstract zzb(Ljava/lang/String;)Ljava/lang/Object;
+    .annotation build Landroidx/annotation/q0;
+    .end annotation
+.end method

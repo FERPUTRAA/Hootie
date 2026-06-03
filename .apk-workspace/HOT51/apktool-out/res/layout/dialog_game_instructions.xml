@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/dialog_game_instructions_0" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/content" android:layout_width="fill_parent" android:layout_height="@dimen/dp_400">
+        <com.example.obs.player.ui.widget.MyWebView android:id="@id/webView" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent" />
+        <com.opensource.svgaplayer.SVGAImageView android:id="@id/svga" android:visibility="gone" android:layout_width="80.0dip" android:layout_height="80.0dip" android:layout_marginTop="88.0dip" app:autoPlay="true" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:loopCount="9999" app:source="lding.svga" />
+        <androidx.constraintlayout.widget.ConstraintLayout android:gravity="center_horizontal" android:id="@id/empty" android:background="#ffffffff" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="10.0dip">
+            <ImageView android:id="@id/imageView38" android:layout_width="206.0dip" android:layout_height="168.0dip" android:layout_marginTop="88.0dip" android:src="@drawable/web_empty" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            <TextView android:textColor="#ff9494a1" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" app:layout_constraintBottom_toBottomOf="@id/imageView38" app:layout_constraintEnd_toEndOf="@id/imageView38" app:layout_constraintStart_toStartOf="@id/imageView38" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

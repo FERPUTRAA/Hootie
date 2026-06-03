@@ -1,0 +1,229 @@
+Saya lihat Anda sedang berusaha membangun DevChat yang bisa memperbaiki error, membangun dari APK, dan terutama membuat AI-nya benar-benar bekerja seperti agen di Replit, bukan sekadar memberi komentar. Tantangan ini menarik karena pada dasarnya Anda ingin menciptakan "otak" untuk platform coding Anda.
+
+Untuk mencapai itu, solusi intinya adalah dengan mengubah AI dari sekadar 'pembicara' menjadi 'pekerja' yang bisa melakukan tindakan nyata di dalam proyek Anda. Panduan berikut akan membantu Anda mewujudkan hal tersebut, dengan fokus pada tiga fondasi utama: kendali penuh AI, arsitektur yang tangguh, dan integrasi yang mulus.
+
+---
+
+### 🏗️ 1. Buat Fondasi AI yang Kuat
+
+Fondasi ini adalah "otak" yang akan menjalankan semua perintah. Gunakan stack pilihan Anda:
+
+*   **Agen Utama**: Gunakan `Qwen Code` (untuk terminal) atau integrasikan `OpenCode` dengan `Qwen` via OpenRouter. Pastikan model yang Anda pilih mendukung function/tool calling, karena ini kunci agar AI bisa melakukan tindakan.
+*   **Dekompliasi APK**: Integrasikan **JADX MCP Server** atau **Apktool MCP Server** sehingga AI bisa membaca, menganalisis, hingga membangun ulang (rebuild) APK.
+
+### ⚙️ 2. Rancang Tools untuk Tindakan Nyata
+
+AI tidak akan bisa bertindak tanpa tools. Anda perlu menyediakan "tangan dan kaki" untuk AI. Berikut adalah daftar fungsi penting yang harus AI miliki, serta contoh kode implementasinya dalam Node.js:
+
+1.  **Manajemen Workflow**: Fungsi `restart_workflow` untuk memulai/mengatur ulang alur kerja AI.
+2.  **Operasi File**: Fungsi baca, tulis, edit, dan daftar file/direktori.
+3.  **Eksplorasi Kode**: Fungsi mencari file, kode, dan memahami struktur proyek.
+4.  **Lingkungan & Build**: Fungsi menjalankan perintah shell, menginstal dependensi, dan menjalankan proses build.
+5.  **Kontrol Versi**: Integrasi Git untuk commit, branching, dll.
+6.  **Analisis APK**: Fungsi decode APK, baca manifest, dsb.
+
+<details>
+<summary><b>💡 Contoh Kode: Implementasi Tools untuk AI (Node.js)</b></summary>
+
+```javascript
+// tools.js - Kumpulan fungsi yang akan dipanggil AI
+import fs from 'fs/promises';
+import path from 'path';
+import { exec } from 'child_process';
+import util from 'util';
+
+const execAsync = util.promisify(exec);
+
+// 1. Fungsi untuk restart workflow
+async function restartWorkflow() {
+  console.log('🔄 Me-restart alur kerja...');
+  // Logika reset state agent di sini
+  return { status: 'Workflow restarted' };
+}
+
+// 2. Membaca file
+async function readFile({ path: filePath }) {
+  try {
+    const content = await fs.readFile(filePath, 'utf-8');
+    return { success: true, content };
+  } catch (error) {
+    return { success: false, error: error.message };
+  }
+}
+
+// 3. Mengedit file dengan string replacement
+async function editFile({ path: filePath, old_str, new_str }) {
+  try {
+    const content = await fs.readFile(filePath, 'utf-8');
+    if (!content.includes(old_str)) {
+      return { 
+        success: false, 
+        error: 'String yang ingin diganti tidak ditemukan' 
+      };
+    }
+    const newContent = content.replace(old_str, new_str);
+    await fs.writeFile(filePath, newContent, 'utf-8');
+    return { success: true, message: 'File berhasil diupdate' };
+  } catch (error) {
+    return { success: false, error: error.message };
+  }
+}
+
+// 4. Menjalankan perintah shell
+async function runShellCommand({ command }) {
+  const allowedCommands = ['ls', 'cat', 'echo', 'grep', 'npm', 'node'];
+  const baseCmd = command.split(' ')[0];
+  
+  if (!allowedCommands.includes(baseCmd)) {
+    return { 
+      success: false, 
+      error: `Perintah ${baseCmd} tidak diizinkan` 
+    };
+  }
+  
+  try {
+    const { stdout, stderr } = await execAsync(command);
+    return { 
+      success: true, 
+      stdout, 
+      stderr: stderr || null 
+    };
+  } catch (error) {
+    return { success: false, error: error.message };
+  }
+}
+
+// 5. Mencari file berdasarkan pola
+async function searchFilesystem({ pattern, directory = '.' }) {
+  // Implementasi pencarian file
+  // Bisa pakai library seperti 'glob'
+  return { success: true, files: [] };
+}
+
+export default {
+  restart_workflow: restartWorkflow,
+  read_file: readFile,
+  edit_file: editFile,
+  run_shell_command: runShellCommand,
+  search_filesystem: searchFilesystem,
+};
+```
+</details>
+
+### 🧠 3. Ubah AI Menjadi Agen yang Cerdas
+
+AI Anda perlu mengubah instruksi bahasa alami menjadi serangkaian tindakan. Arsitektur **Reasoning + Acting (ReAct)** adalah yang paling populer.
+
+1.  **Loop Utama**: Sistem akan menerima instruksi, memanggil AI, dan menjalankan alat yang diminta berulang kali.
+2.  **Manajemen Konteks**: Jika percakapan sudah panjang, ringkas riwayatnya agar AI tidak lupa instruksi awal.
+3.  **Struktur Tools**: Definisikan alat yang tersedia untuk AI dalam format JSON.
+
+<details>
+<summary><b>💡 Contoh Kode: Loop Agen AI yang Cerdas</b></summary>
+
+```javascript
+import Anthropic from '@anthropic-ai/sdk';
+import tools from './tools.js';
+
+const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
+
+// Definisikan tools dalam format yang dimengerti AI
+const toolDefinitions = [
+  {
+    name: 'read_file',
+    description: 'Membaca konten file',
+    input_schema: {
+      type: 'object',
+      properties: { path: { type: 'string', description: 'Path file' } },
+      required: ['path'],
+    },
+  },
+  {
+    name: 'edit_file',
+    description: 'Mengedit file dengan string replacement',
+    input_schema: {
+      type: 'object',
+      properties: {
+        path: { type: 'string' },
+        old_str: { type: 'string' },
+        new_str: { type: 'string' },
+      },
+      required: ['path', 'old_str', 'new_str'],
+    },
+  },
+  {
+    name: 'run_shell_command',
+    description: 'Menjalankan perintah shell',
+    input_schema: {
+      type: 'object',
+      properties: { command: { type: 'string' } },
+      required: ['command'],
+    },
+  },
+];
+
+async function runAgent(userInput, conversationHistory = []) {
+  let messages = [...conversationHistory, { role: 'user', content: userInput }];
+  let maxIterations = 10;
+  
+  for (let i = 0; i < maxIterations; i++) {
+    // Panggil AI dengan tools yang tersedia
+    const response = await anthropic.messages.create({
+      model: 'claude-3-5-sonnet-20241022',
+      max_tokens: 4096,
+      messages: messages,
+      tools: toolDefinitions,
+    });
+    
+    // Tambahkan respons AI ke riwayat
+    messages.push(response.content[0]);
+    
+    // Jika AI merespon dengan teks biasa, selesai
+    if (response.stop_reason !== 'tool_use') {
+      return response.content[0].text;
+    }
+    
+    // Proses setiap alat yang ingin dipanggil AI
+    for (const content of response.content) {
+      if (content.type === 'tool_use') {
+        const toolName = content.name;
+        const toolInput = content.input;
+        console.log(`🤖 AI memanggil tool: ${toolName}`);
+        
+        // Jalankan fungsi yang sesuai
+        const result = await tools[toolName](toolInput);
+        
+        // Kirim hasil kembali ke AI
+        messages.push({
+          role: 'user',
+          content: [{
+            type: 'tool_result',
+            tool_use_id: content.id,
+            content: JSON.stringify(result),
+          }],
+        });
+      }
+    }
+  }
+  return 'Mencapai batas maksimum iterasi';
+}
+```
+</details>
+
+### 🌐 4. Rancang Arsitektur Web Anda
+
+Agar AI ini terintegrasi dengan website dan RTK yang sudah Anda install.
+
+1.  **Backend**: Buat **server WebSocket** untuk streaming interaksi secara real-time.
+2.  **Frontend**: Di React, kelola state global AI (misal: `isAgentRunning`, `isWaitingForUser`) dengan **Redux Toolkit** dan sinkronisasi data dengan **RTK Query**.
+3.  **Keamanan**: Jalankan tools AI di **lingkungan yang terisolasi (sandbox)**, misalnya dengan Docker, untuk mencegah risiko keamanan.
+
+### 🔄 Konsep Penting untuk AI Agen
+
+*   **Restart Workflow**: Sediakan fungsi yang bisa mengatur ulang state AI ke awal.
+*   **Checkpoint**: Sediakan mekanisme "titik penyimpanan" proyek agar pengguna bisa kembali ke versi sebelumnya jika perubahan AI salah.
+*   **Prompt Queue**: Implementasikan antrean untuk instruksi beruntun. Ini memungkinkan AI tetap bekerja meskipun pengguna memberikan perintah baru, seperti fitur Queue di Replit.
+
+---
+
+Dengan pendekatan di atas, AI Anda akan berkembang dari sekadar model bahasa menjadi agen coding yang nyata. Apakah ada bagian yang ingin Anda diskusikan lebih detail? Saya siap membantu Anda menelusuri implementasinya langkah demi langkah.

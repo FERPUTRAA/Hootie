@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="layout/dialog_tip2_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/shape_base_dialog_bg" android:layout_width="306.0dip" android:layout_height="wrap_content" android:layout_marginLeft="35.0dip" android:layout_marginRight="35.0dip">
+        <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="#ff000000" android:gravity="center" android:id="@id/dialog_tip_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="14.0dip" android:layout_centerInParent="true" />
+        <View android:background="#ffe0e0e0" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginTop="14.0dip" android:layout_marginStart="20.0dip" android:layout_marginEnd="20.0dip" />
+        <TextView android:textSize="13.0sp" android:textColor="#ff000000" android:id="@id/content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="27.0dip" android:layout_marginTop="18.0dip" android:layout_marginRight="27.0dip" android:layout_centerInParent="true" />
+        <TextView android:textSize="15.0sp" android:textColor="#ffffffff" android:gravity="center" android:id="@id/dialog_bt" android:tag="binding_1" android:background="@drawable/btn_send" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginTop="116.0dip" android:layout_marginBottom="20.0dip" android:layout_marginStart="20.0dip" android:layout_marginEnd="20.0dip" />
+    </LinearLayout>
+</FrameLayout>

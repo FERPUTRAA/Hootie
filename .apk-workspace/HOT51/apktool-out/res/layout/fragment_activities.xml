@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/fragment_activities_0" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.example.obs.player.ui.widget.TitleBarView android:id="@id/title_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="43.0dip" app:defaultLeftIco="@drawable/ic_back" app:defaultLeftPadding="12.0px" app:defaultRightPadding="12.0px" app:rightIco="@drawable/icon_activity_more" app:title="common.activity" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.example.obs.player.ui.widget.CustomNativeWebView android:id="@id/web_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <androidx.appcompat.widget.LinearLayoutCompat android:gravity="center" android:orientation="vertical" android:id="@id/net_error_retry" android:background="@color/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:id="@id/ivImage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_stats_error" />
+            <com.example.obs.player.ui.widget.qmui.AppTextView android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="28.0dip" app:resText="status.api.error" />
+            <com.example.obs.player.ui.widget.qmui.AppTextView android:textSize="12.0dip" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" app:resText="status.second.retry" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </FrameLayout>
+</LinearLayout>

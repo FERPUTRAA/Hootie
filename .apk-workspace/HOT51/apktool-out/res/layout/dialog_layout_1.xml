@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="#fff8f9fa" android:paddingBottom="20.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/view_top" android:background="#ffeeeeee" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <RelativeLayout android:id="@id/rela_buttons" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_below="@id/view_top">
+        <com.example.obs.player.ui.widget.qmui.AppTextView android:textSize="18.0sp" android:id="@id/btn_cancel" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" app:resText="common.cancel" />
+        <com.example.obs.player.ui.widget.qmui.AppTextView android:textSize="18.0sp" android:id="@id/btn_ok" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" app:resText="common.confirm" />
+        <TextView android:textSize="16.0sp" android:textColor="#ff666666" android:ellipsize="none" android:gravity="center" android:id="@id/tv_msg" android:padding="10.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_toLeftOf="@id/btn_ok" android:layout_toRightOf="@id/btn_cancel" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:layout_below="@id/rela_buttons">
+        <com.example.obs.player.ui.widget.wheel.WheelView android:id="@id/wheel_num" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <com.example.obs.player.ui.widget.wheel.WheelView android:id="@id/wheel_num_decimals" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <com.example.obs.player.ui.widget.wheel.WheelView android:id="@id/wheel_unit" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <View android:id="@id/dialog_layout_2_lin1" android:background="#ffeeeeee" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginTop="40.0dip" />
+        <View android:background="#ffeeeeee" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginTop="60.0dip" />
+        <View android:background="#ffeeeeee" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginTop="40.0dip" />
+    </LinearLayout>
+</RelativeLayout>

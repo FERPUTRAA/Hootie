@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="@dimen/dp_40"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/load_more_loading_view" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:id="@id/pb_footer" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" />
+        <com.example.obs.player.ui.widget.qmui.AppTextView android:id="@id/tv_footer" android:layout_width="wrap_content" android:layout_height="wrap_content" app:resText="refresh.loading" />
+    </LinearLayout>
+    <FrameLayout android:id="@id/load_more_load_fail_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.example.obs.player.ui.widget.qmui.AppTextView android:layout_gravity="center" android:id="@id/tv_prompt" android:layout_width="wrap_content" android:layout_height="wrap_content" app:resText="refresh.load.failure" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/load_more_load_end_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.example.obs.player.ui.widget.qmui.AppTextView android:textColor="@android:color/darker_gray" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" app:resText="refresh.noMore" />
+    </FrameLayout>
+</FrameLayout>

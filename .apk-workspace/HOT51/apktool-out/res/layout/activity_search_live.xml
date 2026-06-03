@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/activity_search_live_0" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.example.obs.player.ui.widget.SearchView android:id="@id/searchView" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/text_black" android:gravity="center_vertical" android:id="@id/tv_tags" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="44.0dip" android:text="@string/live.center.popular.tags" android:paddingStart="16.0dip" />
+        <androidx.recyclerview.widget.RecyclerView android:orientation="horizontal" android:id="@id/rvLabel" android:paddingTop="10.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="44.0dip" android:paddingStart="16.0dip" app:layoutManager="com.google.android.flexbox.FlexboxLayoutManager" />
+        <com.drake.brv.PageRefreshLayout android:id="@id/page" android:padding="16.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/rv" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layoutManager="androidx.recyclerview.widget.GridLayoutManager" app:spanCount="2" />
+        </com.drake.brv.PageRefreshLayout>
+    </FrameLayout>
+</LinearLayout>

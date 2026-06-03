@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_item" android:tag="layout/bet_record_item_0" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="40.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="11.0sp" android:textColor="#ff212121" android:gravity="center" android:id="@id/tv_order" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="1" android:layout_weight="9.0" />
+    <TextView android:textSize="11.0sp" android:textColor="#ff212121" android:gravity="center" android:id="@id/tv_issue" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="\ 20240731010" android:layout_weight="18.0" />
+    <TextView android:textSize="11.0sp" android:textColor="#ff212121" android:gravity="center" android:id="@id/tv_betting_content" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="小" android:layout_weight="16.0" />
+    <TextView android:textSize="11.0sp" android:textColor="#ff212121" android:gravity="center" android:id="@id/tv_amount" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="$100.00" android:layout_weight="16.0" />
+    <TextView android:textSize="11.0sp" android:textColor="#fffe3c54" android:gravity="center" android:id="@id/tv_lottery_results" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="Winning" android:layout_weight="16.0" android:paddingEnd="2.0dip" />
+</LinearLayout>

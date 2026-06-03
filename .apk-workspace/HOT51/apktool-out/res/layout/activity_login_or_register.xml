@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:tag="layout/activity_login_or_register_0" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.example.obs.player.ui.widget.TitleBarView android:id="@id/title" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="@dimen/common_title_bar_height" app:defaultLeftIco="@drawable/ic_back" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:rightIco="@drawable/ic_user_center_service" app:title="common.account" />
+    <net.lucode.hackware.magicindicator.MagicIndicator android:id="@id/tab" android:layout_width="fill_parent" android:layout_height="@dimen/dp_42" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/title" />
+    <com.drake.engine.widget.FixedViewPager android:id="@id/viewPager" android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/tab" />
+    <ProgressBar android:id="@id/progressBar" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="?android:progressBarStyle" />
+</androidx.constraintlayout.widget.ConstraintLayout>

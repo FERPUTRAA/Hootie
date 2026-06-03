@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:tag="layout/dialog_html_0" android:background="@drawable/shape_rectangle_cornor_bg" android:layout_width="fill_parent" android:layout_height="530.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="16.0dip" android:textStyle="bold" android:textColor="@color/black" android:gravity="center" android:id="@id/tvTitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="14.0dip" />
+        <com.example.obs.player.ui.widget.MyWebView android:gravity="center" android:id="@id/webview" android:layout_width="fill_parent" android:layout_height="@dimen/dp_400" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/place_an_order" android:tag="binding_1" android:background="@drawable/bg_recharge_sure" android:layout_width="fill_parent" android:layout_height="45.0dip" android:layout_marginLeft="20.0dip" android:layout_marginTop="12.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="20.0dip" />
+    </LinearLayout>
+</LinearLayout>

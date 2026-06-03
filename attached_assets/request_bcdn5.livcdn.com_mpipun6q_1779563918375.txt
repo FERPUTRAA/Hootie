@@ -1,0 +1,7 @@
+GET /live/501_2041124952984932353_bf19b22e0af8f6fe22d0960a5d8fa46e-1779552131.ts?txspiseq=10871442221929794808 HTTP/1.1
+User-Agent: Lavf/61.1.100
+Accept: */*
+Range: bytes=0-
+Connection: keep-alive
+Host: bcdn5.livcdn.com
+Icy-MetaData: 1

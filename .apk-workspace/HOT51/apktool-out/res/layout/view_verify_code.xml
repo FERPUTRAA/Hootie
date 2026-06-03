@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="48.0dip">
+        <TextView android:id="@id/tv_0" style="@style/textview_style" />
+        <View android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <TextView android:id="@id/tv_1" style="@style/textview_style" />
+        <View android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <TextView android:id="@id/tv_2" style="@style/textview_style" />
+        <View android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <TextView android:id="@id/tv_3" style="@style/textview_style" />
+        <View android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <TextView android:id="@id/tv_4" style="@style/textview_style" />
+        <View android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <TextView android:id="@id/tv_5" style="@style/textview_style" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="48.0dip">
+        <View android:layout_gravity="bottom" android:background="#ffe5e5ea" android:layout_width="33.0dip" android:layout_height="2.0dip" />
+        <View android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <View android:layout_gravity="bottom" android:background="#ffe5e5ea" android:layout_width="33.0dip" android:layout_height="2.0dip" />
+        <View android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <View android:layout_gravity="bottom" android:background="#ffe5e5ea" android:layout_width="33.0dip" android:layout_height="2.0dip" />
+        <View android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <View android:layout_gravity="bottom" android:background="#ffe5e5ea" android:layout_width="33.0dip" android:layout_height="2.0dip" />
+        <View android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <View android:layout_gravity="bottom" android:background="#ffe5e5ea" android:layout_width="33.0dip" android:layout_height="2.0dip" />
+        <View android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <View android:layout_gravity="bottom" android:background="#ffe5e5ea" android:layout_width="33.0dip" android:layout_height="2.0dip" />
+    </LinearLayout>
+    <com.example.obs.player.ui.widget.MyEditText android:textColor="@color/transparent" android:id="@id/edit_text_view" android:background="@android:color/transparent" android:longClickable="false" android:layout_width="fill_parent" android:layout_height="48.0dip" android:maxLength="6" android:digits="\ 1234567890" android:inputType="number" />
+</RelativeLayout>

@@ -1,0 +1,33 @@
+.class public interface abstract Lcom/example/obs/player/ui/widget/custom/TabLayoutMediator$OnConfigureTabCallback;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/example/obs/player/ui/widget/custom/TabLayoutMediator;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x609
+    name = "OnConfigureTabCallback"
+.end annotation
+
+
+# virtual methods
+.method public abstract onConfigureTab(Lcom/google/android/material/tabs/TabLayout$i;I)V
+    .param p1    # Lcom/google/android/material/tabs/TabLayout$i;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "tab",
+            "position"
+        }
+    .end annotation
+.end method

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/shape_base_dialog_bg2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="35.0dip" android:layout_marginRight="35.0dip">
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="134.0dip">
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                    <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="#ff000000" android:gravity="center" android:id="@id/text1" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="#ff000000" android:gravity="center" android:id="@id/text2" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                </LinearLayout>
+            </RelativeLayout>
+            <View android:background="#ffe0e0e0" android:layout_width="fill_parent" android:layout_height="1.0px" />
+            <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="#ff1c1c1c" android:gravity="center" android:id="@id/dialog_tip_bt" android:layout_width="fill_parent" android:layout_height="50.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.youth.banner.Banner android:id="@id/banner" android:tag="layout/list_item_sales_0" android:layout_width="@dimen/dp_50" android:layout_height="@dimen/dp_80"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

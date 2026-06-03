@@ -1,0 +1,1157 @@
+.class public final Lcom/google/android/gms/common/internal/v;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation build Ll4/a;
+.end annotation
+
+
+# direct methods
+.method private constructor <init>()V
+    .locals 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/lang/AssertionError;
+
+    const-string v1, "Uninstantiable"
+
+    invoke-direct {v0, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v0
+.end method
+
+.method static varargs A(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    .locals 7
+
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    add-int/lit8 v0, v0, 0x30
+
+    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    const/4 v0, 0x0
+
+    move v2, v0
+
+    :goto_0
+    const/4 v3, 0x3
+
+    if-ge v0, v3, :cond_1
+
+    const-string v4, "%s"
+
+    invoke-virtual {p0, v4, v2}, Ljava/lang/String;->indexOf(Ljava/lang/String;I)I
+
+    move-result v4
+
+    const/4 v5, -0x1
+
+    if-ne v4, v5, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    invoke-virtual {p0, v2, v4}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    add-int/lit8 v2, v0, 0x1
+
+    aget-object v0, p1, v0
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    add-int/lit8 v0, v4, 0x2
+
+    move v6, v2
+
+    move v2, v0
+
+    move v0, v6
+
+    goto :goto_0
+
+    :cond_1
+    :goto_1
+    invoke-virtual {p0, v2}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    if-ge v0, v3, :cond_3
+
+    const-string p0, " ["
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    add-int/lit8 p0, v0, 0x1
+
+    aget-object v0, p1, v0
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    :goto_2
+    if-ge p0, v3, :cond_2
+
+    const-string v0, ", "
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    add-int/lit8 v0, p0, 0x1
+
+    aget-object p0, p1, p0
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move p0, v0
+
+    goto :goto_2
+
+    :cond_2
+    const-string p0, "]"
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_3
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static a(Z)V
+    .locals 0
+    .annotation build Ll4/a;
+    .end annotation
+
+    if-eqz p0, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {p0}, Ljava/lang/IllegalArgumentException;-><init>()V
+
+    throw p0
+.end method
+
+.method public static b(ZLjava/lang/Object;)V
+    .locals 0
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .annotation build Ll4/a;
+    .end annotation
+
+    if-eqz p0, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public static varargs c(ZLjava/lang/String;[Ljava/lang/Object;)V
+    .locals 0
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .param p2    # [Ljava/lang/Object;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .annotation build Ll4/a;
+    .end annotation
+
+    if-eqz p0, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    invoke-static {p1, p2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public static d(DDDLjava/lang/String;)D
+    .locals 5
+    .param p6    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .annotation build Ll4/a;
+    .end annotation
+
+    cmpg-double v0, p0, p2
+
+    const/4 v1, 0x2
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x3
+
+    if-ltz v0, :cond_1
+
+    cmpl-double v0, p0, p4
+
+    if-gtz v0, :cond_0
+
+    return-wide p0
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    new-array p1, v4, [Ljava/lang/Object;
+
+    aput-object p6, p1, v3
+
+    invoke-static {p2, p3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+
+    move-result-object p2
+
+    aput-object p2, p1, v2
+
+    invoke-static {p4, p5}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+
+    move-result-object p2
+
+    aput-object p2, p1, v1
+
+    const-string p2, "%s is out of range of [%f, %f] (too high)"
+
+    invoke-static {p2, p1}, Lcom/google/android/gms/common/internal/v;->A(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_1
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    new-array p1, v4, [Ljava/lang/Object;
+
+    aput-object p6, p1, v3
+
+    invoke-static {p2, p3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+
+    move-result-object p2
+
+    aput-object p2, p1, v2
+
+    invoke-static {p4, p5}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+
+    move-result-object p2
+
+    aput-object p2, p1, v1
+
+    const-string p2, "%s is out of range of [%f, %f] (too low)"
+
+    invoke-static {p2, p1}, Lcom/google/android/gms/common/internal/v;->A(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public static e(FFFLjava/lang/String;)F
+    .locals 5
+    .param p3    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .annotation build Ll4/a;
+    .end annotation
+
+    cmpg-float v0, p0, p1
+
+    const/4 v1, 0x2
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x3
+
+    if-ltz v0, :cond_1
+
+    cmpl-float v0, p0, p2
+
+    if-gtz v0, :cond_0
+
+    return p0
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    new-array v0, v4, [Ljava/lang/Object;
+
+    aput-object p3, v0, v3
+
+    invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object p1
+
+    aput-object p1, v0, v2
+
+    invoke-static {p2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object p1
+
+    aput-object p1, v0, v1
+
+    const-string p1, "%s is out of range of [%f, %f] (too high)"
+
+    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/v;->A(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_1
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    new-array v0, v4, [Ljava/lang/Object;
+
+    aput-object p3, v0, v3
+
+    invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object p1
+
+    aput-object p1, v0, v2
+
+    invoke-static {p2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object p1
+
+    aput-object p1, v0, v1
+
+    const-string p1, "%s is out of range of [%f, %f] (too low)"
+
+    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/v;->A(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public static f(IIILjava/lang/String;)I
+    .locals 4
+    .param p3    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .annotation build Le5/a;
+    .end annotation
+
+    .annotation build Ll4/a;
+    .end annotation
+
+    const/4 v0, 0x2
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x3
+
+    if-lt p0, p1, :cond_1
+
+    if-gt p0, p2, :cond_0
+
+    return p0
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    new-array v3, v3, [Ljava/lang/Object;
+
+    aput-object p3, v3, v2
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    aput-object p1, v3, v1
+
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    aput-object p1, v3, v0
+
+    const-string p1, "%s is out of range of [%d, %d] (too high)"
+
+    invoke-static {p1, v3}, Lcom/google/android/gms/common/internal/v;->A(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_1
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    new-array v3, v3, [Ljava/lang/Object;
+
+    aput-object p3, v3, v2
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    aput-object p1, v3, v1
+
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    aput-object p1, v3, v0
+
+    const-string p1, "%s is out of range of [%d, %d] (too low)"
+
+    invoke-static {p1, v3}, Lcom/google/android/gms/common/internal/v;->A(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public static g(JJJLjava/lang/String;)J
+    .locals 5
+    .param p6    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .annotation build Ll4/a;
+    .end annotation
+
+    cmp-long v0, p0, p2
+
+    const/4 v1, 0x2
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x3
+
+    if-ltz v0, :cond_1
+
+    cmp-long v0, p0, p4
+
+    if-gtz v0, :cond_0
+
+    return-wide p0
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    new-array p1, v4, [Ljava/lang/Object;
+
+    aput-object p6, p1, v3
+
+    invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p2
+
+    aput-object p2, p1, v2
+
+    invoke-static {p4, p5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p2
+
+    aput-object p2, p1, v1
+
+    const-string p2, "%s is out of range of [%d, %d] (too high)"
+
+    invoke-static {p2, p1}, Lcom/google/android/gms/common/internal/v;->A(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_1
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    new-array p1, v4, [Ljava/lang/Object;
+
+    aput-object p6, p1, v3
+
+    invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p2
+
+    aput-object p2, p1, v2
+
+    invoke-static {p4, p5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p2
+
+    aput-object p2, p1, v1
+
+    const-string p2, "%s is out of range of [%d, %d] (too low)"
+
+    invoke-static {p2, p1}, Lcom/google/android/gms/common/internal/v;->A(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public static h(Landroid/os/Handler;)V
+    .locals 4
+    .param p0    # Landroid/os/Handler;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .annotation build Ll4/a;
+    .end annotation
+
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    if-eq v0, v1, :cond_1
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroid/os/Looper;->getThread()Ljava/lang/Thread;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Thread;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_0
+    const-string v0, "null current looper"
+
+    :goto_0
+    new-instance v1, Ljava/lang/IllegalStateException;
+
+    invoke-virtual {p0}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/os/Looper;->getThread()Ljava/lang/Thread;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ljava/lang/Thread;->getName()Ljava/lang/String;
+
+    move-result-object p0
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "Must be called on "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p0, " thread, but got "
+
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p0, "."
+
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v1, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+
+    :cond_1
+    return-void
+.end method
+
+.method public static i(Landroid/os/Handler;Ljava/lang/String;)V
+    .locals 1
+    .param p0    # Landroid/os/Handler;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .annotation build Ll4/a;
+    .end annotation
+
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
+
+    move-result-object p0
+
+    if-ne v0, p0, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public static j()V
+    .locals 1
+    .annotation build Ll4/a;
+    .end annotation
+
+    const-string v0, "Must be called on the main application thread"
+
+    invoke-static {v0}, Lcom/google/android/gms/common/internal/v;->k(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public static k(Ljava/lang/String;)V
+    .locals 1
+    .param p0    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .annotation build Ll4/a;
+    .end annotation
+
+    invoke-static {}, Lcom/google/android/gms/common/util/f0;->a()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public static l(Ljava/lang/String;)Ljava/lang/String;
+    .locals 1
+    .param p0    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/q0;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/o0;
+    .end annotation
+
+    .annotation build Le5/a;
+    .end annotation
+
+    .annotation build Ll4/a;
+    .end annotation
+
+    .annotation runtime Lw9/d;
+        value = {
+            "#1"
+        }
+    .end annotation
+
+    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    return-object p0
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Given String is empty or null"
+
+    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public static m(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
+    .locals 1
+    .param p0    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/q0;
+        .end annotation
+    .end param
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/o0;
+    .end annotation
+
+    .annotation build Le5/a;
+    .end annotation
+
+    .annotation build Ll4/a;
+    .end annotation
+
+    .annotation runtime Lw9/d;
+        value = {
+            "#1"
+        }
+    .end annotation
+
+    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    return-object p0
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public static n()V
+    .locals 1
+    .annotation build Ll4/a;
+    .end annotation
+
+    const-string v0, "Must not be called on GoogleApiHandler thread."
+
+    invoke-static {v0}, Lcom/google/android/gms/common/internal/v;->o(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public static o(Ljava/lang/String;)V
+    .locals 2
+    .param p0    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .annotation build Ll4/a;
+    .end annotation
+
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Landroid/os/Looper;->getThread()Ljava/lang/Thread;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Thread;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "GoogleApiHandler"
+
+    if-eq v0, v1, :cond_0
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_1
+    :goto_0
+    return-void
+.end method
+
+.method public static p()V
+    .locals 1
+    .annotation build Ll4/a;
+    .end annotation
+
+    const-string v0, "Must not be called on the main application thread"
+
+    invoke-static {v0}, Lcom/google/android/gms/common/internal/v;->q(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public static q(Ljava/lang/String;)V
+    .locals 1
+    .param p0    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .annotation build Ll4/a;
+    .end annotation
+
+    invoke-static {}, Lcom/google/android/gms/common/util/f0;->a()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public static r(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+    .param p0    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/q0;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/o0;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(TT;)TT;"
+        }
+    .end annotation
+
+    .annotation build Le5/a;
+    .end annotation
+
+    .annotation build Ll4/a;
+    .end annotation
+
+    .annotation runtime Lw9/d;
+        value = {
+            "#1"
+        }
+    .end annotation
+
+    if-eqz p0, :cond_0
+
+    return-object p0
+
+    :cond_0
+    new-instance p0, Ljava/lang/NullPointerException;
+
+    const-string v0, "null reference"
+
+    invoke-direct {p0, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public static s(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+    .param p0    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/o0;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(TT;",
+            "Ljava/lang/Object;",
+            ")TT;"
+        }
+    .end annotation
+
+    .annotation build Le5/a;
+    .end annotation
+
+    .annotation build Ll4/a;
+    .end annotation
+
+    .annotation runtime Lw9/d;
+        value = {
+            "#1"
+        }
+    .end annotation
+
+    if-eqz p0, :cond_0
+
+    return-object p0
+
+    :cond_0
+    new-instance p0, Ljava/lang/NullPointerException;
+
+    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public static t(I)I
+    .locals 1
+    .annotation build Le5/a;
+    .end annotation
+
+    .annotation build Ll4/a;
+    .end annotation
+
+    if-eqz p0, :cond_0
+
+    return p0
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Given Integer is zero"
+
+    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public static u(ILjava/lang/Object;)I
+    .locals 0
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .annotation build Le5/a;
+    .end annotation
+
+    .annotation build Ll4/a;
+    .end annotation
+
+    if-eqz p0, :cond_0
+
+    return p0
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public static v(J)J
+    .locals 2
+    .annotation build Le5/a;
+    .end annotation
+
+    .annotation build Ll4/a;
+    .end annotation
+
+    const-wide/16 v0, 0x0
+
+    cmp-long v0, p0, v0
+
+    if-eqz v0, :cond_0
+
+    return-wide p0
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    const-string p1, "Given Long is zero"
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public static w(JLjava/lang/Object;)J
+    .locals 2
+    .param p2    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .annotation build Le5/a;
+    .end annotation
+
+    .annotation build Ll4/a;
+    .end annotation
+
+    const-wide/16 v0, 0x0
+
+    cmp-long v0, p0, v0
+
+    if-eqz v0, :cond_0
+
+    return-wide p0
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    invoke-static {p2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public static x(Z)V
+    .locals 0
+    .annotation build Ll4/a;
+    .end annotation
+
+    if-eqz p0, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    invoke-direct {p0}, Ljava/lang/IllegalStateException;-><init>()V
+
+    throw p0
+.end method
+
+.method public static y(ZLjava/lang/Object;)V
+    .locals 0
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .annotation build Ll4/a;
+    .end annotation
+
+    if-eqz p0, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public static varargs z(ZLjava/lang/String;[Ljava/lang/Object;)V
+    .locals 0
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+
+        .annotation build Le5/i;
+        .end annotation
+    .end param
+    .param p2    # [Ljava/lang/Object;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .annotation build Le5/h;
+    .end annotation
+
+    .annotation build Ll4/a;
+    .end annotation
+
+    if-eqz p0, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    invoke-static {p1, p2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method

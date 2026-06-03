@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ConstraintSet>
+        <Constraint android:id="@id/svga_enter" android:visibility="gone" android:layout_width="@dimen/dp_375" android:layout_height="@dimen/dp_214" android:layout_marginBottom="-10.0dip" app:autoPlay="true" app:layout_constraintBottom_toTopOf="@id/message_bt" app:loopCount="1" />
+        <Constraint android:id="@id/live_gift_recycler" android:visibility="gone" />
+        <Constraint android:id="@id/animateBroadcast" android:visibility="gone" />
+        <Constraint android:id="@id/svga_id" android:visibility="gone" />
+        <Constraint android:id="@id/rlNotice" android:visibility="gone" />
+        <Constraint android:id="@id/user_list" android:visibility="gone" />
+        <Constraint android:id="@id/close" android:background="@drawable/bg_shadow_transparent_circle" android:visibility="gone" android:layout_width="28.0dip" android:layout_height="28.0dip" android:layout_marginTop="@dimen/dp_12" android:src="@drawable/ic_live_room_close" android:scaleType="center" android:layout_marginEnd="@dimen/dp_24" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
+        <Constraint android:id="@id/gift_bt" android:layout_width="@dimen/dp_38" android:layout_height="@dimen/dp_50" android:layout_marginEnd="@dimen/dp_9" app:layout_constraintBottom_toBottomOf="@id/game_bt" app:layout_constraintEnd_toStartOf="@id/game_bt" />
+        <Constraint android:id="@id/marquee_notice" android:visibility="gone" />
+        <Constraint android:id="@id/pay_linearLayout" android:visibility="gone" />
+        <Constraint android:id="@id/rv_sales" android:visibility="gone" />
+        <Constraint android:id="@id/imv_orientation" android:visibility="gone" />
+        <Constraint android:id="@id/layoutSmallIcons" android:visibility="gone" />
+        <Constraint android:id="@id/imv_horizontal_quit" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/dp_32" app:layout_constraintBottom_toBottomOf="@id/view2" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintTop_toTopOf="@id/view2" />
+        <Constraint android:id="@id/his_select" android:background="@drawable/bg_shadow_transparent_circle" android:layout_width="@dimen/dp_38" android:layout_height="@dimen/dp_38" android:scaleType="fitXY" android:layout_marginStart="@dimen/dp_5" android:layout_marginEnd="@dimen/dp_10" app:layout_constraintBottom_toBottomOf="@id/fl_share_gift" app:layout_constraintEnd_toStartOf="@id/fl_share_gift" />
+        <Constraint android:id="@id/fl_share_gift" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_16" android:layout_marginStart="@dimen/dp_5" android:layout_marginEnd="@dimen/dp_10" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
+        <Constraint android:id="@id/count_view" android:paddingTop="4.0dip" android:layout_width="50.0dip" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_82" android:layout_marginEnd="@dimen/dp_10" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
+        <Constraint android:id="@id/lottery_number" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_4" android:layout_marginStart="@dimen/dp_9" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/view2" />
+        <Constraint android:id="@id/enter_my_win" android:visibility="gone" android:layout_width="@dimen/dp_375" android:layout_height="30.0dip" android:layout_marginBottom="@dimen/dp_5" app:layout_constraintBottom_toTopOf="@id/danmu_recycler" app:layout_constraintStart_toStartOf="parent" />
+        <Constraint android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/message_bt" android:background="@drawable/bg_shadow_transparent_circle" android:layout_width="@dimen/dp_357" android:layout_height="@dimen/dp_38" android:layout_marginStart="@dimen/dp_8" app:layout_constraintBottom_toBottomOf="@id/game_bt" app:layout_constraintRight_toLeftOf="@id/game_bt" app:layout_constraintStart_toStartOf="parent" />
+        <Constraint android:id="@id/danmu_recycler" android:visibility="visible" android:layout_width="@dimen/dp_357" android:layout_height="@dimen/dp_176" android:layout_marginBottom="12.0dip" android:requiresFadingEdge="vertical" android:layout_marginStart="10.0dip" android:layout_marginEnd="10.0dip" app:layout_constraintBottom_toTopOf="@id/message_bt" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0" app:layout_constraintStart_toStartOf="parent" />
+        <Constraint android:id="@id/game_bt" android:layout_width="@dimen/dp_38" android:layout_height="@dimen/dp_38" android:layout_marginBottom="@dimen/dp_10" android:layout_marginEnd="@dimen/dp_9" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@id/back_video" app:srcCompat="@drawable/ic_live_room_game" />
+    </ConstraintSet>
+</MotionScene>

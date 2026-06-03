@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:tag="layout/item_home_hot_banner_0" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="-15.0dip" android:layout_marginTop="@dimen/dp_15" android:layout_marginRight="-15.0dip" android:layout_marginHorizontal="-15.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.youth.banner.Banner android:id="@id/banner" android:layout_width="fill_parent" android:layout_height="@dimen/dp_140" app:banner_indicator_height="5.0dip" app:banner_indicator_marginBottom="6.0dip" app:banner_indicator_normal_color="#80ffffff" app:banner_indicator_normal_width="5.0dip" app:banner_indicator_radius="5.0dip" app:banner_indicator_selected_color="#ffffffff" app:banner_indicator_selected_width="12.0dip" app:banner_indicator_space="5.0dip" app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

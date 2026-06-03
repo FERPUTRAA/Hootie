@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="layout/dialog_red_packet_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_gravity="center" android:tag="binding_1" android:layout_width="258.0dip" android:layout_height="331.0dip">
+        <include android:id="@id/include_03" layout="@layout/include_red_packet_03" />
+        <include android:id="@id/include_04" layout="@layout/include_red_packet_04" />
+        <include android:id="@id/include_05" layout="@layout/include_red_packet_05" />
+        <include android:id="@id/include_06" layout="@layout/include_red_packet_06" />
+        <include android:id="@id/include_07" layout="@layout/include_red_packet_07" />
+        <include android:id="@id/include_08" layout="@layout/include_red_packet_08" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

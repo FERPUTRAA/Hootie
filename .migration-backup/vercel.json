@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "installCommand": "pnpm install",
+  "buildCommand": "BASE_PATH=/ NODE_ENV=production pnpm --filter @workspace/tiktok-ui run build",
+  "outputDirectory": "artifacts/tiktok-ui/dist/public",
+  "rewrites": [
+    { "source": "/api/:path*", "destination": "/api/index" }
+  ],
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        { "key": "Access-Control-Allow-Methods", "value": "GET,POST,OPTIONS" },
+        { "key": "Access-Control-Allow-Headers", "value": "Content-Type,Authorization" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/item_audit_list_0" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginTop="1.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/lineView" android:background="#fff5f5f5" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <LinearLayout android:orientation="horizontal" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="12.0sp" android:textColor="#ff0d0043" android:gravity="center" android:id="@id/tv_rked" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <View android:background="#fff5f5f5" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" />
+        <TextView android:textSize="12.0sp" android:textColor="#ff0d0043" android:gravity="center" android:id="@id/tv_jhed" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <View android:background="#fff5f5f5" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" />
+        <TextView android:textSize="12.0sp" android:textColor="#ff0d0043" android:gravity="center" android:id="@id/tv_yjh" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <View android:background="#fff5f5f5" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" />
+        <TextView android:textSize="12.0sp" android:textColor="#ff0d0043" android:gravity="center" android:id="@id/tv_zt" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="--" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

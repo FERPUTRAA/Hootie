@@ -1,0 +1,132 @@
+# Project-local RTK filters for Scrollap (TikTok-clone pnpm monorepo)
+# Filters here override user-global and built-in filters.
+# Docs: https://github.com/rtk-ai/rtk#custom-filters
+schema_version = 1
+
+# ── pnpm workspace (build / typecheck / dev) ────────────────────────────────
+[filters.pnpm-build]
+description = "Compact pnpm build & typecheck output"
+match_command = "^rtk\\s+pnpm\\s+(run\\s+)?(build|typecheck)"
+strip_ansi = true
+strip_lines_matching = [
+  "^\\s*$",
+  "^Done in",
+  "^Scope:",
+  "^\\[rtk\\]",
+  "^\\s*(dist/|\\.d\\.ts|\\.js|\\.mjs|\\.map)",
+  "^(\\u2514|\\u251c)",
+]
+max_lines = 15
+on_empty = "pnpm build: ok"
+
+[filters.pnpm-dev]
+description = "Compact pnpm dev server output"
+match_command = "^rtk\\s+pnpm\\s+(run\\s+)?dev"
+strip_ansi = true
+strip_lines_matching = [
+  "^\\s*$",
+  "^\\[vite\\]",
+  "^\\[05:",
+  "^\\[04:",
+  "^\\d{4}-\\d{2}-\\d{2}",
+]
+max_lines = 10
+on_empty = "dev server running"
+
+# ── Vite build output ───────────────────────────────────────────────────────
+[filters.vite-build]
+description = "Compact Vite build stats"
+match_command = "^rtk\\s+vite\\s+build"
+strip_ansi = true
+strip_lines_matching = [
+  "^\\s*$",
+  "^building",
+  "^\\u2514",
+  "^\\u251c",
+  "^dist/",
+  "\\.map\\s*$",
+]
+max_lines = 12
+on_empty = "vite build: ok"
+
+# ── Express / pino server logs ──────────────────────────────────────────────
+[filters.express-logs]
+description = "Compact Express + pino request logs"
+match_command = "^rtk\\s+(node|tsx|ts-node)"
+strip_ansi = true
+strip_lines_matching = [
+  "^\\s*$",
+  "^\\[\\d{2}:\\d{2}:\\d{2}\\.\\d{3}\\]\\s*(DEBUG|TRACE)",
+  "req:\\s*\\{",
+  "res:\\s*\\{",
+  "responseTime:",
+  "\"method\":\"GET\",\"url\":\"(api/session-status|api/zego-config|api/zego-token|api/stream-proxy|favicon)\"",
+]
+max_lines = 20
+on_empty = "server running"
+
+# ── Git commands ────────────────────────────────────────────────────────────
+[filters.git-status]
+description = "Ultra-compact git status"
+match_command = "^rtk\\s+git\\s+(status|diff\\s+--stat|log\\s+--oneline)"
+strip_ansi = true
+strip_lines_matching = [
+  "^\\s*$",
+  "^\\(use",
+  "^nothing to commit",
+  "^Changes not staged",
+  "^Untracked files",
+  "^On branch",
+]
+max_lines = 12
+on_empty = "git: clean"
+
+# ── TypeScript / tsc ───────────────────────────────────────────────────────
+[filters.tsc]
+description = "Compact TypeScript compiler output"
+match_command = "^rtk\\s+(npx\\s+)?tsc"
+strip_ansi = true
+strip_lines_matching = [
+  "^\\s*$",
+  "^\\[tsconfig",
+]
+max_lines = 20
+on_empty = "tsc: no errors"
+
+# ── ESLint ─────────────────────────────────────────────────────────────────
+[filters.eslint]
+description = "Compact ESLint output"
+match_command = "^rtk\\s+(npx\\s+)?eslint"
+strip_ansi = true
+strip_lines_matching = [
+  "^\\s*$",
+  "^\\d+\\s+of",
+]
+max_lines = 15
+on_empty = "eslint: clean"
+
+# ── Docker / container ─────────────────────────────────────────────────────
+[filters.docker]
+description = "Compact docker output"
+match_command = "^rtk\\s+docker"
+strip_ansi = true
+strip_lines_matching = [
+  "^\\s*$",
+  "^\\u2514",
+  "^\\u251c",
+]
+max_lines = 10
+on_empty = "docker: ok"
+
+# ── General file listing ────────────────────────────────────────────────────
+[filters.ls]
+description = "Compact ls -la output"
+match_command = "^rtk\\s+ls"
+strip_ansi = true
+strip_lines_matching = [
+  "^total\\s+\\d+",
+  "^\\.$",
+  "^\\.\\.$",
+]
+max_lines = 20
+on_empty = "dir: empty"

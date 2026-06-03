@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:tag="layout/panel_ssc_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.example.obs.player.ui.widget.MultiLineRadioGroup android:orientation="vertical" android:id="@id/radioGroup_sex_id" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="16.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="10.0dip">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <RadioButton android:id="@id/ludan_01" android:layout_width="100.0dip" android:checked="true" style="@style/checkbox_digits_ludan4" />
+                <Space android:layout_width="0.0dip" android:layout_height="10.0dip" android:layout_weight="1.0" />
+                <RadioButton android:id="@id/ludan_02" android:layout_width="100.0dip" style="@style/checkbox_digits_ludan4" />
+                <Space android:layout_width="0.0dip" android:layout_height="10.0dip" android:layout_weight="1.0" />
+                <RadioButton android:id="@id/ludan_03" android:layout_width="100.0dip" style="@style/checkbox_digits_ludan4" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                <RadioButton android:id="@id/ludan_04" android:layout_width="100.0dip" style="@style/checkbox_digits_ludan4" />
+                <Space android:layout_width="0.0dip" android:layout_height="10.0dip" android:layout_weight="1.0" />
+                <RadioButton android:id="@id/ludan_05" android:layout_width="100.0dip" style="@style/checkbox_digits_ludan4" />
+                <Space android:layout_width="0.0dip" android:layout_height="10.0dip" android:layout_weight="1.0" />
+                <RadioButton android:id="@id/ludan_06" android:layout_width="100.0dip" style="@style/checkbox_digits_ludan4" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@id/threeLLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                <RadioButton android:id="@id/ludan_07" android:layout_width="100.0dip" style="@style/checkbox_digits_ludan4" />
+                <Space android:layout_width="0.0dip" android:layout_height="10.0dip" android:layout_weight="1.0" />
+                <RadioButton android:id="@id/ludan_08" android:layout_width="100.0dip" style="@style/checkbox_digits_ludan4" />
+                <Space android:layout_width="0.0dip" android:layout_height="10.0dip" android:layout_weight="1.0" />
+                <View android:visibility="invisible" android:layout_width="100.0dip" style="@style/checkbox_digits_ludan4" />
+            </LinearLayout>
+        </com.example.obs.player.ui.widget.MultiLineRadioGroup>
+    </LinearLayout>
+</LinearLayout>

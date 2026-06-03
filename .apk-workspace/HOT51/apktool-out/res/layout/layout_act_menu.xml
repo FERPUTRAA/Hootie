@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="layout/layout_act_menu_0" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:background="@drawable/bg_act_menu" android:paddingTop="@dimen/dp_6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="8.0dip" app:divider="?android:dividerVertical" app:showDividers="middle">
+        <androidx.appcompat.widget.LinearLayoutCompat android:gravity="center_vertical" android:id="@id/menu_refresh" android:paddingLeft="@dimen/dp_24" android:paddingRight="@dimen/dp_24" android:layout_width="wrap_content" android:layout_height="@dimen/dp_54" android:paddingHorizontal="@dimen/dp_24">
+            <androidx.appcompat.widget.AppCompatImageView android:layout_width="@dimen/dp_26" android:layout_height="@dimen/dp_26" android:src="@drawable/icon_menu_refresh" />
+            <androidx.appcompat.widget.AppCompatTextView android:textSize="@dimen/sp_16" android:textColor="#ff212121" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/dp_12" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.appcompat.widget.LinearLayoutCompat android:gravity="center_vertical" android:id="@id/menu_faqs" android:paddingLeft="@dimen/dp_24" android:paddingRight="@dimen/dp_24" android:layout_width="wrap_content" android:layout_height="@dimen/dp_54" android:paddingHorizontal="@dimen/dp_24">
+            <androidx.appcompat.widget.AppCompatImageView android:layout_width="@dimen/dp_26" android:layout_height="@dimen/dp_26" android:src="@drawable/icon_menu_faqs" />
+            <androidx.appcompat.widget.AppCompatTextView android:textSize="@dimen/sp_16" android:textColor="#ff212121" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/dp_12" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.appcompat.widget.LinearLayoutCompat android:gravity="center_vertical" android:id="@id/menu_home" android:paddingLeft="@dimen/dp_24" android:paddingRight="@dimen/dp_24" android:layout_width="wrap_content" android:layout_height="@dimen/dp_54" android:paddingHorizontal="@dimen/dp_24">
+            <androidx.appcompat.widget.AppCompatImageView android:layout_width="@dimen/dp_26" android:layout_height="@dimen/dp_26" android:src="@drawable/icon_menu_home" />
+            <androidx.appcompat.widget.AppCompatTextView android:textSize="@dimen/sp_16" android:textColor="#ff212121" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/dp_12" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</FrameLayout>

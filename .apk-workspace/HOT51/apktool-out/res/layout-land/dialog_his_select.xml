@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center_vertical" android:tag="layout-land/dialog_his_select_0" android:background="@color/white" android:paddingLeft="@dimen/dp_14" android:paddingRight="@dimen/dp_14" android:layout_width="fill_parent" android:layout_height="fill_parent" android:backgroundTint="@color/white" android:paddingHorizontal="@dimen/dp_14"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.LinearLayoutCompat android:id="@id/layer1" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/ll_1" android:paddingTop="@dimen/dp_8" android:layout_width="0.0dip" android:layout_height="wrap_content" android:minHeight="@dimen/dp_80" android:layout_weight="1.0">
+            <ImageView android:layout_width="42.0dip" android:layout_height="42.0dip" android:src="@drawable/ic_draw_result_history" />
+            <TextView android:textSize="11.0sp" android:textColor="#ff808080" android:gravity="center" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_8" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/ll_2" android:paddingTop="@dimen/dp_8" android:layout_width="0.0dip" android:layout_height="wrap_content" android:minHeight="@dimen/dp_80" android:layout_weight="1.0" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/ll_1">
+            <ImageView android:layout_width="42.0dip" android:layout_height="42.0dip" android:src="@drawable/ic_betting_record" />
+            <TextView android:textSize="11.0sp" android:textColor="#ff808080" android:gravity="center" android:id="@id/textView42" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_8" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/ll_danmu" android:paddingTop="@dimen/dp_8" android:layout_width="0.0dip" android:layout_height="wrap_content" android:minHeight="@dimen/dp_80" android:layout_weight="1.0" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/ll_1">
+            <ImageView android:layout_width="42.0dip" android:layout_height="42.0dip" android:src="@drawable/ic_danmu_setting" />
+            <TextView android:textSize="11.0sp" android:textColor="#ff808080" android:gravity="center" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_8" />
+        </LinearLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <androidx.appcompat.widget.LinearLayoutCompat android:id="@id/layer2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_40" android:layout_below="@id/layer1">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/llPriceMethod" android:paddingTop="@dimen/dp_8" android:layout_width="0.0dip" android:layout_height="wrap_content" android:minHeight="@dimen/dp_80" android:layout_weight="1.0" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/ll_1">
+            <ImageView android:layout_width="42.0dip" android:layout_height="42.0dip" android:src="@drawable/ic_price_method" />
+            <TextView android:textSize="11.0sp" android:textColor="#ff808080" android:gravity="center" android:id="@id/tvPriceMethod" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_8" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/llLiveStreamRate" android:paddingTop="@dimen/dp_8" android:layout_width="0.0dip" android:layout_height="wrap_content" android:minHeight="@dimen/dp_80" android:layout_weight="1.0">
+            <ImageView android:layout_width="42.0dip" android:layout_height="42.0dip" android:src="@drawable/ic_hisselect_rate" />
+            <TextView android:textSize="11.0sp" android:textColor="#ff808080" android:gravity="center" android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_8" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/llClear" android:paddingTop="@dimen/dp_8" android:layout_width="0.0dip" android:layout_height="wrap_content" android:minHeight="@dimen/dp_80" android:layout_weight="1.0">
+            <ImageView android:layout_width="42.0dip" android:layout_height="42.0dip" android:src="@drawable/ic_hisselect_clear" />
+            <TextView android:textSize="11.0sp" android:textColor="#ff808080" android:gravity="center" android:tag="binding_6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_8" />
+        </LinearLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <androidx.appcompat.widget.LinearLayoutCompat android:id="@id/layer3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_40" android:layout_below="@id/layer2">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/llMultipleBet" android:paddingTop="@dimen/dp_8" android:layout_width="0.0dip" android:layout_height="wrap_content" android:minHeight="@dimen/dp_80" android:layout_weight="1.0">
+            <ImageView android:id="@id/ivMultipleBet" android:layout_width="42.0dip" android:layout_height="42.0dip" />
+            <TextView android:textSize="11.0sp" android:textColor="#ff808080" android:gravity="center" android:id="@id/tvMultipleBet" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_8" />
+        </LinearLayout>
+        <Space android:layout_width="0.0dip" android:layout_height="@dimen/dp_80" android:layout_weight="2.0" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</RelativeLayout>

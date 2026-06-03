@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/lll_imgroup" android:tag="layout/lmp_group_item2_0" android:background="@drawable/bg_game_bet_rectangle_unselect" android:layout_width="56.0dip" android:layout_height="50.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_gravity="center" android:id="@id/rl_01" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:id="@id/product_image" android:background="@drawable/kuaisan_bg04" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_centerVertical="true" app:srcCompat="@drawable/products_disable_ico" />
+        <ImageView android:id="@id/product_image2" android:background="@drawable/kuaisan_bg04" android:layout_width="22.0dip" android:layout_height="22.0dip" android:layout_marginLeft="4.0dip" android:layout_toRightOf="@id/product_image" app:srcCompat="@drawable/products_disable_ico" />
+    </RelativeLayout>
+    <TextView android:textSize="11.0dip" android:textStyle="bold" android:textColor="#ffc7bfdb" android:gravity="center" android:id="@id/odds" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" />
+</LinearLayout>

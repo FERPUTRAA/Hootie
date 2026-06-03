@@ -1,0 +1,1192 @@
+[
+  {
+    "areacode": "AL",
+    "name": "阿爾巴尼亞",
+    "phonecode": "355"
+  },
+  {
+    "areacode": "DZ",
+    "name": "阿爾及利亞",
+    "phonecode": "213"
+  },
+  {
+    "areacode": "AF",
+    "name": "阿富汗",
+    "phonecode": "93"
+  },
+  {
+    "areacode": "AR",
+    "name": "阿根廷",
+    "phonecode": "54"
+  },
+  {
+    "areacode": "AE",
+    "name": "阿拉伯聯合大公國",
+    "phonecode": "971"
+  },
+  {
+    "areacode": "OM",
+    "name": "阿曼",
+    "phonecode": "968"
+  },
+  {
+    "areacode": "IE",
+    "name": "愛爾蘭",
+    "phonecode": "353"
+  },
+  {
+    "areacode": "EG",
+    "name": "埃及",
+    "phonecode": "20"
+  },
+  {
+    "areacode": "EE",
+    "name": "愛沙尼亞",
+    "phonecode": "372"
+  },
+  {
+    "areacode": "AD",
+    "name": "安道爾",
+    "phonecode": "376"
+  },
+  {
+    "areacode": "AG",
+    "name": "安地卡及巴布達",
+    "phonecode": "1"
+  },
+  {
+    "areacode": "AO",
+    "name": "安哥拉",
+    "phonecode": "244"
+  },
+  {
+    "areacode": "AI",
+    "name": "安奎拉",
+    "phonecode": "1"
+  },
+  {
+    "areacode": "AT",
+    "name": "奧地利",
+    "phonecode": "43"
+  },
+  {
+    "areacode": "MO",
+    "name": "澳門",
+    "phonecode": "853"
+  },
+  {
+    "areacode": "AU",
+    "name": "澳洲",
+    "phonecode": "61"
+  },
+  {
+    "areacode": "BB",
+    "name": "巴貝多",
+    "phonecode": "1"
+  },
+  {
+    "areacode": "PG",
+    "name": "巴布亞紐幾內亞",
+    "phonecode": "675"
+  },
+  {
+    "areacode": "BS",
+    "name": "巴哈馬",
+    "phonecode": "1"
+  },
+  {
+    "areacode": "PK",
+    "name": "巴基斯坦",
+    "phonecode": "92"
+  },
+  {
+    "areacode": "PY",
+    "name": "巴拉圭",
+    "phonecode": "595"
+  },
+  {
+    "areacode": "PS",
+    "name": "巴勒斯坦自治區",
+    "phonecode": "970"
+  },
+  {
+    "areacode": "BH",
+    "name": "巴林",
+    "phonecode": "973"
+  },
+  {
+    "areacode": "PA",
+    "name": "巴拿馬",
+    "phonecode": "507"
+  },
+  {
+    "areacode": "BR",
+    "name": "巴西",
+    "phonecode": "55"
+  },
+  {
+    "areacode": "BY",
+    "name": "白俄羅斯",
+    "phonecode": "375"
+  },
+  {
+    "areacode": "BM",
+    "name": "百慕達",
+    "phonecode": "1"
+  },
+  {
+    "areacode": "BG",
+    "name": "保加利亞",
+    "phonecode": "359"
+  },
+  {
+    "areacode": "KP",
+    "name": "北韓",
+    "phonecode": "850"
+  },
+  {
+    "areacode": "BZ",
+    "name": "貝里斯",
+    "phonecode": "501"
+  },
+  {
+    "areacode": "MP",
+    "name": "北馬利安納群島",
+    "phonecode": "1"
+  },
+  {
+    "areacode": "MK",
+    "name": "北馬其頓",
+    "phonecode": "389"
+  },
+  {
+    "areacode": "BJ",
+    "name": "貝南",
+    "phonecode": "229"
+  },
+  {
+    "areacode": "BE",
+    "name": "比利時",
+    "phonecode": "32"
+  },
+  {
+    "areacode": "IS",
+    "name": "冰島",
+    "phonecode": "354"
+  },
+  {
+    "areacode": "PR",
+    "name": "波多黎各",
+    "phonecode": "1"
+  },
+  {
+    "areacode": "PL",
+    "name": "波蘭",
+    "phonecode": "48"
+  },
+  {
+    "areacode": "BO",
+    "name": "玻利維亞",
+    "phonecode": "591"
+  },
+  {
+    "areacode": "PW",
+    "name": "帛琉",
+    "phonecode": "680"
+  },
+  {
+    "areacode": "BA",
+    "name": "波士尼亞與赫塞哥維納",
+    "phonecode": "387"
+  },
+  {
+    "areacode": "BW",
+    "name": "波札那",
+    "phonecode": "267"
+  },
+  {
+    "areacode": "BT",
+    "name": "不丹",
+    "phonecode": "975"
+  },
+  {
+    "areacode": "BF",
+    "name": "布吉納法索",
+    "phonecode": "226"
+  },
+  {
+    "areacode": "TD",
+    "name": "查德",
+    "phonecode": "235"
+  },
+  {
+    "areacode": "IO",
+    "name": "查戈斯群島",
+    "phonecode": "246"
+  },
+  {
+    "areacode": "GQ",
+    "name": "赤道幾內亞",
+    "phonecode": "240"
+  },
+  {
+    "areacode": "DK",
+    "name": "丹麥",
+    "phonecode": "45"
+  },
+  {
+    "areacode": "DE",
+    "name": "德國",
+    "phonecode": "49"
+  },
+  {
+    "areacode": "TL",
+    "name": "東帝汶",
+    "phonecode": "670"
+  },
+  {
+    "areacode": "TO",
+    "name": "東加",
+    "phonecode": "676"
+  },
+  {
+    "areacode": "TG",
+    "name": "多哥",
+    "phonecode": "228"
+  },
+  {
+    "areacode": "DM",
+    "name": "多米尼克",
+    "phonecode": "1"
+  },
+  {
+    "areacode": "DO",
+    "name": "多明尼加共和國",
+    "phonecode": "1"
+  },
+  {
+    "areacode": "EC",
+    "name": "厄瓜多",
+    "phonecode": "593"
+  },
+  {
+    "areacode": "ER",
+    "name": "厄利垂亞",
+    "phonecode": "291"
+  },
+  {
+    "areacode": "RU",
+    "name": "俄羅斯",
+    "phonecode": "7"
+  },
+  {
+    "areacode": "FR",
+    "name": "法國",
+    "phonecode": "33"
+  },
+  {
+    "areacode": "FO",
+    "name": "法羅群島",
+    "phonecode": "298"
+  },
+  {
+    "areacode": "PF",
+    "name": "法屬玻里尼西亞",
+    "phonecode": "689"
+  },
+  {
+    "areacode": "MF",
+    "name": "法屬聖馬丁",
+    "phonecode": "590"
+  },
+  {
+    "areacode": "VA",
+    "name": "梵蒂岡",
+    "phonecode": "379"
+  },
+  {
+    "areacode": "FJ",
+    "name": "斐濟",
+    "phonecode": "679"
+  },
+  {
+    "areacode": "PH",
+    "name": "菲律賓",
+    "phonecode": "63"
+  },
+  {
+    "areacode": "FI",
+    "name": "芬蘭",
+    "phonecode": "358"
+  },
+  {
+    "areacode": "FK",
+    "name": "福克蘭群島",
+    "phonecode": "500"
+  },
+  {
+    "areacode": "GY",
+    "name": "蓋亞那",
+    "phonecode": "592"
+  },
+  {
+    "areacode": "GM",
+    "name": "甘比亞",
+    "phonecode": "220"
+  },
+  {
+    "areacode": "CG",
+    "name": "剛果（布拉薩）",
+    "phonecode": "242"
+  },
+  {
+    "areacode": "CD",
+    "name": "剛果（金夏沙）",
+    "phonecode": "243"
+  },
+  {
+    "areacode": "GL",
+    "name": "格陵蘭",
+    "phonecode": "299"
+  },
+  {
+    "areacode": "CO",
+    "name": "哥倫比亞",
+    "phonecode": "57"
+  },
+  {
+    "areacode": "KM",
+    "name": "葛摩",
+    "phonecode": "269"
+  },
+  {
+    "areacode": "GD",
+    "name": "格瑞那達",
+    "phonecode": "1"
+  },
+  {
+    "areacode": "CR",
+    "name": "哥斯大黎加",
+    "phonecode": "506"
+  },
+  {
+    "areacode": "GG",
+    "name": "根息",
+    "phonecode": "44"
+  },
+  {
+    "areacode": "CU",
+    "name": "古巴",
+    "phonecode": "53"
+  },
+  {
+    "areacode": "GT",
+    "name": "瓜地馬拉",
+    "phonecode": "502"
+  },
+  {
+    "areacode": "GU",
+    "name": "關島",
+    "phonecode": "1"
+  },
+  {
+    "areacode": "KZ",
+    "name": "哈薩克",
+    "phonecode": "7"
+  },
+  {
+    "areacode": "HT",
+    "name": "海地",
+    "phonecode": "509"
+  },
+  {
+    "areacode": "NL",
+    "name": "荷蘭",
+    "phonecode": "31"
+  },
+  {
+    "areacode": "AW",
+    "name": "荷屬阿魯巴",
+    "phonecode": "297"
+  },
+  {
+    "areacode": "SX",
+    "name": "荷屬聖馬丁",
+    "phonecode": "1"
+  },
+  {
+    "areacode": "HN",
+    "name": "宏都拉斯",
+    "phonecode": "504"
+  },
+  {
+    "areacode": "DJ",
+    "name": "吉布地",
+    "phonecode": "253"
+  },
+  {
+    "areacode": "KG",
+    "name": "吉爾吉斯",
+    "phonecode": "996"
+  },
+  {
+    "areacode": "KI",
+    "name": "吉里巴斯",
+    "phonecode": "686"
+  },
+  {
+    "areacode": "GN",
+    "name": "幾內亞",
+    "phonecode": "224"
+  },
+  {
+    "areacode": "GW",
+    "name": "幾內亞比索",
+    "phonecode": "245"
+  },
+  {
+    "areacode": "GH",
+    "name": "迦納",
+    "phonecode": "233"
+  },
+  {
+    "areacode": "CA",
+    "name": "加拿大",
+    "phonecode": "1"
+  },
+  {
+    "areacode": "GA",
+    "name": "加彭",
+    "phonecode": "241"
+  },
+  {
+    "areacode": "KH",
+    "name": "柬埔寨",
+    "phonecode": "855"
+  },
+  {
+    "areacode": "CZ",
+    "name": "捷克",
+    "phonecode": "420"
+  },
+  {
+    "areacode": "QA",
+    "name": "卡達",
+    "phonecode": "974"
+  },
+  {
+    "areacode": "CM",
+    "name": "喀麥隆",
+    "phonecode": "237"
+  },
+  {
+    "areacode": "KY",
+    "name": "開曼群島",
+    "phonecode": "1"
+  },
+  {
+    "areacode": "CC",
+    "name": "科克斯（基靈）群島",
+    "phonecode": "61"
+  },
+  {
+    "areacode": "HR",
+    "name": "克羅埃西亞",
+    "phonecode": "385"
+  },
+  {
+    "areacode": "XK",
+    "name": "科索沃",
+    "phonecode": "383"
+  },
+  {
+    "areacode": "KW",
+    "name": "科威特",
+    "phonecode": "965"
+  },
+  {
+    "areacode": "KE",
+    "name": "肯亞",
+    "phonecode": "254"
+  },
+  {
+    "areacode": "CK",
+    "name": "庫克群島",
+    "phonecode": "682"
+  },
+  {
+    "areacode": "CW",
+    "name": "庫拉索",
+    "phonecode": "599"
+  },
+  {
+    "areacode": "LV",
+    "name": "拉脫維亞",
+    "phonecode": "371"
+  },
+  {
+    "areacode": "LR",
+    "name": "賴比瑞亞",
+    "phonecode": "231"
+  },
+  {
+    "areacode": "LS",
+    "name": "賴索托",
+    "phonecode": "266"
+  },
+  {
+    "areacode": "LB",
+    "name": "黎巴嫩",
+    "phonecode": "961"
+  },
+  {
+    "areacode": "LY",
+    "name": "利比亞",
+    "phonecode": "218"
+  },
+  {
+    "areacode": "LT",
+    "name": "立陶宛",
+    "phonecode": "370"
+  },
+  {
+    "areacode": "LA",
+    "name": "寮國",
+    "phonecode": "856"
+  },
+  {
+    "areacode": "LI",
+    "name": "列支敦斯登",
+    "phonecode": "423"
+  },
+  {
+    "areacode": "RE",
+    "name": "留尼旺",
+    "phonecode": "262"
+  },
+  {
+    "areacode": "RW",
+    "name": "盧安達",
+    "phonecode": "250"
+  },
+  {
+    "areacode": "LU",
+    "name": "盧森堡",
+    "phonecode": "352"
+  },
+  {
+    "areacode": "RO",
+    "name": "羅馬尼亞",
+    "phonecode": "40"
+  },
+  {
+    "areacode": "MG",
+    "name": "馬達加斯加",
+    "phonecode": "261"
+  },
+  {
+    "areacode": "MV",
+    "name": "馬爾地夫",
+    "phonecode": "960"
+  },
+  {
+    "areacode": "MT",
+    "name": "馬爾他",
+    "phonecode": "356"
+  },
+  {
+    "areacode": "MW",
+    "name": "馬拉威",
+    "phonecode": "265"
+  },
+  {
+    "areacode": "MY",
+    "name": "馬來西亞",
+    "phonecode": "60"
+  },
+  {
+    "areacode": "ML",
+    "name": "馬利",
+    "phonecode": "223"
+  },
+  {
+    "areacode": "MH",
+    "name": "馬紹爾群島",
+    "phonecode": "692"
+  },
+  {
+    "areacode": "YT",
+    "name": "馬約特島",
+    "phonecode": "262"
+  },
+  {
+    "areacode": "IM",
+    "name": "曼島",
+    "phonecode": "44"
+  },
+  {
+    "areacode": "MR",
+    "name": "茅利塔尼亞",
+    "phonecode": "222"
+  },
+  {
+    "areacode": "US",
+    "name": "美國",
+    "phonecode": "1"
+  },
+  {
+    "areacode": "AS",
+    "name": "美屬薩摩亞",
+    "phonecode": "1"
+  },
+  {
+    "areacode": "VI",
+    "name": "美屬維京群島",
+    "phonecode": "1"
+  },
+  {
+    "areacode": "MN",
+    "name": "蒙古",
+    "phonecode": "976"
+  },
+  {
+    "areacode": "BD",
+    "name": "孟加拉",
+    "phonecode": "880"
+  },
+  {
+    "areacode": "ME",
+    "name": "蒙特內哥羅",
+    "phonecode": "382"
+  },
+  {
+    "areacode": "MS",
+    "name": "蒙哲臘",
+    "phonecode": "1"
+  },
+  {
+    "areacode": "FM",
+    "name": "密克羅尼西亞",
+    "phonecode": "691"
+  },
+  {
+    "areacode": "PE",
+    "name": "秘魯",
+    "phonecode": "51"
+  },
+  {
+    "areacode": "MM",
+    "name": "緬甸",
+    "phonecode": "95"
+  },
+  {
+    "areacode": "MD",
+    "name": "摩爾多瓦",
+    "phonecode": "373"
+  },
+  {
+    "areacode": "MU",
+    "name": "模里西斯",
+    "phonecode": "230"
+  },
+  {
+    "areacode": "MA",
+    "name": "摩洛哥",
+    "phonecode": "212"
+  },
+  {
+    "areacode": "MC",
+    "name": "摩納哥",
+    "phonecode": "377"
+  },
+  {
+    "areacode": "MZ",
+    "name": "莫三比克",
+    "phonecode": "258"
+  },
+  {
+    "areacode": "MX",
+    "name": "墨西哥",
+    "phonecode": "52"
+  },
+  {
+    "areacode": "NA",
+    "name": "納米比亞",
+    "phonecode": "264"
+  },
+  {
+    "areacode": "NG",
+    "name": "奈及利亞",
+    "phonecode": "234"
+  },
+  {
+    "areacode": "ZA",
+    "name": "南非",
+    "phonecode": "27"
+  },
+  {
+    "areacode": "KR",
+    "name": "南韓",
+    "phonecode": "82"
+  },
+  {
+    "areacode": "AQ",
+    "name": "南極洲",
+    "phonecode": "672"
+  },
+  {
+    "areacode": "SS",
+    "name": "南蘇丹",
+    "phonecode": "211"
+  },
+  {
+    "areacode": "NI",
+    "name": "尼加拉瓜",
+    "phonecode": "505"
+  },
+  {
+    "areacode": "NP",
+    "name": "尼泊爾",
+    "phonecode": "977"
+  },
+  {
+    "areacode": "NE",
+    "name": "尼日",
+    "phonecode": "227"
+  },
+  {
+    "areacode": "NU",
+    "name": "紐埃島",
+    "phonecode": "683"
+  },
+  {
+    "areacode": "NZ",
+    "name": "紐西蘭",
+    "phonecode": "64"
+  },
+  {
+    "areacode": "NR",
+    "name": "諾魯",
+    "phonecode": "674"
+  },
+  {
+    "areacode": "NO",
+    "name": "挪威",
+    "phonecode": "47"
+  },
+  {
+    "areacode": "SJ",
+    "name": "挪威屬斯瓦巴及尖棉",
+    "phonecode": "47"
+  },
+  {
+    "areacode": "PN",
+    "name": "皮特肯群島",
+    "phonecode": "64"
+  },
+  {
+    "areacode": "BI",
+    "name": "蒲隆地",
+    "phonecode": "257"
+  },
+  {
+    "areacode": "PT",
+    "name": "葡萄牙",
+    "phonecode": "351"
+  },
+  {
+    "areacode": "TT",
+    "name": "千里達及托巴哥",
+    "phonecode": "1"
+  },
+  {
+    "areacode": "GE",
+    "name": "喬治亞",
+    "phonecode": "995"
+  },
+  {
+    "areacode": "JP",
+    "name": "日本",
+    "phonecode": "81"
+  },
+  {
+    "areacode": "SE",
+    "name": "瑞典",
+    "phonecode": "46"
+  },
+  {
+    "areacode": "CH",
+    "name": "瑞士",
+    "phonecode": "41"
+  },
+  {
+    "areacode": "SV",
+    "name": "薩爾瓦多",
+    "phonecode": "503"
+  },
+  {
+    "areacode": "WS",
+    "name": "薩摩亞",
+    "phonecode": "685"
+  },
+  {
+    "areacode": "RS",
+    "name": "塞爾維亞",
+    "phonecode": "381"
+  },
+  {
+    "areacode": "SN",
+    "name": "塞內加爾",
+    "phonecode": "221"
+  },
+  {
+    "areacode": "CY",
+    "name": "賽普勒斯",
+    "phonecode": "357"
+  },
+  {
+    "areacode": "SC",
+    "name": "塞席爾",
+    "phonecode": "248"
+  },
+  {
+    "areacode": "SA",
+    "name": "沙烏地阿拉伯",
+    "phonecode": "966"
+  },
+  {
+    "areacode": "ZM",
+    "name": "尚比亞",
+    "phonecode": "260"
+  },
+  {
+    "areacode": "BL",
+    "name": "聖巴瑟米",
+    "phonecode": "590"
+  },
+  {
+    "areacode": "CX",
+    "name": "聖誕島",
+    "phonecode": "61"
+  },
+  {
+    "areacode": "ST",
+    "name": "聖多美普林西比",
+    "phonecode": "239"
+  },
+  {
+    "areacode": "SH",
+    "name": "聖赫勒拿島",
+    "phonecode": "290"
+  },
+  {
+    "areacode": "KN",
+    "name": "聖克里斯多福及尼維斯",
+    "phonecode": "1"
+  },
+  {
+    "areacode": "LC",
+    "name": "聖露西亞",
+    "phonecode": "1"
+  },
+  {
+    "areacode": "SM",
+    "name": "聖馬利諾",
+    "phonecode": "378"
+  },
+  {
+    "areacode": "PM",
+    "name": "聖皮埃與密克隆群島",
+    "phonecode": "508"
+  },
+  {
+    "areacode": "VC",
+    "name": "聖文森及格瑞那丁",
+    "phonecode": "1"
+  },
+  {
+    "areacode": "SZ",
+    "name": "史瓦帝尼",
+    "phonecode": "268"
+  },
+  {
+    "areacode": "SL",
+    "name": "獅子山共和國",
+    "phonecode": "232"
+  },
+  {
+    "areacode": "LK",
+    "name": "斯里蘭卡",
+    "phonecode": "94"
+  },
+  {
+    "areacode": "SK",
+    "name": "斯洛伐克",
+    "phonecode": "421"
+  },
+  {
+    "areacode": "SI",
+    "name": "斯洛維尼亞",
+    "phonecode": "386"
+  },
+  {
+    "areacode": "SD",
+    "name": "蘇丹",
+    "phonecode": "249"
+  },
+  {
+    "areacode": "SR",
+    "name": "蘇利南",
+    "phonecode": "597"
+  },
+  {
+    "areacode": "SB",
+    "name": "索羅門群島",
+    "phonecode": "677"
+  },
+  {
+    "areacode": "SO",
+    "name": "索馬利亞",
+    "phonecode": "252"
+  },
+  {
+    "areacode": "TJ",
+    "name": "塔吉克",
+    "phonecode": "992"
+  },
+  {
+    "areacode": "TH",
+    "name": "泰國",
+    "phonecode": "66"
+  },
+  {
+    "areacode": "TW",
+    "name": "台灣",
+    "phonecode": "886"
+  },
+  {
+    "areacode": "TZ",
+    "name": "坦尚尼亞",
+    "phonecode": "255"
+  },
+  {
+    "areacode": "TR",
+    "name": "土耳其",
+    "phonecode": "90"
+  },
+  {
+    "areacode": "TC",
+    "name": "土克斯及開科斯群島",
+    "phonecode": "1"
+  },
+  {
+    "areacode": "TM",
+    "name": "土庫曼",
+    "phonecode": "993"
+  },
+  {
+    "areacode": "TN",
+    "name": "突尼西亞",
+    "phonecode": "216"
+  },
+  {
+    "areacode": "TV",
+    "name": "吐瓦魯",
+    "phonecode": "688"
+  },
+  {
+    "areacode": "TK",
+    "name": "托克勞群島",
+    "phonecode": "690"
+  },
+  {
+    "areacode": "WF",
+    "name": "瓦利斯群島和富圖那群島",
+    "phonecode": "681"
+  },
+  {
+    "areacode": "VU",
+    "name": "萬那杜",
+    "phonecode": "678"
+  },
+  {
+    "areacode": "CV",
+    "name": "維德角",
+    "phonecode": "238"
+  },
+  {
+    "areacode": "VE",
+    "name": "委內瑞拉",
+    "phonecode": "58"
+  },
+  {
+    "areacode": "BN",
+    "name": "汶萊",
+    "phonecode": "673"
+  },
+  {
+    "areacode": "UG",
+    "name": "烏干達",
+    "phonecode": "256"
+  },
+  {
+    "areacode": "UA",
+    "name": "烏克蘭",
+    "phonecode": "380"
+  },
+  {
+    "areacode": "UY",
+    "name": "烏拉圭",
+    "phonecode": "598"
+  },
+  {
+    "areacode": "UZ",
+    "name": "烏茲別克",
+    "phonecode": "998"
+  },
+  {
+    "areacode": "ES",
+    "name": "西班牙",
+    "phonecode": "34"
+  },
+  {
+    "areacode": "GR",
+    "name": "希臘",
+    "phonecode": "30"
+  },
+  {
+    "areacode": "EH",
+    "name": "西撒哈拉",
+    "phonecode": "212"
+  },
+  {
+    "areacode": "HK",
+    "name": "香港",
+    "phonecode": "852"
+  },
+  {
+    "areacode": "CI",
+    "name": "象牙海岸",
+    "phonecode": "225"
+  },
+  {
+    "areacode": "ZW",
+    "name": "辛巴威",
+    "phonecode": "263"
+  },
+  {
+    "areacode": "SG",
+    "name": "新加坡",
+    "phonecode": "65"
+  },
+  {
+    "areacode": "NC",
+    "name": "新喀里多尼亞",
+    "phonecode": "687"
+  },
+  {
+    "areacode": "HU",
+    "name": "匈牙利",
+    "phonecode": "36"
+  },
+  {
+    "areacode": "SY",
+    "name": "敘利亞",
+    "phonecode": "963"
+  },
+  {
+    "areacode": "JM",
+    "name": "牙買加",
+    "phonecode": "1"
+  },
+  {
+    "areacode": "AM",
+    "name": "亞美尼亞",
+    "phonecode": "374"
+  },
+  {
+    "areacode": "AZ",
+    "name": "亞塞拜然",
+    "phonecode": "994"
+  },
+  {
+    "areacode": "YE",
+    "name": "葉門",
+    "phonecode": "967"
+  },
+  {
+    "areacode": "IT",
+    "name": "義大利",
+    "phonecode": "39"
+  },
+  {
+    "areacode": "IQ",
+    "name": "伊拉克",
+    "phonecode": "964"
+  },
+  {
+    "areacode": "IR",
+    "name": "伊朗",
+    "phonecode": "98"
+  },
+  {
+    "areacode": "IL",
+    "name": "以色列",
+    "phonecode": "972"
+  },
+  {
+    "areacode": "ET",
+    "name": "衣索比亞",
+    "phonecode": "251"
+  },
+  {
+    "areacode": "IN",
+    "name": "印度",
+    "phonecode": "91"
+  },
+  {
+    "areacode": "ID",
+    "name": "印尼",
+    "phonecode": "62"
+  },
+  {
+    "areacode": "GB",
+    "name": "英國",
+    "phonecode": "44"
+  },
+  {
+    "areacode": "VG",
+    "name": "英屬維京群島",
+    "phonecode": "1"
+  },
+  {
+    "areacode": "JO",
+    "name": "約旦",
+    "phonecode": "962"
+  },
+  {
+    "areacode": "VN",
+    "name": "越南",
+    "phonecode": "84"
+  },
+  {
+    "areacode": "JE",
+    "name": "澤西島",
+    "phonecode": "44"
+  },
+  {
+    "areacode": "GI",
+    "name": "直布羅陀",
+    "phonecode": "350"
+  },
+  {
+    "areacode": "CL",
+    "name": "智利",
+    "phonecode": "56"
+  },
+  {
+    "areacode": "CF",
+    "name": "中非共和國",
+    "phonecode": "236"
+  }
+]

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <title></title>
+
+    <!--http://www.html5rocks.com/en/mobile/mobifying/-->
+    <meta name="viewport"
+        content="width=device-width,user-scalable=no,initial-scale=1, minimum-scale=1,maximum-scale=1" />
+
+    <!--https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- force webkit on 360 -->
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <!-- force edge on IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- force full screen on some browser -->
+    <meta name="full-screen" content="yes" />
+    <meta name="x5-fullscreen" content="true" />
+    <meta name="360-fullscreen" content="true" />
+
+    <!-- force screen orientation on some browser -->
+    <meta name="screen-orientation" content="<%=orientation%>" />
+    <meta name="x5-orientation" content="<%=orientation%>">
+
+    <!--fix fireball/issues/3568 -->
+    <!--<meta name="browsermode" content="application">-->
+    <meta name="x5-page-mode" content="app">
+
+    <!--<link rel="apple-touch-icon" href=".png" />-->
+    <!--<link rel="apple-touch-icon-precomposed" href=".png" />-->
+
+    <link rel="stylesheet" type="text/css" href="style-mobile.25fc5.css" />
+    <link rel="icon" href="favicon.8de18.ico" />
+
+</head>
+
+<body style='color:rgba(0, 0, 0, 0); background-color: rgba(0, 0, 0, 0);'>
+    <canvas id="GameCanvas" oncontextmenu="event.preventDefault()" tabindex="0"></canvas>
+
+    <script>
+        //
+        function _showAnimWithJson(messageStr) {
+            /**
+                //开始动画通知 
+                type: 'POPUN_ANIM_STARTED',
+                //货币种类 PS:USD 
+                currencyCode : code,
+                //货币金额 PS: 1000 
+                income : money
+            */
+            //解析数据
+            let message = null;
+            try {
+                message = JSON.parse(messageStr);
+            } catch (error) {
+
+            }
+            //收到开始动画通知
+            if (message && message.type == 'POPUN_ANIM_STARTED') {
+                message.type = 'SELF_POPUN_ANIM_STARTED';
+                window['__AnimData'] = message;
+                let newMsgStr = JSON.stringify(message);
+                window.postMessage(newMsgStr,'*');
+            }
+        }
+
+        // H5 调用 网页方法
+        window.addEventListener("message", (event) => {
+            _showAnimWithJson(event.data);
+        });
+
+        window.AndroidJS = window.AndroidJS || {};
+        /** 安卓 调用 网页方法 */
+        window.AndroidJS.ShowAnim = (messageStr) => {
+            _showAnimWithJson(messageStr);
+        }
+
+        /** IOS调用 网页方法 */
+        window.ShowAnim = (messageStr) => {
+            _showAnimWithJson(messageStr);
+        }
+
+        /** 动画结束回调方法 */
+        window.AnimOverCallFunc = () => {
+            
+            if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.popAnimCompleted && window.webkit.messageHandlers.popAnimCompleted.postMessage) {
+                //IOS动画完成回调
+                window.webkit.messageHandlers.popAnimCompleted.postMessage(
+                    'POPUN_ANIM_COMPLETED'
+                );
+            } else if (window.AndroidJS && window.AndroidJS.popAnimCompleted) {
+                //安卓动画完成回调
+                window.AndroidJS.popAnimCompleted();
+            } else {
+                //H5回调
+                const message = {
+                    type: 'POPUN_ANIM_COMPLETED',
+                };
+                const messageStr = JSON.stringify(message);
+                window.top.postMessage(messageStr, '*');
+            }
+        }
+
+
+    </script>
+
+    <div id="splash" : style="display: none;">
+        <div class="progress-bar stripes">
+            <span style="width: 0%"></span>
+        </div>
+    </div>
+
+    <script src="src/settings.ae0e3.js" charset="utf-8"></script>
+    <%=webDebugger%>
+        <script src="main.46c78.js" charset="utf-8"></script>
+
+        <script type="text/javascript">
+            (function () {
+                // open web debugger console
+                if (typeof VConsole !== 'undefined') {
+                    window.vConsole = new VConsole();
+                }
+
+                var debug = window._CCSettings.debug;
+                var splash = document.getElementById('splash');
+                splash.style.display = 'none';
+
+                function loadScript(moduleName, cb) {
+                    function scriptLoaded() {
+                        document.body.removeChild(domScript);
+                        domScript.removeEventListener('load', scriptLoaded, false);
+                        cb && cb();
+                    };
+                    var domScript = document.createElement('script');
+                    domScript.async = true;
+                    domScript.src = moduleName;
+                    domScript.addEventListener('load', scriptLoaded, false);
+                    document.body.appendChild(domScript);
+                }
+
+                loadScript(debug ? 'cocos2d-js.js' : 'cocos2d-js-min.98e54.js', function () {
+                    if (CC_PHYSICS_BUILTIN || CC_PHYSICS_CANNON) {
+                        loadScript(debug ? 'physics.js' : 'physics-min.js', window.boot);
+                    }
+                    else {
+                        window.boot();
+                    }
+                });
+            })();
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="layout/dialog_tip7_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/shape_base_dialog_bg2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_20" android:layout_marginRight="@dimen/dp_20">
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/dp_78">
+                <TextView android:textSize="18.0sp" android:textColor="#ff000000" android:gravity="center" android:id="@id/dialog_tip_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:layout_centerInParent="true" />
+            </RelativeLayout>
+            <View android:background="#ffe0e0e0" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0px" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dp_30" android:minHeight="@dimen/dp_44">
+                <TextView android:textColor="#ff212121" android:gravity="center" android:id="@id/dialog_left_bt" android:background="@drawable/btn_dialog_negative" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/dp_20" android:layout_weight="1.0" android:autoSizeTextType="uniform" android:autoSizeStepGranularity="2.0sp" android:autoSizeMinTextSize="10.0sp" android:autoSizeMaxTextSize="16.0sp" />
+                <View android:id="@id/lin" android:background="#ffe0e0e0" android:visibility="gone" android:layout_width="1.0px" android:layout_height="fill_parent" />
+                <TextView android:textColor="@color/white" android:gravity="center" android:id="@id/dialog_right_bt" android:background="@drawable/btn_dialog_positive" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/dp_10" android:layout_marginRight="@dimen/dp_20" android:layout_weight="1.0" android:autoSizeTextType="uniform" android:autoSizeStepGranularity="2.0sp" android:autoSizeMinTextSize="10.0sp" android:autoSizeMaxTextSize="16.0sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

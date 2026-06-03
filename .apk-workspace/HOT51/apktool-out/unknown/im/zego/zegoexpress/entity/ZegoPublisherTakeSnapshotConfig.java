@@ -1,0 +1,25 @@
+package im.zego.zegoexpress.entity;
+
+import android.app.Application;
+import android.graphics.*;
+import im.zego.zegoexpress.*;
+import im.zego.zegoexpress.callback.*;
+import im.zego.zegoexpress.constants.*;
+import im.zego.zegoexpress.entity.*;
+import im.zego.zegoexpress.internal.*;
+import java.nio.*;
+import java.util.*;
+import org.json.*;
+
+/**
+ * The config of publish stream snapshot.
+ */
+public class ZegoPublisherTakeSnapshotConfig {
+
+    /** The position of taking snapshot. Default value: . */
+    public ZegoPublisherTakeSnapshotPosition position;
+
+    public ZegoPublisherTakeSnapshotConfig() {
+        position = ZegoPublisherTakeSnapshotPosition.AFTER_PROCESS;
+    }
+}

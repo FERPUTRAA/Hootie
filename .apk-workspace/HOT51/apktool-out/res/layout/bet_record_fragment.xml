@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/bet_record_fragment_0" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_tab_head" android:background="#fff3f4f6" android:layout_width="fill_parent" android:layout_height="30.0dip" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <TextView android:textSize="10.0sp" android:textColor="#ff212121" android:gravity="center" android:id="@id/tv_order" android:tag="binding_1" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/game.wingo.order" android:layout_weight="12.0" android:paddingStart="2.0dip" />
+        <TextView android:textSize="10.0sp" android:textColor="#ff212121" android:gravity="center" android:id="@id/tv_issue" android:tag="binding_2" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="18.0" />
+        <TextView android:textSize="10.0sp" android:textColor="#ff212121" android:gravity="center" android:id="@id/tv_betting_content" android:tag="binding_3" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/game.wingo.content" android:layout_weight="16.0" />
+        <TextView android:textSize="10.0sp" android:textColor="#ff212121" android:gravity="center" android:id="@id/tv_amount" android:tag="binding_4" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/game.wingo.amount" android:layout_weight="16.0" />
+        <TextView android:textSize="10.0sp" android:textColor="#ff212121" android:gravity="center" android:id="@id/tv_lottery_results" android:tag="binding_5" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/game.wingo.result" android:layout_weight="16.0" android:paddingEnd="2.0dip" />
+    </LinearLayout>
+    <com.drake.brv.PageRefreshLayout android:orientation="vertical" android:id="@id/page" android:background="@null" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/rv" android:layout_width="fill_parent" android:layout_height="fill_parent" android:overScrollMode="never" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+        <TextView android:textSize="12.0sp" android:textColor="#ff999999" android:gravity="center" android:id="@id/tv_footer" android:tag="binding_6" android:background="#ffffffff" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="42.0dip" android:text="@string/game.wingo.noMore.data" />
+    </com.drake.brv.PageRefreshLayout>
+</LinearLayout>

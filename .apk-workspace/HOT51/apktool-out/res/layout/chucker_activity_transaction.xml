@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.google.android.material.appbar.MaterialToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:popupTheme="@style/Chucker.Theme">
+            <TextView android:id="@id/toolbarTitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/chucker_doub_grid" style="@style/Chucker.TextAppearance.Title" />
+        </com.google.android.material.appbar.MaterialToolbar>
+        <com.google.android.material.tabs.TabLayout android:id="@id/tabLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Widget.MaterialComponents.TabLayout.PrimarySurface" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.viewpager.widget.ViewPager android:id="@id/viewPager" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

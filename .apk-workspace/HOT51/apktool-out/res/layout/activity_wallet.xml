@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/activity_wallet_0" android:background="#fff5f6fa" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:background="@drawable/ic_wallet_bg_h" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="170.0dip" android:scaleType="fitXY" />
+    <RelativeLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="80.0dip" android:layout_marginTop="20.0dip">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/ivBack" android:tag="binding_1" android:layout_width="@dimen/dp_22" android:layout_height="@dimen/dp_22" android:src="@drawable/ic_back_white" android:layout_marginStart="@dimen/dp_15" />
+        <TextView android:textSize="@dimen/sp_17" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/wallet.title" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:background="@drawable/bg_wallet_gold_sliver" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_10" android:layout_marginTop="@dimen/dp_100" android:layout_marginRight="@dimen/dp_10" android:elevation="@dimen/dp_1" android:layout_marginHorizontal="@dimen/dp_10">
+        <TextView android:textSize="@dimen/sp_15" android:textColor="#ff999999" android:gravity="center" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_28" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_12" android:layout_marginTop="@dimen/dp_5" android:layout_marginRight="@dimen/dp_12" android:layout_marginHorizontal="@dimen/dp_12">
+            <ImageView android:layout_width="@dimen/dp_24" android:layout_height="@dimen/dp_24" android:src="@drawable/ic_coin_wallet" />
+            <TextView android:textSize="@dimen/sp_28" android:textStyle="bold" android:textColor="#ff0d0143" android:id="@id/goldCoin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/dp_8" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/llUseCurrency" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_12" android:layout_marginTop="@dimen/dp_5" android:layout_marginRight="@dimen/dp_12" android:layout_marginHorizontal="@dimen/dp_12">
+            <TextView android:textSize="@dimen/sp_14" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="≈" />
+            <TextView android:textSize="@dimen/sp_14" android:textColor="@color/black" android:id="@id/tv_bz_u" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/dp_3" />
+            <TextView android:textSize="@dimen/sp_14" android:textColor="@color/black" android:id="@id/gold_amount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="1.0dip" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_15" android:layout_marginTop="@dimen/dp_28" android:layout_marginRight="@dimen/dp_15" android:layout_marginBottom="@dimen/dp_28" android:layout_marginHorizontal="@dimen/dp_15" android:layout_marginVertical="@dimen/dp_28">
+            <androidx.appcompat.widget.AppCompatTextView android:textSize="@dimen/sp_16" android:textColor="@color/white" android:gravity="center" android:id="@id/tv_recharge" android:tag="binding_3" android:background="@drawable/bg_corner_22" android:layout_width="0.0dip" android:layout_height="@dimen/dp_44" android:layout_weight="1.0" />
+            <androidx.appcompat.widget.AppCompatTextView android:textSize="@dimen/sp_16" android:textColor="#fffe2c55" android:gravity="center" android:id="@id/tv_withdrawal" android:tag="binding_4" android:background="@drawable/bg_corner_22_ffe9ee" android:layout_width="0.0dip" android:layout_height="@dimen/dp_44" android:layout_weight="1.0" android:layout_marginStart="@dimen/dp_10" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,121 @@
+.class public final Lcom/google/protobuf/util/Structs;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# direct methods
+.method private constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public static of(Ljava/lang/String;Lcom/google/protobuf/Value;)Lcom/google/protobuf/Struct;
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "k1",
+            "v1"
+        }
+    .end annotation
+
+    invoke-static {}, Lcom/google/protobuf/Struct;->newBuilder()Lcom/google/protobuf/Struct$Builder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0, p1}, Lcom/google/protobuf/Struct$Builder;->putFields(Ljava/lang/String;Lcom/google/protobuf/Value;)Lcom/google/protobuf/Struct$Builder;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lcom/google/protobuf/Struct$Builder;->build()Lcom/google/protobuf/Struct;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static of(Ljava/lang/String;Lcom/google/protobuf/Value;Ljava/lang/String;Lcom/google/protobuf/Value;)Lcom/google/protobuf/Struct;
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "k1",
+            "v1",
+            "k2",
+            "v2"
+        }
+    .end annotation
+
+    invoke-static {}, Lcom/google/protobuf/Struct;->newBuilder()Lcom/google/protobuf/Struct$Builder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0, p1}, Lcom/google/protobuf/Struct$Builder;->putFields(Ljava/lang/String;Lcom/google/protobuf/Value;)Lcom/google/protobuf/Struct$Builder;
+
+    move-result-object p0
+
+    invoke-virtual {p0, p2, p3}, Lcom/google/protobuf/Struct$Builder;->putFields(Ljava/lang/String;Lcom/google/protobuf/Value;)Lcom/google/protobuf/Struct$Builder;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lcom/google/protobuf/Struct$Builder;->build()Lcom/google/protobuf/Struct;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static of(Ljava/lang/String;Lcom/google/protobuf/Value;Ljava/lang/String;Lcom/google/protobuf/Value;Ljava/lang/String;Lcom/google/protobuf/Value;)Lcom/google/protobuf/Struct;
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "k1",
+            "v1",
+            "k2",
+            "v2",
+            "k3",
+            "v3"
+        }
+    .end annotation
+
+    invoke-static {}, Lcom/google/protobuf/Struct;->newBuilder()Lcom/google/protobuf/Struct$Builder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0, p1}, Lcom/google/protobuf/Struct$Builder;->putFields(Ljava/lang/String;Lcom/google/protobuf/Value;)Lcom/google/protobuf/Struct$Builder;
+
+    move-result-object p0
+
+    invoke-virtual {p0, p2, p3}, Lcom/google/protobuf/Struct$Builder;->putFields(Ljava/lang/String;Lcom/google/protobuf/Value;)Lcom/google/protobuf/Struct$Builder;
+
+    move-result-object p0
+
+    invoke-virtual {p0, p4, p5}, Lcom/google/protobuf/Struct$Builder;->putFields(Ljava/lang/String;Lcom/google/protobuf/Value;)Lcom/google/protobuf/Struct$Builder;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lcom/google/protobuf/Struct$Builder;->build()Lcom/google/protobuf/Struct;
+
+    move-result-object p0
+
+    return-object p0
+.end method

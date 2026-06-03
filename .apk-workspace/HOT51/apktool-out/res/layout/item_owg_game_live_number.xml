@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:tag="layout/item_owg_game_live_number_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/clMain" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/llGameBean" android:paddingBottom="3.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+            <TextView android:textSize="14.0sp" android:textColor="#ffaa6cff" android:layout_gravity="center_horizontal" android:id="@id/productName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" />
+            <TextView android:textSize="10.0sp" android:textColor="#ffaa6cff" android:layout_gravity="center_horizontal" android:id="@id/odds" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-3.0dip" />
+        </LinearLayout>
+        <ImageView android:id="@id/imgCheckMark" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="@dimen/dp_8" android:layout_marginBottom="@dimen/dp_1" android:importantForAccessibility="no" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

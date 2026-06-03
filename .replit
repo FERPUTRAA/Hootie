@@ -1,0 +1,109 @@
+modules = ["web", "rust-stable", "nodejs-20", "java-graalvm22.3"]
+
+[deployment]
+router = "application"
+deploymentTarget = "autoscale"
+
+[deployment.postBuild]
+args = ["pnpm", "store", "prune"]
+env = { "CI" = "true" }
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Start application"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Tailscale Exit Node"
+
+[[workflows.workflow]]
+name = "Start application"
+author = "agent"
+
+[workflows.workflow.metadata]
+outputType = "webview"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "bash scripts/start-all.sh"
+waitForPort = 5000
+
+[[workflows.workflow]]
+name = "Tailscale Exit Node"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "bash scripts/start-tailscale.sh"
+
+[workflows.workflow.metadata]
+outputType = "console"
+
+[agent]
+stack = "BEST_EFFORT_FALLBACK"
+expertMode = true
+
+[postMerge]
+path = "scripts/post-merge.sh"
+timeoutMs = 20000
+
+[[ports]]
+localPort = 5000
+externalPort = 80
+
+[[ports]]
+localPort = 8080
+externalPort = 8080
+
+[[ports]]
+localPort = 8081
+externalPort = 8081
+
+[[ports]]
+localPort = 8082
+externalPort = 3003
+
+[[ports]]
+localPort = 20677
+externalPort = 3000
+
+[[ports]]
+localPort = 25104
+externalPort = 3001
+
+[[ports]]
+localPort = 25105
+externalPort = 4200
+
+[[ports]]
+localPort = 63103
+externalPort = 5000
+
+[[ports]]
+localPort = 64912
+externalPort = 3002
+
+[userenv]
+
+[userenv.shared]
+HOT51_CF_WORKER_URL = "https://hot51-proxy.feryputrafer.workers.dev/"
+HOT51_STREAM_KEY = "4ad75f5e2eb06d315ea14e8484a29e1d"
+AGORA_APP_CERTIFICATE = "6dfd8bd4e2364fa4a57c01ec9757178e"
+AGORA_CUSTOMER_ID = "e5963aaa320545b4a9ce873f3fbe9627"
+COMHUB_USER_ID = "228433833"
+HOT51_PROXY_URL = "http://43.218.124.29:24281"
+TAILSCALE_AUTH_KEY = "tskey-auth-kTByTpUgfK11CNTRL-ft8pPk44NtBT6STC7MkRtBpWVAuVc4y5J"
+HOT51_AC = "2345689"
+HOT51_USERNAME = "ylbza2jctc"
+HOT51_SIGN = "eyJraWQiOiJ1c2VyLW9hdXRoMi1qa3MiLCJhbGciOiJSUzI1NiJ9.eyJhZ2VudElkIjowLCJtZXJjaGFudElkIjo1MDEsInVzZXJfbmFtZSI6InlsYnphMmpjdGMiLCJzY29wZSI6WyJhbGwiXSwibWVtYmVyVHlwZSI6MSwiZXhwIjoxNzgxNTE2MTc5LCJqdGkiOiIxYTQxNzcxMS05MDdkLTRlZGEtODdhOC1mMzBlM2U2ODU1ZmIiLCJjbGllbnRfaWQiOiJhcHAtcGxheWVyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9QTEFZRVIiXSwidXNlcm5hbWUiOiJ5bGJ6YTJqY3RjIiwibWVtYmVySWQiOiIyMDYxMDE4OTMwMzY5MjM2OTkzIn0.UhAlwQcAU-8OWR1OZpg-dZTal9d_MtekxCBcJ46u9rsmh_BrYnE3cYJZFAim_ZEkAPjI32kuiYLfrQ9BlfyFmAIuoRHJ89Pzu-WoPXakKETQYNwT_q84mSPOh0fbRnLoSEAcCQSecU-5ar1zC-sJQBXVEjfJs2KPxd4-PTbM3YPm-jahT3FURAl354pD4pTb2UdeID_Fhi1aDZRuWX8V0t9u7RDhvLwKnnSVRP5-3fRqUvwvure-pMdXIe-gyIzJfG-Qkr6RMAUebrfxBOfoC1keN8IVPFdkVvPZtkQQkcSlLSwFfoH2CHvciHa7D6SM7CA5YnP0WaQHzq6JBF9sbA"
+
+[nix]
+channel = "stable-25_05"

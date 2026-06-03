@@ -1,0 +1,21 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "theme": "opencode",
+  "autoshare": false,
+  "model": "qwen/qwen-plus",
+  "instructions": ["/home/runner/workspace/AGENTS.md"],
+  "provider": {
+    "qwen": {
+      "name": "Qwen (DashScope)",
+      "apiKey": "${GOOGLE_API_KEY}",
+      "baseURL": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+      "type": "openai"
+    }
+  },
+  "plugin": [
+    "/home/runner/workspace/rtk/hooks/opencode"
+  ],
+  "keybinds": {
+    "leader": "ctrl+x"
+  }
+}

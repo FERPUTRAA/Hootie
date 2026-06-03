@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:tag="layout/activity_choose_digital_wallet_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.example.obs.player.ui.widget.TitleBarView android:id="@id/title" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="44.0dip" app:defaultLeftIco="@drawable/ic_back" app:isTitleTextBold="true" app:title="common.withdraw.choose.dighital.wali" app:titleColor="@color/text_black" app:titleSize="16.0sp" />
+    <com.drake.statelayout.StateLayout android:id="@id/state" android:background="#fff9f9f9" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/rv" android:background="#fff9f9f9" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    </com.drake.statelayout.StateLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>

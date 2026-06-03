@@ -1,0 +1,95 @@
+.class public final Landroidx/room/l1;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ll0/f$c;
+
+
+# instance fields
+.field private final a:Ll0/f$c;
+    .annotation build Loa/d;
+    .end annotation
+.end field
+
+.field private final b:Ljava/util/concurrent/Executor;
+    .annotation build Loa/d;
+    .end annotation
+.end field
+
+.field private final c:Landroidx/room/a2$g;
+    .annotation build Loa/d;
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor <init>(Ll0/f$c;Ljava/util/concurrent/Executor;Landroidx/room/a2$g;)V
+    .locals 1
+    .param p1    # Ll0/f$c;
+        .annotation build Loa/d;
+        .end annotation
+    .end param
+    .param p2    # Ljava/util/concurrent/Executor;
+        .annotation build Loa/d;
+        .end annotation
+    .end param
+    .param p3    # Landroidx/room/a2$g;
+        .annotation build Loa/d;
+        .end annotation
+    .end param
+
+    const-string v0, "delegate"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "queryCallbackExecutor"
+
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "queryCallback"
+
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Landroidx/room/l1;->a:Ll0/f$c;
+
+    iput-object p2, p0, Landroidx/room/l1;->b:Ljava/util/concurrent/Executor;
+
+    iput-object p3, p0, Landroidx/room/l1;->c:Landroidx/room/a2$g;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public a(Ll0/f$b;)Ll0/f;
+    .locals 3
+    .param p1    # Ll0/f$b;
+        .annotation build Loa/d;
+        .end annotation
+    .end param
+    .annotation build Loa/d;
+    .end annotation
+
+    const-string v0, "configuration"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    new-instance v0, Landroidx/room/k1;
+
+    iget-object v1, p0, Landroidx/room/l1;->a:Ll0/f$c;
+
+    invoke-interface {v1, p1}, Ll0/f$c;->a(Ll0/f$b;)Ll0/f;
+
+    move-result-object p1
+
+    iget-object v1, p0, Landroidx/room/l1;->b:Ljava/util/concurrent/Executor;
+
+    iget-object v2, p0, Landroidx/room/l1;->c:Landroidx/room/a2$g;
+
+    invoke-direct {v0, p1, v1, v2}, Landroidx/room/k1;-><init>(Ll0/f;Ljava/util/concurrent/Executor;Landroidx/room/a2$g;)V
+
+    return-object v0
+.end method

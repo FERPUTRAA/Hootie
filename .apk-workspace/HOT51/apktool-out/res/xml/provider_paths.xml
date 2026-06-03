@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <external-path name="tmp" path="/GameTv/player" />
+    <external-path name="external_files" path="." />
+    <files-path name="external_files2" path="." />
+</paths>

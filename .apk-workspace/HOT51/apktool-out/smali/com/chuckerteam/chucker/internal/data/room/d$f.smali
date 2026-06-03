@@ -1,0 +1,160 @@
+.class Lcom/chuckerteam/chucker/internal/data/room/d$f;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ljava/util/concurrent/Callable;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/chuckerteam/chucker/internal/data/room/d;->c(JLkotlin/coroutines/d;)Ljava/lang/Object;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ljava/util/concurrent/Callable<",
+        "Lkotlin/s2;",
+        ">;"
+    }
+.end annotation
+
+
+# instance fields
+.field final synthetic a:J
+
+.field final synthetic b:Lcom/chuckerteam/chucker/internal/data/room/d;
+
+
+# direct methods
+.method constructor <init>(Lcom/chuckerteam/chucker/internal/data/room/d;J)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x1010
+        }
+        names = {
+            "this$0",
+            "val$threshold"
+        }
+    .end annotation
+
+    iput-object p1, p0, Lcom/chuckerteam/chucker/internal/data/room/d$f;->b:Lcom/chuckerteam/chucker/internal/data/room/d;
+
+    iput-wide p2, p0, Lcom/chuckerteam/chucker/internal/data/room/d$f;->a:J
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public a()Lkotlin/s2;
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/Exception;
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/chuckerteam/chucker/internal/data/room/d$f;->b:Lcom/chuckerteam/chucker/internal/data/room/d;
+
+    invoke-static {v0}, Lcom/chuckerteam/chucker/internal/data/room/d;->i(Lcom/chuckerteam/chucker/internal/data/room/d;)Landroidx/room/l2;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroidx/room/l2;->acquire()Ll0/j;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    iget-wide v2, p0, Lcom/chuckerteam/chucker/internal/data/room/d$f;->a:J
+
+    invoke-interface {v0, v1, v2, v3}, Ll0/g;->u1(IJ)V
+
+    iget-object v1, p0, Lcom/chuckerteam/chucker/internal/data/room/d$f;->b:Lcom/chuckerteam/chucker/internal/data/room/d;
+
+    invoke-static {v1}, Lcom/chuckerteam/chucker/internal/data/room/d;->f(Lcom/chuckerteam/chucker/internal/data/room/d;)Landroidx/room/a2;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroidx/room/a2;->beginTransaction()V
+
+    :try_start_0
+    invoke-interface {v0}, Ll0/j;->B()I
+
+    iget-object v1, p0, Lcom/chuckerteam/chucker/internal/data/room/d$f;->b:Lcom/chuckerteam/chucker/internal/data/room/d;
+
+    invoke-static {v1}, Lcom/chuckerteam/chucker/internal/data/room/d;->f(Lcom/chuckerteam/chucker/internal/data/room/d;)Landroidx/room/a2;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroidx/room/a2;->setTransactionSuccessful()V
+
+    sget-object v1, Lkotlin/s2;->a:Lkotlin/s2;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    iget-object v2, p0, Lcom/chuckerteam/chucker/internal/data/room/d$f;->b:Lcom/chuckerteam/chucker/internal/data/room/d;
+
+    invoke-static {v2}, Lcom/chuckerteam/chucker/internal/data/room/d;->f(Lcom/chuckerteam/chucker/internal/data/room/d;)Landroidx/room/a2;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroidx/room/a2;->endTransaction()V
+
+    iget-object v2, p0, Lcom/chuckerteam/chucker/internal/data/room/d$f;->b:Lcom/chuckerteam/chucker/internal/data/room/d;
+
+    invoke-static {v2}, Lcom/chuckerteam/chucker/internal/data/room/d;->i(Lcom/chuckerteam/chucker/internal/data/room/d;)Landroidx/room/l2;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Landroidx/room/l2;->release(Ll0/j;)V
+
+    return-object v1
+
+    :catchall_0
+    move-exception v1
+
+    iget-object v2, p0, Lcom/chuckerteam/chucker/internal/data/room/d$f;->b:Lcom/chuckerteam/chucker/internal/data/room/d;
+
+    invoke-static {v2}, Lcom/chuckerteam/chucker/internal/data/room/d;->f(Lcom/chuckerteam/chucker/internal/data/room/d;)Landroidx/room/a2;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroidx/room/a2;->endTransaction()V
+
+    iget-object v2, p0, Lcom/chuckerteam/chucker/internal/data/room/d$f;->b:Lcom/chuckerteam/chucker/internal/data/room/d;
+
+    invoke-static {v2}, Lcom/chuckerteam/chucker/internal/data/room/d;->i(Lcom/chuckerteam/chucker/internal/data/room/d;)Landroidx/room/l2;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Landroidx/room/l2;->release(Ll0/j;)V
+
+    throw v1
+.end method
+
+.method public bridge synthetic call()Ljava/lang/Object;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/Exception;
+        }
+    .end annotation
+
+    invoke-virtual {p0}, Lcom/chuckerteam/chucker/internal/data/room/d$f;->a()Lkotlin/s2;
+
+    move-result-object v0
+
+    return-object v0
+.end method

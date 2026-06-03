@@ -1,0 +1,19 @@
+.class public Lcom/zego/zegoavkit2/entities/ZegoVideoDenoiseParams;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# instance fields
+.field public mode:I
+
+.field public strength:I
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method

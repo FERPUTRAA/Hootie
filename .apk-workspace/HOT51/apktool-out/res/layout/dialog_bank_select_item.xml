@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:tag="layout/dialog_bank_select_item_0" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="48.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/bank_img" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginStart="18.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <ImageView android:id="@id/select_ico" android:layout_width="@dimen/dp_22" android:layout_height="@dimen/dp_22" android:layout_marginEnd="13.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" app:srcCompat="@drawable/icon_bank_selected" />
+    <TextView android:textSize="14.0sp" android:textColor="#ff0d0143" android:id="@id/bank_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="12.0dip" app:layout_constraintBottom_toBottomOf="@id/bank_img" app:layout_constraintStart_toEndOf="@id/bank_img" app:layout_constraintTop_toTopOf="@id/bank_img" />
+</androidx.constraintlayout.widget.ConstraintLayout>

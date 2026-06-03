@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:tag="layout/fragment_one_m_wingo_history_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/layoutTrend" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="horizontal" android:background="#fff3f4f6" android:layout_width="fill_parent" android:layout_height="@dimen/dp_30">
+            <TextView android:textSize="@dimen/sp_10" android:textColor="#ff212121" android:gravity="center" android:tag="binding_1" android:layout_width="@dimen/dp_109" android:layout_height="fill_parent" />
+            <TextView android:textSize="@dimen/sp_10" android:textColor="#ff212121" android:gravity="center" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </LinearLayout>
+        <com.drake.brv.PageRefreshLayout android:id="@id/pageLayout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <androidx.core.widget.NestedScrollView android:id="@id/trendScrollView" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <com.example.obs.player.ui.widget.custom.OneMWinGoTrendChartView android:id="@id/trendChartView" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                    <View android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </com.drake.brv.PageRefreshLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/layoutHistory" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="horizontal" android:background="#fff3f4f6" android:layout_width="fill_parent" android:layout_height="@dimen/dp_30">
+            <TextView android:textSize="@dimen/sp_10" android:textColor="#ff212121" android:gravity="center" android:tag="binding_3" android:layout_width="@dimen/dp_116" android:layout_height="fill_parent" />
+            <TextView android:textSize="@dimen/sp_10" android:textColor="#ff212121" android:gravity="center" android:tag="binding_4" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/rv" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

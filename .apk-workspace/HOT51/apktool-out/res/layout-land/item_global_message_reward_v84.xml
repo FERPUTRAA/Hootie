@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:tag="layout-land/item_global_message_reward_v84_0" android:paddingLeft="@dimen/dp_12" android:paddingRight="@dimen/dp_12" android:layout_width="fill_parent" android:layout_height="@dimen/dp_96" android:layout_marginTop="@dimen/dp_8" android:layout_marginBottom="@dimen/dp_4" android:paddingHorizontal="@dimen/dp_12"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/ctl_top_ic" android:background="@drawable/shape_global_msg_reward_item_bg" android:layout_width="fill_parent" android:layout_height="@dimen/dp_72" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <ImageView android:id="@id/imgIcon" android:background="@null" android:layout_width="@dimen/dp_52" android:layout_height="@dimen/dp_52" android:scaleType="fitCenter" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView android:textSize="@dimen/sp_12" android:textColor="#ff212121" android:ellipsize="end" android:gravity="center" android:id="@id/tvContent" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_6" android:maxLines="1" app:layout_constraintEnd_toEndOf="@id/ctl_top_ic" app:layout_constraintStart_toStartOf="@id/ctl_top_ic" app:layout_constraintTop_toBottomOf="@id/ctl_top_ic" />
+</androidx.constraintlayout.widget.ConstraintLayout>

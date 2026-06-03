@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="layout/dialog_lianmai_interactive_0" android:layout_width="fill_parent" android:layout_height="@dimen/dp_227"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/live_gift_bg" android:layout_width="fill_parent" android:layout_height="@dimen/dp_227">
+        <TextView android:textSize="@dimen/sp_18" android:textColor="@color/white" android:gravity="center" android:layout_width="fill_parent" android:layout_height="@dimen/dp_54" android:text="@string/common.lianmai.interactive" android:fontFamily="sans-serif-medium" />
+        <View android:background="#14ffffff" android:layout_width="fill_parent" android:layout_height="@dimen/dp_0_5" />
+        <LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <androidx.appcompat.widget.LinearLayoutCompat android:gravity="center" android:orientation="vertical" android:id="@id/llMute" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <ImageView android:id="@id/ivVoice" android:layout_width="@dimen/dp_48" android:layout_height="@dimen/dp_48" android:src="@mipmap/ic_cancel_mute" />
+                <TextView android:textSize="12.0dip" android:textColor="@color/white" android:gravity="center" android:id="@id/tvMute" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_12" android:text="@string/voice.unmute" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <androidx.appcompat.widget.LinearLayoutCompat android:gravity="center" android:orientation="vertical" android:id="@id/llTurnOff" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <ImageView android:layout_width="@dimen/dp_48" android:layout_height="@dimen/dp_48" android:src="@mipmap/ic_turn_off_lianmai" />
+                <TextView android:textSize="12.0dip" android:textColor="@color/white" android:gravity="center" android:id="@id/tvTurnOff" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_12" android:text="@string/voice.leave" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

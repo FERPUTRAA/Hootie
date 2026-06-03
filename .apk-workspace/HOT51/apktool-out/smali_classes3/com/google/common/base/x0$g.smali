@@ -1,0 +1,212 @@
+.class Lcom/google/common/base/x0$g;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lcom/google/common/base/w0;
+.implements Ljava/io/Serializable;
+
+
+# annotations
+.annotation build Ld5/c;
+.end annotation
+
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/google/common/base/x0;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0xa
+    name = "g"
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;",
+        "Lcom/google/common/base/w0<",
+        "TT;>;",
+        "Ljava/io/Serializable;"
+    }
+.end annotation
+
+
+# static fields
+.field private static final serialVersionUID:J
+    .annotation build Ld5/d;
+    .end annotation
+.end field
+
+
+# instance fields
+.field private final clazz:Ljava/lang/Class;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/lang/Class<",
+            "*>;"
+        }
+    .end annotation
+.end field
+
+
+# direct methods
+.method private constructor <init>(Ljava/lang/Class;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "clazz"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Class<",
+            "*>;)V"
+        }
+    .end annotation
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    invoke-static {p1}, Lcom/google/common/base/u0;->E(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Class;
+
+    iput-object p1, p0, Lcom/google/common/base/x0$g;->clazz:Ljava/lang/Class;
+
+    return-void
+.end method
+
+.method synthetic constructor <init>(Ljava/lang/Class;Lcom/google/common/base/x0$a;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/google/common/base/x0$g;-><init>(Ljava/lang/Class;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public apply(Ljava/lang/Object;)Z
+    .locals 1
+    .param p1    # Ljava/lang/Object;
+        .annotation runtime Lcom/google/common/base/r0;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "o"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TT;)Z"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/google/common/base/x0$g;->clazz:Ljava/lang/Class;
+
+    invoke-virtual {v0, p1}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public equals(Ljava/lang/Object;)Z
+    .locals 2
+    .param p1    # Ljava/lang/Object;
+        .annotation runtime Lb8/a;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "obj"
+        }
+    .end annotation
+
+    instance-of v0, p1, Lcom/google/common/base/x0$g;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, Lcom/google/common/base/x0$g;
+
+    iget-object v0, p0, Lcom/google/common/base/x0$g;->clazz:Ljava/lang/Class;
+
+    iget-object p1, p1, Lcom/google/common/base/x0$g;->clazz:Ljava/lang/Class;
+
+    if-ne v0, p1, :cond_0
+
+    const/4 v1, 0x1
+
+    :cond_0
+    return v1
+.end method
+
+.method public hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lcom/google/common/base/x0$g;->clazz:Ljava/lang/Class;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public synthetic test(Ljava/lang/Object;)Z
+    .locals 0
+
+    invoke-static {p0, p1}, Lcom/google/common/base/v0;->a(Lcom/google/common/base/w0;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "Predicates.instanceOf("
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lcom/google/common/base/x0$g;->clazz:Ljava/lang/Class;
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method

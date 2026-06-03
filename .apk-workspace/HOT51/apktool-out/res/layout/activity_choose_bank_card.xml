@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:tag="layout/activity_choose_bank_card_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.example.obs.player.ui.widget.TitleBarView android:id="@id/title" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="44.0dip" app:defaultLeftIco="@drawable/ic_back" app:isTitleTextBold="true" app:title="card.bind.bank.select" app:titleColor="#ff0d0043" app:titleSize="16.0sp" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/rv" android:background="#fff9f9f9" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+</androidx.appcompat.widget.LinearLayoutCompat>

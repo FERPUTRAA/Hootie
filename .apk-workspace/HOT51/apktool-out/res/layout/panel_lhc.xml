@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:tag="layout/panel_lhc_0" android:layout_width="fill_parent" android:layout_height="151.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:background="#fff9f9f9" android:layout_width="fill_parent" android:layout_height="151.0dip">
+        <com.example.obs.player.ui.widget.MultiLineRadioGroup android:orientation="vertical" android:id="@id/radioGroup_sex_id" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:layout_marginTop="22.0dip" android:layout_marginRight="10.0dip">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <RadioButton android:id="@id/ludan_01" android:checked="true" style="@style/checkbox_digits_ludan" />
+                <Space android:layout_width="0.0dip" android:layout_height="10.0dip" android:layout_weight="1.0" />
+                <RadioButton android:id="@id/ludan_02" style="@style/checkbox_digits_ludan" />
+                <Space android:layout_width="0.0dip" android:layout_height="10.0dip" android:layout_weight="1.0" />
+                <RadioButton android:id="@id/ludan_03" style="@style/checkbox_digits_ludan" />
+                <Space android:layout_width="0.0dip" android:layout_height="10.0dip" android:layout_weight="1.0" />
+                <RadioButton android:id="@id/ludan_04" style="@style/checkbox_digits_ludan" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="3.0dip">
+                <TextView android:id="@id/text_01" android:text="1.985" style="@style/text_digits_ludan" />
+                <Space android:layout_width="0.0dip" android:layout_height="10.0dip" android:layout_weight="1.0" />
+                <TextView android:id="@id/text_02" android:text="1.985" style="@style/text_digits_ludan" />
+                <Space android:layout_width="0.0dip" android:layout_height="10.0dip" android:layout_weight="1.0" />
+                <TextView android:id="@id/text_03" android:text="1.985" style="@style/text_digits_ludan" />
+                <Space android:layout_width="0.0dip" android:layout_height="10.0dip" android:layout_weight="1.0" />
+                <TextView android:id="@id/text_04" android:text="1.985" style="@style/text_digits_ludan" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                <RadioButton android:id="@id/ludan_05" style="@style/checkbox_digits_ludan" />
+                <Space android:layout_width="0.0dip" android:layout_height="10.0dip" android:layout_weight="1.0" />
+                <RadioButton android:id="@id/ludan_06" style="@style/checkbox_digits_ludan" />
+                <Space android:layout_width="0.0dip" android:layout_height="10.0dip" android:layout_weight="1.0" />
+                <RadioButton android:id="@id/ludan_07" style="@style/checkbox_digits_ludan" />
+                <Space android:layout_width="0.0dip" android:layout_height="10.0dip" android:layout_weight="1.0" />
+                <RadioButton android:id="@id/ludan_08" style="@style/checkbox_digits_ludan" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="3.0dip">
+                <TextView android:id="@id/text_05" android:text="1.985" style="@style/text_digits_ludan" />
+                <Space android:layout_width="0.0dip" android:layout_height="10.0dip" android:layout_weight="1.0" />
+                <TextView android:id="@id/text_06" android:text="1.985" style="@style/text_digits_ludan" />
+                <Space android:layout_width="0.0dip" android:layout_height="10.0dip" android:layout_weight="1.0" />
+                <TextView android:id="@id/text_07" android:text="1.985" style="@style/text_digits_ludan" />
+                <Space android:layout_width="0.0dip" android:layout_height="10.0dip" android:layout_weight="1.0" />
+                <TextView android:id="@id/text_08" android:text="1.985" style="@style/text_digits_ludan" />
+            </LinearLayout>
+        </com.example.obs.player.ui.widget.MultiLineRadioGroup>
+    </LinearLayout>
+</LinearLayout>

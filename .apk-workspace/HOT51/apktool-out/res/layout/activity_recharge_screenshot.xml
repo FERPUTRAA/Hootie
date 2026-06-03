@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="layout/activity_recharge_screenshot_0" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.LinearLayoutCompat android:gravity="center_horizontal" android:orientation="vertical" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <View android:background="#fff3f4f6" android:layout_width="fill_parent" android:layout_height="10.0dip" />
+        <FrameLayout android:id="@id/flUploadPicture" android:tag="binding_2" android:layout_width="300.0dip" android:layout_height="360.0dip" android:layout_marginTop="50.0dip">
+            <TextView android:textSize="15.0dip" android:textStyle="bold" android:textColor="@color/black" android:layout_gravity="center" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawablePadding="10.0dip" app:drawableTopCompat="@drawable/ic_add_upload_photo" />
+            <ImageView android:tag="binding_4" android:layout_width="300.0dip" android:layout_height="360.0dip" android:scaleType="centerCrop" />
+            <TextView android:textColor="@color/white" android:gravity="center" android:layout_gravity="bottom" android:tag="binding_5" android:background="@drawable/bg_corner_4" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="45.0dip" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="8.0dip" android:backgroundTint="#99000000" android:layout_marginHorizontal="8.0dip" />
+        </FrameLayout>
+        <Button android:id="@id/btnDelete" android:tag="binding_6" android:layout_width="144.0dip" android:layout_height="38.0dip" android:layout_marginTop="25.0dip" android:text="@string/common.delete" style="@style/button_red_stroke" />
+        <TextView android:textSize="13.0dip" android:textColor="#fffe2c55" android:tag="binding_7" android:background="#ffffe9ee" android:paddingLeft="14.0dip" android:paddingTop="10.0dip" android:paddingRight="14.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="30.0dip" android:paddingHorizontal="14.0dip" android:paddingVertical="10.0dip" />
+        <androidx.appcompat.widget.LinearLayoutCompat android:gravity="center" android:background="#fff3f4f6" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <Button android:textSize="15.0dip" android:id="@id/btnPrevious" android:tag="binding_8" android:background="@drawable/bg_stroke_corner_21" android:layout_width="165.0dip" android:layout_height="42.0dip" />
+            <Button android:textSize="15.0dip" android:id="@id/btnFinish" android:tag="binding_9" android:layout_width="165.0dip" android:layout_height="42.0dip" android:layout_marginLeft="10.0dip" style="@style/button_red" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <androidx.appcompat.widget.LinearLayoutCompat android:gravity="center_horizontal" android:orientation="vertical" android:tag="binding_10" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <View android:background="#fff3f4f6" android:layout_width="fill_parent" android:layout_height="10.0dip" />
+        <TextView android:textSize="13.0dip" android:textColor="@color/text_black" android:gravity="center" android:tag="binding_11" android:paddingLeft="25.0dip" android:paddingRight="25.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="96.0dip" android:drawablePadding="15.0dip" android:lineSpacingExtra="3.0dip" android:paddingHorizontal="25.0dip" app:drawableTopCompat="@drawable/img_success" />
+        <LinearLayout android:gravity="bottom|center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <Button android:textSize="15.0dip" android:textColor="@color/text_black" android:id="@id/btnBackHome" android:tag="binding_12" android:background="@drawable/bg_stroke_corner_21" android:layout_width="161.0dip" android:layout_height="42.0dip" android:layout_marginBottom="160.0dip" />
+        </LinearLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</FrameLayout>

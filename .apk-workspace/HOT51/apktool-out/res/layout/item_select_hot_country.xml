@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.AppCompatTextView android:textSize="@dimen/sp_14" android:textColor="#ff666666" android:ellipsize="end" android:gravity="center" android:id="@id/iv_hot_country_item" android:tag="layout/item_select_hot_country_0" android:background="@drawable/bg_select_hot_country" android:paddingLeft="@dimen/dp_15" android:paddingRight="@dimen/dp_15" android:layout_width="wrap_content" android:layout_height="@dimen/dp_30" android:minWidth="@dimen/dp_80" android:singleLine="true" android:layout_marginEnd="@dimen/dp_8" android:paddingHorizontal="@dimen/dp_15"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

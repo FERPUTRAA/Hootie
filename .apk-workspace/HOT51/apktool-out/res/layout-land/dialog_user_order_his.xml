@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="layout-land/dialog_user_order_his_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:background="#fff3f4f6" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.google.android.material.tabs.TabLayout android:id="@id/tab_layout" android:background="#fff3f4f6" android:layout_width="0.0dip" android:layout_height="@dimen/dp_55" android:backgroundTint="@color/white" app:layout_constrainedWidth="true" app:layout_constraintEnd_toStartOf="@id/imgClose" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:layout_scrollFlags="enterAlwaysCollapsed" app:tabGravity="start" app:tabIndicatorColor="#ffed4230" app:tabMode="scrollable" app:tabSelectedTextColor="@color/red_fe2" app:tabTextColor="#ff999999" app:tabTextSize="@dimen/sp_16" />
+        <View android:id="@id/line" android:layout_width="fill_parent" app:layout_constraintTop_toBottomOf="@id/tab_layout" style="@style/DialogHorizontalLine" />
+        <ImageView android:id="@id/imgClose" android:background="@color/white" android:paddingLeft="@dimen/dp_15" android:paddingTop="@dimen/dp_19" android:paddingRight="@dimen/dp_15" android:paddingBottom="@dimen/dp_19" android:layout_width="wrap_content" android:layout_height="0.0dip" android:src="@drawable/close_black" android:importantForAccessibility="no" android:paddingHorizontal="@dimen/dp_15" android:paddingVertical="@dimen/dp_19" app:layout_constraintBottom_toBottomOf="@id/tab_layout" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="@id/tab_layout" />
+        <androidx.viewpager2.widget.ViewPager2 android:id="@id/view_pager" android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@id/line" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
