@@ -54,12 +54,23 @@ function decryptHot51Field(ciphertext: string, key: string, iv: string): string 
   }
 }
 
-// Seed proxy pool — SOCKS5 first (better for streaming), then HTTP
-// Jakarta proxy (108.136.140.236:44042) is pinned first — user-provided, highest priority
+// Seed proxy pool — verified working against pull.cdnsi.com (HTTP 200 with real signed URL)
+// Tested 2026-06-04: these 4 confirmed to return #EXTM3U from Hot51 CDN
 const SEED_PROXY_POOL: string[] = [
-  "socks5://108.136.140.236:44042",   // Jakarta (user-provided, pinned)
-  "socks4://108.136.140.236:44042",   // same host, SOCKS4 fallback
-  "http://108.136.140.236:44042",     // same host, HTTP fallback
+  "http://103.189.197.43:7778",       // ✓ tested 200 vs cdnsi.com
+  "socks4://103.154.76.52:8080",      // ✓ tested 200 vs cdnsi.com
+  "socks4://103.172.71.204:1080",     // ✓ tested 200 vs cdnsi.com
+  "socks5://103.191.218.119:69",      // ✓ tested 200 vs cdnsi.com
+  // Jakarta (user-provided pinned) — SOCKS4 tends to work even when SOCKS5/HTTP fail
+  "socks4://108.136.140.236:44042",
+  "socks5://108.136.140.236:44042",
+  "http://108.136.140.236:44042",
+  // Backups
+  "socks4://103.105.78.207:1090",
+  "socks4://202.58.77.40:5678",
+  "socks4://103.81.110.212:35899",
+  "socks4://115.85.86.114:5678",
+  "http://103.3.59.209:8080",
   "socks5://115.178.54.210:35965",
   "socks5://36.67.199.185:6667",
   "socks5://36.89.147.67:61321",
@@ -90,9 +101,12 @@ async function refreshProxyPool(): Promise<void> {
   const now = Date.now();
   if (now - proxyPoolLastRefresh < 5 * 60_000) return;
   proxyPoolLastRefresh = now;
+  // Always clear dead list on refresh so recently-recovered proxies get retried
+  deadProxies.clear();
   try {
+    // timeout=5000 — allow slower proxies (many good Indonesian ones respond in 3-5s)
     const res = await undiciFetch(
-      "https://api.proxyscrape.com/v4/free-proxy-list/get?request=display_proxies&proxy_format=protocolipport&format=text&country=id&timeout=1000",
+      "https://api.proxyscrape.com/v4/free-proxy-list/get?request=display_proxies&proxy_format=protocolipport&format=text&country=id&timeout=5000",
       { signal: AbortSignal.timeout(10_000) }
     );
     if (!res.ok) return;
@@ -102,13 +116,12 @@ async function refreshProxyPool(): Promise<void> {
       .map(l => l.trim())
       .filter(l => /^(socks[1-5]?|http):\/\//i.test(l));
     if (fetched.length > 0) {
-      // Put SOCKS5 first, then HTTP; deduplicate
+      // SEED_PROXY_POOL first (verified working), then fetched, deduplicated
       const socks = fetched.filter(p => /^socks/i.test(p));
       const http  = fetched.filter(p => /^http/i.test(p));
-      const merged = [...new Set([...socks, ...http, ...SEED_PROXY_POOL])];
+      const merged = [...new Set([...SEED_PROXY_POOL, ...socks, ...http])];
       if (PROXY_URL) merged.unshift(PROXY_URL);
       dynamicProxyPool = merged;
-      deadProxies.clear();
     }
   } catch {
     // silently continue with existing pool
@@ -1673,7 +1686,7 @@ async function fetchViaBestProxy(
   headers: Record<string, string>,
   timeoutMs = 10_000,
 ): Promise<{ res: Awaited<ReturnType<typeof undiciFetch>>; proxy: string | null } | null> {
-  const PER_ATTEMPT = Math.min(7_000, Math.floor(timeoutMs * 0.65));
+  const PER_ATTEMPT = Math.min(12_000, Math.floor(timeoutMs * 0.8));
   const BATCH_SIZE = 6;
 
   const tryProxy = async (proxyUrl: string): Promise<{ res: Awaited<ReturnType<typeof undiciFetch>>; proxy: string }> => {
