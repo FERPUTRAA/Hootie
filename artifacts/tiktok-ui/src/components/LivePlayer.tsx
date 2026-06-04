@@ -202,24 +202,21 @@ export default function LivePlayer({
     }
 
     const hls = new Hls({
-      // Disable LL-HLS — Hot51 CDN uses EXT-X-PART (Low-Latency HLS partial segments).
-      // With lowLatencyMode:false, HLS.js uses only full #EXTINF segments (6s each)
-      // and ignores partial segments, avoiding partial-segment codec detection issues.
       lowLatencyMode: false,
       liveSyncDurationCount: 3,
       liveMaxLatencyDurationCount: 6,
       maxBufferLength: 12,
       maxMaxBufferLength: 30,
-      // enableWorker:false — Replit preview iframe blocks blob: Web Workers (CSP).
-      // With the worker enabled, HLS.js silently fails to create the transmuxer thread
-      // and MANIFEST_PARSED never fires. Main-thread transmuxing works fine here.
-      enableWorker: false,
+      enableWorker: true,
       manifestLoadingTimeOut: 13_000,
       manifestLoadingMaxRetry: 2,
-      fragLoadingTimeOut: 20_000,
       fragLoadingMaxRetry: 6,
       fragLoadingRetryDelay: 800,
       liveBackBufferLength: 0,
+      // Explicit codec prevents bufferAddCodecError when HLS.js can't determine
+      // codec from first segment before creating SourceBuffer.
+      // Hot51 streams are H.264/AVC video + AAC audio (confirmed from MPEG-TS PMT).
+      defaultAudioCodec: "mp4a.40.2",
       xhrSetup: (_xhr: XMLHttpRequest, xhrUrl: string) => {
         console.info("[LivePlayer] XHR →", xhrUrl.substring(0, 80));
       },
@@ -227,59 +224,33 @@ export default function LivePlayer({
     hlsRef.current = hls;
     activeHlsSourceRef.current = url;
 
-    // ── Register ALL event handlers BEFORE loadSource/attachMedia ───────────
-    // hls.js 1.6.x can emit MANIFEST_PARSED synchronously during attachMedia
-    // when the manifest was already fetched — registering after would miss it.
-    hls.on(Hls.Events.MEDIA_ATTACHED, () => {
-      console.info("[LivePlayer] MEDIA_ATTACHED");
-    });
+    console.info("[LivePlayer] HLS loadSource:", url.substring(0, 100));
 
-    hls.on(Hls.Events.MANIFEST_LOADING, (_e, data) => {
-      console.info("[LivePlayer] MANIFEST_LOADING:", data.url?.substring(0, 80));
-    });
+    // loadSource BEFORE attachMedia — hls.js starts manifest fetch immediately,
+    // then MSE SourceBuffer is created when attachMedia fires. This is the order
+    // used in the working reference commit and matches hls.js docs for detached mode.
+    hls.loadSource(url);
+    hls.attachMedia(el);
 
-    hls.on(Hls.Events.MANIFEST_LOADED, (_e, data) => {
-      console.info("[LivePlayer] MANIFEST_LOADED — status:", (data as { networkDetails?: { status?: number } }).networkDetails?.status);
-    });
-
-    // ── HLS timeout fallback ─────────────────────────────────────────────────
-    // If MANIFEST_PARSED doesn't fire within 12s, destroy HLS and fall back to Zego.
-    // 12s gives enough time for proxy races (hls-proxy responds ~500-700ms normally,
-    // but Replit cold-start + proxy chain can add latency on first request).
-    let hlsManifestParsed = false;
-    const hlsTimeoutId = window.setTimeout(() => {
-      if (!hlsManifestParsed && hlsRef.current === hls) {
-        console.warn("[LivePlayer] HLS timeout 12s — manifest not parsed, skipping to Zego");
-        destroyHls();
-        startZego();
-      }
-    }, 12_000);
-
-    hls.on(Hls.Events.MANIFEST_PARSED, (_e, data) => {
-      hlsManifestParsed = true;
-      window.clearTimeout(hlsTimeoutId);
-      console.info("[LivePlayer] MANIFEST_PARSED — levels:", data.levels?.length, "— play()");
+    hls.on(Hls.Events.MANIFEST_PARSED, () => {
+      console.info("[LivePlayer] MANIFEST_PARSED — play()");
       setState("playing");
       setMode("hls");
       el.play().catch((e) => console.warn("[LivePlayer] play() rejected:", e));
     });
 
     hls.on(Hls.Events.ERROR, (_event, data) => {
-      console.warn("[LivePlayer] HLS error:", data.details, "fatal:", data.fatal, "type:", data.type, data.error?.message ?? "");
+      console.warn("[LivePlayer] HLS error:", data.details, "fatal:", data.fatal, "type:", data.type);
       if (data.fatal) {
         destroyHls();
-        // bufferAddCodecError = MSE SourceBuffer.addSourceBuffer() failed — browser-side issue,
-        // NOT a network/CORS issue. Skip straight to Zego.
         if (data.details === Hls.ErrorDetails.BUFFER_ADD_CODEC_ERROR) {
-          console.info("[LivePlayer] bufferAddCodecError → MSE unavailable, skipping to Zego");
+          console.info("[LivePlayer] bufferAddCodecError → skipping to Zego");
           startZego();
           return;
         }
-        // For network/CORS/geo-block: try proxy first, then FLV (if not tried), then Zego
         if (proxyFallbackRef.current && !proxyFallbackTriedRef.current) {
           proxyFallbackTriedRef.current = true;
-          hlsTriedRef.current = false; // reset so startHls can actually run HLS again with proxy URL
-          console.info("[LivePlayer] HLS direct fatal → retrying via proxy");
+          console.info("[LivePlayer] HLS fatal → retrying via proxy");
           startHls(proxyFallbackRef.current, el);
         } else if (!flvTriedRef.current && streamUrl) {
           const flvUrl = toAbsoluteUrl(streamUrl);
@@ -300,12 +271,6 @@ export default function LivePlayer({
     });
 
     el.onplaying = () => { setState("playing"); setMode("hls"); };
-
-    // ── Attach media first, THEN load source (canonical hls.js order) ────────
-    // attachMedia first ensures MSE SourceBuffer is ready before fragment loading.
-    console.info("[LivePlayer] HLS attachMedia → loadSource:", url.substring(0, 100));
-    hls.attachMedia(el);
-    hls.loadSource(url);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [hlsTriedRef, destroyAll, destroyHls, startFlv, startZego, streamUrl]);
 
