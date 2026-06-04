@@ -58,20 +58,16 @@ _start_tailscale() {
 # ── Tailscale — background, non-blocking ─────────────────────────────────────
 ( _start_tailscale ) &
 
-# ── API Server — background on port 8080 ─────────────────────────────────────
-echo "[api] Building and starting API server on port 8080..."
-# Kill any existing process holding port 8080 so a restart always gets fresh code
-fuser -k 8080/tcp 2>/dev/null || true
-sleep 1
-PORT=8080 NODE_ENV=development pnpm run --filter @workspace/api-server dev &
-API_PID=$!
-
-# Wait for API server to be ready (up to 30s)
-for i in $(seq 1 30); do
+# ── API Server — wait for the artifact workflow to bring it up on port 8080 ──
+echo "[api] Waiting for API server on port 8080..."
+for i in $(seq 1 60); do
   sleep 1
   if curl -sf http://localhost:8080/api/healthz >/dev/null 2>&1; then
     echo "[api] API server ready"
     break
+  fi
+  if [ "$i" -eq 60 ]; then
+    echo "[api] Warning: API server not ready after 60s, continuing anyway"
   fi
 done
 
