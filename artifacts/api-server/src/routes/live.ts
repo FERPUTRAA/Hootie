@@ -2154,6 +2154,13 @@ liveRouter.get("/hls-proxy", async (req: Request, res: Response) => {
 
 /** GET /api/ts-proxy?url=<encoded_segment_url>
  * Proxies a single HLS TS segment through the proxy pool.
+ *
+ * Uses fetchViaBestProxy which:
+ *  1. Checks CDN proxy cache first — the proxy that worked for the manifest is reused
+ *     immediately (sub-1s on warm requests after hls-proxy populated the cache).
+ *  2. Falls back to direct connection (fast if CDN not geo-blocked from Replit).
+ *  3. Races the full proxy pool in parallel batches (first 2xx wins).
+ * This replaces the old curl-batch approach which timed out 30+ seconds on cdnsi.com.
  */
 liveRouter.get("/ts-proxy", async (req: Request, res: Response) => {
   const rawUrl = String(req.query.url ?? "");
@@ -2171,72 +2178,29 @@ liveRouter.get("/ts-proxy", async (req: Request, res: Response) => {
   };
   if (req.headers["range"]) cdnHeaders["Range"] = String(req.headers["range"]);
 
-  const proxies = getLiveProxies();
-  const PER_ATTEMPT = 10_000;
-  const BATCH = 5;
+  // fetchViaBestProxy checks the CDN proxy cache first (populated by hls-proxy),
+  // so warm TS-segment requests resolve in <1s using the same proxy that loaded the manifest.
+  const result = await fetchViaBestProxy(rawUrl, cdnHeaders, 12_000);
 
-  // STEP 0: Try direct fetch first (fast when CDN is not geo-blocked from this host).
-  // This is the common case in the Replit environment — saves 10-50s of proxy waiting.
-  try {
-    const r = await undiciFetch(rawUrl, { headers: cdnHeaders, signal: AbortSignal.timeout(4_000) });
-    if (r.ok && r.body) {
-      res.setHeader("Access-Control-Allow-Origin", "*");
-      res.setHeader("Content-Type", r.headers.get("content-type") ?? "video/MP2T");
-      res.setHeader("Cache-Control", "no-store");
-      res.setHeader("X-Proxy-Mode", "direct");
-      const reader = r.body.getReader();
-      req.on("close", () => reader.cancel().catch(() => {}));
-      const pump = async (): Promise<void> => {
-        const { done, value } = await reader.read();
-        if (done) { res.end(); return; }
-        if (!res.writableEnded) res.write(value);
-        return pump();
-      };
-      await pump();
-      return;
-    }
-    r.body?.cancel().catch(() => {});
-  } catch { /* geo-blocked or timeout — fall through to proxy pool */ }
-
-  if (res.headersSent) return;
-
-  // STEP 1: Race proxy batches — first successful curl stream wins
-  // (only reached if direct fetch was blocked or failed)
-  for (let i = 0; i < Math.min(proxies.length, 30); i += BATCH) {
-    const batch = proxies.slice(i, i + BATCH);
-    const won = await Promise.any(
-      batch.map(proxyUrl =>
-        spawnCurlStream(rawUrl, cdnHeaders, proxyUrl, PER_ATTEMPT, res)
-          .then(ok => { if (!ok) throw new Error("no data"); return true; })
-      )
-    ).catch(() => false);
-
-    if (won) return;
-    if (res.headersSent) return;
+  if (!result || !result.res.body) {
+    if (!res.headersSent) res.status(502).send("");
+    return;
   }
 
-  // STEP 2: Final direct attempt with longer timeout
-  try {
-    const r = await undiciFetch(rawUrl, { headers: cdnHeaders, signal: AbortSignal.timeout(8_000) });
-    if (r.ok && r.body) {
-      res.setHeader("Access-Control-Allow-Origin", "*");
-      res.setHeader("Content-Type", r.headers.get("content-type") ?? "video/MP2T");
-      res.setHeader("Cache-Control", "no-store");
-      res.setHeader("X-Proxy-Mode", "direct-fallback");
-      const reader = r.body.getReader();
-      req.on("close", () => reader.cancel().catch(() => {}));
-      const pump = async (): Promise<void> => {
-        const { done, value } = await reader.read();
-        if (done) { res.end(); return; }
-        if (!res.writableEnded) res.write(value);
-        return pump();
-      };
-      await pump();
-      return;
-    }
-  } catch { /* ignore */ }
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Content-Type", result.res.headers.get("content-type") ?? "video/MP2T");
+  res.setHeader("Cache-Control", "no-store");
+  res.setHeader("X-Proxy-Mode", result.proxy ?? "direct");
 
-  if (!res.headersSent) res.status(502).send("");
+  const reader = result.res.body.getReader();
+  req.on("close", () => reader.cancel().catch(() => {}));
+  const pump = async (): Promise<void> => {
+    const { done, value } = await reader.read();
+    if (done) { res.end(); return; }
+    if (!res.writableEnded) res.write(value);
+    return pump();
+  };
+  await pump();
 });
 
 /**
