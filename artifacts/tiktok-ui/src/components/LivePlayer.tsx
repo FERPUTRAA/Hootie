@@ -175,7 +175,10 @@ export default function LivePlayer({
     setMode("hls");
     hlsTriedRef.current = true;
 
-    if (!Hls.isSupported() && el.canPlayType("application/vnd.apple.mpegurl")) {
+    const hlsSupported = Hls.isSupported();
+    console.info("[LivePlayer] Hls.isSupported():", hlsSupported, "canPlayHLS:", el.canPlayType("application/vnd.apple.mpegurl"));
+
+    if (!hlsSupported && el.canPlayType("application/vnd.apple.mpegurl")) {
       el.src = url;
       el.play().catch(() => {});
       el.onloadeddata = () => { setState("playing"); setMode("hls"); };
@@ -189,7 +192,7 @@ export default function LivePlayer({
       return;
     }
 
-    if (!Hls.isSupported()) {
+    if (!hlsSupported) {
       if (!flvTriedRef.current && streamUrl) {
         startFlv(toAbsoluteUrl(streamUrl), el);
       } else {
@@ -217,10 +220,6 @@ export default function LivePlayer({
       fragLoadingMaxRetry: 6,
       fragLoadingRetryDelay: 800,
       liveBackBufferLength: 0,
-      // Explicit default codecs — prevents bufferAddCodecError when HLS.js can't
-      // determine the codec from the first segment before creating the SourceBuffer.
-      // Hot51 streams are H.264/AVC video + AAC audio (confirmed from MPEG-TS PMT).
-      defaultAudioCodec: "mp4a.40.2",
       xhrSetup: (_xhr: XMLHttpRequest, xhrUrl: string) => {
         console.info("[LivePlayer] XHR →", xhrUrl.substring(0, 80));
       },
@@ -228,15 +227,41 @@ export default function LivePlayer({
     hlsRef.current = hls;
     activeHlsSourceRef.current = url;
 
-    console.info("[LivePlayer] HLS loadSource:", url.substring(0, 100));
-    hls.loadSource(url);
-    hls.attachMedia(el);
-
+    // ── Register ALL event handlers BEFORE loadSource/attachMedia ───────────
+    // hls.js 1.6.x can emit MANIFEST_PARSED synchronously during attachMedia
+    // when the manifest was already fetched — registering after would miss it.
     hls.on(Hls.Events.MEDIA_ATTACHED, () => {
       console.info("[LivePlayer] MEDIA_ATTACHED");
     });
 
+    hls.on(Hls.Events.MANIFEST_LOADING, (_e, data) => {
+      console.info("[LivePlayer] MANIFEST_LOADING:", data.url?.substring(0, 80));
+    });
+
+    hls.on(Hls.Events.MANIFEST_LOADED, (_e, data) => {
+      console.info("[LivePlayer] MANIFEST_LOADED — status:", (data as { networkDetails?: { status?: number } }).networkDetails?.status);
+    });
+
+    // ── HLS timeout fallback ─────────────────────────────────────────────────
+    // If MANIFEST_PARSED doesn't fire within 5s (e.g. proxy env XHR issue),
+    // destroy HLS and fall back to stream-proxy (FLV via mpegts.js).
+    let hlsManifestParsed = false;
+    const hlsTimeoutId = window.setTimeout(() => {
+      if (!hlsManifestParsed && hlsRef.current === hls) {
+        console.warn("[LivePlayer] HLS timeout 5s — manifest not parsed, falling back to stream-proxy");
+        destroyHls();
+        if (anchorId) {
+          const sp = toAbsoluteUrl(`${BASE}/api/stream-proxy?roomId=${encodeURIComponent(roomId)}&anchorId=${encodeURIComponent(anchorId)}${liveId ? `&liveId=${encodeURIComponent(liveId)}` : ""}`);
+          startFlv(sp, el);
+        } else {
+          startZego();
+        }
+      }
+    }, 5000);
+
     hls.on(Hls.Events.MANIFEST_PARSED, (_e, data) => {
+      hlsManifestParsed = true;
+      window.clearTimeout(hlsTimeoutId);
       console.info("[LivePlayer] MANIFEST_PARSED — levels:", data.levels?.length, "— play()");
       setState("playing");
       setMode("hls");
@@ -279,6 +304,12 @@ export default function LivePlayer({
     });
 
     el.onplaying = () => { setState("playing"); setMode("hls"); };
+
+    // ── Attach media first, THEN load source (canonical hls.js order) ────────
+    // attachMedia first ensures MSE SourceBuffer is ready before fragment loading.
+    console.info("[LivePlayer] HLS attachMedia → loadSource:", url.substring(0, 100));
+    hls.attachMedia(el);
+    hls.loadSource(url);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [hlsTriedRef, destroyAll, destroyHls, startFlv, startZego, streamUrl]);
 

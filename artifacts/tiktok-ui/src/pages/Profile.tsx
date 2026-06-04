@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Settings, Link as LinkIcon, Heart, Grid3x3 } from "lucide-react";
 import { motion } from "framer-motion";
+import NetworkSettingsModal from "../components/NetworkSettingsModal";
 
 const VIDEO_COLORS = [
   "linear-gradient(135deg, #FF9A9E, #FECFEF)",
@@ -27,13 +28,15 @@ const STATS = [
 
 export default function Profile() {
   const [activeTab, setActiveTab] = useState<ProfileTab>("videos");
+  const [showNetworkSettings, setShowNetworkSettings] = useState(false);
 
   return (
+    <>
     <div className="h-full w-full bg-black overflow-y-auto no-scrollbar">
       <div className="flex items-center justify-between px-4 pt-12 pb-3">
         <div className="w-8" />
         <p className="text-white font-bold text-base">@my_username</p>
-        <button data-testid="button-settings">
+        <button data-testid="button-settings" onClick={() => setShowNetworkSettings(true)}>
           <Settings size={22} color="white" />
         </button>
       </div>
@@ -111,5 +114,11 @@ export default function Profile() {
         ))}
       </div>
     </div>
+
+    <NetworkSettingsModal
+      open={showNetworkSettings}
+      onClose={() => setShowNetworkSettings(false)}
+    />
+    </>
   );
 }

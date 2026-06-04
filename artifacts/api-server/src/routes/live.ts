@@ -3027,4 +3027,68 @@ liveRouter.get("/swag-live", async (_req: Request, res: Response) => {
   }
 });
 
+// ─── Network Info / Zero-Rated ───────────────────────────────────────────────
+// GET /api/network-info → info Tailscale IP, zero-rated domain, dan status koneksi
+liveRouter.get("/network-info", async (_req: Request, res: Response) => {
+  const ZERO_RATED_DOMAINS = [
+    process.env.ZERO_RATED_DOMAIN ?? "jupiter-mw.xlsmart.co.id",
+    "www.xl.co.id",
+    "xl.co.id",
+    "m.xl.co.id",
+    "xlaxiata.co.id",
+  ];
+  const primaryDomain = process.env.ZERO_RATED_DOMAIN ?? "jupiter-mw.xlsmart.co.id";
+  const reqHost = (_req.headers["host"] ?? "").split(":")[0];
+  const isZeroRated = ZERO_RATED_DOMAINS.some(d => reqHost === d || reqHost.endsWith("." + d));
+
+  // Baca Tailscale IP dari cache runtime atau eksekusi perintah
+  let tailscaleIp: string | null = null;
+  try {
+    const { execFile } = await import("child_process");
+    const { promisify } = await import("util");
+    const execFileAsync = promisify(execFile);
+    const { stdout } = await execFileAsync("tailscale", ["--socket=/tmp/tailscale.sock", "ip", "-4"], { timeout: 3000 });
+    tailscaleIp = stdout.trim().split("\n")[0] ?? null;
+  } catch {
+    // Tailscale tidak tersedia / belum konek — tidak apa-apa
+  }
+
+  const port = process.env.PORT ?? "8080";
+
+  return res.json({
+    server: {
+      tailscaleIp,
+      port,
+      zeroRatedDomains: ZERO_RATED_DOMAINS,
+      primaryZeroRatedDomain: primaryDomain,
+    },
+    connection: {
+      detectedHost: reqHost,
+      isZeroRated,
+      status: isZeroRated ? "aktif" : "tidak_aktif",
+      petunjuk: isZeroRated
+        ? `✅ Anda mengakses via domain zero-rated (${reqHost}). Kuota XL tidak dipotong.`
+        : `⚠️ Akses via http://${primaryDomain} agar zero-rated.`,
+    },
+    setup: {
+      hostsEntry: tailscaleIp
+        ? `${tailscaleIp} ${primaryDomain}`
+        : `[IP_SERVER] ${primaryDomain}`,
+      accessUrl: tailscaleIp
+        ? `http://${tailscaleIp}:${port}`
+        : `http://${primaryDomain}:${port}`,
+      langkah: [
+        tailscaleIp
+          ? `1. Install Tailscale di HP → Join network → HP dapat akses http://${tailscaleIp}:${port}`
+          : `1. Hubungkan Tailscale untuk mendapatkan IP server`,
+        `2. ATAU: Edit /etc/hosts di HP: ${tailscaleIp ?? "[IP_SERVER]"} ${primaryDomain}`,
+        `3. Akses via HTTP (bukan HTTPS): http://${primaryDomain}:${port}`,
+        `4. XL melihat Host header ${primaryDomain} → kuota tidak dipotong ✓`,
+        `5. Tailscale: join network "FERPUTRAA@" → akses langsung tanpa perlu hosts file`,
+      ],
+      tailscaleAccount: "FERPUTRAA@",
+    },
+  });
+});
+
 export default liveRouter;
