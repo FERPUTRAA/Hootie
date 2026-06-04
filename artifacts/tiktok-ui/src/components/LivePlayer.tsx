@@ -243,21 +243,17 @@ export default function LivePlayer({
     });
 
     // ── HLS timeout fallback ─────────────────────────────────────────────────
-    // If MANIFEST_PARSED doesn't fire within 5s (e.g. proxy env XHR issue),
-    // destroy HLS and fall back to stream-proxy (FLV via mpegts.js).
+    // If MANIFEST_PARSED doesn't fire within 12s, destroy HLS and fall back to Zego.
+    // 12s gives enough time for proxy races (hls-proxy responds ~500-700ms normally,
+    // but Replit cold-start + proxy chain can add latency on first request).
     let hlsManifestParsed = false;
     const hlsTimeoutId = window.setTimeout(() => {
       if (!hlsManifestParsed && hlsRef.current === hls) {
-        console.warn("[LivePlayer] HLS timeout 5s — manifest not parsed, falling back to stream-proxy");
+        console.warn("[LivePlayer] HLS timeout 12s — manifest not parsed, skipping to Zego");
         destroyHls();
-        if (anchorId) {
-          const sp = toAbsoluteUrl(`${BASE}/api/stream-proxy?roomId=${encodeURIComponent(roomId)}&anchorId=${encodeURIComponent(anchorId)}${liveId ? `&liveId=${encodeURIComponent(liveId)}` : ""}`);
-          startFlv(sp, el);
-        } else {
-          startZego();
-        }
+        startZego();
       }
-    }, 5000);
+    }, 12_000);
 
     hls.on(Hls.Events.MANIFEST_PARSED, (_e, data) => {
       hlsManifestParsed = true;
@@ -377,6 +373,12 @@ export default function LivePlayer({
         hlsFallbackRef.current = hlsProxy;
         proxyFallbackRef.current = hlsProxy;
         proxyFallbackTriedRef.current = false;
+      } else if (anchorId) {
+        // No explicit HLS URL but anchorId available — use hls-proxy as FLV fallback
+        const hlsProxy = `${BASE}/api/hls-proxy?room=${encodeURIComponent(anchorId)}`;
+        hlsFallbackRef.current = hlsProxy;
+        proxyFallbackRef.current = hlsProxy;
+        proxyFallbackTriedRef.current = false;
       } else {
         hlsFallbackRef.current = "";
       }
@@ -391,8 +393,8 @@ export default function LivePlayer({
       } else {
         startFlv(rawFlv, el);
       }
-    } else if (rawHls || (rawFlv && rawFlv.endsWith(".m3u8"))) {
-      // HLS-only stream (no FLV URL available)
+    } else if (rawHls || (rawFlv && (rawFlv.endsWith(".m3u8") || rawFlv.includes(".m3u8?")))) {
+      // HLS-only stream (no FLV URL available, or URL is .m3u8 with query params)
       const url = rawHls || rawFlv;
       if (isHot51Cdn(url) && url.includes(".m3u8")) {
         // Always use proxy for Hot51 CDN HLS — avoids 403 from expired tokens/geo-block
@@ -404,7 +406,15 @@ export default function LivePlayer({
         startHls(toHlsProxyUrl(url), el);
       }
     } else {
-      tryProxy(el);
+      // No recognized FLV or HLS URL — try hls-proxy if anchorId available (fastest fallback),
+      // otherwise fall back to tryProxy which will probe stream-proxy then Zego.
+      if (anchorId) {
+        const proxyUrl = `${BASE}/api/hls-proxy?room=${encodeURIComponent(anchorId)}`;
+        console.info("[LivePlayer] no recognized stream URL → hls-proxy fallback:", anchorId);
+        startHls(proxyUrl, el);
+      } else {
+        tryProxy(el);
+      }
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [hlsUrl, streamUrl, anchorId, liveId, roomId, startFlv, startHls, tryProxy]);
@@ -464,23 +474,25 @@ export default function LivePlayer({
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [roomId]);
 
-  // When Feed.tsx refreshes hlsUrl every 20s, update the HLS source if currently playing HLS.
+  // When Feed.tsx refreshes hlsUrl every 20s, reload the HLS source via proxy with a fresh token.
+  // Always use hls-proxy for Hot51 CDN — never load raw CDN URL directly (tokens expire in ~29s).
   useEffect(() => {
-    if (!hlsRef.current || !hlsUrl) return;
-    const absUrl = toAbsoluteUrl(hlsUrl);
+    if (!hlsRef.current || (!hlsUrl && !anchorId)) return;
+    const absUrl = hlsUrl ? toAbsoluteUrl(hlsUrl) : "";
     const hot51 = absUrl.includes("cdnsi.com") || absUrl.includes("livcdn.com") || absUrl.includes("baccdn.com");
-    const newUrl = hot51 ? absUrl : (anchorId
-      ? `${BASE}/api/hls-proxy?room=${encodeURIComponent(anchorId)}`
-      : `${BASE}/api/hls-proxy?url=${encodeURIComponent(absUrl)}`);
+    // Always proxy Hot51 CDN through hls-proxy — never load raw CDN URL (expires in 29s)
+    const newUrl = (hot51 || !absUrl)
+      ? (anchorId
+          ? `${BASE}/api/hls-proxy?room=${encodeURIComponent(anchorId)}`
+          : `${BASE}/api/hls-proxy?url=${encodeURIComponent(absUrl)}`)
+      : absUrl;
     if (newUrl === activeHlsSourceRef.current) return;
-    console.info("[LivePlayer] hlsUrl refreshed → reloading HLS source");
+    console.info("[LivePlayer] hlsUrl refreshed → reloading HLS source via proxy");
     activeHlsSourceRef.current = newUrl;
-    if (hot51) {
-      proxyFallbackRef.current = anchorId
-        ? `${BASE}/api/hls-proxy?room=${encodeURIComponent(anchorId)}`
-        : `${BASE}/api/hls-proxy?url=${encodeURIComponent(absUrl)}`;
-      proxyFallbackTriedRef.current = false;
-    }
+    proxyFallbackRef.current = anchorId
+      ? `${BASE}/api/hls-proxy?room=${encodeURIComponent(anchorId)}`
+      : `${BASE}/api/hls-proxy?url=${encodeURIComponent(absUrl)}`;
+    proxyFallbackTriedRef.current = false;
     hlsRef.current.loadSource(newUrl);
   }, [hlsUrl, anchorId]);
 

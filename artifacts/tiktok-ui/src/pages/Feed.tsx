@@ -167,7 +167,9 @@ export default function Feed() {
             avatar: (room.anchorAvatarUrl ?? room.ahp ?? room.avatar ?? "") as string,
             liveName: (room.liveName ?? room.ln ?? "") as string,
             streamUrl: (room.pullAddr ?? room.streamUrl ?? "") as string,
-            hlsUrl: (room.pullAddr265 ?? room.hlsUrl ?? undefined) as string | undefined,
+            // Never use pullAddr265 — it's H.265 which causes bufferAddCodecError in Chrome/Firefox.
+            // Use pullHlsUrl or hlsUrl (H.264) instead.
+            hlsUrl: (room.hlsUrl ?? (room as Record<string, unknown>).pullHlsUrl ?? undefined) as string | undefined,
             streamProxyUrl: `/api/stream-proxy?roomId=${newAnchorId}&anchorId=${newAnchorId}`,
           };
           setVideos(prev => {

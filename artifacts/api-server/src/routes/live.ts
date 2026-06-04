@@ -1760,6 +1760,15 @@ liveRouter.get("/stream-proxy", async (req: Request, res: Response) => {
   const liveId   = String(req.query.liveId  ?? "");
   if (!roomId) { res.status(400).json({ error: "Missing ?roomId" }); return; }
 
+  // HEAD requests: return immediately without streaming (used by tryProxy availability check).
+  // Starting a full stream fetch for HEAD wastes 10-20s of proxy races for no benefit.
+  if (req.method === "HEAD") {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Content-Type", "video/x-flv");
+    res.status(200).end();
+    return;
+  }
+
   let candidateUrls: string[] = [];
 
   const realUrl = await getRealStreamUrl(roomId, anchorId, liveId);
