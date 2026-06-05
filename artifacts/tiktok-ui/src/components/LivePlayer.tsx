@@ -226,21 +226,33 @@ export default function LivePlayer({
 
     console.info("[LivePlayer] HLS loadSource:", url.substring(0, 100));
 
+    hls.on(Hls.Events.MANIFEST_LOADING, (_e, d) => {
+      console.info("[LivePlayer] MANIFEST_LOADING:", d.url?.substring(0, 80));
+    });
+    hls.on(Hls.Events.MANIFEST_LOADED, (_e, d) => {
+      console.info("[LivePlayer] MANIFEST_LOADED levels:", (d as { levels?: unknown[] }).levels?.length ?? 0);
+    });
+    hls.on(Hls.Events.MEDIA_ATTACHED, () => {
+      console.info("[LivePlayer] MEDIA_ATTACHED");
+    });
+    hls.on(Hls.Events.FRAG_LOADING, (_e, d) => {
+      console.info("[LivePlayer] FRAG_LOADING:", d.frag?.url?.substring(0, 80));
+    });
+
     // loadSource BEFORE attachMedia — hls.js starts manifest fetch immediately,
-    // then MSE SourceBuffer is created when attachMedia fires. This is the order
-    // used in the working reference commit and matches hls.js docs for detached mode.
+    // then MSE SourceBuffer is created when attachMedia fires.
     hls.loadSource(url);
     hls.attachMedia(el);
 
-    hls.on(Hls.Events.MANIFEST_PARSED, () => {
-      console.info("[LivePlayer] MANIFEST_PARSED — play()");
+    hls.on(Hls.Events.MANIFEST_PARSED, (_e, d) => {
+      console.info("[LivePlayer] MANIFEST_PARSED levels:", d.levels?.length, "— play()");
       setState("playing");
       setMode("hls");
       el.play().catch((e) => console.warn("[LivePlayer] play() rejected:", e));
     });
 
     hls.on(Hls.Events.ERROR, (_event, data) => {
-      console.warn("[LivePlayer] HLS error:", data.details, "fatal:", data.fatal, "type:", data.type);
+      console.warn("[LivePlayer] HLS error:", data.details, "fatal:", data.fatal, "type:", data.type, data.error?.message ?? "");
       if (data.fatal) {
         destroyHls();
         if (data.details === Hls.ErrorDetails.BUFFER_ADD_CODEC_ERROR) {
@@ -263,6 +275,14 @@ export default function LivePlayer({
           startZego();
         }
       } else {
+        // Non-fatal: attempt recovery before HLS.js gives up
+        if (data.type === Hls.ErrorTypes.NETWORK_ERROR) {
+          console.info("[LivePlayer] non-fatal network error → startLoad()");
+          try { hls.startLoad(); } catch { /* ignore */ }
+        } else if (data.type === Hls.ErrorTypes.MEDIA_ERROR) {
+          console.info("[LivePlayer] non-fatal media error → recoverMediaError()");
+          try { hls.recoverMediaError(); } catch { /* ignore */ }
+        }
         if (data.details === Hls.ErrorDetails.BUFFER_STALLED_ERROR ||
             data.details === Hls.ErrorDetails.BUFFER_NUDGE_ON_STALL) {
           try { el.currentTime += 0.1; } catch { /* ignore */ }
