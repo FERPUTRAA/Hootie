@@ -25,6 +25,11 @@ function toAbsoluteUrl(url: string): string {
 
 const BASE = import.meta.env.BASE_URL.replace(/\/$/, "");
 
+// FIX #4: isHot51Cdn moved outside component as pure utility (no stale closure)
+function isHot51Cdn(url: string): boolean {
+  return url.includes("cdnsi.com") || url.includes("livcdn.com") || url.includes("baccdn.com");
+}
+
 export default function LivePlayer({
   streamUrl,
   hlsUrl,
@@ -39,14 +44,20 @@ export default function LivePlayer({
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [visible, setVisible] = useState(false);
 
+  // FIX #8: Use ref for onVideoElement callback to prevent re-mount on every parent render
+  const onVideoElementRef = useRef(onVideoElement);
+  useEffect(() => { onVideoElementRef.current = onVideoElement; }, [onVideoElement]);
+
   const [videoEl, setVideoEl] = useState<HTMLVideoElement | null>(null);
   const videoCallbackRef = useCallback((el: HTMLVideoElement | null) => {
     setVideoEl(el);
-    onVideoElement?.(el);
-  }, [onVideoElement]);
+    onVideoElementRef.current?.(el);
+  }, []); // stable — no dep on onVideoElement prop
 
   const hlsRef = useRef<Hls | null>(null);
   const playerRef = useRef<mpegts.Player | null>(null);
+  // FIX #14: track native HLS cleanup function
+  const nativeHlsCleanupRef = useRef<(() => void) | null>(null);
   const [state, setState] = useState<PlayerState>("idle");
   const [muted, setMuted] = useState(true);
   const [mode, setMode] = useState<PlayerMode>("none");
@@ -81,6 +92,11 @@ export default function LivePlayer({
       try { hlsRef.current.destroy(); } catch { /* ignore */ }
       hlsRef.current = null;
     }
+    // FIX #14: cleanup native HLS event handlers
+    if (nativeHlsCleanupRef.current) {
+      nativeHlsCleanupRef.current();
+      nativeHlsCleanupRef.current = null;
+    }
   }, []);
 
   const destroyFlv = useCallback(() => {
@@ -95,9 +111,15 @@ export default function LivePlayer({
     }
   }, []);
 
-  const destroyAll = useCallback(() => {
+  // FIX #3 + #9: destroyAll also clears srcObject/src to prevent MSE SourceBuffer conflicts
+  const destroyAll = useCallback((videoElArg?: HTMLVideoElement | null) => {
     destroyHls();
     destroyFlv();
+    const el = videoElArg;
+    if (el) {
+      try { el.srcObject = null; } catch { /* ignore */ }
+      try { el.src = ""; el.load(); } catch { /* ignore */ }
+    }
   }, [destroyHls, destroyFlv]);
 
   const startZego = useCallback(() => {
@@ -106,17 +128,15 @@ export default function LivePlayer({
       return;
     }
     destroyAll();
-    if (videoEl) try { videoEl.srcObject = null; } catch { /* ignore */ }
     setState("loading");
     setMode("none");
     zegoTriedRef.current = true;
     setZegoActive(true);
-  }, [zegoStreamId, destroyAll, videoEl]);
+  }, [zegoStreamId, destroyAll]);
 
   const startFlv = useCallback((url: string, el: HTMLVideoElement) => {
     if (flvTriedRef.current) { startZego(); return; }
-    destroyAll();
-    try { el.srcObject = null; } catch { /* ignore */ }
+    destroyAll(el);
 
     setState("loading");
     setMode("flv");
@@ -139,9 +159,10 @@ export default function LivePlayer({
     player.attachMediaElement(el);
     player.load();
 
-    player.on(mpegts.Events.ERROR, () => {
+    // FIX #10: log FLV error type and detail for better debugging
+    player.on(mpegts.Events.ERROR, (errType: string, errDetail: object) => {
+      console.error("[LivePlayer] FLV error:", errType, errDetail);
       destroyFlv();
-      // FLV failed → try HLS fallback if available and not yet tried
       const hlsFallback = hlsFallbackRef.current;
       if (!hlsTriedRef.current && hlsFallback && startHlsRef.current) {
         startHlsRef.current(hlsFallback, el);
@@ -159,6 +180,12 @@ export default function LivePlayer({
   }, [destroyAll, destroyFlv, startZego]);
 
   const startHls = useCallback((url: string, el: HTMLVideoElement) => {
+    // FIX #1: Guard against double instantiation — if HLS instance already running, skip
+    if (hlsRef.current) {
+      console.warn("[LivePlayer] startHls called while HLS instance exists — skipping");
+      return;
+    }
+
     if (hlsTriedRef.current) {
       // HLS already tried → FLV as last CDN attempt (if not tried yet), else Zego
       if (!flvTriedRef.current) {
@@ -168,8 +195,7 @@ export default function LivePlayer({
       startZego();
       return;
     }
-    destroyAll();
-    try { el.srcObject = null; } catch { /* ignore */ }
+    destroyAll(el);
 
     setState("loading");
     setMode("hls");
@@ -179,10 +205,18 @@ export default function LivePlayer({
     console.info("[LivePlayer] Hls.isSupported():", hlsSupported, "canPlayHLS:", el.canPlayType("application/vnd.apple.mpegurl"));
 
     if (!hlsSupported && el.canPlayType("application/vnd.apple.mpegurl")) {
+      // FIX #14: save cleanup for native HLS event handlers
+      const cleanup = () => {
+        el.onloadeddata = null;
+        el.onerror = null;
+      };
+      nativeHlsCleanupRef.current = cleanup;
       el.src = url;
       el.play().catch(() => {});
       el.onloadeddata = () => { setState("playing"); setMode("hls"); };
       el.onerror = () => {
+        cleanup();
+        nativeHlsCleanupRef.current = null;
         if (!flvTriedRef.current) {
           startFlv(streamUrl ? toAbsoluteUrl(streamUrl) : url.replace(".m3u8", ".flv"), el);
         } else {
@@ -324,21 +358,18 @@ export default function LivePlayer({
 
   /**
    * Wrap a Hot51 CDN URL through our server-side HLS proxy to bypass geo-blocking.
+   * NOTE: anchorId captured from closure is intentional — startCdn deps include anchorId.
    */
-  function toHlsProxyUrl(url: string): string {
+  const toHlsProxyUrl = useCallback((url: string): string => {
     const abs = toAbsoluteUrl(url);
     if (abs.includes("/api/hls-proxy") || abs.includes("/api/ts-proxy")) return abs;
-    const isHot51Cdn = abs.includes("cdnsi.com") || abs.includes("livcdn.com") || abs.includes("baccdn.com");
-    if (isHot51Cdn) {
+    if (isHot51Cdn(abs)) {
       if (anchorId) return `${BASE}/api/hls-proxy?room=${encodeURIComponent(anchorId)}`;
       if (abs.includes(".m3u8")) return `${BASE}/api/hls-proxy?url=${encodeURIComponent(abs)}`;
       return `${BASE}/api/hls-proxy?url=${encodeURIComponent(abs)}`;
     }
     return abs;
-  }
-
-  const isHot51Cdn = (url: string) =>
-    url.includes("cdnsi.com") || url.includes("livcdn.com") || url.includes("baccdn.com");
+  }, [anchorId]);
 
   const startCdn = useCallback((el: HTMLVideoElement) => {
     const rawFlv = streamUrl ? toAbsoluteUrl(streamUrl) : "";
@@ -401,8 +432,7 @@ export default function LivePlayer({
         tryProxy(el);
       }
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [hlsUrl, streamUrl, anchorId, liveId, roomId, startFlv, startHls, tryProxy]);
+  }, [hlsUrl, streamUrl, anchorId, liveId, roomId, startFlv, startHls, toHlsProxyUrl, tryProxy]);
 
   const handleZegoPlaying = useCallback(() => {
     setMode("zego");
@@ -431,16 +461,20 @@ export default function LivePlayer({
     startCdn(videoEl);
   }, [visible, videoEl, startCdn]);
 
+  // FIX #7: only call play() when state is already "playing" to avoid race with startCdn setup
   useEffect(() => {
     if (!videoEl) return;
-    if (visible) {
+    if (visible && state === "playing") {
       videoEl.play().catch(() => {});
-    } else {
+    } else if (!visible) {
       videoEl.pause();
     }
-  }, [visible, videoEl]);
+  }, [visible, videoEl, state]);
 
+  // FIX #6: abort pending proxy fetch when roomId changes to prevent stale callbacks
   useEffect(() => {
+    abortRef.current?.abort();
+    abortRef.current = null;
     startedRef.current = false;
     zegoTriedRef.current = false;
     hlsTriedRef.current = false;
@@ -453,9 +487,8 @@ export default function LivePlayer({
     setState("idle");
     setMode("none");
     setErrorMsg("");
-    abortRef.current?.abort();
-    destroyAll();
-    if (videoEl) try { videoEl.srcObject = null; } catch { /* ignore */ }
+    if (videoEl) destroyAll(videoEl);
+    else destroyAll();
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [roomId]);
 
@@ -477,7 +510,9 @@ export default function LivePlayer({
     proxyFallbackRef.current = anchorId
       ? `${BASE}/api/hls-proxy?room=${encodeURIComponent(anchorId)}`
       : `${BASE}/api/hls-proxy?url=${encodeURIComponent(absUrl)}`;
-    proxyFallbackTriedRef.current = false;
+    // FIX #2: do NOT reset proxyFallbackTriedRef here — resetting mid-stream allows
+    // double startHls call if a fatal error arrives right after the hlsUrl refresh.
+    // proxyFallbackTriedRef is only reset on full restart (roomId change or handleRetry).
     hlsRef.current.loadSource(newUrl);
   }, [hlsUrl, anchorId]);
 
@@ -486,24 +521,30 @@ export default function LivePlayer({
       abortRef.current?.abort();
       destroyAll();
     };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  function handleRetry() {
+  // FIX #13: wrap handleRetry in useCallback for stability
+  // FIX #5: add Promise.resolve().then() microtask so browser can flush MediaSource cleanup
+  //          before startCdn creates a new player instance
+  const handleRetry = useCallback(() => {
     zegoTriedRef.current = false;
     hlsTriedRef.current = false;
     flvTriedRef.current = false;
+    proxyFallbackTriedRef.current = false;
     hlsFallbackRef.current = "";
     setZegoActive(false);
     startedRef.current = false;
     setState("idle");
     setErrorMsg("");
-    destroyAll();
+    if (videoEl) destroyAll(videoEl);
+    else destroyAll();
     if (videoEl) {
-      try { videoEl.srcObject = null; } catch { /* ignore */ }
       startedRef.current = true;
-      startCdn(videoEl);
+      // Microtask delay: flush browser MediaSource cleanup before new player starts
+      Promise.resolve().then(() => startCdn(videoEl));
     }
-  }
+  }, [videoEl, destroyAll, startCdn]);
 
   const modeBadge = mode === "zego" ? "RTC" : mode === "hls" ? "HLS" : mode === "flv" ? "FLV" : "";
   const loadingText = zegoActive
@@ -522,12 +563,12 @@ export default function LivePlayer({
   const isNativeFLV = flvUrl.endsWith(".flv") || flvUrl.includes(".flv?");
   const canFLV = isNativeFLV || !!anchorId; // stream-proxy works for any room with anchorId
   const hasHLS = !!(hlsUrl ?? (streamUrl?.endsWith(".m3u8") ? streamUrl : null)) || !!anchorId;
-  const showSwitcher = canFLV && hasHLS && (state === "playing" || state === "loading") && mode !== "zego";
+  // FIX #15: only show switcher when state === "playing" (not "loading") to prevent interrupt
+  const showSwitcher = canFLV && hasHLS && state === "playing" && mode !== "zego";
 
   function handleSwitchMode(target: "flv" | "hls") {
     if (!videoEl) return;
-    destroyAll();
-    try { videoEl.srcObject = null; } catch { /* ignore */ }
+    destroyAll(videoEl);
     // Reset all tried-refs so the target format gets a clean attempt
     flvTriedRef.current = false;
     hlsTriedRef.current = false;
@@ -642,7 +683,7 @@ export default function LivePlayer({
             )}
           </button>
 
-          {/* FLV / HLS manual switcher */}
+          {/* FLV / HLS manual switcher — only visible when actually playing */}
           {showSwitcher ? (
             <div
               className="flex rounded-full overflow-hidden"
