@@ -2062,6 +2062,18 @@ liveRouter.get("/hls-proxy", async (req: Request, res: Response) => {
     return;
   }
 
+  // Reject FLV URLs immediately — HLS.js cannot play FLV; serving it causes a silent hang.
+  // This happens when hls-proxy falls back to cachedRoom.streamUrl (which is always .flv).
+  const isFLV = rawUrl.includes(".flv") && !rawUrl.includes(".m3u8");
+  if (isFLV) {
+    res.status(400).json({
+      error: "URL yang ditemukan adalah FLV, bukan HLS (.m3u8). Gunakan stream-proxy untuk FLV.",
+      url: rawUrl,
+      hint: "Coba lagi nanti — stream mungkin belum menerbitkan HLS token.",
+    });
+    return;
+  }
+
   const cdnHeaders = {
     "User-Agent": "Lavf/61.1.100",
     Accept: "*/*",

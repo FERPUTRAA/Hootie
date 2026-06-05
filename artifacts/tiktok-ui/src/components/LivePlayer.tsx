@@ -58,6 +58,8 @@ export default function LivePlayer({
   const playerRef = useRef<mpegts.Player | null>(null);
   // FIX #14: track native HLS cleanup function
   const nativeHlsCleanupRef = useRef<(() => void) | null>(null);
+  // Watchdog timer ref — cleared by destroyHls to prevent stale fallback triggers
+  const hlsWatchdogRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const [state, setState] = useState<PlayerState>("idle");
   const [muted, setMuted] = useState(true);
   const [mode, setMode] = useState<PlayerMode>("none");
@@ -88,6 +90,11 @@ export default function LivePlayer({
   }, []);
 
   const destroyHls = useCallback(() => {
+    // Clear watchdog before destroying — prevents stale fallback triggers after roomId change
+    if (hlsWatchdogRef.current) {
+      clearTimeout(hlsWatchdogRef.current);
+      hlsWatchdogRef.current = null;
+    }
     if (hlsRef.current) {
       try { hlsRef.current.destroy(); } catch { /* ignore */ }
       hlsRef.current = null;
@@ -242,10 +249,11 @@ export default function LivePlayer({
       maxBufferLength: 12,
       maxMaxBufferLength: 30,
       enableWorker: true,
-      manifestLoadingTimeOut: 13_000,
-      manifestLoadingMaxRetry: 2,
-      fragLoadingMaxRetry: 6,
-      fragLoadingRetryDelay: 800,
+      // Fail-fast: 6s timeout, 0 retries — watchdog below handles fallback
+      manifestLoadingTimeOut: 6_000,
+      manifestLoadingMaxRetry: 0,
+      fragLoadingMaxRetry: 4,
+      fragLoadingRetryDelay: 500,
       liveBackBufferLength: 0,
       // Explicit codec prevents bufferAddCodecError when HLS.js can't determine
       // codec from first segment before creating SourceBuffer.
@@ -259,6 +267,30 @@ export default function LivePlayer({
     activeHlsSourceRef.current = url;
 
     console.info("[LivePlayer] HLS loadSource:", url.substring(0, 100));
+
+    // Hard watchdog: if MANIFEST_PARSED has not fired within 10s, force fallback.
+    // Prevents indefinite "Memuat HLS..." when proxy is unreachable or returns FLV.
+    // Store in ref so destroyHls (called on roomId change) can cancel it.
+    let manifestParsedFired = false;
+    hlsWatchdogRef.current = setTimeout(() => {
+      hlsWatchdogRef.current = null;
+      if (manifestParsedFired) return;
+      console.warn("[LivePlayer] HLS watchdog: MANIFEST_PARSED not received in 10s — forcing fallback");
+      destroyHls();
+      // Skip proxyFallback if it's the same URL we just tried (avoid double-hang)
+      const fallback = proxyFallbackRef.current;
+      const isSameUrl = fallback === url || !fallback || proxyFallbackTriedRef.current;
+      if (!isSameUrl) {
+        proxyFallbackTriedRef.current = true;
+        startHls(fallback, el);
+      } else if (!flvTriedRef.current && streamUrl) {
+        const flvAbs = toAbsoluteUrl(streamUrl);
+        if (flvAbs.includes(".flv")) startFlv(flvAbs, el);
+        else startZego();
+      } else {
+        startZego();
+      }
+    }, 10_000);
 
     hls.on(Hls.Events.MANIFEST_LOADING, (_e, d) => {
       console.info("[LivePlayer] MANIFEST_LOADING:", d.url?.substring(0, 80));
@@ -279,6 +311,8 @@ export default function LivePlayer({
     hls.attachMedia(el);
 
     hls.on(Hls.Events.MANIFEST_PARSED, (_e, d) => {
+      manifestParsedFired = true;
+      if (hlsWatchdogRef.current) { clearTimeout(hlsWatchdogRef.current); hlsWatchdogRef.current = null; }
       console.info("[LivePlayer] MANIFEST_PARSED levels:", d.levels?.length, "— play()");
       setState("playing");
       setMode("hls");
@@ -288,16 +322,20 @@ export default function LivePlayer({
     hls.on(Hls.Events.ERROR, (_event, data) => {
       console.warn("[LivePlayer] HLS error:", data.details, "fatal:", data.fatal, "type:", data.type, data.error?.message ?? "");
       if (data.fatal) {
+        if (hlsWatchdogRef.current) { clearTimeout(hlsWatchdogRef.current); hlsWatchdogRef.current = null; }
         destroyHls();
         if (data.details === Hls.ErrorDetails.BUFFER_ADD_CODEC_ERROR) {
           console.info("[LivePlayer] bufferAddCodecError → skipping to Zego");
           startZego();
           return;
         }
-        if (proxyFallbackRef.current && !proxyFallbackTriedRef.current) {
+        // Only use proxyFallback if it's a DIFFERENT URL to avoid double-hanging
+        const fallback = proxyFallbackRef.current;
+        const isSameUrl = fallback === url || !fallback || proxyFallbackTriedRef.current;
+        if (!isSameUrl) {
           proxyFallbackTriedRef.current = true;
-          console.info("[LivePlayer] HLS fatal → retrying via proxy");
-          startHls(proxyFallbackRef.current, el);
+          console.info("[LivePlayer] HLS fatal → retrying via different proxy URL");
+          startHls(fallback, el);
         } else if (!flvTriedRef.current && streamUrl) {
           const flvUrl = toAbsoluteUrl(streamUrl);
           if (flvUrl.includes(".flv")) {
