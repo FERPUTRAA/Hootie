@@ -70,7 +70,7 @@ async function runCmd(
     return { ok: true, output: (stdout + "\n" + stderr).trim() };
   } catch (e) {
     const err = e as { stdout?: string; stderr?: string; message?: string };
-    return { ok: false, output: (err.stdout ?? "" + err.stderr ?? "" + err.message ?? "").trim() };
+    return { ok: false, output: ((err.stdout ?? "") + (err.stderr ?? "") + (err.message ?? "")).trim() };
   }
 }
 

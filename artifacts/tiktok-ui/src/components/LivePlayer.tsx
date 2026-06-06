@@ -415,23 +415,29 @@ export default function LivePlayer({
     const flvIsCdn = rawFlv && isHot51Cdn(rawFlv);
     const hlsIsCdn = rawHls && isHot51Cdn(rawHls);
 
+    // Build hls-proxy URL once — reused as proxy fallback throughout
+    const hlsProxyUrl = anchorId
+      ? `${BASE}/api/hls-proxy?room=${encodeURIComponent(anchorId)}`
+      : (rawHls && isHot51Cdn(rawHls) ? `${BASE}/api/hls-proxy?url=${encodeURIComponent(rawHls)}` : "");
+
     if (rawFlv && (rawFlv.endsWith(".flv") || rawFlv.includes(".flv?"))) {
       // ── FLV-first: HTTP-FLV ~1-3s latency ──
-      // Always set HLS proxy as fallback for FLV failure
-      if (rawHls && rawHls.includes(".m3u8")) {
-        const hlsProxy = anchorId
-          ? `${BASE}/api/hls-proxy?room=${encodeURIComponent(anchorId)}`
-          : (hlsIsCdn
-              ? `${BASE}/api/hls-proxy?url=${encodeURIComponent(rawHls)}`
-              : rawHls);
-        hlsFallbackRef.current = hlsProxy;
-        proxyFallbackRef.current = hlsProxy;
+      // When FLV fails, try HLS next. For Hot51 CDN HLS: attempt DIRECT from browser first
+      // (Indonesian browser → Indonesian CDN = instant; server proxy adds 500ms–2s overhead).
+      // proxyFallbackRef is hls-proxy for when direct CDN is CORS-blocked or geo-filtered.
+      if (rawHls && rawHls.includes(".m3u8") && hlsIsCdn) {
+        // Direct CDN as HLS fallback (ComHub approach — fastest for Indonesian users)
+        hlsFallbackRef.current = rawHls;
+        proxyFallbackRef.current = hlsProxyUrl;
         proxyFallbackTriedRef.current = false;
-      } else if (anchorId) {
-        // No explicit HLS URL but anchorId available — use hls-proxy as FLV fallback
-        const hlsProxy = `${BASE}/api/hls-proxy?room=${encodeURIComponent(anchorId)}`;
-        hlsFallbackRef.current = hlsProxy;
-        proxyFallbackRef.current = hlsProxy;
+      } else if (rawHls && rawHls.includes(".m3u8")) {
+        hlsFallbackRef.current = rawHls;
+        proxyFallbackRef.current = "";
+        proxyFallbackTriedRef.current = false;
+      } else if (hlsProxyUrl) {
+        // No explicit HLS URL — use hls-proxy as fallback (will fetch fresh token)
+        hlsFallbackRef.current = hlsProxyUrl;
+        proxyFallbackRef.current = hlsProxyUrl;
         proxyFallbackTriedRef.current = false;
       } else {
         hlsFallbackRef.current = "";
@@ -451,21 +457,26 @@ export default function LivePlayer({
       // HLS-only stream (no FLV URL available, or URL is .m3u8 with query params)
       const url = rawHls || rawFlv;
       if (isHot51Cdn(url) && url.includes(".m3u8")) {
-        // Always use proxy for Hot51 CDN HLS — avoids 403 from expired tokens/geo-block
-        const proxyUrl = anchorId
-          ? `${BASE}/api/hls-proxy?room=${encodeURIComponent(anchorId)}`
-          : `${BASE}/api/hls-proxy?url=${encodeURIComponent(url)}`;
-        startHls(proxyUrl, el);
+        // ComHub approach: try DIRECT CDN URL first — Indonesian browser → Indonesian CDN
+        // is always faster and more reliable than routing through US server proxy.
+        // Set hls-proxy as proxyFallbackRef so HLS.js error handler retries via proxy.
+        if (hlsProxyUrl) {
+          proxyFallbackRef.current = hlsProxyUrl;
+          proxyFallbackTriedRef.current = false;
+        }
+        console.info("[LivePlayer] HLS direct CDN attempt:", url.substring(0, 80));
+        startHls(url, el);
       } else {
         startHls(toHlsProxyUrl(url), el);
       }
     } else {
       // No recognized FLV or HLS URL — try hls-proxy if anchorId available (fastest fallback),
       // otherwise fall back to tryProxy which will probe stream-proxy then Zego.
-      if (anchorId) {
-        const proxyUrl = `${BASE}/api/hls-proxy?room=${encodeURIComponent(anchorId)}`;
+      if (hlsProxyUrl) {
         console.info("[LivePlayer] no recognized stream URL → hls-proxy fallback:", anchorId);
-        startHls(proxyUrl, el);
+        proxyFallbackRef.current = hlsProxyUrl;
+        proxyFallbackTriedRef.current = false;
+        startHls(hlsProxyUrl, el);
       } else {
         tryProxy(el);
       }
@@ -530,27 +541,35 @@ export default function LivePlayer({
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [roomId]);
 
-  // When Feed.tsx refreshes hlsUrl every 20s, reload the HLS source via proxy with a fresh token.
-  // Always use hls-proxy for Hot51 CDN — never load raw CDN URL directly (tokens expire in ~29s).
+  // When Feed.tsx refreshes hlsUrl every 20s (new CDN token), reload the HLS source.
+  // Strategy:
+  //   • If currently playing via direct CDN → reload with new direct CDN URL (fresh token)
+  //   • If currently playing via hls-proxy → reload with hls-proxy?room= (proxy fetches fresh token)
+  // This ensures tokens never expire regardless of which mode we're in.
   useEffect(() => {
     if (!hlsRef.current || (!hlsUrl && !anchorId)) return;
     const absUrl = hlsUrl ? toAbsoluteUrl(hlsUrl) : "";
     const hot51 = absUrl.includes("cdnsi.com") || absUrl.includes("livcdn.com") || absUrl.includes("baccdn.com");
-    // Always proxy Hot51 CDN through hls-proxy — never load raw CDN URL (expires in 29s)
-    const newUrl = (hot51 || !absUrl)
-      ? (anchorId
-          ? `${BASE}/api/hls-proxy?room=${encodeURIComponent(anchorId)}`
-          : `${BASE}/api/hls-proxy?url=${encodeURIComponent(absUrl)}`)
-      : absUrl;
-    if (newUrl === activeHlsSourceRef.current) return;
-    console.info("[LivePlayer] hlsUrl refreshed → reloading HLS source via proxy");
-    activeHlsSourceRef.current = newUrl;
-    proxyFallbackRef.current = anchorId
+    const proxyUrl = anchorId
       ? `${BASE}/api/hls-proxy?room=${encodeURIComponent(anchorId)}`
-      : `${BASE}/api/hls-proxy?url=${encodeURIComponent(absUrl)}`;
-    // FIX #2: do NOT reset proxyFallbackTriedRef here — resetting mid-stream allows
-    // double startHls call if a fatal error arrives right after the hlsUrl refresh.
-    // proxyFallbackTriedRef is only reset on full restart (roomId change or handleRetry).
+      : (absUrl ? `${BASE}/api/hls-proxy?url=${encodeURIComponent(absUrl)}` : "");
+
+    // Use direct CDN URL if: (1) we have a valid Hot51 CDN URL AND (2) the active source
+    // is already a direct CDN URL (not hls-proxy). If proxy is active, keep it as proxy.
+    const activeIsDirect = activeHlsSourceRef.current
+      ? (activeHlsSourceRef.current.includes("cdnsi.com") ||
+         activeHlsSourceRef.current.includes("livcdn.com") ||
+         activeHlsSourceRef.current.includes("baccdn.com"))
+      : false;
+    const newUrl = (hot51 && absUrl && activeIsDirect)
+      ? absUrl
+      : (proxyUrl || absUrl || activeHlsSourceRef.current);
+
+    if (!newUrl || newUrl === activeHlsSourceRef.current) return;
+    console.info("[LivePlayer] hlsUrl refreshed → reloading HLS source", activeIsDirect ? "direct" : "via proxy");
+    activeHlsSourceRef.current = newUrl;
+    // Update proxy fallback with fresh token too
+    if (proxyUrl) proxyFallbackRef.current = proxyUrl;
     hlsRef.current.loadSource(newUrl);
   }, [hlsUrl, anchorId]);
 
@@ -629,11 +648,13 @@ export default function LivePlayer({
         ? toAbsoluteUrl(hlsUrl)
         : streamUrl?.replace(".flv", ".m3u8") ?? "";
       if (isHot51Cdn(rawHls) && rawHls.includes(".m3u8")) {
-        // Always use proxy for Hot51 CDN HLS — avoids 403 from expired tokens/geo-block
+        // ComHub approach: try direct CDN first, hls-proxy as fallback
         const proxyUrl = anchorId
           ? `${BASE}/api/hls-proxy?room=${encodeURIComponent(anchorId)}`
           : `${BASE}/api/hls-proxy?url=${encodeURIComponent(rawHls)}`;
-        startHls(proxyUrl, videoEl);
+        proxyFallbackRef.current = proxyUrl;
+        proxyFallbackTriedRef.current = false;
+        startHls(rawHls, videoEl);
       } else if (rawHls) {
         startHls(toHlsProxyUrl(rawHls), videoEl);
       }
