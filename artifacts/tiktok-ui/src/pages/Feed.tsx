@@ -339,6 +339,11 @@ export default function Feed() {
             <p className="text-white/60 text-xs text-center leading-relaxed">
               {errorMsg || "Server Hot51 tidak bisa diakses"}
             </p>
+            {errorMsg === "Tidak ada live room aktif saat ini" && (
+               <p className="text-white/30 text-[10px] text-center mt-2">
+                 Semua siaran mungkin sedang offline atau terblokir.
+               </p>
+            )}
           </div>
 
           {isGeoBlocked ? (

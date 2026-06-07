@@ -538,7 +538,18 @@ async function hotFetch(
     // direct failed (network error) — try proxies
   }
 
-  // STEP 2: Race up to 5 proxies at once in parallel batches for speed
+  // STEP 2: Try Cloudflare Worker as a high-reliability proxy for API calls
+  if (CF_WORKER_URL && options.method === "POST") {
+    try {
+      const workerUrl = `${CF_WORKER_URL}/api?url=${encodeURIComponent(url)}`;
+      const data = await attemptFetch(workerUrl, options, undefined, perAttemptMs);
+      if (!isIpLimitResponse(data)) return data;
+    } catch {
+      // Worker failed or blocked, fall through to proxy pool
+    }
+  }
+
+  // STEP 3: Race up to 5 proxies at once in parallel batches for speed
   const liveProxies = getLiveProxies();
   const BATCH = 5;
 
