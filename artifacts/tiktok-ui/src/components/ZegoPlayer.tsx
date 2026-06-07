@@ -33,8 +33,22 @@ let ZegoClass: ZegoEngineClass | null = null;
 
 async function loadZegoSDK(): Promise<ZegoEngineClass> {
   if (ZegoClass) return ZegoClass;
-  const mod = await import("zego-express-engine-webrtc");
-  ZegoClass = (mod.ZegoExpressEngine ?? mod.default) as unknown as ZegoEngineClass;
+
+  const win = window as unknown as Record<string, unknown>;
+  if (!win["ZegoExpressEngine"]) {
+    await new Promise<void>((resolve, reject) => {
+      const existing = document.querySelector('script[data-zego-cdn="true"]');
+      if (existing) { resolve(); return; }
+      const script = document.createElement("script");
+      script.src = "https://cdn.jsdelivr.net/npm/zego-express-engine-webrtc@3.12.0/index.js";
+      script.setAttribute("data-zego-cdn", "true");
+      script.onload = () => resolve();
+      script.onerror = () => reject(new Error("Failed to load Zego SDK from CDN"));
+      document.head.appendChild(script);
+    });
+  }
+
+  ZegoClass = (win["ZegoExpressEngine"]) as unknown as ZegoEngineClass;
   return ZegoClass;
 }
 

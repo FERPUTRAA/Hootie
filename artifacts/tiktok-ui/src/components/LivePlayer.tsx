@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState, useCallback } from "react";
 import Hls from "hls.js";
-import mpegts from "mpegts.js";
+import type { default as MpegtsType } from "mpegts.js";
+import { getMpegts } from "../lib/mpegts-cdn";
 import { useZegoPlayer } from "./ZegoPlayer";
 
 interface LivePlayerProps {
@@ -55,7 +56,7 @@ export default function LivePlayer({
   }, []); // stable — no dep on onVideoElement prop
 
   const hlsRef = useRef<Hls | null>(null);
-  const playerRef = useRef<mpegts.Player | null>(null);
+  const playerRef = useRef<MpegtsType.Player | null>(null);
   // FIX #14: track native HLS cleanup function
   const nativeHlsCleanupRef = useRef<(() => void) | null>(null);
   // Watchdog timer ref — cleared by destroyHls to prevent stale fallback triggers
@@ -149,41 +150,47 @@ export default function LivePlayer({
     setMode("flv");
     flvTriedRef.current = true;
 
-    const player = mpegts.createPlayer(
-      { type: "flv", url, isLive: true, cors: true },
-      {
-        enableWorker: true,
-        lazyLoadMaxDuration: 3 * 60,
-        liveBufferLatencyChasing: true,
-        liveBufferLatencyMaxLatency: 2.0,
-        liveBufferLatencyMinRemain: 0.5,
-        autoCleanupSourceBuffer: true,
-        fixAudioTimestampGap: true,
-      }
-    );
+    getMpegts().then((mpegts) => {
+      if (flvTriedRef.current === false) return;
 
-    playerRef.current = player;
-    player.attachMediaElement(el);
-    player.load();
+      const player = mpegts.createPlayer(
+        { type: "flv", url, isLive: true, cors: true },
+        {
+          enableWorker: true,
+          lazyLoadMaxDuration: 3 * 60,
+          liveBufferLatencyChasing: true,
+          liveBufferLatencyMaxLatency: 2.0,
+          liveBufferLatencyMinRemain: 0.5,
+          autoCleanupSourceBuffer: true,
+          fixAudioTimestampGap: true,
+        }
+      );
 
-    // FIX #10: log FLV error type and detail for better debugging
-    player.on(mpegts.Events.ERROR, (errType: string, errDetail: object) => {
-      console.error("[LivePlayer] FLV error:", errType, errDetail);
-      destroyFlv();
-      const hlsFallback = hlsFallbackRef.current;
-      if (!hlsTriedRef.current && hlsFallback && startHlsRef.current) {
-        startHlsRef.current(hlsFallback, el);
-      } else {
-        startZego();
-      }
+      playerRef.current = player;
+      player.attachMediaElement(el);
+      player.load();
+
+      // FIX #10: log FLV error type and detail for better debugging
+      player.on(mpegts.Events.ERROR, (errType: string, errDetail: object) => {
+        console.error("[LivePlayer] FLV error:", errType, errDetail);
+        destroyFlv();
+        const hlsFallback = hlsFallbackRef.current;
+        if (!hlsTriedRef.current && hlsFallback && startHlsRef.current) {
+          startHlsRef.current(hlsFallback, el);
+        } else {
+          startZego();
+        }
+      });
+
+      player.on(mpegts.Events.MEDIA_INFO, () => {
+        setState("playing");
+        setMode("flv");
+      });
+
+      el.play().catch(() => {});
+    }).catch(() => {
+      startZego();
     });
-
-    player.on(mpegts.Events.MEDIA_INFO, () => {
-      setState("playing");
-      setMode("flv");
-    });
-
-    el.play().catch(() => {});
   }, [destroyAll, destroyFlv, startZego]);
 
   const startHls = useCallback((url: string, el: HTMLVideoElement) => {

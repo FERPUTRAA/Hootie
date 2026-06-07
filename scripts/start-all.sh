@@ -58,8 +58,14 @@ _start_tailscale() {
 # ── Tailscale — background, non-blocking ─────────────────────────────────────
 ( _start_tailscale ) &
 
-# ── API Server — wait for the artifact workflow to bring it up on port 8080 ──
-echo "[api] Waiting for API server on port 8080..."
+# ── API Server — build and start in background on port 8080 ──────────────────
+echo "[api] Building and starting API server on port 8080..."
+(
+  cd "$(dirname "$0")/.." || exit 1
+  PORT=8080 pnpm --filter @workspace/api-server run dev 2>&1 | sed 's/^/[api] /'
+) &
+
+# ── Wait for API server to be ready ──────────────────────────────────────────
 for i in $(seq 1 60); do
   sleep 1
   if curl -sf http://localhost:8080/api/healthz >/dev/null 2>&1; then
