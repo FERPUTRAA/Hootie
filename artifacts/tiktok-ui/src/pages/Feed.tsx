@@ -351,16 +351,18 @@ export default function Feed() {
               style={{ background: "rgba(234,179,8,0.08)", border: "1px solid rgba(234,179,8,0.25)" }}>
               <p className="text-yellow-300/80 text-[11px] text-center leading-relaxed">
                 Server Hot51 memblokir IP luar Indonesia.<br />
-                Set <span className="font-mono text-yellow-400">HOT51_PROXY_URL</span> di Secrets<br />
-                dengan proxy socks5/http Indonesia.
+                Set <span className="font-mono text-yellow-400">HOT51_CF_WORKER_URL</span> di Secrets<br />
+                (Cloudflare Worker Indonesia) atau<br />
+                <span className="font-mono text-yellow-400">HOT51_PROXY_URL</span> (socks5/http).
               </p>
             </div>
           ) : proxyStatus === "not set" ? (
             <div className="rounded-xl px-4 py-3 w-full max-w-xs"
               style={{ background: "rgba(234,179,8,0.08)", border: "1px solid rgba(234,179,8,0.25)" }}>
               <p className="text-yellow-300/80 text-[11px] text-center leading-relaxed">
-                Hot51 CDN membutuhkan IP Indonesia.<br />
-                Set <span className="font-mono text-yellow-400">HOT51_PROXY_URL</span> di Secrets.
+                Hot51 membutuhkan IP Indonesia.<br />
+                Set <span className="font-mono text-yellow-400">HOT51_CF_WORKER_URL</span> di Secrets<br />
+                (direkomendasikan) atau <span className="font-mono text-yellow-400">HOT51_PROXY_URL</span>.
               </p>
             </div>
           ) : (

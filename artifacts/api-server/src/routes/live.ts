@@ -528,7 +528,18 @@ async function hotFetch(
   // Per-attempt timeout: fast enough to try many proxies within total timeout
   const perAttemptMs = Math.min(5_000, Math.floor(totalTimeout * 0.4));
 
-  // STEP 1: Try direct connection first (fastest, works if server isn't geo-blocked)
+  // STEP 1: For POST requests, try Cloudflare Worker FIRST (Replit US IP is always geo-blocked by Hot51)
+  if (CF_WORKER_URL && options.method === "POST") {
+    try {
+      const workerUrl = `${CF_WORKER_URL}/api?url=${encodeURIComponent(url)}`;
+      const data = await attemptFetch(workerUrl, options, undefined, perAttemptMs);
+      if (!isIpLimitResponse(data)) return data;
+    } catch {
+      // Worker failed — fall through to direct / proxy pool
+    }
+  }
+
+  // STEP 2: Try direct connection (fast for GET; always blocked for POST from Replit US, but try anyway)
   let directResult: unknown = null;
   try {
     directResult = await attemptFetch(url, options, undefined, perAttemptMs);
@@ -536,17 +547,6 @@ async function hotFetch(
     if (!options.retryOnIpLimit || !isIpLimitResponse(directResult)) return directResult;
   } catch {
     // direct failed (network error) — try proxies
-  }
-
-  // STEP 2: Try Cloudflare Worker as a high-reliability proxy for API calls
-  if (CF_WORKER_URL && options.method === "POST") {
-    try {
-      const workerUrl = `${CF_WORKER_URL}/api?url=${encodeURIComponent(url)}`;
-      const data = await attemptFetch(workerUrl, options, undefined, perAttemptMs);
-      if (!isIpLimitResponse(data)) return data;
-    } catch {
-      // Worker failed or blocked, fall through to proxy pool
-    }
   }
 
   // STEP 3: Race up to 5 proxies at once in parallel batches for speed

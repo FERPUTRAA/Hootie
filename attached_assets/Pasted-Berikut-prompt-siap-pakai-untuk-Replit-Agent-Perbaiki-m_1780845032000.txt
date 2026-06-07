@@ -1,0 +1,117 @@
+Berikut prompt siap pakai untuk Replit Agent:
+
+---
+
+```
+Perbaiki masalah live Hot51 yang tidak muncul di aplikasi ini. Berikut konteks lengkapnya:
+
+## ROOT CAUSE
+Server Replit berbasis di AS dan diblokir geo-restriction oleh Hot51 API (error G10001/IP_LIMIT). Ada 3 masalah yang harus diperbaiki sekaligus:
+
+1. `cloudflare-worker/hot51-proxy.js` — tidak ada handler METHOD OPTIONS (CORS preflight gagal) dan CDN allowlist kurang domain baru
+2. `artifacts/api-server/src/routes/live.ts` — fungsi `hotFetch` pakai CF Worker sebagai fallback TERAKHIR, padahal harus PERTAMA untuk semua POST request
+3. `artifacts/tiktok-ui/src/components/Feed.tsx` — tidak ada pesan error yang informatif saat IP_LIMIT terjadi
+
+---
+
+## PERBAIKAN 1 — `cloudflare-worker/hot51-proxy.js`
+
+Tambahkan di bagian paling atas handler fetch:
+
+```javascript
+const CORS_HEADERS = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS, HEAD',
+  'Access-Control-Allow-Headers': 'Content-Type, sign, ac, token, Authorization, userId, timestamp, CheckSum',
+  'Access-Control-Max-Age': '86400',
+};
+
+// Tambahkan domain baru ke allowlist CDN:
+// 'baccdn.com', 'hot51.live'
+
+// Di dalam fungsi fetch handler, tambahkan PALING ATAS:
+if (request.method === 'OPTIONS') {
+  return new Response(null, { status: 204, headers: CORS_HEADERS });
+}
+
+// Pastikan setiap Response yang dikembalikan menyertakan CORS_HEADERS
+```
+
+---
+
+## PERBAIKAN 2 — `artifacts/api-server/src/routes/live.ts`
+
+Ubah urutan logika di fungsi `hotFetch` (atau fungsi sejenis yang membuat HTTP request ke Hot51 API):
+
+- SEBELUM: urutan = direct request → proxy pool → CF Worker
+- SESUDAH: urutan = CF Worker (untuk POST) → proxy pool → direct request (hanya GET)
+
+Logika barunya:
+```typescript
+async function hotFetch(path: string, options: RequestInit = {}) {
+  const isPost = options.method === 'POST' || !!options.body;
+  const workerUrl = process.env.HOT51_CF_WORKER_URL;
+
+  // LANGKAH 1: CF Worker dulu untuk semua POST request
+  if (workerUrl && isPost) {
+    try {
+      const res = await fetch(`${workerUrl}${path}`, {
+        ...options,
+        signal: AbortSignal.timeout(10000)
+      });
+      if (res.ok) return res;
+      console.warn(`[hotFetch] CF Worker status ${res.status} untuk ${path}`);
+    } catch (e) {
+      console.error(`[hotFetch] CF Worker error untuk ${path}:`, e);
+    }
+  }
+
+  // LANGKAH 2: Proxy pool sebagai fallback
+  for (const proxy of getActiveProxies()) {
+    try {
+      const res = await fetchViaProxy(proxy, path, options);
+      if (res?.ok) return res;
+    } catch { markProxyDead(proxy); }
+  }
+
+  // LANGKAH 3: Direct hanya untuk GET
+  if (!isPost) {
+    return fetch(`https://api.hot51.app${path}`, {
+      ...options,
+      signal: AbortSignal.timeout(8000)
+    });
+  }
+
+  throw new Error(`[hotFetch] Semua metode gagal untuk ${path}`);
+}
+```
+
+Sesuaikan nama fungsi dan cara akses proxy pool dengan kode yang sudah ada di file tersebut. Jangan ubah logika AES decrypt, struktur route, atau endpoint lainnya.
+
+---
+
+## PERBAIKAN 3 — `artifacts/tiktok-ui/src/components/Feed.tsx`
+
+Pada bagian render saat `rooms.length === 0`, tampilkan pesan yang lebih informatif:
+
+```tsx
+{rooms.length === 0 && !isLoading && (
+  <div className="empty-state text-center p-8">
+    <p className="text-gray-400">Tidak ada live room aktif saat ini.</p>
+    <p className="text-yellow-400 text-sm mt-2">
+      ⚠️ Jika masalah terus terjadi, pastikan variabel <code>HOT51_CF_WORKER_URL</code> sudah diset di Secrets Replit, lalu restart server.
+    </p>
+  </div>
+)}
+```
+
+---
+
+## SETELAH SEMUA PERBAIKAN
+
+1. Pastikan Secret `HOT51_CF_WORKER_URL` sudah diisi di Replit Secrets dengan URL Cloudflare Worker yang aktif
+2. Deploy ulang Cloudflare Worker jika ada perubahan di `hot51-proxy.js` dengan menjalankan: `bash scripts/deploy-worker.sh`
+3. Restart server backend
+4. Test endpoint `/api/live-rooms` — harus mengembalikan array berisi data room, bukan array kosong atau error IP_LIMIT
+5. Buka Feed di browser — live room harus muncul dan video bisa diputar tanpa CORS error di console
+```

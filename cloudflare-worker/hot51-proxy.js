@@ -19,6 +19,9 @@ const ALLOWED_CDN_DOMAINS = [
   "hot51.live",
   "comhub.live",
   "www.comhub.live",
+  "totcdn.com",
+  "y3cdn.com",
+  "m1cdn.com",
 ];
 
 const ALLOWED_API_DOMAINS = [
